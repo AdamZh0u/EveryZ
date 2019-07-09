@@ -57,7 +57,7 @@ July
 想到哪写到哪。
 
 9,Tus
-======
+-------
 昨天上午去了CUPUM，有点失望，Batty讲了四个模型，Quant，等
 UNSW 新南威尔士大学
 那个日本人做的CBD建筑DNA还蛮有意思的，尽管她的口音很奇怪但是讲的却很有激情，我的口语还是不太好，没有提问。
@@ -75,3 +75,6 @@ UNSW 新南威尔士大学
 
 今天去找焦老师和李睿琪，等下组会问问，在准备好toefl和护照就行了。
 加油，记得理发。
+
+We shape our dwellings, and afterwards our dwellings shape us.
+-- Chuichill
