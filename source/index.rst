@@ -37,12 +37,6 @@ This is an open source book written for myself to review the tools for Python.
     Tools/reStructuredText
     Tools/Git
 
-.. toctree::
-    :maxdepth: 2
-    :caption: Daily:
-    :numbered:
-
-    Daily/July.rst
 
 Indices and tables
 ==================
