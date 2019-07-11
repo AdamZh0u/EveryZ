@@ -95,7 +95,28 @@
 </ul>
 <p class="caption"><span class="caption-text">Tools:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. reStructuredText</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#structure">1.1. Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#head-title">1.1.1. head title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paragraph">1.1.2. paragraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list">1.1.3. list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bullet-lists">1.1.3.1. Bullet Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumerated-lists">1.1.3.2. Enumerated Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definition-lists">1.1.3.3. Definition Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#option-lists">1.1.3.4. Option Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-lists">1.1.3.5. Field Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#blocks">1.1.4. Blocks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#literal-blocks">1.1.4.1. Literal Blocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#line-blocks">1.1.4.2. Line Blocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#doctest-blocks">1.1.4.3. Doctest Blocks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">2. Git</a></li>
 </ul>
 
@@ -163,7 +184,203 @@
             
   <div class="section" id="restructuredtext">
 <h1>1. reStructuredText<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h1>
-<p>Reference:</p>
+<p>这种标记语言有点难懂</p>
+<div class="section" id="structure">
+<h2>1.1. Structure<a class="headerlink" href="#structure" title="永久链接至标题">¶</a></h2>
+<div class="section" id="head-title">
+<h3>1.1.1. head title<a class="headerlink" href="#head-title" title="永久链接至标题">¶</a></h3>
+<p>章节头部由下线(也可有上线)和包含标点的标题 组合创建, 其中下线要至少等于
+标准文本的长度。
+可以表示标题的符号有 =、-、<a href="#id1"><span class="problematic" id="id2">`</span></a>、:、’、”、~、^、_ 、* 、+、 #、&lt;、&gt; 。
+对于相同的符号，有上标是一级标题，没有上标是二级标题。
+标题最多分六级，可以自由组合使用。
+全加上上标或者是全不加上标，使用不同的 6 个符号的标题依次排列，则会依次生成的标题为H1-H6。</p>
+</div>
+<div class="section" id="paragraph">
+<h3>1.1.2. paragraph<a class="headerlink" href="#paragraph" title="永久链接至标题">¶</a></h3>
+<p>段落是被空行分割的文字片段，左侧必须对齐（没有空格，或者有相同多的空格）。
+缩进的段落被视为引文。</p>
+<blockquote>
+<div><dl class="simple">
+<dt>这是引文</dt><dd><dl class="simple">
+<dt>demo</dt><dd><p>demodemo</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="list">
+<h3>1.1.3. list<a class="headerlink" href="#list" title="永久链接至标题">¶</a></h3>
+<div class="section" id="bullet-lists">
+<h4>1.1.3.1. Bullet Lists<a class="headerlink" href="#bullet-lists" title="永久链接至标题">¶</a></h4>
+<p>符号列表可以使用 -、 <a href="#id3"><span class="problematic" id="id4">*</span></a>、+ 来表示,不同的符号结尾需要加上空行，
+下级列表需要有空格缩进。</p>
+<ul>
+<li><p>list 1</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>list1.1</p></li>
+</ul>
+<ul class="simple">
+<li><p>list1.1</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt>list 2</dt><dd><p>Note that a blank line is required before the first item
+and after the last, but is optional between items.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="enumerated-lists">
+<h4>1.1.3.2. Enumerated Lists<a class="headerlink" href="#enumerated-lists" title="永久链接至标题">¶</a></h4>
+<p>阿拉伯数字: 1, 2, 3, … (无上限)。
+大写字母: A-Z。
+小写字母: a-z。
+大写罗马数字: I, II, III, IV, …, MMMMCMXCIX (4999)。
+小写罗马数字: i, ii, iii, iv, …, mmmmcmxcix (4999)。</p>
+<p>可以为序号添加前缀和后缀，下面的是被允许的。前后缀区分层级</p>
+<p>. 后缀: “1.”, “A.”, “a.”, “I.”, “i.”。
+() 包起来: “(1)”, “(A)”, “(a)”, “(I)”, “(i)”。
+) 后缀: “1)”, “A)”, “a)”, “I)”, “i)”</p>
+<p>枚举列表可以结合 # 自动生成枚举序号。</p>
+<ol class="arabic simple">
+<li><p>list1</p></li>
+<li><dl class="simple">
+<dt>list2</dt><dd><ol class="loweralpha simple">
+<li><p>list1.1</p></li>
+<li><p>list1.2</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>list3</dt><dd><ol class="loweralpha simple">
+<li><dl class="simple">
+<dt>list3.1</dt><dd><ol class="loweralpha simple">
+<li><p>list3.2</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="definition-lists">
+<h4>1.1.3.3. Definition Lists<a class="headerlink" href="#definition-lists" title="永久链接至标题">¶</a></h4>
+<p>条目占一行，解释文本要有缩进；多层可根据缩进实现。
+定义1</p>
+<blockquote>
+<div><p>demo</p>
+</div></blockquote>
+<dl class="simple">
+<dt>定义2</dt><dd><p>demodemo
+demodemo</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="option-lists">
+<h4>1.1.3.4. Option Lists<a class="headerlink" href="#option-lists" title="永久链接至标题">¶</a></h4>
+<dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="field-lists">
+<h4>1.1.3.5. Field Lists<a class="headerlink" href="#field-lists" title="永久链接至标题">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><p>Tony J. (Tibs) Ibbs,
+David Goodger
+(and sundry other good-natured folks)</p>
+</dd>
+<dt class="field-even">Version</dt>
+<dd class="field-even"><p>1.0 of 2001/08/08</p>
+</dd>
+<dt class="field-odd">Dedication</dt>
+<dd class="field-odd"><p>To my father.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="blocks">
+<h3>1.1.4. Blocks<a class="headerlink" href="#blocks" title="永久链接至标题">¶</a></h3>
+<div class="section" id="literal-blocks">
+<h4>1.1.4.1. Literal Blocks<a class="headerlink" href="#literal-blocks" title="永久链接至标题">¶</a></h4>
+<p>文字块就是一段文字信息，在需要插入文本块的段落后面加上 ::，接着一个空行，然后就是文字块了。
+文字块不能定顶头写，要有缩进，结束标志是，新的一段文本贴开头，即没有缩进。
+A paragraph containing only two colons indicates that the following indented or quoted
+text is a literal block.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Whitespace</span><span class="p">,</span> <span class="n">newlines</span><span class="p">,</span> <span class="n">blank</span> <span class="n">lines</span><span class="p">,</span> <span class="ow">and</span>
+<span class="nb">all</span> <span class="n">kinds</span> <span class="n">of</span> <span class="n">markup</span> <span class="p">(</span><span class="n">like</span> <span class="o">*</span><span class="n">this</span><span class="o">*</span> <span class="ow">or</span>
+\<span class="n">this</span><span class="p">)</span> <span class="ow">is</span> <span class="n">preserved</span> <span class="n">by</span> <span class="n">literal</span> <span class="n">blocks</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">paragraph</span> <span class="n">containing</span> <span class="n">only</span> <span class="s1">&#39;::&#39;</span>
+<span class="n">will</span> <span class="n">be</span> <span class="n">omitted</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">result</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">::</span></code> may be tacked onto the very end of any paragraph. The <code class="docutils literal notranslate"><span class="pre">::</span></code> will be
+omitted if it is preceded by whitespace.The <code class="docutils literal notranslate"><span class="pre">::</span></code> will be converted to a single
+colon if preceded by text, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">It</span><span class="s1">&#39;s very convenient to use this form.</span>
+</pre></div>
+</div>
+<p>Literal blocks end when text returns to the preceding paragraph’s indentation.
+This means that something like this is possible:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">We</span> <span class="n">start</span> <span class="n">here</span> <span class="ow">and</span> <span class="k">continue</span> <span class="n">here</span> <span class="ow">and</span> <span class="n">end</span> <span class="n">here</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Per-line quoting can also be used on unindented literal blocks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Useful</span> <span class="k">for</span> <span class="n">quotes</span> <span class="kn">from</span> <span class="nn">email</span> <span class="ow">and</span>
+<span class="o">&gt;</span> <span class="k">for</span> <span class="n">Haskell</span> <span class="n">literate</span> <span class="n">programming</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-blocks">
+<h4>1.1.4.2. Line Blocks<a class="headerlink" href="#line-blocks" title="永久链接至标题">¶</a></h4>
+<p>行块对于地址、诗句以及无装饰列表是非常有用的。行块是以 | 开头，
+每一个行块可以是多段文本。</p>
+<div class="line-block">
+<div class="line">这是一段行块内容</div>
+<div class="line">这同样也是行块内容
+还是行块内容</div>
+</div>
+</div>
+<div class="section" id="doctest-blocks">
+<h4>1.1.4.3. Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="永久链接至标题">¶</a></h4>
+<p>Doctest blocks are interactive
+Python sessions. They begin with
+“<code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>” and end with a blank line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s2">&quot;This is a doctest block.&quot;</span>
+<span class="go">This is a doctest block.</span>
+</pre></div>
+</div>
+<p>Reference:
+<a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html#literal-blocks">http://docutils.sourceforge.net/docs/user/rst/quickref.html#literal-blocks</a>
+<a class="reference external" href="https://www.jianshu.com/p/1885d5570b37">https://www.jianshu.com/p/1885d5570b37</a></p>
+</div>
+</div>
+</div>
 </div>
 
 
