@@ -99,10 +99,40 @@
 <li class="toctree-l2"><a class="reference internal" href="#structure">1.1. Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#head-title">1.1.1. head title</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#paragraph">1.1.2. paragraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line">1.1.3. line</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#list">1.2. list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#blocks">1.3. Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list">1.2. list</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bullet-lists">1.2.1. Bullet Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumerated-lists">1.2.2. Enumerated Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definition-lists">1.2.3. Definition Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-lists">1.2.4. Option Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field-lists">1.2.5. Field Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#blocks">1.3. Blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#literal-blocks">1.3.1. Literal Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-blocks">1.3.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doctest-blocks">1.3.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">1.4. tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#grid-tables">1.4.1. Grid Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-tables">1.4.2. Simple Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#links">1.5. links</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#external-hyperlink">1.5.1. External Hyperlink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#internal-hyperlink">1.5.2. 内部超链接|锚点(Internal Hyperlink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anonymous-hyperlink">1.5.3. 匿名超链接(Anonymous hyperlink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#indirect-hyperlink">1.5.4. 间接超链接(Indirect Hyperlink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implicit-hyperlink">1.5.5. 隐式超链接(Implicit Hyperlink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#substitution-reference">1.5.6. 替换引用(Substitution Reference)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#footnote-reference">1.5.7. 脚注引用(Footnote Reference)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#citation-reference">1.5.8. 引用参考(Citation Reference)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments">1.5.9. 注释(Comments)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">2. Git</a></li>
@@ -177,9 +207,9 @@
 <h2>1.1. Structure<a class="headerlink" href="#structure" title="永久链接至标题">¶</a></h2>
 <div class="section" id="head-title">
 <h3>1.1.1. head title<a class="headerlink" href="#head-title" title="永久链接至标题">¶</a></h3>
-<p>章节头部由下线(也可有上线)和包含标点的标题 组合创建, 其中下线要至少等于
-标准文本的长度。
-可以表示标题的符号有 =、-、<a href="#id1"><span class="problematic" id="id2">`</span></a>、:、’、”、~、^、_ 、* 、+、 #、&lt;、&gt; 。
+<p>章节头部由下线(也可有上线)和包含标点的标题 组合创建, 其中下线要至少。
+等于标准文本的长度。
+可以表示标题的符号有” =、-、<a href="#id1"><span class="problematic" id="id2">`</span></a>、:、’、”、~、^、_ 、* 、+、 #、&lt;、&gt; “。
 对于相同的符号，有上标是一级标题，没有上标是二级标题。
 标题最多分六级，可以自由组合使用。
 全加上上标或者是全不加上标，使用不同的 6 个符号的标题依次排列，则会依次生成的标题为H1-H6。</p>
@@ -198,9 +228,15 @@
 </dl>
 </div></blockquote>
 </div>
+<div class="section" id="line">
+<h3>1.1.3. line<a class="headerlink" href="#line" title="永久链接至标题">¶</a></h3>
 </div>
+</div>
+<hr class="docutils" />
 <div class="section" id="list">
 <h2>1.2. list<a class="headerlink" href="#list" title="永久链接至标题">¶</a></h2>
+<div class="section" id="bullet-lists">
+<h3>1.2.1. Bullet Lists<a class="headerlink" href="#bullet-lists" title="永久链接至标题">¶</a></h3>
 <p>符号列表可以使用 -、 <a href="#id3"><span class="problematic" id="id4">*</span></a>、+ 来表示,不同的符号结尾需要加上空行，
 下级列表需要有空格缩进。</p>
 <ul>
@@ -221,6 +257,9 @@ and after the last, but is optional between items.</p>
 </dl>
 </li>
 </ul>
+</div>
+<div class="section" id="enumerated-lists">
+<h3>1.2.2. Enumerated Lists<a class="headerlink" href="#enumerated-lists" title="永久链接至标题">¶</a></h3>
 <p>阿拉伯数字: 1, 2, 3, … (无上限)。
 大写字母: A-Z。
 小写字母: a-z。
@@ -255,16 +294,20 @@ and after the last, but is optional between items.</p>
 </dl>
 </li>
 </ol>
-<p>条目占一行，解释文本要有缩进；多层可根据缩进实现。
-定义1</p>
-<blockquote>
-<div><p>demo</p>
-</div></blockquote>
+</div>
+<div class="section" id="definition-lists">
+<h3>1.2.3. Definition Lists<a class="headerlink" href="#definition-lists" title="永久链接至标题">¶</a></h3>
+<p>条目占一行，解释文本要有缩进；多层可根据缩进实现。</p>
 <dl class="simple">
+<dt>定义1</dt><dd><p>demo</p>
+</dd>
 <dt>定义2</dt><dd><p>demodemo
 demodemo</p>
 </dd>
 </dl>
+</div>
+<div class="section" id="option-lists">
+<h3>1.2.4. Option Lists<a class="headerlink" href="#option-lists" title="永久链接至标题">¶</a></h3>
 <dl class="option-list">
 <dt><kbd><span class="option">-a</span></kbd></dt>
 <dd><p>command-line option “a”</p>
@@ -283,6 +326,9 @@ arguments</p>
 <dd><p>DOS/VMS-style options too</p>
 </dd>
 </dl>
+</div>
+<div class="section" id="field-lists">
+<h3>1.2.5. Field Lists<a class="headerlink" href="#field-lists" title="永久链接至标题">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Authors</dt>
 <dd class="field-odd"><p>Tony J. (Tibs) Ibbs,
@@ -297,12 +343,15 @@ David Goodger
 </dd>
 </dl>
 </div>
+</div>
 <div class="section" id="blocks">
 <h2>1.3. Blocks<a class="headerlink" href="#blocks" title="永久链接至标题">¶</a></h2>
+<div class="section" id="literal-blocks">
+<h3>1.3.1. Literal Blocks<a class="headerlink" href="#literal-blocks" title="永久链接至标题">¶</a></h3>
 <p>文字块就是一段文字信息，在需要插入文本块的段落后面加上 ::，接着一个空行，然后就是文字块了。
 文字块不能定顶头写，要有缩进，结束标志是，新的一段文本贴开头，即没有缩进。
-A paragraph containing only two colons indicates that the following indented or quoted
-text is a literal block.</p>
+A paragraph containing only two colons indicates that the following
+indented or quoted text is a literal block.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Whitespace</span><span class="p">,</span> <span class="n">newlines</span><span class="p">,</span> <span class="n">blank</span> <span class="n">lines</span><span class="p">,</span> <span class="ow">and</span>
 <span class="nb">all</span> <span class="n">kinds</span> <span class="n">of</span> <span class="n">markup</span> <span class="p">(</span><span class="n">like</span> <span class="o">*</span><span class="n">this</span><span class="o">*</span> <span class="ow">or</span>
 \<span class="n">this</span><span class="p">)</span> <span class="ow">is</span> <span class="n">preserved</span> <span class="n">by</span> <span class="n">literal</span> <span class="n">blocks</span><span class="o">.</span>
@@ -327,6 +376,9 @@ This means that something like this is possible:</p>
 <span class="o">&gt;</span> <span class="k">for</span> <span class="n">Haskell</span> <span class="n">literate</span> <span class="n">programming</span><span class="o">.</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="line-blocks">
+<h3>1.3.2. Line Blocks<a class="headerlink" href="#line-blocks" title="永久链接至标题">¶</a></h3>
 <p>行块对于地址、诗句以及无装饰列表是非常有用的。行块是以 | 开头，
 每一个行块可以是多段文本。</p>
 <div class="line-block">
@@ -334,6 +386,9 @@ This means that something like this is possible:</p>
 <div class="line">这同样也是行块内容
 还是行块内容</div>
 </div>
+</div>
+<div class="section" id="doctest-blocks">
+<h3>1.3.3. Doctest Blocks<a class="headerlink" href="#doctest-blocks" title="永久链接至标题">¶</a></h3>
 <p>Doctest blocks are interactive
 Python sessions. They begin with
 “<code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>” and end with a blank line.</p>
@@ -341,10 +396,178 @@ Python sessions. They begin with
 <span class="go">This is a doctest block.</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="tables">
+<h2>1.4. tables<a class="headerlink" href="#tables" title="永久链接至标题">¶</a></h2>
+<div class="section" id="grid-tables">
+<h3>1.4.1. Grid Tables<a class="headerlink" href="#grid-tables" title="永久链接至标题">¶</a></h3>
+<p>网格表中使用的符号有：-、=、<a href="#id5"><span class="problematic" id="id6">|</span></a>、+。- 用来分隔行， = 用来分隔表头和表体行，
+| 用来分隔列，+ 用来表示行和列相交的节点。</p>
+<p>Grid table:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 34%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="2"><p>Cells may span columns.</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td rowspan="2"><ul class="simple">
+<li><p>Cells</p></li>
+<li><p>contain</p></li>
+<li><p>blocks.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>body row 4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="simple-tables">
+<h3>1.4.2. Simple Tables<a class="headerlink" href="#simple-tables" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="links">
+<h2>1.5. links<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
+<div class="section" id="external-hyperlink">
+<h3>1.5.1. External Hyperlink<a class="headerlink" href="#external-hyperlink" title="永久链接至标题">¶</a></h3>
+<p>引用/参考(reference)，是简单的形式，只能是一个词语，引用的文字不能带有空格。
+这篇文章来自我的Github,请参考 <a class="reference external" href="https://github.com/SeayXu/">reference</a>。</p>
+<p>引用/参考(reference)，行内形式，引用的文字可以带有空格或者符号。
+这篇文章来自我的Github,请参考 <a class="reference external" href="https://github.com/SeayXu/">SeayXu</a>。</p>
+</div>
+<div class="section" id="internal-hyperlink">
+<h3>1.5.2. 内部超链接|锚点(Internal Hyperlink)<a class="headerlink" href="#internal-hyperlink" title="永久链接至标题">¶</a></h3>
+<p>更多信息参考 <a class="reference internal" href="#id7">引用文档</a></p>
+<p>这里是其他内容</p>
+<p id="id7">这是引用部分的内容</p>
+</div>
+<div class="section" id="anonymous-hyperlink">
+<h3>1.5.3. 匿名超链接(Anonymous hyperlink)<a class="headerlink" href="#anonymous-hyperlink" title="永久链接至标题">¶</a></h3>
+<p>词组(短语)引用/参考(phrase reference)，引用的文字可以带有空格或者符号，需要使用反引号引起来。</p>
+<p>这篇文章参考的是：<a href="#id25"><span class="problematic" id="id26">`Quick reStructuredText`__</span></a>。</p>
+</div>
+<div class="section" id="indirect-hyperlink">
+<h3>1.5.4. 间接超链接(Indirect Hyperlink)<a class="headerlink" href="#indirect-hyperlink" title="永久链接至标题">¶</a></h3>
+<p>间接超链接是基于匿名链接的基础上的，<a href="#id27"><span class="problematic" id="id28">就是将匿名链接地址换成了外部引用名_</span></a>。</p>
+</div>
+<div class="section" id="implicit-hyperlink">
+<h3>1.5.5. 隐式超链接(Implicit Hyperlink)<a class="headerlink" href="#implicit-hyperlink" title="永久链接至标题">¶</a></h3>
+<p>小节标题、脚注和引用参考会自动生成超链接地址，使用小节标题、脚注或引用参考名称作为超链接名称就可以生成隐式链接。
+其他内容…</p>
+<p>隐式链接到 <a class="reference internal" href="#list">list</a>，即可生成超链接。</p>
+</div>
+<div class="section" id="substitution-reference">
+<h3>1.5.6. 替换引用(Substitution Reference)<a class="headerlink" href="#substitution-reference" title="永久链接至标题">¶</a></h3>
+<p>替换引用就是用定义的指令替换对应的文字或图片，和内置指令(inline directives)类似。
+这是 <img alt="logo" src="https://help.github.com/assets/images/site/favicon.ico" /> github的Logo，我的github用户名是:SeayXu。</p>
+</div>
+<div class="section" id="footnote-reference">
+<h3>1.5.7. 脚注引用(Footnote Reference)<a class="headerlink" href="#footnote-reference" title="永久链接至标题">¶</a></h3>
+<p>脚注引用，有这几个方式：有手工序号(标记序号123之类)、自动序号(填入#号会自动填充序号)、自动符号(填入*会自动生成符号)。
+手工序号可以和#结合使用，会自动延续手工的序号。
+# 表示的方法可以在后面加上一个名称，这个名称就会生成一个链接。</p>
+<p>脚注引用一 <a class="footnote-reference brackets" href="#id17" id="id11">1</a>
+脚注引用二 <a class="footnote-reference brackets" href="#id19" id="id12">3</a>
+脚注引用三 <a class="footnote-reference brackets" href="#id20" id="id13">4</a>
+脚注引用四 <a class="footnote-reference brackets" href="#id21" id="id14">*</a>
+脚注引用五 <a class="footnote-reference brackets" href="#id22" id="id15">†</a>
+脚注引用六 <a class="footnote-reference brackets" href="#id23" id="id16">‡</a></p>
+<dl class="footnote brackets">
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id11">1</a></span></dt>
+<dd><p>脚注内容一</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">2</span></dt>
+<dd><p>脚注内容二</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
+<dd><p>脚注内容三</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
+<dd><p>脚注内容四 <a class="reference internal" href="#id20">链接</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id14">*</a></span></dt>
+<dd><p>脚注内容五</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id15">†</a></span></dt>
+<dd><p>脚注内容六</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id16">‡</a></span></dt>
+<dd><p>脚注内容七</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="citation-reference">
+<h3>1.5.8. 引用参考(Citation Reference)<a class="headerlink" href="#citation-reference" title="永久链接至标题">¶</a></h3>
+<p>引用参考与上面的脚注有点类似。</p>
+<p>引用参考的内容通常放在页面结尾处，比如 <a class="reference internal" href="#one" id="id24"><span>[One]</span></a>，<a class="reference internal" href="#two">Two</a></p>
+<dl class="citation">
+<dt class="label" id="one"><span class="brackets"><a class="fn-backref" href="#id24">One</a></span></dt>
+<dd><p>参考引用一</p>
+</dd>
+<dt class="label" id="two"><span class="brackets">Two</span></dt>
+<dd><p>参考引用二</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="comments">
+<h3>1.5.9. 注释(Comments)<a class="headerlink" href="#comments" title="永久链接至标题">¶</a></h3>
+<p>注释以 .. 开头，后面接注释内容即可，可以是多行内容，多行时每行开头要加一个空格。</p>
 <p>Reference:</p>
 <p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html#literal-blocks">http://docutils.sourceforge.net/docs/user/rst/quickref.html#literal-blocks</a>
 <a class="reference external" href="https://www.jianshu.com/p/1885d5570b37">https://www.jianshu.com/p/1885d5570b37</a></p>
+</div>
 </div>
 </div>
 
