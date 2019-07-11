@@ -25,7 +25,7 @@ paragraph
             demodemo
 
 list
->>>>>>>>
+========
 
 Bullet Lists
 ^^^^^^^^^^^^^^
@@ -96,7 +96,7 @@ Field Lists
 :Dedication: To my father.
 
 Blocks
->>>>>>>>
+========
 
 Literal Blocks
 ^^^^^^^^^^^^^^^^^
@@ -149,6 +149,9 @@ This is a doctest block.
 
 
 
+------------
+
 Reference:
+
 http://docutils.sourceforge.net/docs/user/rst/quickref.html#literal-blocks
 https://www.jianshu.com/p/1885d5570b37
