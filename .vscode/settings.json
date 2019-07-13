@@ -1,0 +1,4 @@
+{
+    "restructuredtext.confPath": "${workspaceFolder}\\source",
+    "python.pythonPath": "F:\\Miniconda\\conda64\\envs\\py37\\python.exe"
+}
