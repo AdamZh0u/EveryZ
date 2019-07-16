@@ -23,11 +23,11 @@ This is an open source book written for myself to review the tools for Python.
 
 .. toctree::
     :maxdepth: 2
-    :caption: snippet:
+    :caption: Snippet:
     :numbered:
 
     Snippet/py
-
+    Snippet/Matplotlib
 
 .. toctree::
     :maxdepth: 3

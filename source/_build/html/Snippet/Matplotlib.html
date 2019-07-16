@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Matplotlib &mdash; EveryPy 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="1. reStructuredText" href="../Tools/reStructuredText.html" />
+    <link rel="prev" title="1. demo" href="py.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EveryPy
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basic:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Basic/py.html">1. demo</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced/py.html">1. demo</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="py.html">1. demo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Matplotlib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loglogplot">2.1. loglogplot</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tools:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Tools/reStructuredText.html">1. reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tools/Git.html">2. Git</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EveryPy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>2. Matplotlib</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Snippet/Matplotlib.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib">
+<h1>2. Matplotlib<a class="headerlink" href="#matplotlib" title="永久链接至标题">¶</a></h1>
+<div class="section" id="loglogplot">
+<h2>2.1. loglogplot<a class="headerlink" href="#loglogplot" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loglogplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">labelx</span><span class="o">=</span><span class="s2">&quot;LogPop&quot;</span><span class="p">,</span><span class="n">labely</span><span class="o">=</span><span class="s2">&quot;LogArea&quot;</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+    <span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="c1"># make the scatter plot</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+    <span class="c1">#ax.set_ylim(1e1,10**3.4)</span>
+    <span class="c1">#ax.set_xlim(10**(-0.1),10**(2.5))</span>
+    <span class="c1"># determine best fit line</span>
+    <span class="n">par</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span> <span class="n">yd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">full</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">slope</span><span class="o">=</span><span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">intercept</span><span class="o">=</span><span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">xl</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">xd</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">xd</span><span class="p">)]</span>
+    <span class="n">yl</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span>  <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="o">**</span><span class="n">xx</span> <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">],[</span><span class="mi">10</span><span class="o">**</span><span class="n">yy</span> <span class="k">for</span> <span class="n">yy</span> <span class="ow">in</span> <span class="n">yl</span><span class="p">],</span> <span class="s1">&#39;-m&#39;</span><span class="p">)</span>
+
+    <span class="c1"># coefficient of determination, plot text</span>
+    <span class="n">variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">yd</span><span class="p">)</span><span class="c1">#方差</span>
+    <span class="n">residuals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">([(</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span> <span class="o">-</span> <span class="n">yy</span><span class="p">)</span>  <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)])</span><span class="c1">#残差</span>
+
+    <span class="n">Rsqr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">residuals</span><span class="o">/</span><span class="n">variance</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1">#ax.text(0.3*max(x),1.2*max(y),r&#39;$R^2 ={0.2f} \n Slope={0.2f}&#39;.format{Rsqr,slope.round(2)}, fontsize=15)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="mf">1.1</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> =</span><span class="si">%0.2f</span><span class="se">\n</span><span class="s1">Slope=</span><span class="si">%0.2f</span><span class="se">\n</span><span class="s1">Intercept=</span><span class="si">%0.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="s2">&quot;$\sf{R^2}$&quot;</span><span class="p">,</span><span class="n">Rsqr</span><span class="p">,</span><span class="n">slope</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">intercept</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">variance</span><span class="p">,</span><span class="n">residuals</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labelx</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">labely</span><span class="p">)</span>
+
+    <span class="c1"># error bounds</span>
+    <span class="n">yerr</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span> <span class="o">-</span> <span class="n">yy</span><span class="p">)</span>  <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)]</span>
+    <span class="n">par</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span> <span class="n">yerr</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">erro_x2</span> <span class="o">=</span> <span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">erro_x1</span> <span class="o">=</span> <span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">erro_x0</span> <span class="o">=</span> <span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">yerrUpper</span> <span class="o">=</span> <span class="p">[(</span><span class="n">xx</span><span class="o">*</span><span class="n">slope</span><span class="o">+</span><span class="n">intercept</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">erro_x2</span><span class="o">*</span><span class="n">xx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">erro_x1</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">erro_x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)]</span>
+    <span class="n">yerrLower</span> <span class="o">=</span> <span class="p">[(</span><span class="n">xx</span><span class="o">*</span><span class="n">slope</span><span class="o">+</span><span class="n">intercept</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">erro_x2</span><span class="o">*</span><span class="n">xx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">erro_x1</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">erro_x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)]</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">erro_x2</span><span class="p">,</span> <span class="n">erro_x1</span><span class="p">,</span> <span class="n">erro_x0</span><span class="p">)</span>
+
+    <span class="c1">#     ax.plot([10**xx for xx in xd],[10**yy for yy in yerrLower], &#39;m&#39;)</span>
+    <span class="c1">#     ax.plot([10**xx for xx in xd],[10**yy for yy in yerrUpper], &#39;m&#39;)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">)</span>
+
+    <span class="n">yline</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="o">*</span><span class="n">xl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">,</span><span class="n">xl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">]</span>
+    <span class="c1">#yline2 = [xl[0] + intercept,slope*xl[1] + intercept]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="o">**</span><span class="n">xx</span> <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">],[</span><span class="mi">10</span><span class="o">**</span><span class="n">yy</span> <span class="k">for</span> <span class="n">yy</span> <span class="ow">in</span> <span class="n">yline</span><span class="p">],</span> <span class="s1">&#39;--m&#39;</span><span class="p">)</span>
+    <span class="c1">#ax.plot([10**xx for xx in xl],[10**yy for yy in yline2], &#39;--m&#39;)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">660</span><span class="p">,</span> <span class="s2">&quot;Slope=1&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>\
+            <span class="n">family</span> <span class="o">=</span> <span class="s2">&quot;fantasy&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;italic&quot;</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="s2">&quot;light&quot;</span><span class="p">,</span>\
+            <span class="p">)</span><span class="c1">#bbox = dict(facecolor = &quot;r&quot;, alpha = 0.2)</span>
+    <span class="k">return</span> <span class="n">slope</span><span class="p">,</span><span class="n">ax</span>
+</pre></div>
+</td></tr></table></div>
+<img alt="../_images/loglogplot.png" src="../_images/loglogplot.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Tools/reStructuredText.html" class="btn btn-neutral float-right" title="1. reStructuredText" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="py.html" class="btn btn-neutral float-left" title="1. demo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
