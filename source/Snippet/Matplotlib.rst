@@ -67,68 +67,141 @@ loglogplot
 Scientific style plot
 ------------------------
 
-
 .. code-block:: python
     :linenos:
-    
-        import numpy as np
-        import matplotlib.pyplot as plt
-        import pandas as pd
-        import matplotlib.ticker as mtick
-        from mpltools import annotation
 
-        plt.style.use("science")
-        fig = plt.figure(figsize=(3.5, 2.625),dpi=600)
-        ax = fig.add_subplot(1,1,1)
+	import numpy as np
+	import matplotlib.pyplot as plt
+	import pandas as pd
+	import matplotlib.ticker as mtick
+	from mpltools import annotation
 
-        ax.set_xlim((-0.6,0.6))
-        ax.set_ylim((-0.1,0.1))
-        ax.plot([-0.6,0.6],[0,0], linewidth=0.8, color='black' )
-        ax.plot([0,0],[-0.1,0.1], linewidth=0.8, color='black' )
-        #ax.scatter(x_CA,y_FI,s=1,marker='o')
-        ax.plot(x_FI,y_CA, linewidth=0,ms=2,
-                marker='o', markerfacecolor='w',markeredgecolor='k',markeredgewidth=0.5,zorder=30)
+	plt.style.use("science")
+	fig = plt.figure(figsize=(3.5, 2.625),dpi=600)
+	ax = fig.add_subplot(1,1,1)
 
-        ax.set_xlabel("FI")
-        ax.set_ylabel("CA")
+	ax.set_xlim((-0.6,0.6))
+	ax.set_ylim((-0.1,0.1))
+	ax.plot([-0.6,0.6],[0,0], linewidth=0.8, color='black' )
+	ax.plot([0,0],[-0.1,0.1], linewidth=0.8, color='black' )
+	#ax.scatter(x_CA,y_FI,s=1,marker='o')
+	ax.plot(x_FI,y_CA, linewidth=0,ms=2,
+			marker='o', markerfacecolor='w',markeredgecolor='k',markeredgewidth=0.5,zorder=30)
 
-        plt.annotate('9', xy=(-0.20, 0.03), xytext=(-0.30, 0.05),
-                        arrowprops=dict(facecolor='black',arrowstyle="->"))
-        plt.annotate('10', xy=(0.23, -0.08), xytext=(0.051, -0.09),
-                        arrowprops=dict(facecolor='black',arrowstyle="->"))
-        plt.annotate('18', xy=(0.548, -0.029), xytext=(0.41,-0.015),
-                        arrowprops=dict(facecolor='black',arrowstyle="->"))
-        # plt.annotate('23', xy=(0.099, 0.006), xytext=(0.2,0.02),
-        #              arrowprops=dict(facecolor='black',arrowstyle="->"))
-        plt.annotate('5', xy=(0.27, -0.06), xytext=(0.39,-0.07),
-                        arrowprops=dict(facecolor='black',arrowstyle="->"))
+	ax.set_xlabel("FI")
+	ax.set_ylabel("CA")
+
+	plt.annotate('9', xy=(-0.20, 0.03), xytext=(-0.30, 0.05),
+					arrowprops=dict(facecolor='black',arrowstyle="->"))
+	plt.annotate('10', xy=(0.23, -0.08), xytext=(0.051, -0.09),
+					arrowprops=dict(facecolor='black',arrowstyle="->"))
+	plt.annotate('18', xy=(0.548, -0.029), xytext=(0.41,-0.015),
+					arrowprops=dict(facecolor='black',arrowstyle="->"))
+	# plt.annotate('23', xy=(0.099, 0.006), xytext=(0.2,0.02),
+	#              arrowprops=dict(facecolor='black',arrowstyle="->"))
+	plt.annotate('5', xy=(0.27, -0.06), xytext=(0.39,-0.07),
+					arrowprops=dict(facecolor='black',arrowstyle="->"))
 
 
-        ax.grid(linestyle="--", linewidth=0.2, color='.25', zorder=50,alpha=0.5)
-        vals = ax.get_yticks()
-        ax.set_yticklabels(['{:3.0f}\%'.format(x*100) for x in vals])
-        vals = ax.get_xticks()
-        ax.set_xticklabels(['{:3.0f}\%'.format(x*100) for x in vals])
+	ax.grid(linestyle="--", linewidth=0.2, color='.25', zorder=50,alpha=0.5)
+	vals = ax.get_yticks()
+	ax.set_yticklabels(['{:3.0f}\%'.format(x*100) for x in vals])
+	vals = ax.get_xticks()
+	ax.set_xticklabels(['{:3.0f}\%'.format(x*100) for x in vals])
 
-        par = np.polyfit(x_FI, y_CA, 1,full=True)
-        slope=par[0][0]
-        intercept=par[0][1]
-        xl = [-0.5, max(x_FI)]
-        yl = [slope*xx + intercept  for xx in xl]
-        ax.plot([xx for xx in xl],[yy for yy in yl], '--k',zorder=20)
+	par = np.polyfit(x_FI, y_CA, 1,full=True)
+	slope=par[0][0]
+	intercept=par[0][1]
+	xl = [-0.5, max(x_FI)]
+	yl = [slope*xx + intercept  for xx in xl]
+	ax.plot([xx for xx in xl],[yy for yy in yl], '--k',zorder=20)
 
-        variance = np.var(y_CA)#方差
-        residuals = np.var([(slope*xx + intercept - yy)  for xx,yy in zip(x_FI,y_CA)])#残差
-        Rsqr = np.round(1-residuals/variance, decimals=2)
-        ax.text(0.35,0.08,'%s=%0.2f\nSlope=%0.2f'%("${R^2}$",Rsqr,slope.round(2)), fontsize=6)
+	variance = np.var(y_CA)#方差
+	residuals = np.var([(slope*xx + intercept - yy)  for xx,yy in zip(x_FI,y_CA)])#残差
+	Rsqr = np.round(1-residuals/variance, decimals=2)
+	ax.text(0.35,0.08,'%s=%0.2f\nSlope=%0.2f'%("${R^2}$",Rsqr,slope.round(2)), fontsize=6)
 
-        # annotation.slope_marker((-0.4, 0.03), -0.11,
-        #                         text_kwargs={'color': 'k'},
-        #                         poly_kwargs={'facecolor': "k"})
+	# annotation.slope_marker((-0.4, 0.03), -0.11,
+	#                         text_kwargs={'color': 'k'},
+	#                         poly_kwargs={'facecolor': "k"})
 
-        # \sf
-        plt.show()
-        fig.savefig("Four-quadrant.png",dpi=600)
+	# \sf
+	plt.show()
+	fig.savefig("Four-quadrant.png",dpi=600)
 
 .. image:: /img/CA_FI-rat0_2.0.png
 
+Scientific style
+------------------------
+
+
+.. code-block:: python
+    :linenos:
+
+	# I:\Home\.matplotlib\stylelib\science.mplstyle
+	# Matplotlib style for general scientific plots
+
+	# Set color cycle
+	axes.prop_cycle : cycler('color', ['0C5DA5', '00B945', 'FF9500', 'FF2C00', '845B97', '474747', '9e9e9e'])
+
+	# Set default figure size
+	figure.figsize : 3.5, 2.625
+
+	# Set x axis
+	xtick.direction : in
+	xtick.major.size : 3
+	xtick.major.width : 0.5
+	xtick.minor.size : 1.5
+	xtick.minor.width : 0.5
+	xtick.minor.visible :   True
+	xtick.top : True
+
+	# Set y axis
+	ytick.direction : in
+	ytick.major.size : 3
+	ytick.major.width : 0.5
+	ytick.minor.size : 1.5
+	ytick.minor.width : 0.5
+	ytick.minor.visible :   True
+	ytick.right : True
+
+	# Set line widths
+	axes.linewidth : 0.5
+	grid.linewidth : 0.5
+	lines.linewidth : 1.
+
+	# Remove legend frame
+	legend.frameon : False
+
+	# Always save as 'tight'
+	savefig.bbox : tight
+	savefig.pad_inches : 0.05
+
+	# Use serif fonts
+	font.serif : Times New Roman
+	font.family : serif
+
+	# Use LaTeX for math formatting
+	text.usetex : True
+	text.latex.preamble : \usepackage{amsmath} \usepackage[T1]{fontenc}
+
+
+IEEE style
+------------------------
+
+.. code-block:: python
+    :linenos:
+
+	# Matplotlib style for IEEE plots
+	# This style should work for most two-column journals
+
+	# Set color cycle
+	# Set line style as well for black and white graphs
+	axes.prop_cycle : (cycler('color', ['k', 'r', 'b', 'g']) + cycler('ls', ['-', '--', ':', '-.']))
+
+	# Set default figure size
+	figure.figsize : 3.3, 2.5
+	figure.dpi : 600
+
+	# Font sizes
+	font.size : 8
