@@ -283,3 +283,5 @@ HDI-LDI
 
 	ax1.legend(handles=[A,B],prop=font1,frameon=False,loc="lower left")
 	fig.savefig("HDI-LDI-plot_8_31.png",dpi=1000)
+
+.. image:: /img/HDI-LDI-plot_8_31.png
