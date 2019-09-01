@@ -40,7 +40,6 @@ This is an open source book written for myself to review the tools for Python.
 .. toctree::
     :maxdepth: 3
     :caption: Discussion:
-    :numbered:
 
     Discussion/bian
     Discussion/article
