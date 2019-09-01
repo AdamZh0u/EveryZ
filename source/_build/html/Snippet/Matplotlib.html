@@ -96,6 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#loglogplot">2.1. loglogplot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scientific-style-plot">2.2. Scientific style plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scientific-style">2.3. Scientific style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ieee-style">2.4. IEEE style</a></li>
 </ul>
 </li>
 </ul>
@@ -171,234 +172,10 @@
 <h1>2. Matplotlib<a class="headerlink" href="#matplotlib" title="永久链接至标题">¶</a></h1>
 <div class="section" id="loglogplot">
 <h2>2.1. loglogplot<a class="headerlink" href="#loglogplot" title="永久链接至标题">¶</a></h2>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loglogplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">labelx</span><span class="o">=</span><span class="s2">&quot;LogPop&quot;</span><span class="p">,</span><span class="n">labely</span><span class="o">=</span><span class="s2">&quot;LogArea&quot;</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
-    <span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-    <span class="c1"># make the scatter plot</span>
-    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-    <span class="c1">#ax.set_ylim(1e1,10**3.4)</span>
-    <span class="c1">#ax.set_xlim(10**(-0.1),10**(2.5))</span>
-    <span class="c1"># determine best fit line</span>
-    <span class="n">par</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span> <span class="n">yd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">full</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-    <span class="n">slope</span><span class="o">=</span><span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">intercept</span><span class="o">=</span><span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="n">xl</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">xd</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">xd</span><span class="p">)]</span>
-    <span class="n">yl</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span>  <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="o">**</span><span class="n">xx</span> <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">],[</span><span class="mi">10</span><span class="o">**</span><span class="n">yy</span> <span class="k">for</span> <span class="n">yy</span> <span class="ow">in</span> <span class="n">yl</span><span class="p">],</span> <span class="s1">&#39;-m&#39;</span><span class="p">)</span>
-
-    <span class="c1"># coefficient of determination, plot text</span>
-    <span class="n">variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">yd</span><span class="p">)</span><span class="c1">#方差</span>
-    <span class="n">residuals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">([(</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span> <span class="o">-</span> <span class="n">yy</span><span class="p">)</span>  <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)])</span><span class="c1">#残差</span>
-
-    <span class="n">Rsqr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">residuals</span><span class="o">/</span><span class="n">variance</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="c1">#ax.text(0.3*max(x),1.2*max(y),r&#39;$R^2 ={0.2f} \n Slope={0.2f}&#39;.format{Rsqr,slope.round(2)}, fontsize=15)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="mf">1.1</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> =</span><span class="si">%0.2f</span><span class="se">\n</span><span class="s1">Slope=</span><span class="si">%0.2f</span><span class="se">\n</span><span class="s1">Intercept=</span><span class="si">%0.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="s2">&quot;$\sf{R^2}$&quot;</span><span class="p">,</span><span class="n">Rsqr</span><span class="p">,</span><span class="n">slope</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">intercept</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">variance</span><span class="p">,</span><span class="n">residuals</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">labelx</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">labely</span><span class="p">)</span>
-
-    <span class="c1"># error bounds</span>
-    <span class="n">yerr</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span> <span class="o">-</span> <span class="n">yy</span><span class="p">)</span>  <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)]</span>
-    <span class="n">par</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span> <span class="n">yerr</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">erro_x2</span> <span class="o">=</span> <span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">erro_x1</span> <span class="o">=</span> <span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">erro_x0</span> <span class="o">=</span> <span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
-    <span class="n">yerrUpper</span> <span class="o">=</span> <span class="p">[(</span><span class="n">xx</span><span class="o">*</span><span class="n">slope</span><span class="o">+</span><span class="n">intercept</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">erro_x2</span><span class="o">*</span><span class="n">xx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">erro_x1</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">erro_x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)]</span>
-    <span class="n">yerrLower</span> <span class="o">=</span> <span class="p">[(</span><span class="n">xx</span><span class="o">*</span><span class="n">slope</span><span class="o">+</span><span class="n">intercept</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">erro_x2</span><span class="o">*</span><span class="n">xx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">erro_x1</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">erro_x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="p">)]</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">erro_x2</span><span class="p">,</span> <span class="n">erro_x1</span><span class="p">,</span> <span class="n">erro_x0</span><span class="p">)</span>
-
-    <span class="c1">#     ax.plot([10**xx for xx in xd],[10**yy for yy in yerrLower], &#39;m&#39;)</span>
-    <span class="c1">#     ax.plot([10**xx for xx in xd],[10**yy for yy in yerrUpper], &#39;m&#39;)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">)</span>
-
-    <span class="n">yline</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="o">*</span><span class="n">xl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">,</span><span class="n">xl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">]</span>
-    <span class="c1">#yline2 = [xl[0] + intercept,slope*xl[1] + intercept]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="o">**</span><span class="n">xx</span> <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">],[</span><span class="mi">10</span><span class="o">**</span><span class="n">yy</span> <span class="k">for</span> <span class="n">yy</span> <span class="ow">in</span> <span class="n">yline</span><span class="p">],</span> <span class="s1">&#39;--m&#39;</span><span class="p">)</span>
-    <span class="c1">#ax.plot([10**xx for xx in xl],[10**yy for yy in yline2], &#39;--m&#39;)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">660</span><span class="p">,</span> <span class="s2">&quot;Slope=1&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>\
-            <span class="n">family</span> <span class="o">=</span> <span class="s2">&quot;fantasy&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;italic&quot;</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="s2">&quot;light&quot;</span><span class="p">,</span>\
-            <span class="p">)</span><span class="c1">#bbox = dict(facecolor = &quot;r&quot;, alpha = 0.2)</span>
-    <span class="k">return</span> <span class="n">slope</span><span class="p">,</span><span class="n">ax</span>
-</pre></div>
-</td></tr></table></div>
 <img alt="../_images/loglogplot.png" src="../_images/loglogplot.png" />
 </div>
 <div class="section" id="scientific-style-plot">
 <h2>2.2. Scientific style plot<a class="headerlink" href="#scientific-style-plot" title="永久链接至标题">¶</a></h2>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="kn">as</span> <span class="nn">mtick</span>
-    <span class="kn">from</span> <span class="nn">mpltools</span> <span class="kn">import</span> <span class="n">annotation</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;science&quot;</span><span class="p">)</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.625</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span> <span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span> <span class="p">)</span>
-    <span class="c1">#ax.scatter(x_CA,y_FI,s=1,marker=&#39;o&#39;)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_FI</span><span class="p">,</span><span class="n">y_CA</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-                    <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">markeredgewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;FI&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;CA&quot;</span><span class="p">)</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span>
-                                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.23</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.051</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.09</span><span class="p">),</span>
-                                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;18&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.548</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.029</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.41</span><span class="p">,</span><span class="o">-</span><span class="mf">0.015</span><span class="p">),</span>
-                                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-    <span class="c1"># plt.annotate(&#39;23&#39;, xy=(0.099, 0.006), xytext=(0.2,0.02),</span>
-    <span class="c1">#              arrowprops=dict(facecolor=&#39;black&#39;,arrowstyle=&quot;-&gt;&quot;))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.27</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.39</span><span class="p">,</span><span class="o">-</span><span class="mf">0.07</span><span class="p">),</span>
-                                    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
-
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;.25&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">vals</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;{:3.0f}\%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">])</span>
-    <span class="n">vals</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xticks</span><span class="p">()</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;{:3.0f}\%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">])</span>
-
-    <span class="n">par</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x_FI</span><span class="p">,</span> <span class="n">y_CA</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">full</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">slope</span><span class="o">=</span><span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">intercept</span><span class="o">=</span><span class="n">par</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">xl</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_FI</span><span class="p">)]</span>
-    <span class="n">yl</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span>  <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">xx</span> <span class="k">for</span> <span class="n">xx</span> <span class="ow">in</span> <span class="n">xl</span><span class="p">],[</span><span class="n">yy</span> <span class="k">for</span> <span class="n">yy</span> <span class="ow">in</span> <span class="n">yl</span><span class="p">],</span> <span class="s1">&#39;--k&#39;</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-
-    <span class="n">variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">y_CA</span><span class="p">)</span><span class="c1">#方差</span>
-    <span class="n">residuals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">([(</span><span class="n">slope</span><span class="o">*</span><span class="n">xx</span> <span class="o">+</span> <span class="n">intercept</span> <span class="o">-</span> <span class="n">yy</span><span class="p">)</span>  <span class="k">for</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_FI</span><span class="p">,</span><span class="n">y_CA</span><span class="p">)])</span><span class="c1">#残差</span>
-    <span class="n">Rsqr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">residuals</span><span class="o">/</span><span class="n">variance</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.35</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%0.2f</span><span class="se">\n</span><span class="s1">Slope=</span><span class="si">%0.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="s2">&quot;${R^2}$&quot;</span><span class="p">,</span><span class="n">Rsqr</span><span class="p">,</span><span class="n">slope</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-
-    <span class="c1"># annotation.slope_marker((-0.4, 0.03), -0.11,</span>
-    <span class="c1">#                         text_kwargs={&#39;color&#39;: &#39;k&#39;},</span>
-    <span class="c1">#                         poly_kwargs={&#39;facecolor&#39;: &quot;k&quot;})</span>
-
-    <span class="c1"># \sf</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Four-quadrant.png&quot;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></div>
 <img alt="../_images/CA_FI-rat0_2.0.png" src="../_images/CA_FI-rat0_2.0.png" />
 </div>
 <div class="section" id="scientific-style">
@@ -494,6 +271,36 @@
     <span class="c1"># Use LaTeX for math formatting</span>
     <span class="n">text</span><span class="o">.</span><span class="n">usetex</span> <span class="p">:</span> <span class="bp">True</span>
     <span class="n">text</span><span class="o">.</span><span class="n">latex</span><span class="o">.</span><span class="n">preamble</span> <span class="p">:</span> \<span class="n">usepackage</span><span class="p">{</span><span class="n">amsmath</span><span class="p">}</span> \<span class="n">usepackage</span><span class="p">[</span><span class="n">T1</span><span class="p">]{</span><span class="n">fontenc</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="ieee-style">
+<h2>2.4. IEEE style<a class="headerlink" href="#ieee-style" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="c1"># Matplotlib style for IEEE plots</span>
+    <span class="c1"># This style should work for most two-column journals</span>
+
+    <span class="c1"># Set color cycle</span>
+    <span class="c1"># Set line style as well for black and white graphs</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">prop_cycle</span> <span class="p">:</span> <span class="p">(</span><span class="n">cycler</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="n">cycler</span><span class="p">(</span><span class="s1">&#39;ls&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">]))</span>
+
+    <span class="c1"># Set default figure size</span>
+    <span class="n">figure</span><span class="o">.</span><span class="n">figsize</span> <span class="p">:</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mf">2.5</span>
+    <span class="n">figure</span><span class="o">.</span><span class="n">dpi</span> <span class="p">:</span> <span class="mi">600</span>
+
+    <span class="c1"># Font sizes</span>
+    <span class="n">font</span><span class="o">.</span><span class="n">size</span> <span class="p">:</span> <span class="mi">8</span>
 </pre></div>
 </td></tr></table></div>
 </div>

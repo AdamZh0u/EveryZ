@@ -5,7 +5,7 @@ loglogplot
 -----------------
 
 
-.. code-block:: python
+.. code:: python
     :linenos:
 
     def loglogplot(x,y,labelx="LogPop",labely="LogArea"):
@@ -67,7 +67,7 @@ loglogplot
 Scientific style plot
 ------------------------
 
-.. code-block:: python
+.. code:: python
     :linenos:
 
 	import numpy as np
@@ -205,3 +205,81 @@ IEEE style
 
 	# Font sizes
 	font.size : 8
+
+HDI-LDI
+------------------------
+
+.. code:: python
+    :linenos:
+
+	import matplotlib.pyplot as plt
+	import numpy as np
+	import scipy.stats as stats
+	import pandas as pd
+	from matplotlib.font_manager import FontProperties
+	from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter
+
+	fig, ax1 = plt.subplots(figsize = (3.5,2.625),dpi=200)
+	#https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.axes.Axes.tick_params.html#matplotlib.axes.Axes.tick_params
+	B,=ax1.plot(i, x,"^k",ls="",lw=1,ms=2,label="HDI")
+
+	#ax1.minorticks_on()
+	ax1.tick_params("x",which = "major",direction = "in" ,
+					length=3,width = 0.5,labelrotation=90,labelsize=6)
+	ax1.xaxis.set_major_locator(ticker.MultipleLocator(1))
+	# ax1.tick_params("x",which = "minor",direction = "in",
+	#                 length=3,width = 0.5, bottom = True, top=True,
+	#                 labelbottom=True)
+	xticks = [i for i in range(1,37)]
+	ax1.set_xlim(0,37)
+	ax1.set_ylim(0.3,1.3)
+	ax1.set_xticklabels(a,size=6)
+
+
+	# ax1 y
+	ax1.yaxis.set_minor_locator(AutoMinorLocator(4))
+	ax1.tick_params("y",which = "major",direction = "in",
+				length=3,width = 0.5,right=True ,labelsize=6)
+	# def minor_tick(x, pos):
+	#     if not x % 1.0:
+	#         return ""
+	#     return "%.2f" % x
+
+	# ax1.yaxis.set_minor_formatter(FuncFormatter(minor_tick))
+	ax1.tick_params("y",which = "minor",direction = "in",
+				length=1.5,width = 0.5,right=True ,labelsize=6)
+	labels = ax1.get_xticklabels() + ax1.get_yticklabels()
+	[label.set_fontname('Times New Roman') for label in labels]
+
+
+	## ax2
+	ax2 = ax1.twinx()
+	A,=ax2.plot(i,y,"d--k",lw=1,ms=2,label="LDI")
+	ax2.set_ylim(0.3,1.3)
+	ax2.yaxis.set_minor_locator(AutoMinorLocator(4))
+	ax2.tick_params("y",which = "major",direction = "in",
+				length=3,width = 0.5,right=True ,labelsize=6)
+	labels = ax2.get_yticklabels()
+	[label.set_fontname('Times New Roman') for label in labels]
+	# def minor_tick(x, pos):
+	#     if not x % 1.0:
+	#         return ""
+	#     return "%.2f" % x
+
+	# ax1.yaxis.set_minor_formatter(FuncFormatter(minor_tick))
+	ax2.tick_params("y",which = "minor",direction = "in",
+				length=1.5,width = 0.5,right=True ,labelsize=5)
+
+
+	ax1.grid(which="major",axis="y",lw=0.4)
+
+	font1 = {'family' : 'Times New Roman',
+	'weight' : 'normal',
+	'size'   : 6}
+
+	ax1.set_ylabel("HDI",font1,size=8)
+	ax2.set_ylabel("LDI",font1,size=8)
+	ax1.set_xlabel("Hotspots",font1,size=8)
+
+	ax1.legend(handles=[A,B],prop=font1,frameon=False,loc="lower left")
+	fig.savefig("HDI-LDI-plot_8_31.png",dpi=1000)
