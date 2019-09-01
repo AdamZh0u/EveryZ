@@ -67,7 +67,7 @@ loglogplot
 Scientific style plot
 ------------------------
 
-.. code:: python
+.. code-block:: python
     :linenos:
 
 	import numpy as np
@@ -209,7 +209,7 @@ IEEE style
 HDI-LDI
 ------------------------
 
-.. code:: python
+.. code-block:: python
     :linenos:
 
 	import matplotlib.pyplot as plt
