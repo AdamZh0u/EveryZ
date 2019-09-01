@@ -5,7 +5,7 @@ loglogplot
 -----------------
 
 
-.. code:: python
+.. code-block:: python
     :linenos:
 
     def loglogplot(x,y,labelx="LogPop",labely="LogArea"):
