@@ -285,3 +285,142 @@ HDI-LDI
 	fig.savefig("HDI-LDI-plot_8_31.png",dpi=1000)
 
 .. image:: /img/HDI-LDI-plot_8_31.png
+
+
+Proportion and change rate
+-----------------------------
+
+.. code-block:: python
+    :linenos:
+
+	import pandas as pd
+	import numpy as np
+	import matplotlib.pyplot as plt
+	from matplotlib import gridspec
+	from matplotlib.ticker import AutoMinorLocator, MultipleLocator, FuncFormatter,MaxNLocator
+
+	df1_gp=pd.DataFrame()
+	df2=pd.DataFrame()
+	su={}
+	for i in range(36):
+		df1 = pd.read_excel("path_to_file.xlsx",sheet_name="ID_{}".format(i)).set_index("ID")
+		S1 = df1.loc[6,:].rename(i)# nature
+		df2 = df2.append(S1)
+		S = (df1.loc[6,:]/df1.loc[6,1992]-1).rename(i)
+		df1_gp=df1_gp.append(S)
+		S2=sum(df1.loc[[5,6,7],1992])
+		su[i] =S2
+
+	df2_num=df2
+	for i in range(36):
+		df2_num.loc[i,1992]=df2_num.loc[i,1992]/su[i]
+
+	df2_num=df2_num.sort_values(by=1992)
+	index = list(df2_num.index)
+	# df1_reindex=df1_gp.reindex(index)
+	# df1_reindex.describe()
+
+	def ax_y_settings(ax, var_name, x_min, x_max):
+		ax.set_xlim(x_min,x_max)
+		#ax.set_ylim(y_min,y_max)
+		ax.set_yticks([])
+		#ax.spines['left'].set_visible(False)
+		ax.spines['right'].set_visible(False)
+		ax.spines['top'].set_visible(False)
+		#ax.spines['bottom'].set_visible(False)
+		#ax.spines['bottom'].set_edgecolor(='#444444')
+		ax.spines['bottom'].set_linewidth(0)
+		ax.spines['left'].set_linewidth(0.3)
+		ax.text(0.01, 0.3, var_name, font1, transform = ax.transAxes)
+		return None
+
+	fig = plt.figure(figsize=(3.267,4.5),dpi=1000)
+
+	number_gp=36
+	gs0 = gridspec.GridSpec(nrows=1,
+						ncols=2,
+						figure=fig,
+						width_ratios= [1,3],
+						wspace=0, hspace=0
+						)
+	gs0.tight_layout(fig,pad=0)
+	#height_ratios= [1]*number_gp
+
+	ax = [None]*(number_gp + 1)## important
+
+	font1 = {'family' : 'Times New Roman','weight' : 'normal','size'   : 6}
+	cmap1 = plt.get_cmap("summer")
+
+	gs01=gs0[1].subgridspec(number_gp,1)
+	#https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/gridspec_nested.html#sphx-glr-gallery-subplots-axes-and-figures-gridspec-nested-py
+
+	##ax0
+	ax[0] = fig.add_subplot(gs0[0])
+	ax[0].spines['right'].set_visible(False)
+	ax[0].spines['left'].set_visible(False)
+	ax[0].spines['top'].set_visible(False)
+	ax[0].spines['bottom'].set_linewidth(0.3)
+
+	perc= df2_num.iloc[:,0]
+	features = [i+1 for i in range(number_gp)]
+
+	ax[0].barh(features, -1*perc, color=cmap1(0.1), height=0.4)
+
+	ax[0].invert_yaxis()
+	ax[0].set_yticks([])
+	ax[0].set_ylim([36.5,0.5])
+
+	ax[0].xaxis.set_major_locator(MultipleLocator(0.5))
+	b = ["","100%","50%","-----"]
+	ax[0].set_xticklabels(b,font1)
+	ax[0].tick_params("x",which = "major",direction = "in",
+							length=1.5,width = 0.5 ,labelsize=6,rotation=90)
+	ax[0].set_title("Proportion",font1)
+
+
+	## ax36
+	for i in range(number_gp):
+		ax[i+1] = fig.add_subplot(gs01[i,0])
+		ax_y_settings(ax[i+1],index[i]+1,-0.6,0.16)
+
+		rc = ax[i+1].scatter(df1_reindex.iloc[i,:],[0]*24,
+					c=[i for i in range(24)],cmap=cmap1,
+					marker = "o",s=4,
+					lw=0.1,edgecolors="k",
+					zorder=20)
+		#ax[i].stackplot(df1_gp.columns,df1_gp.loc[i,:])
+		#sns.kdeplot(data=df1_gp.loc[i,:],ax=ax[i], shade=True, color="blue",  bw=300, legend=False)
+		#ax[i].plot([-0.08,0.05],[0,0],"--k",lw=0.1)
+		ax[i+1].axhline(0,0.125,1,ls="--",c="k",lw=0.2,zorder=10)
+		ax[i+1].plot([0,0],[-1,1],"-k",lw=0.2,zorder=10)
+		if i < (number_gp - 1):#1-35
+			ax[i+1].set_xticks([])
+			if i == 0:
+				ax[i+1].set_title("Change rate compared to 1992 ",font1)
+		else:#36
+			ax[i+1].spines['bottom'].set_linewidth(0.3)
+			ax[i+1].spines['bottom'].set_edgecolor('k')
+
+			a1 = [-0.08,-0.06,-0.04,-0.02,0,0.02,0.04]
+			a = ["",""]+['{:3.0f}%'.format(x*100) for x in a1]
+			ax[i+1].set_xticklabels(a,font1,size=6,)
+			ax[i+1].xaxis.set_major_locator(MultipleLocator(0.02))
+			ax[i+1].tick_params("x",which = "major",direction = "in",
+							length=1.5,width = 0.5 ,labelsize=6,rotation=90)
+		#ax[i].plot([1992,2015],[0,0],"--k")
+
+	# colorbar
+
+	cbar = fig.colorbar(rc,ax=[ax[i] for i in range(1,37)],shrink=0.3,
+					drawedges=False)
+	cbar.ax.get_yaxis().set_major_locator(MultipleLocator(23))
+	#cbar.ax.get_yaxis().set_ticklabels(["","1992","2015",""])
+	cbar.ax.set_yticklabels(["","1992","2015",""],font1,rotation=270)
+	cbar.ax.set_ylabel('Year', font1,rotation=270)
+	cbar.ax.tick_params("y",which = "major",direction = "in",
+							length=0,width = 0.5 ,labelsize=6,rotation=270)
+
+	fig.savefig("demo1.png",bbox_inches="tight",dpi=1200,pad_inches=0)
+
+.. image:: /img/Nature_change-9.2.png
+
