@@ -37,6 +37,15 @@ This is an open source book written for myself to review the tools for Python.
     Tools/reStructuredText
     Tools/Git
 
+.. toctree::
+    :maxdepth: 3
+    :caption: Discussion:
+
+    Discussion/bian
+    Discussion/article
+
+
+
 
 Indices and tables
 ==================
