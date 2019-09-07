@@ -1,5 +1,9 @@
-PRINCIPLES  OF  RESEARCH
+Articles
 --------------------------
+
+PRINCIPLES  OF  RESEARCH
+==========================
+
 By Albert Einstein
 
 From: Ideas and Opinions by Albert Einstein, edited by Carl Seelig, New translations and revisions by Sonja Barmann,
@@ -136,7 +140,7 @@ Ansprachen in der Deutschen Physikalischen Gesellschaft）上。1932年爱因斯
 
 
 辩论--说服的艺术
------------------
+================
 
 争论变成了争吵，论证变成了论断
 不以同情之理解，不以包容之精神，不以协商之理性。
