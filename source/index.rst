@@ -3,23 +3,9 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-Welcome to EveryPy's documentation!
+Welcome to EveryThing's documentation!
 ==================================================================
-This is an open source book written for myself to review the tools for Python.
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Basic:
-    :numbered:
-
-    Basic/py
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Advanced:
-    :numbered:
-
-    Advanced/py
+This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 2
@@ -38,11 +24,25 @@ This is an open source book written for myself to review the tools for Python.
     Tools/Git
 
 .. toctree::
+    :maxdepth: 2
+    :caption: Advanced:
+    :numbered:
+
+    Advanced/py
+
+
+.. toctree::
     :maxdepth: 3
     :caption: Discussion:
 
     Discussion/bian
     Discussion/article
+
+.. toctree::
+    :maxdepth: 3
+    :caption: Daily:
+
+    Daily/Daily
 
 
 
