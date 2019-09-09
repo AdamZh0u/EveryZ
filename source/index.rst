@@ -43,6 +43,8 @@ This is an open source book written for myself to review my tools.
     :caption: Daily:
 
     Daily/Daily
+    Daily/Life
+
 
 
 
