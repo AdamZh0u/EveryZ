@@ -8,11 +8,14 @@ Linkoping Uni
 ~~~~~~~~~~~~~~~~
 * How to apply
 https://liu.se/en/article/how-to-apply
+
 * Programm
 https://liu.se/en/education/program/f7mcd
+
 * scholarship
 * tutor
 https://keuschnigg.org/
+
 * Cost
 
 Yale
@@ -29,7 +32,9 @@ UCL
 ~~~~~~~~~
 * How to apply
 search https://www.ucl.ac.uk/adminsys/search/
+
 https://www.ucl.ac.uk/prospective-students/international/china
+
 login https://evision.ucl.ac.uk/urd/sits.urd/run/siw_lgn
 
 * Programm
