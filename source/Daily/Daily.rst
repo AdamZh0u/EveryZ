@@ -112,3 +112,8 @@ http://blog.sciencenet.cn/blog-562867-1085842.html
 * latex \begin{figure*}[!htb]
 https://tex.stackexchange.com/questions/8652/what-does-t-and-ht-mean
 https://tex.stackexchange.com/questions/167186/figure-environment-skips-page-while-using-two-column-document
+
+12.9.2019
+------------
+* 阻止网页被检索
+https://support.google.com/webmasters/answer/6062602?hl=zh-Hans&ref_topic=4598466
