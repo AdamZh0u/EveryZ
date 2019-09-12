@@ -97,3 +97,18 @@ E:\OSGeo4W64\apps\Python37\lib\site-packages;E:\OSGeo4W64\apps\Python37\DLLs
 
 * 马丁·威茨曼与艾伦·克鲁格
 http://www.zhishifenzi.com/depth/character/6864.html
+
+* latex section *
+不插入目录中
+
+多行注释
+ctrl+t ctrl+u
+
+* 传到arxiv
+http://blog.sciencenet.cn/blog-562867-1085842.html
+
+* latex 包管理
+
+* latex \begin{figure*}[!htb]
+https://tex.stackexchange.com/questions/8652/what-does-t-and-ht-mean
+https://tex.stackexchange.com/questions/167186/figure-environment-skips-page-while-using-two-column-document
