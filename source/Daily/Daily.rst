@@ -117,3 +117,20 @@ https://tex.stackexchange.com/questions/167186/figure-environment-skips-page-whi
 ------------
 * 阻止网页被检索
 https://support.google.com/webmasters/answer/6062602?hl=zh-Hans&ref_topic=4598466
+
+* 张彤老师  关雪峰 关庆峰
+https://blog.csdn.net/OliverLee456
+http://www.lmars.whu.edu.cn/prof_web/zhangtong/index.html
+
+* 朝鲜画家 张承业
+https://www.google.com/search?q=%E5%BC%A0%E6%89%BF%E4%B8%9A&oq=%E5%BC%A0%E6%89%BF%E4%B8%9A&aqs=chrome..69i57.450j0j4&sourceid=chrome&ie=UTF-8
+醉画仙
+“像你这样的画家，希望画上去的铁粉能粘上罐子，而上釉工人希望他们的釉料能均匀的铺散开，窑主则希望能诞生一两件杰作，
+但那些都不是我们能决定的，窑火掌握着一切。”
+
+
+14.9.2019
+----------
+* LONG YING
+https://www.beijingcitylab.com
+
