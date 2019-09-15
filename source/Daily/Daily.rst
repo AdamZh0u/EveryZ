@@ -134,3 +134,26 @@ https://www.google.com/search?q=%E5%BC%A0%E6%89%BF%E4%B8%9A&oq=%E5%BC%A0%E6%89%B
 * LONG YING
 https://www.beijingcitylab.com
 
+15.9.2019
+----------
+
+
+http://www.qhull.org/
+
+https://matplotlib.org/3.1.1/gallery/event_handling/trifinder_event_demo.html#sphx-glr-gallery-event-handling-trifinder-event-demo-py
+
+* scipy
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.Delaunay.html
+https://www.jianshu.com/p/74af7443a784
+
+* Mayavi
+https://docs.enthought.com/mayavi/mayavi/auto/examples.html
+
+* delaunay
+https://github.com/jmespadero/pyDelaunay2D
+https://docs.enthought.com/mayavi/mayavi/auto/example_delaunay_graph.html
+
+* PYTHONPATH
+
+* integrate
+https://docs.sympy.org/latest/modules/integrals/integrals.html
