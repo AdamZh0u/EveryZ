@@ -157,3 +157,9 @@ https://docs.enthought.com/mayavi/mayavi/auto/example_delaunay_graph.html
 
 * integrate
 https://docs.sympy.org/latest/modules/integrals/integrals.html
+
+* 紧凑度
+
+20.9.2019
+-------------
+https://www.nature.com/ncomms/submit/how-to-submit
