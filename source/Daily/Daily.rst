@@ -162,4 +162,5 @@ https://docs.sympy.org/latest/modules/integrals/integrals.html
 
 20.9.2019
 -------------
+* nature submit 
 https://www.nature.com/ncomms/submit/how-to-submit
