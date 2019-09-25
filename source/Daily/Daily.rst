@@ -164,3 +164,54 @@ https://docs.sympy.org/latest/modules/integrals/integrals.html
 -------------
 * nature submit 
 https://www.nature.com/ncomms/submit/how-to-submit
+
+* 建筑物层数
+
+21.9.2019
+----------
+* default LaTeX article template
+
+https://www.latextemplates.com/
+
+https://mp.weixin.qq.com/s/X73m5P8N-IAY2Dgcy7TKXQ
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+
+* numpy 矩阵方法
+
+使用矩阵乘法进行数据分析
+z = m@np.array([[1,0,0],[0,1,0],
+                [v[i] for i in [m[i][0] for i in range(len(m))]],[v[i] for i in [m[i][0] for i in range(len(m))]][1],0])
+
+24.9.2019
+----------
+* 市区，建成区，市辖区，城市群
+* 生成边界 边界转shp
+
+Statistical analysis on the evolution of OpenStreetMap road networks in Beijing
+
+A Google-like Model of Road Network Dynamics and its Application to Regulation and Control
+
+Journal of Open Source Software
+
+25.9.2019
+----------
+* 拉马努金
+https://en.wikipedia.org/wiki/Srinivasa_Ramanujan#Further_works_of_Ramanujan's_mathematics
+RAMANUJAN JOURNAL
+https://www.letpub.com.cn/index.php?journalid=7096&page=journalapp&view=detail
+Ramanujan Machine
+https://arxiv.org/abs/1907.00205
+Ramanujan's Place in the World of Mathematics
+https://book.douban.com/subject/19800011/
+
+* 火山图
+* Θ函数
+* 永远别写for循环
+https://blog.csdn.net/wonengguwozai/article/details/78295484
+
+* Nebula
+世界上唯一能够容纳千亿个顶点和万亿条边，并提供毫秒级查询延时的图数据库解决方案
+
+* 栅格计算器的神奇

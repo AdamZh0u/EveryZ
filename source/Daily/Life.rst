@@ -18,6 +18,9 @@ https://keuschnigg.org/
 
 * Cost
 
+* ddl
+1.15
+2.15
 Yale
 ~~~~~~~~~~~~~~
 * How to apply
@@ -55,6 +58,10 @@ UCSB
 ~~~~~~~~~~~
 Yale
 ~~~~~
+12.15
+1.15
+
+
 Chicago
 ~~~~~~~~
 
