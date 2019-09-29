@@ -215,3 +215,34 @@ https://blog.csdn.net/wonengguwozai/article/details/78295484
 世界上唯一能够容纳千亿个顶点和万亿条边，并提供毫秒级查询延时的图数据库解决方案
 
 * 栅格计算器的神奇
+
+* 机器学习教程
+https://github.com/shuhuai007
+https://www.bilibili.com/video/av33360526/
+
+
+26.9.2019
+----------
+* 约德尔唱法
+https://zh.wikipedia.org/wiki/%E7%BA%A6%E5%BE%B7%E5%B0%94%E5%94%B1%E6%B3%95
+The Lonely Goatherd
+
+
+https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.180468
+
+27.9.2019
+---------
+* 区域合并 廊道分析
+arcgis还是有很多工具的，用qgis的必要性
+
+28.9.2019
+-----------
+* chrome 设计模式 
+document.designmode="on"
+
+29.9.2019
+----------
+* 分区统计斑块数
+
+* 哈弗数据
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RPXYSM
