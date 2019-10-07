@@ -246,3 +246,132 @@ document.designmode="on"
 
 * 哈弗数据
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RPXYSM
+
+
+2.10.2019
+---------------
+* 大川周明
+
+* 唐湘龙
+
+* 王晓琮
+
+* 启示录6:8
+见有一匹灰色马。骑在马上的，名字叫作死。
+
+* 李登辉
+
+* CS-Notes
+https://github.com/CyC2018/CS-Notes
+
+
+
+3.10.2019
+------------
+* Bertrand Russell, Freedom and Government 
+
+*When I consider every thing that grows           
+
+Holds in perfection but a little moment,       
+
+That this huge stage presenteth nought but shows 
+
+Whereon the stars in secret influence comment;  
+
+
+
+When I perceive that men as plants increase,             
+
+Cheered and check'd even by the self-same sky,  
+
+Vaunt in their youthful sap, at height decrease, 
+
+And wear their brave state out of memory;       
+
+
+Then the conceit of this inconstant stay         
+
+Sets you most rich in youth before my sight,    
+
+Where wasteful Time debateth with Decay,         
+
+To change your day of youth to sullied night;   
+
+And all in war with Time for love of you,      
+
+As he takes from you, I engraft you new.      
+
+－by William Shakespeare (1564 － 1616)
+
+* zen Mode
+Ctrl + K z 
+
+* 刑事调查大揭秘
+
+* https://lines.chromeexperiments.com/
+
+* earth.nullschool.net
+
+* https://shadiao.app/?from_nmsl
+
+4.10.2019
+------------
+* R 的配置与VScode
+https://zhuanlan.zhihu.com/p/65966331
+
+
+5.10.2019
+----------
+* WASP
+White Anglo-Saxon Protestant
+
+* Rstudio注释
+ctrl shift C
+shift enter 换行
+
+* VScode
+minimap
+
+* SF包与R空间数据
+https://zhuanlan.zhihu.com/p/29743287
+
+1L 整数1
+
+* python or R
+Hadley Wickman
+https://www.zhihu.com/question/20388507
+https://segmentfault.com/a/1190000004621068#articleHeader10
+https://segmentfault.com/a/1190000004879349
+
+6.10.2019
+----------
+* Pysal python地理包
+https://pysal.readthedocs.io/en/latest/
+
+https://medium.com/@chrieke/essential-geospatial-python-libraries-5d82fcc38731
+
+* R SF包与R空间数据
+https://zhuanlan.zhihu.com/p/29743287
+https://bookdown.org/robinlovelace/geocompr/ ######
+
+7.10.2019
+---------
+* https://www.youtube.com/watch?v=vTSLoIM7ltE
+
+当目标远在天边的时候，过程就更重要了
+目的远在天边的时候，手段就更重要了
+过程的重要证明了 需要很细腻的过程完成我们的使命，
+错误的方法打败不了敌人，不能完成真正的使命
+要有方法，有主张
+
+争取司法和争议是需要有方法的，这个方法就是很细腻的法律程序，诉讼程序
+
+要有方法完成目标和使命
+
+为什么求同存异，我们只有同，没有异，我是典型的中国人
+
+昨晚睡觉扭伤了脖子，不能向左看，只能向前看
+
+三不朽，立德立言立功 人格和风格
+创格完人
+
