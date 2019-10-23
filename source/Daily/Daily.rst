@@ -375,3 +375,65 @@ https://bookdown.org/robinlovelace/geocompr/ ######
 三不朽，立德立言立功 人格和风格
 创格完人
 
+
+* SF 
+https://r-spatial.github.io/sf/reference/geos_unary.html#arguments
+
+9.10.2019
+-----------
+人一旦迷醉于自身的软弱，便会一直软弱下去，会在众人的目光下倒在街头，倒在地上，倒在比地面更低的地方。
+—— 米兰·昆德拉《不能承受的生命之轻》 ​​​​
+
+赵武灵王和屈原居然是同一年生的，但我一直以为赵武灵王是战国初的人，屈原是战国末的人，实际他俩都处在战国中期偏后。 ​​​​
+爱因斯坦提出狭义相对论是在清光绪31年；从胡夫金字塔到秦始皇是2300年。从秦始皇到今天是2300年；霸王龙距离马门溪龙的年代，比霸王龙距离我们的年代还要长；
+有一说一，北魏和唐只隔了84年。；刘邦只比秦始皇小三岁；
+
+10.10.2019
+------------------------
+* 社会学谢宇
+Life is full of difficulties. Don’t complain about them. Deal with them. They are the very tests that separate the extraordinary from the ordinary. ​
+https://www.pnas.org/content/116/39/19392.short?rss=1
+people do not change. They die.
+
+Never underestimate how extraordinary difficult it is to understand a situation from another person’s point of view.
+
+* 城市化对女性自杀率的影响
+社会学方法
+
+
+
+
+16.10.2019
+------------------------
+* 在分析中，一切知识都是历史；经抽象后，一切科学都是数学；从依据看，一切判断都是统计。 - C. Radhakrishna Rao《统计与真理(Statistics and Truth: Putting Chance to Work)》 ​​​​
+
+* 张彤老师：四叉树 切片
+
+* google earth engine daily
+
+* 
+
+https://observablehq.com/@mbostock/hover-voronoi
+
+https://observablehq.com/@mbostock/u-s-airports-voronoi
+
+http://bl.ocks.org/shawnbot/8059739
+
+https://bl.ocks.org/mbostock/4341156
+
+https://bl.ocks.org/christophermanning/1734663
+
+https://www.tandfonline.com/doi/full/10.1080/13658816.2017.1300804
+
+
+LaTeX入门 64  鸟哥的Linux私房菜 86.8 linux鸟哥私房菜——服务器架设篇--84.9
+边缘奇迹：相变和临界现象 24
+
+高性能MySQL
+性能之巅
+
+D3.js数据可视化实战手册 40 
+
+JavaScript语言精粹 33
+
+JavaScript高级程序设计 78
