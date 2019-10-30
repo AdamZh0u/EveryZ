@@ -437,3 +437,90 @@ D3.js数据可视化实战手册 40
 JavaScript语言精粹 33
 
 JavaScript高级程序设计 78
+
+23.10.2019
+----------------
+* ubuntu 复制文件路径
+ctrl+l 
+
+* 李庄与重庆
+https://www.youtube.com/watch?v=NPz98dytX-0
+二八定律 劫贫济富 如何 老百姓说薄王好
+运用政治运动，群众专政的手段来解决改革开放带来的社会矛盾完全是逆历史潮流而动的。
+唱红打黑 不准讲司法独立  左
+法是国家制定或认可的，体现统治阶级意志的，并由国家强制力保障实施的行为规范的总和
+道之以政，齐之以刑，民免而无耻；道之以德，齐之以礼，有耻且格。
+
+* 周孝正：中国社会问题分析
+https://www.youtube.com/watch?v=q5TSmPlXkrY
+群众心态与正确
+
+* 如何撒谎以及胡说八道 ：）
+https://www.youtube.com/watch?v=D4j_hTYn8Q4
+
+* zotero tips
+https://www.zotero.org/support/zh/tips_and_tricks
+
+
+*  R 安装包错误
+1. 差udunits
+install.packages('udunits2', type = 'source', repo = 'cran.rstudio.com', configure.args = "--with-udunits2-lib=/home/linuxbrew/.linuxbrew/Cellar/udunits/2.2.27.6/lib/ --with-udunits2-include=/home/linuxbrew/.linuxbrew/Cellar/udunits/2.2.27.6/include/")
+
+sudo apt-get install libudunits2-dev
+
+2. 差gdal
+https://stackoverflow.com/questions/12141422/error-gdal-config-not-found
+
+dpkg -l | grep gdal | cut -c-72
+sudo apt-get install libgdal-dev
+
+* 伦敦大学经济学院 现代高风险社会
+
+* Anthony Giddens
+
+25.10.2019
+-------------
+* 武汉沦陷81周年
+下午四点鸣防空警报
+
+* 安装latex2019
+https://blog.csdn.net/williamyi96/article/details/90732304
+
+
+* 输入法中半角与全角切换
+shift space 否则中文输入法输出英文间距过大
+
+* api应用
+https://www.e-stat.go.jp/api/api-dev/case
+
+26.10.2019
+-------------
+* 人口统计
+https://www.e-stat.go.jp/stat-search/database?page=1&layout=datalist&toukei=00200502&tstat=000001111376&cycle=8&tclass1=000001111379&result_page=1&cycle_facet=cycle
+
+* 帮助
+https://www.e-stat.go.jp/api/api-dev/dev_guide
+
+* github
+https://github.com/e-stat-api/adaptor
+
+* 卢广
+
+29.10.2019
+----------------
+* 渗流实验
+多尺度渗流求维数
+多要素渗流
+加权距离渗流
+景观尺度
+
+
+分别提取shp子图，裁剪china
+重采样
+转点
+渗流
+合并
+
+* 分形维数
+
+* 建筑高度与人口分布
