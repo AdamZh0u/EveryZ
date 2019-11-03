@@ -14,7 +14,7 @@ This is an open source book written for myself to review my tools.
 
     Snippet/py
     Snippet/Matplotlib
-    R
+    Snippet/R
     Snippet/QGis
     
 
