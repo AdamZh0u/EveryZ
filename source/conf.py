@@ -65,3 +65,6 @@ latex_engine = 'lualatex'
 
 # master file content to index
 master_doc = "index"
+source_parsers = {
+   '.md': 'recommonmark.parser.CommonMarkParser',
+}
