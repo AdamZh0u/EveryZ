@@ -1,5 +1,3 @@
-# R in Action
-
 ## Introduction to R
 
 ### Working with R
@@ -61,7 +59,7 @@ example(Arthritis)
 
 ---
 
-## Creating a dataset
+### Creating a dataset
 
 ### Data Structures
 

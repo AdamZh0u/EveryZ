@@ -1,5 +1,3 @@
-# R in Action
-
 ## Advanced data management
 
 ### Numerical and character functions

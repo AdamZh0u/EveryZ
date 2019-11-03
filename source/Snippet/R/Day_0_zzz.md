@@ -1,5 +1,3 @@
-# R in Action
-
 [toc]
 
 ## Day 0
@@ -62,7 +60,6 @@ Highlight : == demo ==
     * [使用markdown制作网页](https://jekyllcn.com/)
 
 * 使用markdown放小视频
-
 
 ****
 

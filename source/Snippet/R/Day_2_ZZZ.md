@@ -1,5 +1,3 @@
-# R in Action
-
 ## Graphs
 
 ### Working with Graphs

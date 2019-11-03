@@ -1,5 +1,3 @@
-# R in Action
-
 ##  Basic Data Management
 
 ### Leadership data frame
