@@ -1,5 +1,3 @@
-R
-============
 .. toctree::
     :maxdepth: 2
     :caption: R in Action
