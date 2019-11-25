@@ -524,3 +524,53 @@ https://github.com/e-stat-api/adaptor
 * 分形维数
 
 * 建筑高度与人口分布
+
+7.11.2019
+--------------
+* 霍洛维茨
+
+14.11.2019
+------------
+* 睁眼说瞎话
+https://www.youtube.com/watch?v=zonmyGDoqnc
+
+https://www.youtube.com/watch?v=-TcqB3qKL8s
+
+https://congcong0806.github.io/2018/04/24/Telegram/
+
+
+22.11.2019
+---------------
+* gis 添加wmts
+https://www.northrivergeographic.com/qgis-adding-wmts-layer
+http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer
+http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/WMTS/1.0.0/WMTSCapabilities.xml
+
+qgis
+http://lbs.tianditu.gov.cn/server/MapService.html
+a2a75b39b8f9ce1693d9175496830b0e
+
+
+https://www.cnblogs.com/liweis/p/9528148.html
+http://zhihu.esrichina.com.cn/article/3911
+
+参数
+https://my.oschina.net/HonglingHe/blog/603304
+
+如何维持ranksize
+第一次基于建筑用地讨论城市演化过程
+全球城市扩张模式
+大小城市的品均距离
+大小城市之间的差异
+
+关键在于精确定义城市
+
+23.11.2019
+-------------
+我们不能用制造问题时的同一水平思维来解决问题、
+
+修改win时间更新频率
+https://github.com/2dust/v2rayN/issues/241
+https://www.cnblogs.com/wangqiideal/p/5354044.html
+
+https://toutyrater.github.io/basic/vmess.html
