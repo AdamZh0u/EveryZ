@@ -75,7 +75,7 @@ path = os.path.abspath(a_module.__file__)
 
 * 人口数据
 https://ghsl.jrc.ec.europa.eu/download.php?ds=pop
-
+https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-count-rev11
 * 边界数据
 naturalearthdata.com/downloads/10m-cultural-vectors/
 
@@ -574,3 +574,48 @@ https://github.com/2dust/v2rayN/issues/241
 https://www.cnblogs.com/wangqiideal/p/5354044.html
 
 https://toutyrater.github.io/basic/vmess.html
+
+25.11.2019
+---------------
+寄生虫
+小丑
+
+
+* 地理探测器
+https://cran.r-project.org/web/packages/geodetector/index.html
+https://cran.r-project.org/web/packages/geodetector/vignettes/geodetector.html
+
+26.11.2019
+--------------
+* 拉姆齐定理
+https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&mid=2651687568&idx=1&sn=b367af9cd9fc581b5e285344c1ad0d97&chksm=8bbe2775bcc9ae63f4b3bfdf33f67fcad52251b6173ee76884f35f7bc184023c37534d24a267&mpshare=1&scene=23&srcid=&sharer_sharetime=1574712250065&sharer_shareid=76bb81bc85a3d97b122469f3ff6331d7#rd
+随机中也可以诞生规律
+
+
+* 做计划
+* 1945 b站直播
+
+* 奇葩说 反驳
+影视之家https://www.yunzmb.com/thread-537-1-1.html
+https://www.dy2018.com/i/100225.html
+
+* 华师一教师
+http://www.hzsdyfz.com.cn/Item/21615.aspx
+https://www.linkedin.com/in/linjie-wang-045704183/%7Bcountry%3Dcn%2C+language%3Dzh%7D?trk=people-guest_profile-result-card_result-card_full-click
+闵阁
+
+28.11.2019
+----------------
+* 很多人认为他们在思考，而实际上他们只是在重新整理自己的偏见
+威廉詹姆斯
+
+* 周涛
+http://blog.sciencenet.cn/home.php?mod=space&uid=3075&do=blog&id=1190454
+
+*  latex3
+https://stone-zeng.github.io/
+
+
+* 
+https://www.zhihu.com/question/307669236/answer/891739543
+
