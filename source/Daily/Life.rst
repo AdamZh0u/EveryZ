@@ -24,6 +24,7 @@ https://www.universityadmissions.se/en/All-you-need-to-know1/Applying-for-studie
 1.15
 2.15
 
+
 MASTERHT20 / 12515904
 1. LIU-91015 - Computational Social Science, Master´s Programme - First and main admission round 120cr DAG,
 Normal teaching, 100%, Study programme,
@@ -40,6 +41,11 @@ Stockholm University, Location: Stockholm
 4. LIU-91108 - Ecology and the Environment, Master's Programme 120cr DAG,
 Normal teaching, 100%, Study programme,
 Linköping University, Location: Linköping
+
+
+scholarship
+1.15
+
 
 Yale
 ~~~~~~~~~~~~~~
