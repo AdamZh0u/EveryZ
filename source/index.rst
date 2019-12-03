@@ -38,16 +38,16 @@ This is an open source book written for myself to review my tools.
 .. toctree::
     :maxdepth: 3
     :caption: Discussion:
-	:numbered:
-	
+    :numbered:
+
     Discussion/bian
     Discussion/article
 
 .. toctree::
     :maxdepth: 3
     :caption: Daily:
-	:numbered:
-	
+    :numbered:
+
     Daily/Daily
     Daily/Life
 
