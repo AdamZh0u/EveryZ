@@ -8,7 +8,7 @@ Welcome to EveryThing's documentation!
 This is an open source book written for myself to review my tools.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Snippet:
     :numbered:
 
@@ -17,7 +17,6 @@ This is an open source book written for myself to review my tools.
     Snippet/R
     Snippet/QGis
     
-
 .. toctree::
     :maxdepth: 3
     :caption: Tools:
@@ -27,7 +26,7 @@ This is an open source book written for myself to review my tools.
     Tools/Git
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Advanced:
     :numbered:
 	
@@ -39,14 +38,16 @@ This is an open source book written for myself to review my tools.
 .. toctree::
     :maxdepth: 3
     :caption: Discussion:
-
+	:numbered:
+	
     Discussion/bian
     Discussion/article
 
 .. toctree::
     :maxdepth: 3
     :caption: Daily:
-
+	:numbered:
+	
     Daily/Daily
     Daily/Life
 
