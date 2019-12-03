@@ -29,9 +29,10 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 3
     :caption: Advanced:
     :numbered:
-	Advanced/En.rst
+
     Advanced/py
     Advanced/Networkx
+    Advanced/En.rst
 
 
 .. toctree::
