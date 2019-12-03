@@ -14,7 +14,7 @@ This is an open source book written for myself to review my tools.
 
     Snippet/py
     Snippet/Matplotlib
-    Snippet/R
+    Snippet/R.rst
     Snippet/QGis
     
 .. toctree::
@@ -29,8 +29,7 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 3
     :caption: Advanced:
     :numbered:
-
-	Advanced/En
+	Advanced/En.rst
     Advanced/py
     Advanced/Networkx
 
