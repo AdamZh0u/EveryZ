@@ -622,3 +622,11 @@ https://www.zhihu.com/question/307669236/answer/891739543
 2.12.2019
 --------------
 https://www.gears-lab.com/emm_lab_1/
+
+* 武大聘用制 3+3
+https://www.zhihu.com/question/306154767
+
+https://baike.baidu.com/item/%E5%BC%A0%E5%9C%A8%E5%85%83/75499
+张在元
+武大建筑学院院长 
+http://blog.creaders.net/u/3843/201205/111813.html

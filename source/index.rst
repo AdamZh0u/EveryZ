@@ -33,7 +33,7 @@ This is an open source book written for myself to review my tools.
 
     Advanced/py
     Advanced/Networkx
-
+	Advanced/En
 
 .. toctree::
     :maxdepth: 3
@@ -48,7 +48,6 @@ This is an open source book written for myself to review my tools.
 
     Daily/Daily
     Daily/Life
-    Daily/En.md
 
 
 

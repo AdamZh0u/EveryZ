@@ -124,3 +124,6 @@ https://zhuanlan.zhihu.com/p/20484484
 
 4506940088163686 8491127
 6252470178321789 8441127
+
+* michigan
+https://rackham.umich.edu/admissions/applying/tests/
