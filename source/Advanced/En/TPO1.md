@@ -1,6 +1,107 @@
 
 ## TPO1
 
+### R1 Groundwater
+
+#### words
+
+* saturate:
+    * water  that  saturates  the  ground is ground water
+*  me te oric  water: 雨水   大气的 极速的
+* minute: 微小的 读作 mi nute
+* soaked: 湿透的，浸透的
+* geology:
+    * precipitation沉淀 降水，冰雹
+    * sediment 沉淀物
+    * grains particle 颗粒
+    * pore 孔； 仔细打量
+    * cavities 腔， 空洞
+    * crevice 裂缝
+    * po rosity 有孔性 porous
+    * perme ability  渗透性
+    * lava 火山岩 volcanic
+    * solidified 凝固的
+    * basalt 玄武岩
+    * crystalline 结晶的 水晶的
+    * cementing 粘合 凝结
+    * glacial 冰河时代的 冰的
+    * gravel 碎石
+    * pebbles 鹅卵石
+* plugged 堵塞的
+* fanwise 呈扇形的
+* flat 平的
+* deposited 存放；堆积的
+* laden 负载 loads
+* coarse 粗俗的
+* drain 排水；流干；喝光；
+
+#### sen
+
+* By  far  the  most  abundant  type  of  groundwater  is  meteoric  water;  this  is  the 
+    groundwater that circulates as part of the water cycle
+* They are found wherever fast rivers carrying loads of coarse sediment once flowed.
+* The water was always laden with pebbles, gravel, and sand, known as glacial outwash, that 
+    was deposited as the flow slowed down.   
+* In lowland country  almost  any spot on  the ground  may overlie  what was  once the bed of a river that has since become buried by soil; if they are now below the water’s upper surface (the water table), the gravels and sands of the former riverbed, and its sandbars, will be saturated with groundwater.  低地区域上的任何位置可能就是曾经的河床，后续被土壤覆盖而变成现在的样子。如果那些河床和沙洲现在位于地下水位之下，一定会有大量的地下水浸在它们的沙砾和沙石之间。 
+* The  result  is  that  sandstone,  for  example,  can  be  as  porous  as  the  loose  sand  from 
+    which it was formed. 
+
+#### pros
+
+* 观点错误Groundwater ==often== remains underground for a long time before it emerges again
+* 过于细节Like sandstone, basalt is a crystalline rock that is very porous. 
+* 偏离主题Beds  of  unconsolidated  sediments  are  typically  located  at  inland  sites  that  were  once underwater. 
+* 排除之后排序
+
+### R2
+
+#### words
+
+* speculation  投机；推测；思索；
+* concrete 实在的，具体的；有形的
+* anthropologists   人类学家
+* envisions 想像，展望
+* myth 神话；虚构的人，虚构的事
+* ritual 仪式；惯例；礼制 rites
+* perceiving  理解（perceive的ing形式）；察觉
+* formalize 使形式化；使正式；拘泥礼仪
+* sophisticated 久经世故的
+* autonomous  自治的；自主的；自发的 spon tane ous Independent
+* aesthetic  美的；美学的；审美的，具有审美趣味的
+* efficacious  有效的；灵验的 Effective
+* elaborated 详尽的复杂的精心的精美的 elaborating   阐释；意义化 objectify
+* pantomime  打手势；演哑剧
+* impersonation  扮演；模仿；装扮
+* rhythmical  有节奏的；有韵律的 metrical
+* gymnastic   体操的，体育的
+* imitation   人造的，仿制的
+* virtuosity n 精湛技巧；对艺术品的爱好；艺术爱好者
+* ex quisite精致的；细腻的；优美的，高雅的；异常的；剧烈的   
+* consum mate 至上的；完美的；圆满的
+* grace  优雅；恩惠；魅力；慈悲 compassion
+*  antecedents  经历；祖先；先行词；前身 Ancestors
+* imitative   模仿的；仿制的
+* fiction 小说；虚构，编造；谎言
+* sufficient   足够的；充分的
+* norms 标准，规范；基准 Standards, specifications; The benchmark
+* champion 支持；拥护
+* ascribe   归因于；归咎于
+* perceive   察觉，感觉；理解；认知
+* refine 精炼，提纯；改善；使…文雅
+
+#### sents  
+
+*  Perceiving  an  apparent connection between  certain actions  performed  by  the group  and the result it  desires, the group repeats, refines and formalizes those actions into fixed ceremonies, or rituals。当他们意识到自己的某些行为和期许的结果之间存在明显的联系以后，人们便开始重复并且完善这些行为，最终形成固定的典礼或宗教仪式。 
+* 
+
+#### pros
+
+
+
+### R3
+
+
+
 ### L Con1
 
 Student

@@ -2,7 +2,7 @@ R
 ========
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: R in Action
     :numbered:
 

@@ -630,3 +630,41 @@ https://baike.baidu.com/item/%E5%BC%A0%E5%9C%A8%E5%85%83/75499
 张在元
 武大建筑学院院长 
 http://blog.creaders.net/u/3843/201205/111813.html
+
+2.12.2019
+-----------
+* 备用机场
+https://gggo.pw/user
+https://zhs.icu/auth/register
+https://v2ge.com/index.php?rp=/download
+
+4.12.2019
+---------
+* 张文逸
+开心嘴炮
+http://openday.whu.edu.cn/yxzq/zhy/xueshengshenghuo/2018-06-20/2219.html
+
+7.12.2019
+-----------
+* 英语
+回忆自己，从没优秀，两次经历，jan feb ,,, responsibility
+提前付出，与人交互 印象深刻
+未来未知，再现辉煌
+
+* 白天跑数据 晚上背to
+猝死？ 接触特殊示例的机会变多了使人胆子变小了
+
+* 几个场景
+遥感在图书馆做实验
+
+* 探讨一个很重要的问题
+技术变革能在多大程度上解决社会问题？技术变革能解决多少社会问题，哪些社会问题是没有技术解的
+
+* 我不需要bilibili
+
+* 治愈启动困难症
+
+人本尺度的数据与人本尺度的认知
+
+
+
