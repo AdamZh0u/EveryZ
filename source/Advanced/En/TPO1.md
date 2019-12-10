@@ -1,6 +1,8 @@
 
 ## TPO1
 
+26 24 
+
 ### R1 Groundwater
 
 #### words
@@ -55,6 +57,70 @@
 
 ### R2
 
+#### artc
+
+In  seeking  to  describe  the  origins  of  theater,  one  must  rely  primarily  on  speculation,  since there is little concrete evidence on which to draw. The most widely accepted theory, championed by  anthropologists  in  the  late  nineteenth  and  early  twentieth  centuries,  envisions  theater  as emerging  out  of  myth  and  ritual.  The  process  perceived  by  these  anthropologists  may  be summarized briefly. During the early stages of its development, (* theories of the origins of theater  theories of the origins of theater ?*)a society becomes aware of forces that appear to influence or control its food supply and well-being. Having little understanding of natural causes, it attributes both desirable and undesirable occurrences to supernatural or magical forces,  and  it  searches  for  means  to  win  the  favor  of  these  forces.  Perceiving  an  apparent connection between  certain actions  performed  by  the group  and the result it  desires, the group repeats, refines and formalizes those actions into fixed ceremonies, or rituals. 
+
+Stories  (myths)  may  then  grow  up  around  a  ritual.  Frequently  the  myths  include representatives  of  those  supernatural  forces  that  the  rites  celebrate  or  hope  to  influence. 
+Performers  may  wear costumes  and masks  to  represent  the mythical characters  or supernatural forces in the rituals or in accompanying celebrations. As a person becomes more sophisticated, its conceptions  of  supernatural  forces  and  causal  relationships  may  change.  As  a  result,  it  may abandon or modify(修正，减轻) some rites. But the myths that have grown up around the rites may continue as part of the group’s oral tradition and may even come to be acted out under conditions divorced from these rites. When this occurs, the first step has been taken toward theater as an autonomous activity,  and  thereafter（此后）  entertainment  and  aesthetic（美学的）  values  may  gradually  replace  the  former mystical and socially efficacious concerns.   
+
+故事（神话）在这种仪式中发展起来，这些故事中经常会有仪式庆祝或期望影响的超自然力量的典型。在这种仪式或伴随的庆典中，表演者们可能会穿上戏装和面具来扮演神秘的角色或超自然力量。当人们认识事物的能力进一步加强的时候，他们对超自然力量以及与其引发的事件间因果关系的认识就发生了改变；于是，他们会抛弃或者修改某些仪式。不过在这些仪式中发展起来的神话故事继续在人们的口头流传，甚至可能脱离了仪式而被演绎着。这时侯，戏剧做为一种自发的活动迈出了自己的第一步，接着，戏剧的娱乐和审美价值开始渐渐取代先前的带有神话色彩的、在社会上灵验的关注。
+
+Although origin in ritual has long been the most popular, it is by no means the only theory about how the theater came into being. Storytelling has been proposed as one alternative. Under this theory, relating and listening to stories are seen as fundamental human pleasures. **Thus, the recalling of an event (a hunt, battle, or other feat) is elaborated through the narrator’s pantomime（打手势 表演） and impersonation（装扮） and eventually through each role being assumed by a different person. **
+
+尽管戏剧起源于宗教仪式的说法是目前最被大众认可的，但无论如何这都不是戏剧起源的唯一理论；另一种推测认为戏剧源于说书。在这个理论中，与故事产生联系和聆听故事被视为是人类基本的乐趣。因此，讲述人通过自己的手势和模仿把对一个事件的回忆（一次打猎、战役或是其它功勋伟业）表现的淋漓尽致，这种方式最终演变成为由不同的人来演绎不同的角色。 
+
+A closely related theory sees theater as evolving out of dances that are primarily pantomimic, 
+rhythmical  or  gymnastic,  or  from  imitations  of  animal  noises  and  sounds.  Admiration  for  the performer’s  skill,  virtuosity,（精湛技巧）  and  grace  are  seen  as  motivation  for  elaborating（阐释）  the  activities  into fully realized theatrical（戏剧性的） performances.   
+
+另外一种与之相关的理论认为，戏剧主要是从无声的、有节奏的舞蹈、体操，或模仿动物声音的过程逐渐演变而来。人们对表演者的演技、审美能力和优雅的欣赏被视为是表演者将他们的表演精心策划为戏剧的动力。 
+
+In  addition  to  exploring  the  possible  antecedents  of  theater,  scholars  have  also  theorized 
+about  the  motives  that  led  people  to  develop  theater.  Why  did  theater  develop,  and why  was  it valued after it ceased（stop） to fulfill the function of ritual? Most answers fall back on the theories about the human mind and basic human needs. One, set forth by Aristotle in the fourth century B.C., sees humans as  naturally  imitative—as  taking pleasure in imitating persons, things, and actions and in seeing such imitations. Another, advanced in the twentieth century, suggests that humans have a gift for fantasy, through which they seek to reshape reality into more satisfying forms than those  encountered  in  daily  life.  Thus,  fantasy  or  fiction  (of  which  drama  is  one  form)  permits people to objectify their anxieties and fears, confront them, and fulfill their hopes in fiction if not fact. The theater, then, is one tool whereby  people define and understand their world or escape from unpleasant realities.
+
+为了进一步探寻戏剧的起源，一些学派开始从人类发展戏剧的动机上建立理论。为什么戏剧会发
+展，为什么在戏剧完全脱离宗教仪式以后还有这么大的价值？大部分答案都回到那些关于人类心智和
+人类基本需求的理论中。首先，亚里士多德在公元前 4 世纪提出，人们天生好模仿，并从模仿他人、
+事物和动作以及观看模仿中获得乐趣。另外，20 世纪提出的先进理论认为人类擅长幻想，通过幻想
+将日常生活中的现实重塑成更加令人满意的形式。因此，人们通过幻想或虚构（戏剧的一个形式）把
+他们的焦虑和恐惧具体化，再通过这种方式面对焦虑和恐惧，并从虚构中满足他们现实中无法实现的
+愿望。所以，戏剧成为了一种帮助人们认识和理解这个世界，或是帮助人们逃避不满现实的工具。 
+
+But  neither  the  human  imitative  instinct  nor  a  penchant  for  fantasy  by  itself  leads  to  an
+autonomous  theater.  Therefore,  additional  explanations  are  needed.  One  necessary  condition seems  to  be  a  somewhat  detached  view  of  human  problems.  For  example,  one  sign  of  this condition is the appearance of the comic（喜剧的） vision, since comedy requires sufficient detachment to view some deviations from social norms as ridiculous rather than as serious threats to the welfare of the entire group. Another condition that contributes to the development of autonomous theater is  the  emergence  of  the  aesthetic  sense.  **For  example,  some  early  societies  ceased  to  consider certain rites essential to their well-being and abandoned them, nevertheless, they retained as parts of their oral tradition the myths that had grown up around the rites and admired them for their artistic qualities rather than for their religious usefulness.   **
+
+但是，无论是人类模仿的本能或是对幻想的嗜好本身都不能发展成为独立的戏剧，因此，我们需要更多解释。一个必要的条件可能是一种要脱离通常人们看待问题的视角。比如，这个条件的一个标志是喜剧构想的出现，因为喜剧要求足够的发散思维，我们需要将社会规范中的离经叛道的行为视作极其荒谬的事情，而不是对公众群体福利的严重威胁。另一个导致戏剧独立的条件是审美感觉的出现。例如，一些早期社会的人们认为有的仪式对他们的幸福生活来说不再是必需品，并且取消了那些仪式。虽然如此，人们还是保留了那些口头传述故事的传统并且热爱从这些仪式里发展起来的神话，出于它
+们的艺术性，而不是宗教原因。
+
+○A  society’s  rites  were  more  likely  to  be  retained  in  the  oral  tradition  if  its  myths  were 
+admired for artistic qualities. 
+
+○The artistic quality of a myth was sometimes an essential reason for a society to abandon it 
+from the oral tradition. 
+
+○Some early societies stopped using myths in their religious practices when rites ceased to be 
+seen as useful for social well-being. 
+
+○Myths sometimes survived in a society’s tradition because of their artistic qualities even after 
+they were no longer deemed religiously beneficial.   4
+
+256
+
+○1.The presence of theater in almost all societies  is thought to have occurred  because  early 
+story tellers traveled to different groups to tell their stores. 
+○2.Many theorists believe that theater arises when societies act out myths to preserve social 
+well-being. 
+○3.The  more  sophisticated  societies  became,  the  better  they  could  influence  desirable 
+occurrences through ritualized(仪式化) theater. 
+○4.Some theories of theater development focus on how theater was used by group leaders to 
+group leaders govern other members of society. 
+○5.Theater  may  have  come  from  pleasure  humans  receive  from  storytelling  and  moving 
+rhythmically. 
+○6.The  human  capacities  for  imitation  and  fantasy  are  considered  possible  reasons  why 
+societies develop theater. 
+
+
+
 #### words
 
 * speculation  投机；推测；思索；
@@ -65,7 +131,7 @@
 * ritual 仪式；惯例；礼制 rites
 * perceiving  理解（perceive的ing形式）；察觉
 * formalize 使形式化；使正式；拘泥礼仪
-* sophisticated 久经世故的
+* sophisticated 久经世故的  复杂的精致的
 * autonomous  自治的；自主的；自发的 spon tane ous Independent
 * aesthetic  美的；美学的；审美的，具有审美趣味的
 * efficacious  有效的；灵验的 Effective
@@ -88,19 +154,63 @@
 * ascribe   归因于；归咎于
 * perceive   察觉，感觉；理解；认知
 * refine 精炼，提纯；改善；使…文雅
+* inclination 倾向，爱好；斜坡
+* cease to consider sth essential to 
 
 #### sents  
 
 *  Perceiving  an  apparent connection between  certain actions  performed  by  the group  and the result it  desires, the group repeats, refines and formalizes those actions into fixed ceremonies, or rituals。当他们意识到自己的某些行为和期许的结果之间存在明显的联系以后，人们便开始重复并且完善这些行为，最终形成固定的典礼或宗教仪式。 
-* 
+* they retained as parts of their oral tradition the myths that had grown up around the rites
 
 #### pros
 
+* The author points out problems with two popular theories. 指出问题并提出理论 erro
 
+    
 
 ### R3
 
+#### words
 
+* semi arid  干旱的
+
+* steppe 大草原
+
+* moisture 水分 降雨量
+
+* deciduous 落叶的 脱落的 落叶林
+
+* birch  桦木
+
+* twisted 扭曲的
+
+* deformed 残废的 畸形的
+
+* ridge 山脊
+
+* velocity 速度
+
+* such a dramatic cessation of 
+
+* cessation 终止
+
+* ultraviolet 紫外线的
+
+* elevation  高地 海拔 altitude
+
+* bud 萌芽 =tree shoots 树芽
+
+* the most striking characteristic
+
+* rigor n 严寒
+
+* insulation 隔离
+
+* equatorial 赤道的
+
+* prevalent 流行的 普遍的
+
+    
 
 ### L Con1
 
@@ -201,3 +311,44 @@ Of course, the obvious question is how did that sand end up so far west? The the
 
 Like I said before, Uranium-Lead Dating has been with us for a while. But, um… until recently, in order to do it, you really had to study many individual grains. And it took a long time before yougot results. It just wasn’t very efficient. And it wasn’t very accurate. **But technical advances have cut down on the number of grains you have to study, so you get your results faster.** So I’ll predict that Uranium-Lead Dating is going to become an increasingly popular dating method. **There are a few pretty exciting possibilities for Uranium-Lead Dating. ==Here is one that comes to mind.== **You know the theory that earth’s continents were once joined together and only split apart relatively recently? Well, with Uranium-Lead Dating, we could prove that more conclusively. If they show evidence of once having been joined, that could really tell us a lot about the early history of the planet’s geology.
 
+### L Con2
+
+* astronomy
+* interdisciplinary各学科间的；跨学科的
+* mythology 神话学
+
+### L Lec3
+
+* So the people that lived there had only stone tools, no metals. So everything they accomplished, like building this town, they did with just stone, plus wood, bricks, that sort of thing.
+*  The houses are all rectangular, one storey made of sun dried bricks.
+
+* flake 碎片
+* hatchway 天窗 chimney 烟囱
+* hearths 壁炉
+* diagonal 斜的 对角的
+* plastered 使平 粘贴 涂 掩饰
+* They ended up with a layer of black soot on them, and so did people’s lungs. The bones found in the graves show a layer of soot烟灰 on the inside of the ribs.肋骨
+* burial 葬礼 埋葬的
+* excavation 挖掘 
+*  That’s the way it is with archeology.
+* speculate
+* further excavation of Catalhoyuk will yield more clues
+
+### L Lec4
+
+* rodent 啮齿动物
+* squirrel 松鼠
+* habitats
+* year hibernating 冬眠
+* They reside throughout the eastern region of North America where there is a temperate（温和的） climate, 
+* mating 交配
+* frost n霜
+* vegetative parts of a plant’s herbs 草本植物的营养部分
+* territorial 领土的  and loners
+* Well, they are really territorial, and loners, and just so aggressive even with other Eastern marmots. And their mating ritual is just so impersonal.没人情味的
+* offspring 后代 子孙 产物
+* edible 可食用的
+* bizarre 奇异的
+* meadows 草地
+* harsher 残酷的 严厉的
+* nurture 养育 培植

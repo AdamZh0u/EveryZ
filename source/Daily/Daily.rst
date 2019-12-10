@@ -666,5 +666,5 @@ http://openday.whu.edu.cn/yxzq/zhy/xueshengshenghuo/2018-06-20/2219.html
 
 人本尺度的数据与人本尺度的认知
 
-
+* 我要解决更深层次的问题，这些东西好像并不能给我提供方案
 

@@ -10,7 +10,11 @@
 | 30min |       writing        |
 | 30min |         read         |
 
-### 1207
+### 1210
 
-- [ ] 1h reading   2:45-3:27  17/28
+每天迭代，如果今天不坚持，之前的全部作废了
+
+speaking youtube
+
+- [ ] 
 - [ ] 
