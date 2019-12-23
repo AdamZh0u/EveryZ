@@ -646,10 +646,10 @@ http://openday.whu.edu.cn/yxzq/zhy/xueshengshenghuo/2018-06-20/2219.html
 
 7.12.2019
 -----------
-* 英语
-回忆自己，从没优秀，两次经历，jan feb ,,, responsibility
+* en
+回忆自己，两次经历，jan feb ,,, responsibility
 提前付出，与人交互 印象深刻
-未来未知，再现辉煌
+
 
 * 白天跑数据 晚上背to
 猝死？ 接触特殊示例的机会变多了使人胆子变小了
@@ -668,3 +668,142 @@ http://openday.whu.edu.cn/yxzq/zhy/xueshengshenghuo/2018-06-20/2219.html
 
 * 我要解决更深层次的问题，这些东西好像并不能给我提供方案
 
+10.12.2019
+--------------
+* 迭代  复利
+时习之
+
+15.12.2019
+-----------------
+* 作业状态信息查看命令squeue
+module available
+
+作业提交http://hpc.whu.edu.cn/info/1026/1141.htm
+
+结点状态查看命令 sinfo 
+
+提交http://hpc.whu.edu.cn/sjfw/sjlc/zytj.htm
+
+* 在超算集群上安装r
+conda activate py37
+conda install R
+sacctmgr show ass account=xxx
+
+conda config 
+* 安装一般R包
+http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html
+
+* 安装rgeos
+** 安装geos
+http://download.osgeo.org/geos
+tar xvf  geos-3.4.2.tar
+cd geos-3.4.2
+./configure  --prefix=$HOME/project/CPCA
+make
+make install 
+
+ld 1 exsit status: make clean 
+
+conda activate py37
+R
+install.packages("rgeos")
+
+https://gist.github.com/robinkraft/2a8ee4dd7e9ee9126030
+
+https://stackoverflow.com/questions/33373197/how-to-install-rgdal-and-rgeos-package-in-r-on-university-high-performance-compu
+
+* 安装proj
+http://download.osgeo.org/geos
+
+* 搭建笔记网站
+https://notesdown.netlify.com/
+
+* 环境变量
+export PATH=“”:$PATH
+echo $PATH
+
+source file
+
+~/.bash_profile
+
+* 权限
+7 4 2 1 用户，用户组，其他
+chmod
+
+* docker singularity
+
+* vtk namd netcdf
+
+
+* 用vultr
+yum install epel-release
+yum config-manager --set-enabled PowerTools
+yum install R
+
+yum install geos geos-dev
+# https://gis.stackexchange.com/questions/263495/how-to-install-gdal-on-centos-7-4
+yum groupinstall "Development Tools"
+yum install wget
+
+apt get in centos
+curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -o /usr/local/bin/apt-get
+chmod 0755 /usr/local/bin/apt-get
+
+proj4 in centos 
+yum install proj.x86_64 proj-devel.x86_64
+yum install proj-epsg.x86_64 proj-nad.x86_64
+
+17.12.2019
+-------------
+chmod +x batch.sh
+* R 中 .libPaths()
+
+#SBATCH -N 1
+#SBATCH -n 4
+#SBATCH -p hpxg
+#SBATCH -J H2O
+
+18.12.2019
+-------------
+https://rcc.uchicago.edu/docs/software/environments/R/index.html#multicore
+https://hpcc.usc.edu/support/documentation/r/
+多核
+并发 并行
+多进程 多线程
+异步
+
+* 行政边界到底在多大程度上限制了城市认知
+
+* 城市化和国家经济不相关？ 2008 science
+观察的CPCA过程
+边界对人口统计的影响  城市化人口
+
+* panel data Model
+时序与截面
+
+20.12.2019
+-----------
+城市平均形态指数
+
+* 斑块聚类的方向性
+一个小的城市向一个方向扩张了一点使得相邻斑块改变了归属
+
+* 层级结构
+
+the structure of global urban area
+城市化是人类对地表改变
+
+不找同行评阅
+
+ For centuries now, different disciplines have
+been aware of some of the emergent characteristics that cities display; nevertheless, it was
+not until the middle of the last century that a bottom-up approach integrating the different
+ﬁelds began to shape the way urbanism might be approached.
+
+* 全球城市的新阶段--一体化
+
+* 重视过程，追求不确定性
+高级的rsg
+
+22.12.2019
+-------------

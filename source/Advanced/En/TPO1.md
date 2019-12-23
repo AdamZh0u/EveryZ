@@ -352,3 +352,98 @@ Like I said before, Uranium-Lead Dating has been with us for a while. But, um…
 * meadows 草地
 * harsher 残酷的 严厉的
 * nurture 养育 培植
+
+## TPO54
+
+### R1 Elements of life
+
+* determine 断定 
+* condense 凝聚 
+*  oxygen, carbon, hydrogen, nitrogen，lithium，silicon
+* molecule 分子 微粒
+* vent 通风口 管风琴
+* bombardment 轰击 炮击
+* intact 完整的 interact 反应 互相作用
+* gaseous 气态的
+* 天文学astronomy
+    * planetesimal  星子
+    * planet 行星
+    * moon 卫星
+    * asteroid 小行星
+    * comet 彗星
+    * galaxy 星系
+
+### R2 The commercialization of lumber 伐木业的商业化
+
+```
+By 1860, the settlement of the American West along with timber shortages in the East converged with ever-widening impact on the pine forests of the Great Lakes states.
+
+No longer were farmers in search of extra income the main source for shingles, firewood, and other wood products.
+
+In the 1870s, a set of snowless winters left lumber companies to ponder ways of liberating themselves from the seasons. Railroads were one possibility. At first, the remoteness of the pine forests discouraged common carriers from laying track. But increasing lumber prices in the late 1870s combined with periodic warm, dry winters compelled loggers to turn to iron rails.
+```
+
+* practically 实际上
+* log 原木 timber 木材  feller 伐木机
+* ever-widening impact 日益扩大的影响 full-fledged enterprise 完全成熟的企业
+* commodity 商品 日用品
+* colonist 殖民者
+* thick saw blade 厚锯条 薄的 thin despise 宽的 窄的 narrow
+*  sawdust or scrap 锯屑 残余物废弃的
+* mill 磨坊
+* streamlined  使流线化
+* pond 池塘 ponder 思考
+* neutralize  抵消 中和
+* sled sleigh 雪橇
+* thaw  解冻 变得随和
+* To counter the effects of climate  反击
+* sprinkling 洒
+* friction  摩擦
+* periodic  周期的
+* compel 强迫
+* tortuous 冗长的
+
+### R3 Overkill of the North American Megafauna 
+
+```
+If humans did contribute to the extinctions, much more evidence of that would have been found by now 将会被发现/应该已经发现
+```
+
+
+
+* drastic  强烈的
+* championed  support
+* paleontological contexts 古生物学
+* synchronicity  同步性
+* the paucity of evidence  缺乏证据 sparse  稀疏的
+* minuscule  极小的
+* slaughter 屠杀
+* scenario 方案 剧本
+* herbivore 食草动物
+* succumb 屈服 死 被压垮
+* disprove  反驳
+
+There is constant drumbeat dedicated to the topic about where should the governments money spend on,  rights which are one of the cornerstones in the search for a science of cities. such search is an interdisciplinary quest, which can only be advanced through cumulative theories that build on ideas about how the form of cities determines their function and vice versa as well as localised knowledge that defines the particular characteristics of individual cities and the cultures. notions
+
+### L1 history
+
+* showcase 展示
+* it might require a fair amount of sifting  筛选过滤
+* I know some libraries have special rules for handling delicate or old materials.
+* conduct research
+* So that got the word out a little. 如此以便人知道
+* special precautions are not necessary in this case 防范
+
+### L2 marine biology
+
+* is teeming with 充满
+* foundation of the bulk of the marine food chain大部分海洋食物链的基础 bulk 体积容量 大部分
+* plankton 浮游生物 algae  藻类 phytoplankton 浮游植物 zooplankton浮游动物microscopic  微观的crab larvae 蟹类 幼体
+* researchers have been trying to solve a mystery about zooplankton
+* though there are several compelling theories  令人信服的 
+* the stimulus for zooplankton DVM is light 
+* the Sun’s rays barely penetrate 阳光几乎透不过 渗透 
+* Sun no longer illuminates shallower water  照明；阐述   浅
+* opportunity to feed on phytoplankton 以。。为食
+* ultraviolet  紫外线 pigments  颜料
+* 阐述几个理论的时候，做好切分，可以根据关键词定位答案 
