@@ -485,3 +485,43 @@ https://www.bilibili.com/video/av77070493/?spm_id_from=333.788.videocard.2
 https://www.bilibili.com/video/av77067067/?spm_id_from=333.788.videocard.0
 
 https://www.bilibili.com/video/av73670937/?spm_id_from=333.788.videocard.0
+
+## Words
+
+### 50
+
+* inhibit  禁止 restrict
+* virtually   几乎 almost
+    * virtual 虚拟的 事实上的
+* guarantee 担保 ensure
+* indefinite period
+* rebound 反弹回升 recovery 
+* adjacent neighboring nearby
+* fluid 液体的
+* attribute 属性特质，归属于 ascribe 归因于
+* penchant 倾向 嗜好 inclination
+* dragged 拖拉的 plugged 堵塞的 filled up
+* delicate 微妙的精美的 fragile
+* scarce 缺乏的 几乎没有
+* attain 获得 achieve        保留 retain
+* prone  有倾向的 易于的 likely 
+* devoid of 缺乏 lacking in
+* prevalent 普遍的 广泛的 widespread 
+* propulsion 推进力 moving forward  pulse 脉冲
+* feasible  可行的 achievable
+* readily 容易的 乐意的 easily
+* subsequent 随后的 ensuing   ensue 紧接着发生的 
+* devised 设计发明 created 
+* integral 积分 完整 essential 必要的 基本的 本质的   integer
+* variable 变化的 practical 实用的
+* unprecedented  空前的 unlike anything to the past
+* arduous 努力的 费力的 difficult 
+* marked 显著的 considerable 
+* mutual exclusive 彼此排斥 共同的 彼此的
+* principal 主要的 首长 资本 major
+* overwhelming 压倒性的 powerful 
+* trappings 外饰 decorations
+* implements 工具 执行 使生效 tool    imply
+* sloping 倾斜 溢出 inclining
+* foul 犯规的 污塞 pollute 
+
