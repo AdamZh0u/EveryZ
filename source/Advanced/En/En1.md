@@ -223,7 +223,54 @@ https://www.bilibili.com/video/av73659212
     * 改写并复述题目.There may be one or two disadvantages to ____; however, I believe that there are far more advantages. My arguments for this point are listed as follows.
     * There has been constant drumbeat over（for）where electronic book are likely to replace paperback books in the fruture. While there might be a few advantages of replacing paperback books with e-books, there are far more benefits to simply opting for tradition books. Reasons go as follow.
 
-## 托福长难句
+### speaking
+
+* https://www.bilibili.com/video/av49603111?from=search&seid=11903831688335394749
+* transition words--- sound natural
+    * don't sound smart but sound natural
+    * Introducing Opinions: To me ; In my opinion 
+    * Personal examples: for instance ; for example ; I remember when  
+    * Adding info: Furthermore; moreover ; On the top of that ; 
+    * Contrasting: On the other hand ; while (while opposite, use it !)  
+    * Conclusions:  In conclusion;These are the reasons; To sum up ; That's why 
+* ==subject juggling==--- reword the same subject in different sentences. 
+    * Every subject mush have at least two synonymous expressions: a subject pronoun and a subject alias  
+    * Ben and jerry They The two man 
+        1. use synonymous noun  and add an adjective
+    * school -- educational institution
+    * tornado -- dangerous weather pattern 
+        2. more specific
+    * new noun and adjective = specific
+    * lions -- the male lion
+* idioms
+    * To me, it is a no brainer,
+    * It drives me crazy when 
+    * To make a long story short, 
+    * To me, it is a no brainer, a high school student should wear uniform.
+        Wearing school uniform is not my style.
+        Wearing school uniform drives me crazy.
+        To make a long story short, i do not think students should wear uniforms.
+
+* 
+
+### writing 
+
+* https://www.bilibili.com/video/av6660795/?spm_id_from=333.788.videocard.0
+* https://www.youtube.com/watch?v=ALmuKLzTZyY
+* Tactics reminder
+    * establish position
+    * smart outline
+    * develop body
+    * concession statements
+    * develop introduction
+* all
+    * Becoming an adult is a really special time in any body’s life and the call to head out into the world and embrace our independence is, for many people, quite powerful. I think this can depend on a lot of different factors; for example, somebody starting a job might have different needs and priorities compared to a person who intends to go on and study at university. Generally speaking, I believe that it is better for all concerned if young adults continue to live with their families for a longer time, particularly if they are going to be studying at university.
+    * First of all, it’s important to consider finances. Certainly, it is possible for some young adults to get work and support themselves relatively quickly. However, in most parts of the world these days it costs a lot to rent a house, attend university, buy a car or purchase things like insurance. By way of example, I can recall trying to live independently outside the family home as a university student and I constantly struggled to pay bills and meet all the other costs of living as a young adult. This in turn had adverse effects for things like my study performance.
+    * Hence, in addition to the importance of finances, I think this is better for a young adult's study potential. With your family's support, it is a lot easier to focus on your studies. Of course, for some people in some situations, the family situation may actually be quite distracting or stressful. However, I think it would be fair to say that (for most people) you are more likely to eat better meals, have a quiet place to do school work and get a decent night's sleep if you happen to be living in the family home. I can recall a friend from my university days who lived in share house with other students. Life was a party for him but he didn't eat or study well and finished his degree later than many of his peers.
+    * Finally, staying at home with one's parents doesn't necessarily mean that a young adult cannot develop independence. I will be the first to admit that there are parents out there who struggle to acknowledge that their children have grown up and deserve treatment as adults; it's instinctive in many of them to continue to play a 'mothering' role that can actually be quite stifling for a young adult. Despite this possibility, even though i spent most of my university days living with my parents, they respect me as an adult as well as their child and they didn't attempt to interfere too much or limit my independence. I think this is the case for many other young people as well, so I do not think it is necessarily fair to claim that, just because someone is living with their family, they are somehow unable to enjoy benefits of independence. In fact, I believe the safe environment of the family is a good place to handle the transition to adulthood for concerned, both the child and the parents.
+    * By the way of conclusion, based on the arguments explored above, I am of the opinion that in most cases it's actually more beneficial for most adults to continue living with their families for a longer period of time. Families are precious things and an essential part of the fabric of a nurturing society, so I have a strong belief that they can be a powerful guide in helping children negotiate the path to independence.
+
+## 长难句
 
 ### 30
 
@@ -324,3 +371,117 @@ Amphibians are therefore hardly at mercy of ambient temperature, since by means 
 * some 一点，程度
 * exercising 行动
 * 因此两栖动物不会受到环境温度的支配，因为通过上述方法，这些动物对于自身体温控制的程度很高。
+
+### 22
+
+```
+The tropics contain a larger surface area of land than higher latitudes-- a fact that is not always evident when we examine commonly used projections of Earth's curved surface, since this tends to exaggerate the areas of land in the higher latitudes-- and some biogeograophers regard the differences in diversity as a reflection of the effect.
+```
+
+* 热带地区的地表面积比高纬度地区更大，一些生物地理学家认为生物多样性的差异归因于这一事实。当我们观察常用的地球弧面投影的时候这一事实并不明显，这是因为投影会增大高纬度地区的地表面积。
+
+### 21
+
+```
+By the end of the century, the time was ripe for more change: the tyrants were driven out, and in 508BC a new reformer, Cleisthenes, gave final form to the developments reducing aristocratic control alread under way.
+```
+
+* ripe 成熟的
+* tyrant 暴君 专制君主
+* aristocratic 贵族的
+* give final form to 
+* 到了本世纪末，深化改革的实际已经成熟：人们将专制君主驱逐出境，随后的公元前508年，克里斯提尼这位新的改革家，又进行了一项决定性的改革，来进一步削弱贵族控制权 （当时正在进行的削弱贵族控制权的改革）
+
+### 20 **
+
+```
+Now that we know much more about ancient exchange and commerce, we know that, because no one aspect of trade was an overriding cause of cultural change or evolution in commmercial practices, trade can never be looked on as a unifying factor or as a primary agent of ancent civilization.
+```
+
+* Now that 既然  就 in that so that 
+* look on 看做
+* agent 代理；因素；漂白剂（托福中常考因素=factor）
+* overriding 首要的=primary
+* unifying 统一的，主要的
+* 既然我们现在对于古代的交易和贸易有了更多的了解，我们就明白了贸易从来都不能看做古代文明的统一因素或主要因素。因为贸易中的任何一个方面都不能在贸易活动中成为改变文化或发展文化的主要原因。
+* an overriding cause; a unifying factor; a primary agent
+
+### 19 **
+
+```
+The answer to the first question is that carbon dioxide is still found abundance on Earth, but now, insted of being in the form of atmospheric carbon dioxide, it is either dissolved in the oceans or chemically bound into carbonate rocks, such as the limestone and marble that formed in the oceans.
+```
+
+* 对于第一个问题的答案是：地球上依旧存在大量的二氧化碳。但是现在，这些二氧化碳要么溶解在海洋中要么以化学形式形成碳酸盐，比如在海洋中形成石灰石和大理石，而不是在大气中以二氧化碳的形式存在。
+* instead of 代替替代；而不是
+* either or 
+* bound into 结合 carbonate 碳酸盐 limestone 石灰石marble 大理石
+
+### 18
+
+```
+As relative newcomers to the Southwest, a place where their climate, neighbors, and rulers could be equally inhospitable, the Navajo created these art forms to affect the world around them, not just through the recounting of the actions symbolized, but through the beauty and harmony of the artworks themselves.
+```
+
+* inhospitable 不友好的 不宜居的
+* 作为美国西南地区（一个气候严酷，邻居冷漠，统治者无情的地区）的新成员，纳瓦霍人创造了这些艺术形式，他们不仅仅通过一些象征性行为的详细叙述，还通过艺术品本身的美感与和谐，来影响他们周围的环境。
+* recount 详细叙述 讲述
+* not just through... but through
+
+### 17
+
+```
+In thinking of ice so far from the Sun, it is important not to judge its behavior from that of the much warmer ice we know on Earth; at the temperatures of the outer solar system, ice on the surface is nearly as hard as rock, and behaves similarly
+```
+
+* 考虑到这些冰距离太阳很遥远，不要以我们地球上那些温度相对较高的冰的性质判断这些冰的性质是很重要的；在外太阳系的低温环境下，行星表面上的冰几乎和岩石一样坚硬，并且和岩石有一样的性质
+* In thinking of 
+* behavior 行为;性质
+* it is important not to do 
+* 状语
+
+### 16**
+
+```
+Geographic isolation creates opportunities for new species to develop, but it does not necessarily lead to new species because speciation occurs only when the gene pool undergoes enough changes to establish reproductive barriers between the isolated population and its parent population.
+```
+
+* 地理隔离为新物种的形成创造了机会，但是地理隔离并不一定会导致新物种形成，因为只有当基因库经历了足够的改变，并且在被隔离种群和亲本种群之间产生生殖障碍的时候，新物种才会形成。
+* not necessarily 不一定 only when
+* undergo 经历经受
+* reproductive 生殖的
+
+###  15
+
+```
+When oil and gas are squeezed out of the shale in which they originated and enter a body of sandstone or limestone somewhere above, they migrate readily because sandstones (consisting of quartz grains) and limestones (consisting of carbonate minerals) are much more permeable than any shale.
+```
+
+* 当石油和燃气从他们所起源的页岩中被挤出，然后进入到上方的砂岩或石灰岩的时候，他们可以很容易的移动因为砂岩(主要由石英颗粒组成)和石灰岩（主要由碳酸盐组成）比起任何页岩都更容易渗透
+* shale 页岩 sandstone 砂岩 limestone 石灰石
+* readily 容易的
+* permeable  渗透性
+
+## 口语
+
+https://www.bilibili.com/video/av75290838?p=4
+
+### Task1
+
+
+
+### Task 4
+
+
+
+## Train 
+
+### TPO
+
+https://www.bilibili.com/video/av77187040?from=search&seid=11903831688335394749
+
+https://www.bilibili.com/video/av77070493/?spm_id_from=333.788.videocard.2
+
+https://www.bilibili.com/video/av77067067/?spm_id_from=333.788.videocard.0
+
+https://www.bilibili.com/video/av73670937/?spm_id_from=333.788.videocard.0
