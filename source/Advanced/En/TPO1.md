@@ -342,7 +342,7 @@ Like I said before, Uranium-Lead Dating has been with us for a while. But, um…
 * year hibernating 冬眠
 * They reside throughout the eastern region of North America where there is a temperate（温和的） climate, 
 * mating 交配
-* frost n霜
+* frost霜
 * vegetative parts of a plant’s herbs 草本植物的营养部分
 * territorial 领土的  and loners
 * Well, they are really territorial, and loners, and just so aggressive even with other Eastern marmots. And their mating ritual is just so impersonal.没人情味的
@@ -352,6 +352,154 @@ Like I said before, Uranium-Lead Dating has been with us for a while. But, um…
 * meadows 草地
 * harsher 残酷的 严厉的
 * nurture 养育 培植
+
+## TPO5
+
+### L Con1
+
+* Counseling 咨询 counselor consult
+* overwhelmed 被压倒的 不知所措的 overwhelming 压倒性的 不可抵挡的 2
+* understatement  不充分的陈述 
+* dorm 宿舍 or in the dorms;  hall 会堂
+* impersonal 没有人情味的 客观的
+* In either case I wouldn't take it personally. 针对个人
+* 1:35 There is no reason you couldn't pop in to say hi and to make yourself known
+* artsy 艺术气息的 orchestra 管弦乐队string quartet 弦乐四重奏
+* They've been searching high and low for a replacement
+* audition 试演 面试
+* I wanted to get my academic work settled before pursuing my music here 先于
+* compliment 恭维 称赞 ==问候==To offer a compliment
+
+### L Lec1 Astronomy
+
+*  there are compelling reasons in favor of another Moon landing ，not the least of which is trying to pinpoint the moon's age.
+    * compelling 引人注目的 **
+    * not the least = not at all 其中最重要的
+    * pinpoint 查明 精确地 详尽的
+* enormous impact crater 巨大的陨石坑 
+    * crater 坑，火山口 v 消亡
+* spacecraft 航天器 planetary  行星的
+* orbit only around the moon's equator
+    * orbit 环绕 n势力范围，眼眶
+    * equator 赤道
+* elevation 海拔
+* diameter 直径
+* how they redistributed pieces of a planet's crust 
+    * crust 地壳
+    * mantle 地幔 斗篷the layer beneath the crust 
+    * composition 成分 作曲 
+* penetrate  渗透 洞察
+* during the final stages of planetary formation, or if they resulted from later meteor showers.
+*  crude estimates  粗糙的估计
+* by inference water less than a meter underground at both poles. 
+    * inference 推理
+* meteors  流星
+*  tails of passing comets 彗星的尾巴
+* perpetually   永恒的 持久的
+* evaporation 蒸发
+* primitive  life 原始的 粗糙的
+* practical  value 实用的
+* departure point 出发点
+* maybe a ways off，but we shouldn't have to wait for that 还有一段路，但我们不应等待
+
+### L Con2 film course
+
+* be pretty far along in film studies 有很大进展
+* prerequisites 先决条件 预备知识
+* that would give you a better handle on the subject
+* It's still a pretty tall order 艰巨的任务
+* we will be moving right along 我们将继续前进
+
+### L Lec2 Spectroscopy
+
+* substances 物质 基本内容
+* choose a discipline that interests you, and devise an experiment.
+    * discipline 学科
+    * devise 设计
+* authentic 真正的 可信的
+* Rembrandt
+    * canvas  帆布
+    * brushstroke 绘画技巧 一笔
+    * pigment 颜料
+    * ingredient 材料 佐料
+    * binding agent 粘合剂
+    * varnish  装饰 清漆 
+    * finishes 抛光剂
+* infrared 红外线 ultraviolet  紫外线
+* invasive 侵略性的
+* flecks 微粒 斑点 chips 缺口
+* restoration 复位
+* synonym  同义词
+
+### L Lec3 Literature
+
+*  folk tales 民间故事 fairy tales 童话神话故事  genres 流派 体裁 ** 
+* communal 公共的
+* with certain aspects of the tale adapted to fit the specific community
+* plot 情节 thread 线 思路 v 穿过  line-up 阵容  安排
+* tailored  定制的
+* identifiable 可辨别的
+* generalizable 可概括的
+* cabins  小房屋 grand palace
+
+
+
+## TPO 6
+
+### L Con1
+
+### L Con2
+
+
+
+## TPO52 
+
+### R1 Stream Deposits
+
+* swift stream 
+* clay 黏土 boulder 岩石  streambed 河床 wane 衰落，退潮 
+*  gravel  碎石 silt 淤泥 阻塞  choked 阻塞
+* competence 
+* settle out
+* tributaries 
+* abrasion 
+* elongated 
+* mound
+* transient 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## TPO54
 
