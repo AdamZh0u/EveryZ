@@ -454,9 +454,47 @@ Like I said before, Uranium-Lead Dating has been with us for a while. But, um…
 
 ## TPO 6
 
+### R1
+
+* harnessing of power  控制 利用
+* reign  统治支配 ，王朝
+* abound 
+* drought
+* exploited 
+* expanding steam raised a piston 活塞  in a cylinder 气缸
+* condensed 浓缩的
+* embodied revolutionary principles 体现革命性的进步
+* reciprocating  motion to rotary motion
+    * reciprocate 往复循环 报答 互换 互给
+    * rotary 旋转的
+* mine  矿 coal 煤  charcoal 木炭
+* Coal gas rivaled smoky oil lamps and flickering candles
+    * 煤气灯在与冒烟的油灯和忽闪的蜡烛的比较中尽占优势
+    * rival 比得上 ，超过 a 竞争的
+* well-to-do 小康的 富裕的
+* blast furnaces with steam-powered bellows 蒸汽动力的鼓风炉
+* virtual monopoly 虚拟的垄断
+* spin cotton and roll iron 织布、炼铁
+* ingredients  材料 佐料
+*  hilly terrain 丘陵地形
+* canals 运河 turnpikes 收费公路
+* Boats could carry heavy weights, but canals could not cross hilly terrain; turnpikes could cross the hills, but the roadbeds could not stand up under great weights. These problems needed still another solution, and the ingredients for it lay close at hand. In some industrial regions, heavily laden wagons, with flanged wheels, were being hauled by horses along metal rails; and the stationary steam engine was puffing in the factory and mine. Another generation passed before inventors succeeded in combining these ingredients, by putting the engine on wheels and the wheels on the rails, so as to provide a machine to take the place of the horse. Thus the railroad age sprang from what had already happened in the eighteenth century.
+
+### R2
+
+
+
+### R3
+
+
+
 ### L Con1
 
+
+
 ### L Con2
+
+
 
 ## TPO 7
 
