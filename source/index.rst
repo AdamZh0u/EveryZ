@@ -49,6 +49,7 @@ This is an open source book written for myself to review my tools.
     :numbered:
 
     Daily/Daily
+    Daily/Jan20.md
     Daily/Life
 
 

@@ -19,8 +19,8 @@
     * pore 孔； 仔细打量
     * cavities 腔， 空洞
     * crevice 裂缝
-    * po rosity 有孔性 porous
-    * perme ability  渗透性
+    * porosity 有孔性 porous
+    * permeability  渗透性
     * lava 火山岩 volcanic
     * solidified 凝固的
     * basalt 玄武岩
@@ -142,8 +142,8 @@ societies develop theater.
 * gymnastic   体操的，体育的
 * imitation   人造的，仿制的
 * virtuosity n 精湛技巧；对艺术品的爱好；艺术爱好者
-* ex quisite精致的；细腻的；优美的，高雅的；异常的；剧烈的   
-* consum mate 至上的；完美的；圆满的
+* exquisite精致的；细腻的；优美的，高雅的；异常的；剧烈的   
+* consummate 至上的；完美的；圆满的
 * grace  优雅；恩惠；魅力；慈悲 compassion
 *  antecedents  经历；祖先；先行词；前身 Ancestors
 * imitative   模仿的；仿制的
@@ -172,7 +172,7 @@ societies develop theater.
 
 #### words
 
-* semi arid  干旱的
+* semiarid  干旱的
 
 * steppe 大草原
 
@@ -501,6 +501,12 @@ Like I said before, Uranium-Lead Dating has been with us for a while. But, um…
 ## TPO 8
 
 ## TPO 10
+
+### S4
+
+* psychology  sociology
+
+
 
 ## TPO 30
 

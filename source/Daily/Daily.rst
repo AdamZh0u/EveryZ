@@ -807,3 +807,14 @@ not until the middle of the last century that a bottom-up approach integrating t
 
 22.12.2019
 -------------
+* senario
+
+26.12.2019
+--------------
+* 台湾大选
+https://www.youtube.com/watch?v=mi9kdDojq1k
+政见会
+
+
+
+
