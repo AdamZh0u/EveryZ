@@ -1,3 +1,4 @@
+# Function
 ## function compute area
 ``` javascript
 var Cities = ee.FeatureCollection("users/zhouzz400/Boundries/China_Cities")

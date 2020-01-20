@@ -11,12 +11,14 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 3
     :caption: Snippet:
     :numbered:
+.. Snippet/py
 
-    Snippet/py
     Snippet/Matplotlib
     Snippet/R.rst
-    Snippet/QGis
     Snippet/GEE.rst
+..  Snippet/QGis
+
+
     
 .. toctree::
     :maxdepth: 3
