@@ -11,12 +11,12 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 3
     :caption: Snippet:
     :numbered:
-.. Snippet/py
 
+    Snippet/GEE.rst
     Snippet/Matplotlib
     Snippet/R.rst
-    Snippet/GEE.rst
-..  Snippet/QGis
+
+
 
 
     
