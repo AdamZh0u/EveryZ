@@ -32,6 +32,74 @@ proxy参数设置
     * 多线程计算的方法
     * 算一幅图需要多久
 
-### 实验一： 一次性能计算多大范围？
 
-### 实验二： 
+## 1.10.2019
+* arcgis python api
+http://kikitamap.com/2017/01/22/PythonAPIFunction1/
+https://learn.arcgis.com/zh-cn/trial/ 
+试用
+https://github.com/Esri/arcgis-python-api
+
+* word 查找域 F11
+显示域底纹
+
+## 1.11.2019
+* 以论文为导向，发不了就转
+
+#### 更快地矢量距离计算方法？ 2h 14:00-16:00
+* 方案一：rgeos gDistance
+ * 
+* 方案二：Near_analysis in arcgis
+
+* knnJ K-nearest neighbor join
+ * nngeo in R
+   * 这个好像还是用sf包算的，为什么arcgis的算法那么快
+
+* 一般的distance 都有这个功能？
+
+#### 用这个结果分析什么问题？
+
+#### 使用Gee进行聚类和城市分析
+
+## 1.13.2020
+提取的方法已经基本完成
+分析的方法： 从现象中提取结论
+
+微观尺度，PEI
+城市的宏观尺度 反s
+系统的尺度 缺失
+
+文章分类
+土地利用分类图
+建设用地图
+城市范围图
+
+
+1. 反s大法 中心，水体 全球城市土地密度比较
+2. 不同规模城市的空间分布规律
+    平均距离
+3. 和angel数据进行比较
+
+
+## 1.17.2019
+
+城市-人口 
+
+不同扩张模式下城市人口密度的变化
+
+城市扩张对其他用地的直接影响
+
+1. 交互模型
+2. letter of intent
+3. UConn
+4. GEE打卡
+5. 库
+6. 一篇论文
+7. marc keushinigg
+
+https://philippgaertner.github.io/
+
+全球城市人口密度
+
+
+

@@ -16,6 +16,7 @@ This is an open source book written for myself to review my tools.
     Snippet/Matplotlib
     Snippet/R.rst
     Snippet/QGis
+    Snippet/GEE.rst
     
 .. toctree::
     :maxdepth: 3
