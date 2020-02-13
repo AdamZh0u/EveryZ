@@ -10,7 +10,6 @@ This is an open source book written for myself to review my tools.
 .. toctree::
     :maxdepth: 3
     :caption: Snippet:
-    :numbered:
 
     Snippet/python.rst
     Snippet/Matplotlib.rst
