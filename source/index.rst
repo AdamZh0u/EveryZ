@@ -18,11 +18,11 @@ This is an open source book written for myself to review my tools.
     Snippet/R.rst
     Snippet/reStructuredText.rst
     Snippet/Git.rst
+    Snippet/Rhino.rst
 
 .. toctree::
     :maxdepth: 3
     :caption: Discussion:
-    :numbered:
 
     Discussion/bian.rst
     Discussion/article.rst
@@ -31,14 +31,9 @@ This is an open source book written for myself to review my tools.
 .. toctree::
     :maxdepth: 3
     :caption: Daily:
-    :numbered:
 
     Daily/Daily
     Daily/2020
-
-
-
-
 
 Indices and tables
 ==================
