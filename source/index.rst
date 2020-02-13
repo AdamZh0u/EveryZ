@@ -12,10 +12,11 @@ This is an open source book written for myself to review my tools.
     :caption: Snippet:
     :numbered:
 
+    Snippet/Python/python.rst
     Snippet/GEE.rst
     Snippet/Matplotlib
     Snippet/R.rst
-
+    
     
 .. toctree::
     :maxdepth: 3

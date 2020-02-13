@@ -91,7 +91,7 @@ https://github.com/Esri/arcgis-python-api
 
 1. 交互模型
 2. letter of intent
-3. UConn
+3. UConn TTU sydney
 4. GEE打卡
 5. 库
 6. 一篇论文
@@ -103,3 +103,12 @@ https://philippgaertner.github.io/
 
 
 
+#设置参数
+set http_proxy=http://localhost:1080
+set http_proxy_user=zhangsan
+set http_proxy_pass=lisi
+
+#删除参数
+set http_proxy=
+set http_proxy_user=
+set http_proxy_pass=
