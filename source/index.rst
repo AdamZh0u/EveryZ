@@ -25,8 +25,9 @@ This is an open source book written for myself to review my tools.
     :caption: Discussion:
 
     Discussion/bian.rst
-    Discussion/article.rst
+    Discussion/Write.rst
     Discussion/En.rst
+    Discussion/article.rst
 
 .. toctree::
     :maxdepth: 3
