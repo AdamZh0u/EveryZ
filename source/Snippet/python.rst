@@ -5,4 +5,4 @@ Python
     :caption: Python:
     :numbered:
 
-    Snippet/Python/LinkedList.md
+    Python/LinkedList.md
