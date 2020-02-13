@@ -12,37 +12,21 @@ This is an open source book written for myself to review my tools.
     :caption: Snippet:
     :numbered:
 
-    Snippet/Python/python.rst
+    Snippet/python.rst
+    Snippet/Matplotlib.rst
     Snippet/GEE.rst
-    Snippet/Matplotlib
     Snippet/R.rst
-    
-    
-.. toctree::
-    :maxdepth: 3
-    :caption: Tools:
-    :numbered:
-
-    Tools/reStructuredText
-    Tools/Git
-
-.. toctree::
-    :maxdepth: 3
-    :caption: Advanced:
-    :numbered:
-
-    Advanced/py
-    Advanced/Networkx
-    Advanced/En.rst
-
+    Snippet/reStructuredText.rst
+    Snippet/Git.rst
 
 .. toctree::
     :maxdepth: 3
     :caption: Discussion:
     :numbered:
 
-    Discussion/bian
-    Discussion/article
+    Discussion/bian.rst
+    Discussion/article.rst
+    Discussion/En.rst
 
 .. toctree::
     :maxdepth: 3
@@ -50,8 +34,7 @@ This is an open source book written for myself to review my tools.
     :numbered:
 
     Daily/Daily
-    Daily/Jan20.md
-    Daily/Life
+    Daily/2020
 
 
 

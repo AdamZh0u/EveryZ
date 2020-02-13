@@ -1,0 +1,9 @@
+Daily2020
+========
+
+.. toctree::
+    :maxdepth: 3
+    :caption: 2020
+    :numbered:
+
+    2020/Jan20.md
