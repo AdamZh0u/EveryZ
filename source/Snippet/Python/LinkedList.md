@@ -108,22 +108,6 @@ node2.nonext = node3
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-12-71905b0d05ab> in <module>
-    ----> 1 node1 = Node("Mon")
-          2 node2 = Node("Tus")
-          3 node3 = Node("Wen")
-          4 node1.nonext = node2
-          5 node2.nonext = node3
-    
-
-    NameError: name 'Node' is not defined
-
-
-
 ```python
 def printList(node):
     while node:
@@ -479,7 +463,6 @@ def findIntersectionNode2(ll1,ll2):
             return node2 ##如果改为print 跳不出循环 需加一行
         else:
             node2 = node2.next
-    
 ```
 
 
@@ -578,6 +561,182 @@ c = 1
     ''
 
 
+
+## Q206 链表反转
+
+https://leetcode-cn.com/problems/reverse-linked-list/
+
+
+```python
+nodea1 = Node("A1")
+nodea2 = Node("A2")
+nodea3 = Node("A3")
+nodec1 = Node("C1")
+nodec2 = Node("C2")
+nodea1.next = nodea2
+nodea2.next = nodea3
+nodea3.next = nodec1
+nodec1.next = nodec2
+```
+
+
+```python
+ll = LinkedList(nodea1)
+```
+
+### 双指针迭代
+
+![](https://pic.leetcode-cn.com/7d8712af4fbb870537607b1dd95d66c248eb178db4319919c32d9304ee85b602-%E8%BF%AD%E4%BB%A3.gif)
+
+* 时间复杂度：$O(n)$，假设 $n$ 是列表的长度
+* 空间复杂度：$O(1)$。
+
+
+```python
+def reverseLinkedList1(ll):
+    pre = None
+    cur = ll.head
+    while cur:
+        tmp = cur.next
+        cur.next = pre
+        pre = cur
+        cur = tmp
+    return LinkedList(pre)
+```
+
+
+```python
+ll1 = reverseLinkedList1(ll)
+ll1.head.data
+```
+
+
+
+
+    'C2'
+
+
+
+
+```python
+def reverseLinkedList2(ll):
+    cur, pre = ll.head, None
+    while cur:
+        pre, pre.next,cur = cur, pre, cur.next
+    return LinkedList(pre)
+```
+
+
+```python
+ll2 =reverseLinkedList2(ll)
+ll2.head.data
+```
+
+
+
+
+    'C2'
+
+
+
+#### Tips: 同行等式与分行等式
+
+
+```python
+## 同行等式左右分别对应，同时赋值,左右分别当做数组
+cur1,pre = ll.head,cur1.next
+cur1,pre
+```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-47-03a5fe5f240e> in <module>
+          1 ## 同行等式左右分别对应，同时赋值,左右分别当做数组
+    ----> 2 cur1,pre = ll.head,cur1.next
+          3 cur1,pre
+    
+
+    NameError: name 'cur1' is not defined
+
+
+
+```python
+cur = ll.head
+pre = cur.next
+cur,pre
+```
+
+
+
+
+    (<__main__.Node at 0x1aa2ce09148>, None)
+
+
+
+
+```python
+a,b,c = 1,2,3
+a,b,c = c,b,a
+a,b,c
+```
+
+
+
+
+    (3, 2, 1)
+
+
+
+### 递归
+
+![](https://pic.leetcode-cn.com/dacd1bf55dec5c8b38d0904f26e472e2024fc8bee4ea46e3aa676f340ba1eb9d-%E9%80%92%E5%BD%92.gif)
+
+* 时间复杂度：$O(n)$，假设 n 是列表的长度，那么时间复杂度为 O(n)。
+* 空间复杂度：$O(n)$，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。
+
+
+
+```python
+def reverseList3(head):
+    if (head==None or head.next==None):
+        return head
+    cur = reverseList3(head.next)
+    head.next.next = head
+    head.next = None
+    return cur
+```
+
+
+```python
+newhead = reverseList3(ll.head)
+newhead.
+```
+
+A1-->A2-->A3-->None
+```python
+def reverseList3(head= A1):
+    if (head==None or head.next==None):
+        return head
+    cur = reverseList3(head.next=A2)=A3
+        if (head==None or head.next==None):
+            return head  
+        cur = reverseList3(head.next=A3)=A3
+            if (head==None or head.next==None):
+                return head = A3              
+        head.next.next(A3.next) = head =A2 # 调整A3的指针
+        head.next = None# A2 指针为none，删除A2指向A3
+        return cur=A3
+    head.next.next(A2.next) = head(A1) 
+    head.next = None
+    return cur
+```
+
+## Q21 合并两个有序链表
+
+https://leetcode-cn.com/problems/merge-two-sorted-lists/
 
 
 ```python
