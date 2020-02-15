@@ -505,7 +505,7 @@ findIntersectionNode3(ll1,ll2).data
 
 
 
-##### Tips: If Else 简写
+#### Tips: If Else 简写
 
 
 ```python
@@ -737,6 +737,224 @@ def reverseList3(head= A1):
 ## Q21 合并两个有序链表
 
 https://leetcode-cn.com/problems/merge-two-sorted-lists/
+
+
+```python
+class Node:
+    def __init__(self, x):
+        self.data = x
+        self.next = None
+nodea1 = Node("A1")
+nodea2 = Node("A2")
+nodea3 = Node("A3")
+nodeb1 = Node("B1")
+nodeb2 = Node("B2")
+nodeb3 = Node("B3")
+nodea1.next = nodea2
+nodea2.next = nodea3
+
+nodeb1.next = nodeb2
+nodeb2.next = nodeb3
+```
+
+### 递归法
+
+* 时间复杂度：$O(n + m)$。 因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），函数 mergeTwoList 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。
+
+* 空间复杂度：$O(n + m)$。调用 mergeTwoLists 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，所以 n + m个栈帧会消耗$O(n+m)$ 的空间。
+
+
+
+```python
+class Node:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+class Solution:
+    def mergeTwoLists1(self, l1, l2):
+        if l1 is None:
+            return l2
+        elif l2 is None:
+            return l1
+        elif l1.val<l2.val:
+            l1.next = self.mergeTwoLists1(l1.next, l2)
+            return l1
+        else:
+            l2.next = self.mergeTwoLists1(l1, l2.next)
+            return l2
+```
+
+
+```python
+nodea1 = Node("A1")
+nodea2 = Node("A2")
+nodea3 = Node("A3")
+nodeb1 = Node("B1")
+nodeb2 = Node("B2")
+nodeb3 = Node("B3")
+nodea1.next = nodea2
+nodea2.next = nodea3
+
+nodeb1.next = nodeb2
+nodeb2.next = nodeb3
+```
+
+
+```python
+demo = Solution()
+node = demo.mergeTwoLists1(nodea1,nodeb1)
+```
+
+
+```python
+node.next.next.next.next.val
+```
+
+
+
+
+    'B2'
+
+
+
+### 迭代
+
+
+```python
+class Node:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+class Solution:
+    def mergeTwoLists2(self, l1, l2):
+        prehead = ListNode(-1)
+        prev = prehead
+        while l1 and l2:
+            if l1.val<l2.val:
+                prev.next = l1
+                l1 = l1.next
+            else:
+                prev.next = l2
+                l2 = l2.next
+            prev = prev.next
+        prev.next = l1 if l1 is not None else l2
+        return prehead.next
+```
+
+
+```python
+demo = Solution()
+node = demo.mergeTwoLists2(nodea1,nodeb1)
+```
+
+
+```python
+node.next.next.next.next.val
+```
+
+
+
+
+    'B2'
+
+
+
+#### Tips: self 是干什么的
+
+https://blog.csdn.net/CLHugh/article/details/75000104
+
+* \_\_init__方法的第一参数永远是self，表示创建的类实例本身
+* 有了\_\_init__方法，创建实例，不能传入空的参数
+* self.name = name 把外部传来的参数name的值赋值给Student类自己的属性变量self.name
+* __开头表示私有变量，外部不可访问；_开头表示特殊变量，不要随意访问
+
+
+```python
+## self 代表类的实例 而非类
+class Test:
+    def ppr(self):
+        print(self)
+        print(self.__class__)
+
+t = Test()
+t.ppr()
+```
+
+    <__main__.Test object at 0x000002EFA50F5908>
+    <class '__main__.Test'>
+    
+
+
+```python
+## self可以不写吗-- 类方法与对象方法
+class Test:
+    def ppr():
+        print(__class__)
+
+Test.ppr()
+```
+
+    <class '__main__.Test'>
+    
+
+
+```python
+## 在继承时，传入的是哪个实例，就是那个传入的实例，而不是指定义了self的类的实例
+class Parent:
+    def pprt(self):
+        print(self)
+
+class Child(Parent):
+    def cprt(self):
+        print(self)
+c = Child()
+c.cprt()
+c.pprt()
+p = Parent()
+p.pprt()
+```
+
+    <__main__.Child object at 0x000002EFA50F58C8>
+    <__main__.Child object at 0x000002EFA50F58C8>
+    <__main__.Parent object at 0x000002EFA50F5F08>
+    
+
+
+```python
+## 在描述符类中，self指的是描述符类的实例
+class Desc:
+    def __get__(self, ins, cls):
+        print('self in Desc: %s ' % self )
+        print(self, ins, cls)
+class Test:
+    x = Desc()
+    def prt(self):
+        print('self in Test: %s' % self)
+t = Test()
+t.prt()
+t.x
+```
+
+    self in Test: <__main__.Test object at 0x000002EFA5103D08>
+    self in Desc: <__main__.Desc object at 0x000002EFA5103F88> 
+    <__main__.Desc object at 0x000002EFA5103F88> <__main__.Test object at 0x000002EFA5103D08> <class '__main__.Test'>
+    
+
+* 因为这里调用的是t.x，也就是说是Test类的实例t的属性x，由于实例t中并没有定义属性x，所以找到了类属性x，而该属性是描述符属性，为Desc类的实例而已，所以此处并没有调用Test的任何方法。
+
+* 那么我们如果直接通过类来调用属性x也可以得到相同的结果。
+* python中存在的几种方法：对象方法、静态方法、类方法
+
+
+```python
+Test.x
+```
+
+    self in Desc: <__main__.Desc object at 0x000002EFA5103F88> 
+    <__main__.Desc object at 0x000002EFA5103F88> None <class '__main__.Test'>
+    
+
+https://blog.csdn.net/lilong117194/article/details/80090951
 
 
 ```python

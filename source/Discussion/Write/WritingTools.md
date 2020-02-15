@@ -99,3 +99,20 @@ While Fleming used the past tense to narrate his adventure, Gall prefers verbs i
 *  Look for occasions to convert passive or "to be" verbs into the active. For example, "It was her observation that …" becomes "She observed …"  
 * In your own work and in the newspaper, search for verb attachments and see what happens when you cut them from a story.  
 * Read "Politics and the English Language," by George Orwell. As you listen to political speech, mark those occasions when politicians or other leaders use the passive voice to avoid responsibility for problems or mistakes. 
+
+##  Beware of Adverbs 
+
+* Beware of adverbs. They can dilute the meaning of the verb or repeat it. 
+* "Tom Swift" adventures
+
+> "Look!" suddenly exclaimed Ned. "There's the agent now! ... I'm going to speak to him!" 
+> impulsively declared Ned. 
+
+That exclamation point after "Look" should be enough to heat the prose for the young reader,
+but the author adds "suddenly" and "exclaimed" for good measure. Time and again, the writer
+uses the adverb, not to change our understanding of the verb, but to intensify it. The silliness of this style led to a form of pun called the "Tom Swiftie," where the adverb conveys the punch line: 
+
+> "I'm an artist," he said easily. 
+> "I need some pizza now," he said crustily. 
+> "I'm the Venus de Milo," she said disarmingly. 
+
