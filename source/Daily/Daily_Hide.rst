@@ -142,7 +142,7 @@ https://apply.environment.yale.edu/apply/per
 
 
 
-* boston 
+* boston
 https://www.bu.edu/earth/admissions/apply-for-an-ma/
 
 https://www.bu.edu/earth/academics/ma-remote-sensing-geospatial-sciences/
@@ -173,6 +173,7 @@ https://zhuanlan.zhihu.com/p/20484484
 * michigan
 https://rackham.umich.edu/admissions/applying/tests/
 
+* manchester
 g90740zz
 10760733
 Zzz_1300120013

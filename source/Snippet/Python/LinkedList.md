@@ -390,7 +390,7 @@ len(ll3)
 
 
 
-## Q160 找出链表的交点
+## Q160 找出链表的交点\*\*\*\*\*
 
 * 如果两个链表没有交点，返回 null.
 * 在返回结果后，两个链表仍须保持原有的结构。
@@ -562,7 +562,7 @@ c = 1
 
 
 
-## Q206 链表反转
+## Q206 链表反转****
 
 https://leetcode-cn.com/problems/reverse-linked-list/
 
@@ -734,7 +734,7 @@ def reverseList3(head= A1):
     return cur
 ```
 
-## Q21 合并两个有序链表
+## Q21 合并两个有序链表 ***
 
 https://leetcode-cn.com/problems/merge-two-sorted-lists/
 
@@ -859,7 +859,7 @@ node.next.next.next.next.val
 
 
 
-#### Tips: self 是干什么的
+#### Tips: self 是干什么的  @@@
 
 https://blog.csdn.net/CLHugh/article/details/75000104
 
@@ -955,6 +955,304 @@ Test.x
     
 
 https://blog.csdn.net/lilong117194/article/details/80090951
+
+## Q83 从有序链表中删除重复节点 **
+
+
+```python
+class Node:
+    def __init__(self, x):
+        self.data = x
+        self.next = None
+nodea1 = Node("A1")
+nodea2 = Node("A2")
+nodea3 = Node("A3")
+nodeb1 = Node("B1")
+nodeb2 = Node("B2")
+nodeb3 = Node("B3")
+nodea1.next = nodea2
+nodea2.next = nodea3
+
+nodeb1.next = nodeb2
+nodeb2.next = nodeb3
+```
+
+### wrong1
+
+
+```python
+class Solution:
+    def deleteDuplicates(self,head):
+        des = head
+        while des:
+            pre = des
+            cur = des.next
+            while cur:
+                if cur.data == des.data:
+                    pre.next = cur.next 
+                    pre = cur.next ## pre = none ;cur error
+                    cur = pre.next 
+                else:
+                    pre = pre.next
+                    cur = cur.next
+            des = des.next
+        return head 
+```
+
+
+```python
+nodea1 = Node("A1")
+nodea2 = Node("A1")
+nodea3 = Node("A3")
+nodea1.next = nodea2
+nodea2.next = nodea3
+```
+
+
+```python
+demo = Solution()
+node = demo.deleteDuplicates(nodea1)
+```
+
+
+```python
+node.next.data
+```
+
+
+
+
+    'A3'
+
+
+
+### demo2
+
+
+```python
+class Solution:
+    def deleteDuplicates2(self,head):
+        des = head
+        while des:
+            cur = des.next
+            while cur:
+                if cur.data == des.data:
+                    des.next = cur.next
+                cur = cur.next              
+            des = des.next
+        return head 
+```
+
+
+```python
+demo = Solution()
+node = demo.deleteDuplicates2(nodea1)
+```
+
+### 直接法
+
+
+```python
+class Solution:
+    def deleteDuplicates3(self,head):
+        cur = head
+        while (cur is not None) & (cur.next is not None):
+            if cur.data == cur.next.data:
+                cur.next = cur.next.next
+            else:
+                cur = cur.next
+        return head 
+```
+
+* 这里是有序链表
+
+
+```python
+demo = Solution()
+node = demo.deleteDuplicates3(nodea1)
+```
+
+
+```python
+node.next.data
+```
+
+
+
+
+    'A3'
+
+
+
+### 递归***
+
+
+```python
+class Solution:
+    def deleteDuplicates(self, head):
+        if head is None or head.next is None:
+            return head
+        
+        child = self.deleteDuplicates(head.next)
+        if child and head.val == child.val:
+            head.next = child.next
+            child.next = None
+            
+        return head
+```
+
+```python
+    def deleteDuplicates(self, head=a1):
+        if head is None or head.next is None:return head
+        child=a2 = self.deleteDuplicates(head.next=a2)
+            if head is None or head.next is None:return head
+            child=a3 = self.deleteDuplicates(head.next=a3) 
+                if head is None or head.next is None:return head=a3
+            if child and head.val == child.val:
+                head.next = child.next
+                child.next = None
+            return head=a2
+        if child and head.val == child.val:
+            head.next = child.next
+            child.next = None
+        return head
+```
+
+
+```python
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        if head:
+            head.next = self.deleteDuplicates(head.next)
+            return head.next if head.next and head.val == head.next.val else head
+```
+
+```python
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        if head:
+            head.next=a3 = self.deleteDuplicates(head.next)
+                if head=a2:
+                    head.next=a3 = self.deleteDuplicates(head.next=a3)
+                        if head=a3:
+                            head.next=None = self.deleteDuplicates(head.next)
+                            return head.next if head.next and head.val == head.next.val else head=a3
+                    return head.next=a3 if head.next and head.val == head.next.val else head
+            return head.next if head.next and head.val == head.next.val else head
+```
+
+* 如此精妙的递归是如何构建的
+* 递归，可计算性，尾调用
+    * https://www.zhihu.com/question/271081962
+
+#### Tips: 递归fib
+
+* 缓存装饰器
+
+
+```python
+def fibo(n):
+    if n==1:
+        return 1
+    elif n==2:
+        return 2
+    else:
+        return fibo(n-1)+fibo(n-2)
+```
+
+
+```python
+%%time
+i=1
+even=[] # 所有不超过4百万的偶数
+while fibo(i) <= 4000000:
+    # 若该项是偶数，则添加进even[]
+    if fibo(i) % 2==0:
+        even.append(fibo(i))
+    i+=1
+print('所有4百万以内的偶数之和=%d'%sum(even))
+```
+
+    所有4百万以内的偶数之和=4613732
+    Wall time: 6.99 s
+    
+
+
+```python
+import functools
+
+# 方法一，自定义缓存装饰器
+def cache(func):
+    memo = dict()
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if args not in memo:
+            memo[args] = func(*args, **kwargs)
+        return memo[args]
+    return wrapper
+
+@cache
+def fib(n):
+    if n <= 2:
+        return 1
+    return fib(n-2) + fib(n-1)
+
+# 方法二，使用内置缓存装饰器
+@functools.lru_cache(8)
+def fib(n):
+    if n <= 2:
+        return 1
+    return fib(n-2) + fib(n-1)
+```
+
+
+```python
+%%time
+i = 0 
+even = []
+while fib(i)<=40000:
+    if fib(i)%1==0:
+        even.append(fib(i))
+    i+=1
+```
+
+    Wall time: 999 µs
+    
+
+
+```python
+even
+```
+
+
+
+
+    [1,
+     1,
+     1,
+     2,
+     3,
+     5,
+     8,
+     13,
+     21,
+     34,
+     55,
+     89,
+     144,
+     233,
+     377,
+     610,
+     987,
+     1597,
+     2584,
+     4181,
+     6765,
+     10946,
+     17711,
+     28657]
+
+
 
 
 ```python

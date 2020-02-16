@@ -162,7 +162,7 @@ https://docs.sympy.org/latest/modules/integrals/integrals.html
 
 20.9.2019
 -------------
-* nature submit 
+* nature submit
 https://www.nature.com/ncomms/submit/how-to-submit
 
 * 建筑物层数
@@ -237,7 +237,7 @@ arcgis还是有很多工具的，用qgis的必要性
 
 28.9.2019
 -----------
-* chrome 设计模式 
+* chrome 设计模式
 document.designmode="on"
 
 29.9.2019
@@ -268,43 +268,43 @@ https://github.com/CyC2018/CS-Notes
 
 3.10.2019
 ------------
-* Bertrand Russell, Freedom and Government 
+* Bertrand Russell, Freedom and Government
 
-*When I consider every thing that grows           
+*When I consider every thing that grows
 
-Holds in perfection but a little moment,       
+Holds in perfection but a little moment,
 
-That this huge stage presenteth nought but shows 
+That this huge stage presenteth nought but shows
 
-Whereon the stars in secret influence comment;  
-
-
-
-When I perceive that men as plants increase,             
-
-Cheered and check'd even by the self-same sky,  
-
-Vaunt in their youthful sap, at height decrease, 
-
-And wear their brave state out of memory;       
+Whereon the stars in secret influence comment;
 
 
-Then the conceit of this inconstant stay         
 
-Sets you most rich in youth before my sight,    
+When I perceive that men as plants increase,
 
-Where wasteful Time debateth with Decay,         
+Cheered and check'd even by the self-same sky,
 
-To change your day of youth to sullied night;   
+Vaunt in their youthful sap, at height decrease,
 
-And all in war with Time for love of you,      
+And wear their brave state out of memory;
 
-As he takes from you, I engraft you new.      
+
+Then the conceit of this inconstant stay
+
+Sets you most rich in youth before my sight,
+
+Where wasteful Time debateth with Decay,
+
+To change your day of youth to sullied night;
+
+And all in war with Time for love of you,
+
+As he takes from you, I engraft you new.
 
 －by William Shakespeare (1564 － 1616)
 
 * zen Mode
-Ctrl + K z 
+Ctrl + K z
 
 * 刑事调查大揭秘
 
@@ -376,7 +376,7 @@ https://bookdown.org/robinlovelace/geocompr/ ######
 创格完人
 
 
-* SF 
+* SF
 https://r-spatial.github.io/sf/reference/geos_unary.html#arguments
 
 9.10.2019
@@ -411,7 +411,7 @@ Never underestimate how extraordinary difficult it is to understand a situation 
 
 * google earth engine daily
 
-* 
+*
 
 https://observablehq.com/@mbostock/hover-voronoi
 
@@ -432,7 +432,7 @@ LaTeX入门 64  鸟哥的Linux私房菜 86.8 linux鸟哥私房菜——服务器
 高性能MySQL
 性能之巅
 
-D3.js数据可视化实战手册 40 
+D3.js数据可视化实战手册 40
 
 JavaScript语言精粹 33
 
@@ -441,7 +441,7 @@ JavaScript高级程序设计 78
 23.10.2019
 ----------------
 * ubuntu 复制文件路径
-ctrl+l 
+ctrl+l
 
 * 李庄与重庆
 https://www.youtube.com/watch?v=NPz98dytX-0
@@ -616,7 +616,7 @@ http://blog.sciencenet.cn/home.php?mod=space&uid=3075&do=blog&id=1190454
 https://stone-zeng.github.io/
 
 
-* 
+*
 https://www.zhihu.com/question/307669236/answer/891739543
 
 2.12.2019
@@ -628,7 +628,7 @@ https://www.zhihu.com/question/306154767
 
 https://baike.baidu.com/item/%E5%BC%A0%E5%9C%A8%E5%85%83/75499
 张在元
-武大建筑学院院长 
+武大建筑学院院长
 http://blog.creaders.net/u/3843/201205/111813.html
 
 2.12.2019
@@ -680,7 +680,7 @@ module available
 
 作业提交http://hpc.whu.edu.cn/info/1026/1141.htm
 
-结点状态查看命令 sinfo 
+结点状态查看命令 sinfo
 
 提交http://hpc.whu.edu.cn/sjfw/sjlc/zytj.htm
 
@@ -689,7 +689,7 @@ conda activate py37
 conda install R
 sacctmgr show ass account=xxx
 
-conda config 
+conda config
 * 安装一般R包
 http://docs.hpc.shef.ac.uk/en/latest/iceberg/software/apps/r.html
 
@@ -700,9 +700,9 @@ tar xvf  geos-3.4.2.tar
 cd geos-3.4.2
 ./configure  --prefix=$HOME/project/CPCA
 make
-make install 
+make install
 
-ld 1 exsit status: make clean 
+ld 1 exsit status: make clean
 
 conda activate py37
 R
@@ -749,7 +749,7 @@ apt get in centos
 curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -o /usr/local/bin/apt-get
 chmod 0755 /usr/local/bin/apt-get
 
-proj4 in centos 
+proj4 in centos
 yum install proj.x86_64 proj-devel.x86_64
 yum install proj-epsg.x86_64 proj-nad.x86_64
 
@@ -814,7 +814,3 @@ not until the middle of the last century that a bottom-up approach integrating t
 * 台湾大选
 https://www.youtube.com/watch?v=mi9kdDojq1k
 政见会
-
-
-
-
