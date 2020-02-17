@@ -1254,6 +1254,178 @@ even
 
 
 
+## Q19 删除链表的倒数第N个节点
+
+
+```python
+class Node:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+nodea1 = Node("A1")
+nodea2 = Node("A1")
+nodea3 = Node("A3")
+nodea1.next = nodea2
+nodea2.next = nodea3
+```
+
+* 只有一个值，两个值删除头部
+
+
+```python
+class Solution:
+    def removeNthFromEnd(self, head, n):
+        counter = 0
+        head1 = head
+        head2 = head
+        while head1.next:
+            head1 = head1.next
+            counter+=1
+        if counter == n-1:
+            return head.next
+        else:
+            i = counter-n
+            while i:
+                head2=head2.next
+                i = i-1
+            head2.next = head2.next.next
+            return head
+```
+
+
+```python
+demo = Solution()
+demo.removeNthFromEnd1(nodea1,1)
+```
+
+
+
+
+    <__main__.Node at 0x1c03d98a888>
+
+
+
+### 两次遍历方法
+
+* 添加哑结点，简化极端情况
+* 时间复杂度：$O(L)$，该算法对列表进行了两次遍历，首先计算了列表的长度 L 其次找到第 $(L - n)$个结点。 操作执行了 $2L-n$。
+* 空间复杂度：$O(1)$，我们只用了常量级的额外空间
+
+
+```python
+class Solution:
+    def removeNthFromEnd(self, head, n):
+        dummy = Node(0)
+        dummy.next = head
+        counter = 0
+        first = head
+        while first:
+            counter+=1
+            first = first.next
+        i = counter-n
+        first = dummy
+        while i:
+            i -=1
+            first = first.next
+        first.next = first.next.next
+        return dummy.next
+```
+
+### 一次遍历方法
+
+* 快慢指针间隔n
+* 时间复杂度：$O(L)$，该算法对含有 $L$ 个结点的列表进行了一次遍历。
+* 空间复杂度：$O(1)$，我们只用了常量级的额外空间
+
+
+```python
+class Solution:
+    def removeNthFromEnd(self, head, n):
+        dummy = Node(0)
+        dummy.next = head
+        pre = dummy
+        cur = dummy
+        for i in range(n+1):
+            cur = cur.next
+        while cur:
+            pre = pre.next
+            cur = cur.next
+        pre.next = pre.next.next
+        return dummy.next
+```
+
+### 递归
+
+
+```python
+class Solution:
+    i = 0 
+    def removeNthFromEnd(self, head, n):
+        global i 
+        if head is None:
+            return None
+        head.next = self.removeNthFromEnd(head.next,n)
+        i+=1
+        return head.next if i==n else head
+```
+
+A1-->A2-->A3
+```python
+    def removeNthFromEnd(self, head=A1, n=2):
+        head.next = A3 = removeNthFromEnd(head.next=A2,n)
+            head.next = A3 = removeNthFromEnd(head.next=A3,n)
+                head.next=None = removeNthFromEnd(head.next=None,n)
+                    if head is None:
+                        i=0
+                        return None
+                i+=1 =1
+                return head.next if i==n else head =A3              
+            i+=1 =2
+            return head.next = A3 if i==n else head    
+        i+=1 =3 
+        return head.next if i==n else head  =A1  
+```
+
+
+```python
+demo = Solution()
+demo.removeNthFromEnd(nodea1,1)
+```
+
+
+
+
+    <__main__.Node at 0x1c03d98a888>
+
+
+
+
+```python
+nodea1.val
+```
+
+
+
+
+    'A1'
+
+
+
+#### Tips: 全局变量 局部变量与 非局部变量
+
+
+```python
+global i
+nonlocal i
+```
+
+
+      File "<ipython-input-33-fdfe75b6846f>", line 4
+    SyntaxError: name 'i' is nonlocal and global
+    
+
+
 
 ```python
 
