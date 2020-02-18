@@ -1426,6 +1426,73 @@ nonlocal i
     
 
 
+## Q24 两两交换链表中的相邻结点
+
+
+```python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+nodea1 = ListNode("A1")
+nodea2 = ListNode("A2")
+nodea3 = ListNode("A3")
+nodea4 = ListNode("A4")
+nodea1.next = nodea2
+nodea2.next = nodea3
+nodea3.next = nodea4
+```
+
+### 指针
+
+* 四个指针+哑结点
+* 时间复杂度：$O(N)$，其中 N 指的是链表的节点数量。
+* 空间复杂度：$O(1)$
+
+
+```python
+class Solution:
+    def swapPairs(self, head):
+        dummy,dummy.next = ListNode(-1),head
+        prev = dummy
+        while head and head.next:
+            fst,sec = head,head.next
+            prev.next,fst.next,sec.next = sec,sec.next,fst
+            head,prev = head.next,head
+        return dummy.next        
+
+```
+
+### 递归
+
+
+```python
+class Solution:
+    def swapPairs(self, head):
+        if not head or not head.next:
+            return head
+        fst,sec = head,head.next
+        fst.next = self.swapPairs(sec.next)
+        sec.next = fst
+        return sec
+```
+
+1-->2-->3-->4  ===  2-->1-->4-->3
+```python
+class Solution:
+    def swapPairs(self, head):
+        fst,sec = head,head.next
+        fst.next =4 = self.swapPairs(sec.next=3)
+            fst,sec = head,head.next
+            fst.next=None = self.swapPairs(sec.next=None)
+                if not head or not head.next:
+                    return head =None
+            sec.next = fst
+            return sec=4
+        sec.next = fst=1
+        return sec=2
+```
+
 
 ```python
 
