@@ -1460,7 +1460,6 @@ class Solution:
             prev.next,fst.next,sec.next = sec,sec.next,fst
             head,prev = head.next,head
         return dummy.next        
-
 ```
 
 ### 递归
@@ -1492,6 +1491,119 @@ class Solution:
         sec.next = fst=1
         return sec=2
 ```
+
+## Q445 Add Two Numbers II *****
+
+### 加法递归
+
+
+```python
+class Solution:
+    def addTwoNumbers(self, l1, l2):
+        ## 计算长度 使l1为长链
+        num1 = num2 = 0
+        cur = l2 
+        while cur:
+            num2+=1
+            cur = cur.next
+        cur = l1
+        while cur:
+            num1 +=1
+            cur = cur.next
+        
+        if num2>num1:
+            l1,l2 = l2,l1
+            num2,num1 = num1,num2
+
+        def add(num1,num2,i,j):
+            if not i or not j:
+                return 0
+            if num1>num2:
+                temp = i.val +add(num1-1,num2,i.next,j)
+            else:
+                temp = i.val + j.val + add(num1,num2,i.next,j.next)
+            i.val = temp%10  ##直接修改l1的值
+            return temp//10
+
+        if add(num1,num2,l1,l2):
+            head = ListNode(1)
+            head.next,l1 = l1,head
+        return l1
+```
+
+1->9->7   8->1->1
+```python
+def addTwoNumbers(self, l1, l2):
+    num1 = 4 num2 =4
+
+    def add(num1,num2,i,j):
+        else num1= num2:
+            temp = i.val + j.val + add(num1,num2,i.next,j.next) 
+            ## temp = 1+8+add(4,4,9,1) = 10
+               ## temp = 9+1+add(4,4,7,1) = 10
+                ## temp = 7+1+add(4,4,none,none) =8
+                ## i.val = 8 return 0
+               ## i.val =0  return 1
+            ## i.val = 0 return 1
+        i.val = temp%10## 取余
+        return temp//10## 取整
+
+    if add(num1,num2,l1,l2): ##=1
+        head = ListNode(1)
+        head.next,l1 = l1,head
+    return l1
+```
+
+### 双栈法
+
+- @关键点：
+
+1. 两数相加由于是从低位加到高位，需要从最后的节点开始，可以想到用栈来解决
+
+- @思路：
+
+1. 先将两个链表的每个值存入栈中，然后将每个栈中对应位置的节点相加
+2. 进位通过一个变量保存，每次迭代都将该值加上
+- @注意点：
+
+1. 创建链表时，要用 头插法，否则链表是反的
+2. 判断迭代是否可以继续时，要注意当进位值存在时也需要继续，因为可能出现两个栈都空但存在进位的情况
+
+
+
+```python
+class Solution:
+    def addTwoNumbers(self, l1, l2):
+        s1,s2 = [],[]
+        while l1:s1,l1 = s1+[l1.val],l1.next# 先进后出
+        while l2:s2,l2 = s2+[l2.val],l2.next
+        dummy = ListNode(-1)
+        carry = 0
+        
+        while s1 or s2 or carry:
+            n1,n2 = 0,0
+            if s1:n1 = s1.pop() or 0
+            if s2:n2 = s1.pop() or 0
+            count = carry + n1 + n2
+            n = count%10
+            # 头插法创建链表    
+            node = ListNode(n)
+            node.next = dummy.next
+            dummy.next = node
+            # 进位数
+            carry = count//10
+        return dummy.next
+```
+
+* 头插法  
+node.next = dummy.next  
+dummy.next = node
+
+## Q234 Palindrome Linked List (Easy)
+
+## Q725. Split Linked List in Parts(Medium)
+
+## Q328 Odd Even Linked List (Medium)
 
 
 ```python

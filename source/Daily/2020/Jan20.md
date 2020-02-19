@@ -36,7 +36,7 @@ proxy参数设置
 ## 1.10.2019
 * arcgis python api
 http://kikitamap.com/2017/01/22/PythonAPIFunction1/
-https://learn.arcgis.com/zh-cn/trial/ 
+https://learn.arcgis.com/zh-cn/trial/
 试用
 https://github.com/Esri/arcgis-python-api
 
@@ -48,7 +48,7 @@ https://github.com/Esri/arcgis-python-api
 
 #### 更快地矢量距离计算方法？ 2h 14:00-16:00
 * 方案一：rgeos gDistance
- * 
+ *
 * 方案二：Near_analysis in arcgis
 
 * knnJ K-nearest neighbor join
@@ -83,7 +83,7 @@ https://github.com/Esri/arcgis-python-api
 
 ## 1.17.2019
 
-城市-人口 
+城市-人口
 
 不同扩张模式下城市人口密度的变化
 
@@ -100,9 +100,7 @@ https://github.com/Esri/arcgis-python-api
 https://philippgaertner.github.io/
 
 全球城市人口密度
-
-
-
+```python
 #设置参数
 set http_proxy=http://localhost:1080
 set http_proxy_user=zhangsan
@@ -112,3 +110,4 @@ set http_proxy_pass=lisi
 set http_proxy=
 set http_proxy_user=
 set http_proxy_pass=
+```
