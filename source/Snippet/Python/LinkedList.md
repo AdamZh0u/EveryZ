@@ -1599,9 +1599,160 @@ class Solution:
 node.next = dummy.next  
 dummy.next = node
 
-## Q234 Palindrome Linked List (Easy)
+## Q234 Palindrome Linked List****
+
+### 链表反转
+
+1. 找到前半部分链表的尾节点：
+    * 计算链表节点的数量，然后遍历链表找到前半部分的尾节点。
+    * 或者可以使用快慢指针在一次遍历中找到：慢指针一次走一步，快指针一次走两步，快慢指针同时出发。当快指针移动到链表的末尾时，慢指针到链表的中间。通过慢指针将链表分为两部分。
+
+2. 反转后半部分链表
+    
+3. 判断是否为回文：比较两个部分的值，当后半部分到达末尾则比较完成，可以忽略计数情况中的中间节点
+
+4. 恢复链表：再次反转
+
+* 时间复杂度：$O(n)$，其中 $n$ 指的是链表的大小。
+* 空间复杂度：$O(1)$，我们是一个接着一个的改变指针，我们在堆栈上的堆栈帧不超过 $O(1)$。
+* 该方法的缺点是，在并发环境下，函数运行时需要锁定其他线程或进程对链表的访问，因为在函数执执行过程中链表暂时断开。
+
+
+
+```python
+class Solution:
+    def end_of_first_half(self, head):
+        fast = head
+        slow = head
+        while fast.next and fast.next.next:
+            fast = fast.next.next
+            slow = slow.next
+        return slow
+
+    def reverse_list(self, head):
+        previous = None
+        current = head
+        while current:
+            next_node = current.next
+            current.next = previous
+            previous = current
+            current = next_node
+        return previous
+
+    def isPalindrome(self, head):
+        if head is None:
+            return True
+        fir_end = self.end_of_first_half(head)
+        sec_sta = self.reverse_list(fir_end.next)
+        
+        result = True
+        firP = head
+        secP = sec_sta
+        while result and (secP is not None): ## and 可以不用is not none  none and 1 = none none and 0 = none none or 1 = 1 
+            if firP.val != secP.val:
+                result = False
+            firP = firP.next
+            secP = secP.next
+   
+        fir_end.next = self.reverse_list(sec_sta)
+        return result
+```
+
+
+```python
+#  简写
+class Solution:
+    def end_of_first_half(self, head):
+        slow,fast = head,head
+        while fast.next is not None and fast.next.next is not None:
+            slow,fast = slow.next,fast.next.next
+        return slow
+    
+    def reverse_list(self, head):
+        cur,pre = head,None
+        while cur is not None:
+            cur.next,pre,cur = pre,cur,cur.next
+        return pre
+    
+    def isPalindrome(self, head):
+        if head is None:
+            return True
+        slow = self.end_of_first_half(head)
+        sec_sta = self.reverse_list(slow.next)
+        
+        #slow.next = None
+        result = True
+        a,b = head,sec_sta
+        ## 前半部分后半部分对比
+        while result and (b is not None):
+            if a.val != b.val:
+                result =  False
+            a,b = a.next,b.next  ##一个.调我一下午！！
+
+        slow.next = self.reverse_list(sec_sta)
+        return result
+```
+
+### 数组
+
+* 时间复杂度：$O(n)$，其中 $n$ 指的是链表的元素个数。
+    * 第一步： 遍历链表并将值复制到数组中，$O(n)$。
+    * 第二步：双指针判断是否为回文，执行了 $O(n/2)$ 次的判断，即 $O(n)$。
+    * 总的时间复杂度：$O(2n) = O(n)$。
+* 空间复杂度：$O(n)$，其中 $n$ 指的是链表的元素个数，我们使用了一个数组列表存放链表的元素值。
+
+
+
+
+```python
+class Solution:
+    def end_of_first_half(self, head):
+        vals = []
+        current_node = head
+        while current_node is not None:
+            vals.append(current_node.val)
+            current_node = current_node.next
+        return vals == vals[::-1]
+```
+
+### 递归@@
+
+
+```python
+class Solution:
+    def end_of_first_half(self, head):
+
+        self.front_pointer = head
+
+        def recursively_check(current_node=head):
+            if current_node is not None:
+                if not recursively_check(current_node.next):
+                    return False
+                if self.front_pointer.val != current_node.val:
+                    return False
+                self.front_pointer = self.front_pointer.next
+            return True
+
+        return recursively_check()
+
+```
 
 ## Q725. Split Linked List in Parts(Medium)
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
 
 ## Q328 Odd Even Linked List (Medium)
 
