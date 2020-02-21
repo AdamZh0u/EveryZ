@@ -1734,24 +1734,115 @@ class Solution:
             return True
 
         return recursively_check()
-
 ```
 
 ## Q725. Split Linked List in Parts(Medium)
 
 
 ```python
-
+class Solution:
+    def splitListToParts(self, root, k):
+        num = 0
+        while root:
+            root = root.next
+            num+=1
+        ls = []
+        if num< k:
+            while root:
+                root = root.next
+                ls.append([root.val])
+            ls += [[] for i in range(k-num)]
+        else:
+            n = num%k
+            ls1 = []
+            while n:
+                ls1.append([root.val])
+                root = root.next
+                n = n-1
+            ls2 = []
+            while 
+            while k:
+        
 ```
 
 
 ```python
+divmod?
+```
 
+### 新列表
+
+* 时间复杂度：$O(N + k)$。$N$ 指的是链表的结点数，若 kk 很大，则还需要添加许多空列表。
+* 空间复杂度：$O(max(N, k))$，存放答案所需的空间。
+
+
+```python
+class Solution:
+    def splitListToParts(self,root,k):
+        cur = root
+        num = 0
+        while cur:
+            num +=1
+            cur = cur.next
+        width,remainder = divmod(num,k)
+        
+        ans = []
+        cur = root
+        for i in range(k):
+            head = write = ListNode(None)
+            for j in range(width + (i<remainder)):
+                write.next = write = ListNode(cur.val)
+                if cur: cur = cur.next
+            ans.append(head.next)
+        return ans
+            
 ```
 
 
 ```python
+class Solution:
+    def splitListToParts(self, root: ListNode, k: int) -> List[ListNode]:
+        ans, nodes = [], []
+        while root:
+            nodes.append(root)
+            root = root.next
+        (p, q), j, n = divmod(len(nodes), k), 0, len(nodes)
+        for i in range(k):
+            if j < n:
+                ans.append(nodes[j])
+                j += p + (i < q)
+                nodes[j - 1].next = None
+            else:
+                ans.append(None)
+        return ans
+```
 
+### 拆分链表
+
+* 时间复杂度：$O(N+k)$。$N$ 指的是所给链表的结点数，若 $k$很大，则还需要添加许多空列表。
+* 空间复杂度：$O(k)$，存储答案时所需的额外空格
+
+
+
+```python
+class Solution(object):
+    def splitListToParts(self, root, k):
+        cur = root
+        for N in range(1001):
+            if not cur: break
+            cur = cur.next
+        width, remainder = divmod(N, k)
+
+        ans = []
+        cur = root
+        for i in range(k):
+            head = cur
+            for j in range(width + (i < remainder) - 1):
+                if cur: cur = cur.next
+            if cur:
+                cur.next, cur = None, cur.next
+            ans.append(head)
+        return ans
 ```
 
 ## Q328 Odd Even Linked List (Medium)
