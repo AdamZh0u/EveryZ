@@ -1849,5 +1849,100 @@ class Solution(object):
 
 
 ```python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+a1 = ListNode(1)
+a2 = ListNode(2)
+a3 = ListNode(3)
+a4 = ListNode(4)
+a5 = ListNode(5)
+a1.next = a2
+a2.next = a3
+a3.next = a4
+a4.next = a5
+```
+
+
+```python
+class Solution:
+    def oddEvenList(self, head: ListNode):
+        if head is None:
+            return head
+        cur = head
+        num = 0
+        while cur is not None:
+            cur = cur.next
+            num +=1
+        pre = head
+        nex = head.next
+        eve = head.next
+        if num%2 == 0:
+            while nex.next is not None:
+                pre.next = pre.next.next
+                nex.next = nex.next.next
+                pre = pre.next
+                nex = nex.next
+            pre.next = eve
+        else:
+            while pre.next is not None:
+                pre.next = pre.next.next
+                nex.next = nex.next.next
+                pre = pre.next
+                nex = nex.next
+                print(pre.val)
+            pre.next = eve
+        return head
+```
+
+### 简写
+
+
+```python
+class Solution:
+    def oddEvenList(self, head: ListNode):
+        if head is None: return head
+        odd,even,evenHead = head,head.next,head.next
+        while even and even.next:
+            odd.next,even.next = even.next,even.next.next
+            odd,even = odd.next,even.next
+        odd.next = evenHead
+        return head
+```
+
+#### Tips: and 和 &
+
+* 位运算  1的二进制01，2的二进制10 1&2 = 0
+    * 位或 |     10 + 01 = 11 =3
+    * 位与 &    10 + 01 = 00 = 0
+* 逻辑运算 and or not 
+
+
+```python
+3&3
+```
+
+
+
+
+    3
+
+
+
+
+```python
+1|2
+```
+
+
+
+
+    3
+
+
+
+
+```python
 
 ```
