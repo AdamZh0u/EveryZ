@@ -1,8 +1,8 @@
 # Course1
-## String 
+## String
 
 ```javascript
-// create 
+// create
 var string = ee.String("helloworld");
 // display
 print(string);
@@ -10,7 +10,7 @@ print(string);
 // change
 var cat_string = string.cat("demo");
 print(cat_string);
-var rep_string = cat_string.replace("d","zz","g");//global match 
+var rep_string = cat_string.replace("d","zz","g");//global match
 print(rep_string);
 
 // split
@@ -25,7 +25,7 @@ print(mat_string);
 var sli_string = string.slice(1,5);
 print(sli_string);
 
-// length 
+// length
 var len_string = string.length()
 print(string, len_string)
 
@@ -39,13 +39,13 @@ var int_numb2 = numb2.int8()
 print(int_numb2)
 
 // compare
-  // eq neq gt gte lt lte 
+  // eq neq gt gte lt lte
   // and or not
 
-// calculate 
+// calculate
   //floor round ceil  abs sqrt exp log log10
 
-// bitwise 
+// bitwise
 var numb3 = ee.Number(1);
 var numb4 = ee.Number(2);
 var numb_And = numb3.bitwiseAnd(numb4);
@@ -70,10 +70,10 @@ var Dic_2 = ee.Dictionary({
 })
 
 // change dic.combine() dic.set()
-var Dic_combine = Dic_1.combine(Dic_2,true);//use second first when conflict 
+var Dic_combine = Dic_1.combine(Dic_2,true);//use second first when conflict
 print(Dic_combine);
 
-var Dic_3 = Dic_1.set("Age","30"); // add or change 
+var Dic_3 = Dic_1.set("Age","30"); // add or change
 print(Dic_3);
 
 // iquiry dic.keys dic.get dic.values
@@ -102,8 +102,8 @@ var Provinces_Number_1 = China_Provinces.reduceColumns(
 var Provinces_Number_2 = China_Provinces.reduceColumns(
   Reducer_CountEvery,[]); // count every columns
 var Provinces_First = China_Provinces.reduceColumns(
-  Reducer_First,["Name"]); 
-  
+  Reducer_First,["Name"]);
+
 Map.addLayer(China_Provinces);
 print(China_Provinces);
 print("Reducer_Count",Provinces_Number_1);
@@ -171,7 +171,7 @@ Map.centerObject(image,8);//zoom
 Map.addLayer(maxValue,{max:13000},"Maximum value image");
 
 // intervalMean/percentile
-  // 0, 50 mean 
+  // 0, 50 mean
 
 // linearFit()
 var Data_X = ee.List([12,13,14,5]);
@@ -209,7 +209,7 @@ var Reducer_Min = ee.Reducer.min();
 var Reducer_Combine = Reducer_Max.combine(Reducer_Min);
 
 var Array_Example = ee.Array([[1,2],
-                              [3,4]]); // axis = 0 updown 
+                              [3,4]]); // axis = 0 updown
 
 var Combine_Reduced_1 = Array_Example.reduce(
   Reducer_Combine, [0], 1);// direction 0 field axis
@@ -234,7 +234,7 @@ var sums = countries
       ee.Filter.neq("Census 2000 Housing Units", null))
   )
   .reduceColumns({
-    selectors:["Census 2000 Population", 
+    selectors:["Census 2000 Population",
       "Census 2000 Housing Units","StateName"],
     reducer:ee.Reducer.sum().repeat(2).group({
       groupField:2,
@@ -276,7 +276,7 @@ Map.addLayer(DEM_kirsch,{min:-1100,max:1100},"DEM_kirsch")
   // circle octagon square diamond cross plus fied
 
 // operation
-  // rotate 90*   add 
+  // rotate 90*   add
 
 // print kernel
 print(ee.Kernel.euclidean(1))
@@ -285,10 +285,3 @@ print(ee.Kernel.gaussian(1))
 // function name(parameters){operation}
 
 ```
-
-
-
-
-
-
-
