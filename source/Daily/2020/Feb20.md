@@ -174,6 +174,7 @@ boun areapro area:
 186531461977.6914
 img reproject area:
 185905517767.81976
+
 ```
 
 ### 栅格区域太大时切片计算
@@ -332,3 +333,51 @@ var area = rect.map(function(fets){
 var area = area.reduce(ee.Reducer.sum())
 print(area)
 ```
+
+var bound = ee.List(boun.bounds().coordinates().get(0))
+var pro = boun.bounds().projection()
+Map.addLayer(boun.bounds())
+var left = ee.Number(ee.List(bound.get(0)).get(0)).floor()
+var right = ee.Number(ee.List(bound.get(1)).get(0)).ceil()
+var down = ee.Number(ee.List(bound.get(0)).get(1)).floor()
+var up = ee.Number(ee.List(bound.get(2)).get(1)).ceil()
+
+//92,236,-30,29
+
+var rec = ee.Geometry.Rectangle([left, down,right, up],null,false)
+var down = ee.Number(0)
+var lslat = ee.List.sequence(down,down.add(14),6)
+var lslng = ee.List.sequence(left,left.add(24),6)
+// var lslat = ee.List.sequence(down,up)
+// var lslng = ee.List.sequence(left,right)
+var ls = lslat.map(function(lat){
+  var y = lslng.map(function(lng){
+    return ee.List([lat,lng])
+  })
+  return y
+})
+var array = ee.Array(ls).reshape([15,2])
+
+
+var rect = array.toList().map(function(point){
+  var x = ee.Number(ee.List(point).get(0))
+  var y = ee.Number(ee.List(point).get(1))
+  var rec = ee.Geometry.Rectangle([y,x.subtract(6) ,y.add(6), x],null,false)
+  return rec
+})
+//var rectg = ee.List(ee.Geometry.MultiPolygon(rect))
+Map.addLayer(ee.Geometry.MultiPolygon(rect))
+var area = rect.map(function(fets){
+  var fet = ee.Geometry(fets)
+  var a = ee.Image(g.clip(boun).gte(3))
+  var area_imag = a.multiply(ee.Image.pixelArea())
+  var sumarea = ee.Number(area_imag.reduceRegion(
+                {"reducer": ee.Reducer.sum(),
+                "scale": 300,
+                "geometry":fet
+                })
+                .get("b1") )
+  return sumarea
+})
+var area = area.reduce(ee.Reducer.sum())
+print(area)

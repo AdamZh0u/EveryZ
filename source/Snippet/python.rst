@@ -6,3 +6,4 @@ Python
     :numbered:
 
     Python/LinkedList.md
+    Python/Tree.md
