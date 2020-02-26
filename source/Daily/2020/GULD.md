@@ -154,3 +154,239 @@ Ks上升与下降
 城市扩张观测的尺度效应--全球尺度
 低分辨率的城市扩张预测很可能高估了城市扩张的效应
 各种分辨率影响观测的适用性
+
+
+```Javascript
+var GJ = GJ_P.filterBounds(point).geometry();
+var NDVI_00 = L7_NDVI.filterDate('2000-01-01','2000-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_00 = NDVI_00.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_00,
+  'NDVIsoil':0.22278,//(49)14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+  'NDVIveg':0.78478//(30)14 1,07 0.61322,00 0.43351 ,19 0.96473
+  }).rename('FVC');
+// print(fvc_00);
+var NDVI_01 = L7_NDVI.filterDate('2001-01-01','2001-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_01 = NDVI_01.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_01,
+  'NDVIsoil':0.26945,//14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+  'NDVIveg':0.75373//14 1,07 0.61322,00 0.43351 ,19 0.96473
+  }).rename('FVC');
+// print(fvc_01);
+var NDVI_02 = L7_NDVI.filterDate('2002-01-01','2002-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_02 = NDVI_02.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_02,
+  'NDVIsoil':0.20628,
+  'NDVIveg':0.76145
+  }).rename('FVC');
+// print(fvc_02);
+var NDVI_03 = L5_NDVI.filterDate('2003-01-01','2003-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_03 = NDVI_03.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_03,
+  'NDVIsoil':0.14459,//0.17587
+  'NDVIveg':0.74578//0.73809
+  }).rename('FVC');
+// print(fvc_03);
+var NDVI_04 = L5_NDVI.filterDate('2004-01-01','2004-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_04 = NDVI_04.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_04,
+  'NDVIsoil':0.16053,
+  'NDVIveg':0.76210
+  }).rename('FVC');
+// print(fvc_04);
+var NDVI_05 = L5_NDVI.filterDate('2005-01-01','2005-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_05 = NDVI_05.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_05,
+  'NDVIsoil':0.13683,
+  'NDVIveg':0.75358
+  }).rename('FVC');
+// print(fvc_05);
+var NDVI_06 = L5_NDVI.filterDate('2006-06-01','2006-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_06 = NDVI_06.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_06,
+  'NDVIsoil':0.13679,
+  'NDVIveg':0.76178
+  }).rename('FVC');
+// print(fvc_06);
+var NDVI_07 = L5_NDVI.filterDate('2007-01-01','2007-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_07 = NDVI_07.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_07,
+  'NDVIsoil':0.15240,//0.22274
+  'NDVIveg':0.755361//0.76144
+  }).rename('FVC');
+// print(fvc_07);
+var NDVI_08 = L5_NDVI.filterDate('2008-01-01','2008-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_08 = NDVI_08.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_08,
+  'NDVIsoil':0.14452,
+  'NDVIveg':0.72232
+  }).rename('FVC');
+// print(fvc_08);
+var NDVI_09 = L5_NDVI.filterDate('2009-01-01','2009-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_09 = NDVI_09.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_09,
+  'NDVIsoil':0.14457,
+  'NDVIveg':0.76880
+  }).rename('FVC');
+// print(fvc_09);
+var NDVI_10 = L5_NDVI.filterDate('2010-01-01','2010-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_10 = NDVI_10.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_10,
+  'NDVIsoil':0.12892,
+  'NDVIveg':0.75360
+  }).rename('FVC');
+// print(fvc_10);
+var NDVI_11 = L5_NDVI.filterDate('2011-01-01','2011-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_11 = NDVI_11.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_11,
+  'NDVIsoil':0.14458,
+  'NDVIveg':0.75363
+  }).rename('FVC');
+// print(fvc_11);
+var NDVI_12 = L7_NDVI.filterDate('2012-01-01','2012-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_12 = NDVI_12.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_12,
+  'NDVIsoil':0.18363,
+  'NDVIveg':0.78475
+  }).rename('FVC');
+// print(fvc_12);
+var NDVI_13 = L7_NDVI.filterDate('2013-01-01','2013-12-31')
+           .filterBounds(GJ)
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_13 = NDVI_13.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_13,
+  'NDVIsoil':0.20681,
+  'NDVIveg':0.80047
+  }).rename('FVC');
+// print(fvc_13);
+var NDVI_14 = L8.filterDate('2014-01-01','2014-12-31')
+           .filterBounds(GJ)
+           .map(function(image) {
+           return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+           .select('NDVI')
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_14 = NDVI_14.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_14,
+  'NDVIsoil':0.27930,//14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+  'NDVIveg':1//14 1,07 0.61322,00 0.43351 ,19 0.96473
+  }).rename('FVC');
+// print(fvc_14);
+var NDVI_15 = L8.filterDate('2015-01-01','2015-12-31')
+           .filterBounds(GJ)
+           .map(function(image) {
+           return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+           .select('NDVI')
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_15 = NDVI_15.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_15,
+  'NDVIsoil':0.25393,
+  'NDVIveg':1
+  }).rename('FVC');
+// print(fvc_15);
+var NDVI_16 = L8.filterDate('2016-01-01','2016-12-31')
+           .filterBounds(GJ)
+           .map(function(image) {
+           return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+           .select('NDVI')
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_16 = NDVI_16.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_16,
+  'NDVIsoil':0.24803,
+  'NDVIveg':1
+  }).rename('FVC');
+// print(fvc_16);
+var NDVI_17 = L8.filterDate('2017-01-01','2017-12-31')
+           .filterBounds(GJ)
+           .map(function(image) {
+           return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+           .select('NDVI')
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_17 = NDVI_17.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_17,
+  'NDVIsoil':0.26367,
+  'NDVIveg':1
+  }).rename('FVC');
+// print(fvc_17);
+var NDVI_18 = L8.filterDate('2018-01-01','2018-12-31')
+           .filterBounds(GJ)
+           .map(function(image) {
+           return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+           .select('NDVI')
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_18 = NDVI_18.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_18,
+  'NDVIsoil':0.24803,
+  'NDVIveg':1
+  }).rename('FVC');
+// print(fvc_18);
+  var NDVI_19 = L8.filterDate('2019-01-01','2019-12-31')
+           .filterBounds(GJ)
+           .map(function(image) {
+           return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+           .select('NDVI')
+           .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+var fvc_19 = NDVI_19.expression(
+  '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+  'NDVI':NDVI_19,
+  'NDVIsoil':0.22268,//14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+  'NDVIveg':0.96473//14 1,07 0.61322,00 0.43351 ,19 0.96473
+  }).rename('FVC');
+// print(fvc_19);
+var collection = ee.ImageCollection([fvc_00,fvc_01,fvc_02,fvc_03,fvc_04,fvc_05,fvc_06,fvc_07,fvc_08,
+fvc_09,fvc_10,fvc_11,fvc_12,fvc_13,fvc_14,fvc_15,fvc_16,fvc_17,fvc_18,fvc_19]);
+print(collection);
+var collection_mean = collection.reduce(ee.Reducer.mean()).rename('FVC').toFloat();
+print(collection_mean);
+Export.image.toDrive({
+  image:collection_mean,
+  description:'fvc_mean',
+  fileNamePrefix:'GJ_fvc_mean',
+  scale:30,
+  region:GJ,
+  maxPixels:1e13
+})
+```
