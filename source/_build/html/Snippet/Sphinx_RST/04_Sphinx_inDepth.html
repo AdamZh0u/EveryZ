@@ -6,7 +6,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Sphinx 简单入门 &mdash; EveryThing 2.0.0 文档</title>
+  <title>使用 Sphinx 书写 API 文档 &mdash; EveryThing 2.0.0 文档</title>
   
 
   
@@ -26,9 +26,7 @@
   <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="Git" href="../Git.html" />
-    <link rel="prev" title="sphinx+reStructuredText" href="../RST.html" /> 
+    <link rel="search" title="搜索" href="../../search.html" /> 
 
 </head>
 
@@ -67,15 +65,13 @@
     
       <li><a href="../../index.html">Docs</a></li>
         
-          <li><a href="../RST.html">sphinx+reStructuredText</a></li>
-        
-      <li><span class="section-number">1. </span>Sphinx 简单入门</li>
+      <li>使用 Sphinx 书写 API 文档</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../_sources/Snippet/Sphinx_RST/00_sphinx_intro.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/Snippet/Sphinx_RST/04_Sphinx_inDepth.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -105,7 +101,7 @@
                             
                             
                                 <p class="caption"><span class="caption-text">Snippet:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Python/LinkedList.html">1. 链表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python/Tree.html">2. 树</a></li>
@@ -135,8 +131,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../R/Day_5_ZZZ.html">6. Basic graphs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../RST.html">sphinx+reStructuredText</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Sphinx 简单入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../RST.html">sphinx+reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="00_sphinx_intro.html">1. Sphinx 简单入门</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
@@ -338,188 +334,197 @@
                     <div class="document">
                         
                             
-  <div class="section" id="sphinx">
-<h1><span class="section-number">1. </span>Sphinx 简单入门<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
-<p>Sphinx 是一个用于生成 Python 文档的工具, 但是也可以用来制作电子书. 本文记录使用该工具的一些经验.</p>
+  <div class="section" id="sphinx-api">
+<h1>使用 Sphinx 书写 API 文档<a class="headerlink" href="#sphinx-api" title="永久链接至标题">¶</a></h1>
+<p>程序中有哪些结构? 变量,函数,类 …… 等等. 在 Sphinx 中定义了相应的指令或角色来描述它们, 并且, 也可以写进源代码的 docstring 中, 让 <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> 自动生成.</p>
+<p>此文参考官方文档 <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html</a> .</p>
 <div class="section" id="id1">
-<h2><span class="section-number">1.1. </span>首先使用 Sphinx 的自动配置工具<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>在准备好的工作目录下, 运行 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 将会弹出一堆文本, 并让你在其中选择要使用的配置, 一般情况下, 只需要手动修改两项, 其他保持默认即可. 让我们来看看 Sphinx 询问了我们哪些问题吧.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx 1.8.1 quickstart utility.
-Please enter values for the following settings (just press Enter to
-accept a default value, if one is given in brackets).
-
-Selected root path: .
-</pre></div>
-</div>
-<p>选择当前工作目录为项目根目录.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>You have two options for placing the build directory for Sphinx output.
-Either, you use a directory &quot;_build&quot; within the root path, or you separate
-&quot;source&quot; and &quot;build&quot; directories within the root path.
-&gt; Separate source and build directories (y/n) [n]: y
-</pre></div>
-</div>
-<p>是否将源文件(使用 .rst 或 .md 标记语言写的文档)和生成文件(html 或 epub, pdf 等)分开放置在不同的目录</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Inside the root directory, two more directories will be created; &quot;_templates&quot;
-for custom HTML templates and &quot;_static&quot; for custom stylesheets and other static
-files. You can enter another prefix (such as &quot;.&quot;) to replace the underscore.
-&gt; Name prefix for templates and static dir [_]:
-</pre></div>
-</div>
-<p>对于模板或静态目录(文件不被解析渲染), 设它们的前缀为 <cite>_</cite>.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The project name will occur in several places in the built documentation.
-&gt; Project name: Learn-Sphinx
-&gt; Author name(s): Zombie110year
-&gt; Project release []:
-</pre></div>
-</div>
-<p>分别是 项目名, 作者名, Project release 是指项目发布版本, 根据实际项目来填.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If the documents are to be written in a language other than English,
-you can select a language here by its language code. Sphinx will then
-translate text that it generates into that language.
-
-For a list of supported codes, see
-http://sphinx-doc.org/config.html#confval-language.
-&gt; Project language [en]: zh_CN
-</pre></div>
-</div>
-<p>选择项目语言, 默认是英语, 用 zh_CN 表示简体中文, 可以在上面那个链接看支持的语言以及其表示代码. 这个选项会影响搜索功能, 英文情况下, 会以英语存储搜索索引, 这样就无法使用中文搜索. 搜索功能是用 JavaScript + 字典实现的.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The file name suffix for source files. Commonly, this is either &quot;.txt&quot;
-or &quot;.rst&quot;.  Only files with this suffix are considered documents.
-&gt; Source file suffix [.rst]:
-</pre></div>
-</div>
-<p>文档文件后缀, 只有拥有这些后缀的文件才会被解析, 在当前使用的版本(v1.8.2)中只能接受 .rst 与 .txt 后缀(但都是以 reStructuredText 的语法进行解析). 要解析 Markdown, 需要安装额外的插件 recommonmark, 这个稍后再讲.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>One document is special in that it is considered the top node of the
-&quot;contents tree&quot;, that is, it is the root of the hierarchical structure
-of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;
-document is a custom template, you can also set this to another filename.
-&gt; Name of your master document (without suffix) [index]:
-</pre></div>
-</div>
-<p>这个是主文件, 对于 html, 就是指 index.html 等能够被浏览器直接默认显示的. 建议保持默认.</p>
-<p>接下来就是插件配置. 这里的都是默认插件, 其中 imgmath 和 mathjax 不能同时选.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Indicate which of the following Sphinx extensions should be enabled:
-&gt; autodoc: automatically insert docstrings from modules (y/n) [n]: y
-&gt; doctest: automatically test code snippets in doctest blocks (y/n) [n]: n
-&gt; intersphinx: link between Sphinx documentation of different projects (y/n) [n]: y
-&gt; todo: write &quot;todo&quot; entries that can be shown or hidden on build (y/n) [n]: y
-&gt; coverage: checks for documentation coverage (y/n) [n]: n
-&gt; imgmath: include math, rendered as PNG or SVG images (y/n) [n]: n
-&gt; mathjax: include math, rendered in the browser by MathJax (y/n) [n]: y
-&gt; ifconfig: conditional inclusion of content based on config values (y/n) [n]: y
-&gt; viewcode: include links to the source code of documented Python objects (y/n) [n]: y
-&gt; githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: y
-</pre></div>
-</div>
-<p>然后询问是否创建 Makefile 或者 Windows 的批处理脚本, 这是为了方便使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx</span></code> 来构建文档.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A Makefile and a Windows command file can be generated for you so that you
-only have to run e.g. `make html&#39; instead of invoking sphinx-build
-directly.
-&gt; Create Makefile? (y/n) [y]: y
-&gt; Create Windows command file? (y/n) [y]: y
-</pre></div>
-</div>
-<p>就算在 quickstart 中有选项不满意, 也可以在接下来的 <cite>conf.py</cite> 中修改.</p>
-</div>
-<div class="section" id="id2">
-<h2><span class="section-number">1.2. </span>如何规划目录结构<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>在运行了如上的 sphinx-quickstart 程序后, 目录下出现了以下文件/目录:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>├─build
-└─source
-    ├─_static
-    ├─_templates
-    |  conf.py
-    |  index.rst
-  Makefile
-</pre></div>
-</div>
-<p>在根目录下设置了 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 便于使用 make 工具自动构建, 而配置文件和索引则放在了 source 目录下.
-如果需要修改文件规划, 那么, 可以在 Makefile 中修改 <code class="docutils literal notranslate"><span class="pre">BUILDDIR</span></code> 和 <code class="docutils literal notranslate"><span class="pre">SOURCEDIR</span></code> 两项目.</p>
-</div>
-<div class="section" id="id3">
-<h2><span class="section-number">1.3. </span>插件介绍<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id4">
-<h3><span class="section-number">1.3.1. </span>官方插件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li><p>autodoc: 自动从模块中抽取 docstring 插入文档</p></li>
-<li><p>doctest: 自动测试 doctest</p></li>
-<li><p>intersphinx: 链接多个 Sphinx 文档. 需要启用它才能使用 <code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> 这样的语法链接到官方文档</p></li>
-<li><p>todo: 写下 todo 在文件头部时, 将不会渲染该文件</p></li>
-<li><p>coverage: 检查封面</p></li>
-<li><p>imgmath: 将数学公式渲染为 png 或 svg 图像</p></li>
-<li><p>mathjax: 使用 Mathjax 渲染数学公式</p></li>
-<li><p>ifconfig: 通过配置的条件判断决定文档包含</p></li>
-<li><p>viewcode: 将源代码包含进文档项目, 并在 api 文档中创建指向源代码的链接</p></li>
-<li><p>githubpages: create .nojekyll file to publish the document on GitHub pages</p></li>
+<h2>函数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="getDate">
+<code class="sig-name descname">getDate</code><span class="sig-paren">(</span><em class="sig-param">time</em>, <em class="sig-param">mode=&quot;YYYY-MM-DD hh:mm:ss&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#getDate" title="永久链接至目标">¶</a></dt>
+<dd><p>解析传入的时间, 得到一个可读的时间字符串.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>int</em>) – 从 1970 至今的秒数</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – 解析模式</p></li>
 </ul>
-</div>
-<div class="section" id="id5">
-<h3><span class="section-number">1.3.2. </span>第三方插件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
-<ul class="simple">
-<li><p><span class="xref std std-doc">graphviz</span>, 可在文档中嵌入 graphviz 代码, 在构建时生成图片</p></li>
-<li><p><span class="xref std std-doc">matplotlib</span>, 在文档中嵌入 matplotlib 代码, 在构建时生成图片</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="toctree">
-<h2><span class="section-number">1.4. </span>toctree<a class="headerlink" href="#toctree" title="永久链接至标题">¶</a></h2>
-<p>在 source 目录下添加 .rst 文件, 但是如果要在编译项目后从首页 (index.html) 进行访问, 还需要在 index.rst 中将这个文件添加到 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 中. 在原始的 index.rst 中, 应当有如下 toctree.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-</pre></div>
-</div>
-<p>要在 toctree 中添加一个文件, 应当在上面那个 toctree 结构下空一行, 添加文件名(不需要扩展)</p>
-<p>例如, 有一个 example.rst 就将 toctree 编辑为</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   example
-</pre></div>
-</div>
-<p>如果, 在 source 目录中, 添加了子目录, 将文档放在子目录里了, 那么, 只需要在原来 example 里面按相对于 index.rst 的路径填就可以了, 例如 /source/text/example.rst 就填:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
-   :maxdepth: 2
-
-   text/example
-</pre></div>
-</div>
-<div class="section" id="id6">
-<h3><span class="section-number">1.4.1. </span>toctree 参数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
-<p>toctree 下的 <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">Contents:</span></code> 等就是它的参数, 可以选用的参数有:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">n</span></code> 将目录的标题深度设为 n. 意思是 example 文件为目录的根标题, 在这个标题下, 会建立文件中的 1, 2, …, n 级标题的索引.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> 给标题自动编号.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">xxx</span></code></p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="html">
-<h2><span class="section-number">1.5. </span>更改 html 页面主题<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
-<p>默认的 html 页面看起来并不是很好看, 可以使用 pip 安装 <code class="docutils literal notranslate"><span class="pre">sphinx_*_theme</span></code> 等包, 然后在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中引用, 就可以使用更多的主题.</p>
-<p>例如 <cite>sphinx_rtd_theme &lt;https://sphinx-rtd-theme.readthedocs.io/en/latest/</cite> 这个受很多人欢迎的主题.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 下载</span>
-pip install sphinx_rtd_theme
-</pre></div>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># conf.py 中配置
-import sphinx_rtd_theme
-html_theme = &#39;sphinx_rtd_theme&#39;
-</pre></div>
-</div>
-</div>
-<div class="section" id="github-page">
-<h2><span class="section-number">1.6. </span>在 GitHub Page 上展示文档<a class="headerlink" href="#github-page" title="永久链接至标题">¶</a></h2>
-<p>在使用 Sphinx 构建完毕后, 生成的 html 项目可以直接拿来用.</p>
-<p>GitHub Page 可以将 master, gh-pages 分支下的根目录或 master 分支的 /doc 目录渲染成页面.</p>
-<p>为了方便管理, 可以在 build/html 目录下新建一个 git 仓库, 并重命名为 gh-pages 分支. 将这个分支 push 到 github 的 gh-pages 上, 充当 GitHub Page 的资源. (注意, build 目录应当在根目录下的 .gitignore 中被忽略)</p>
-<p>这样, 在项目根目录只需要一个 master 分支, 在这个分支编辑源文件, 然后 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, 之后就进入 <code class="docutils literal notranslate"><span class="pre">build/html</span></code> 目录, 再 <code class="docutils literal notranslate"><span class="pre">git</span></code> 一通即可. 非常舒服. <a class="footnote-reference brackets" href="#rtd" id="id7">1</a></p>
-<dl class="footnote brackets">
-<dt class="label" id="rtd"><span class="brackets"><a class="fn-backref" href="#id7">1</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.readthedocs.io/en/stable/config-file/v2.html">https://docs.readthedocs.io/en/stable/config-file/v2.html</a></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>表示时间的字符串 <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">hh:mm:ss</span></code></p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – 不能传入一个负值</p>
+</dd>
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><p><strong>test</strong> – 一个无关的测试量</p>
 </dd>
 </dl>
+</dd></dl>
+
+<p>使用 <code class="docutils literal notranslate"><span class="pre">function</span></code> 描述一个函数:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> getDate(time, mode)
+
+    解析传入的时间, 得到一个可读的时间字符串.
+
+    <span class="nc">:param int time:</span> 从 1970 至今的秒数
+    <span class="nc">:param mode:</span> 解析模式
+    <span class="nc">:type mode:</span> str
+
+    <span class="nc">:return:</span> 表示时间的字符串 <span class="s">``YYYY-MM-DD hh:mm:ss``</span>
+    <span class="nc">:rtype:</span> str
+
+    <span class="nc">:raise ValueError:</span> 不能传入一个负值
+    <span class="nc">:var test:</span> 一个无关的测试量
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">function</span></code> 指令后书写函数原型, 应当处于同一行中.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">xxx:</span></code> 描述一个参数的名称 <code class="docutils literal notranslate"><span class="pre">xxx</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:type</span> <span class="pre">xxx:</span></code> 描述参数 <code class="docutils literal notranslate"><span class="pre">xxx</span></code> 的类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">type</span> <span class="pre">name:</span></code> 同时描述一个参数的类型与名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:return:</span></code> 描述返回值.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:rtype:</span></code> 描述返回值的类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:raise</span> <span class="pre">xxx:</span></code> 描述抛出的异常.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:var</span> <span class="pre">yyy:</span></code> 描述用到的一个变量.</p></li>
+</ul>
+<p>并且可以通过 <a class="reference internal" href="#getDate" title="getDate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getDate()</span></code></a> 来创建一个指向该函数的链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>并且可以用过 <span class="na">:func:</span><span class="nv">`getDate`</span> 来创建一个指向该函数的链接
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>类<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="Clock">
+<em class="property">class </em><code class="sig-name descname">Clock</code><span class="sig-paren">(</span><em class="sig-param">speed=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#Clock" title="永久链接至目标">¶</a></dt>
+<dd><dl class="method">
+<dt id="Clock.gamma">
+<code class="sig-name descname">gamma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Clock.gamma" title="永久链接至目标">¶</a></dt>
+<dd><p>求解 <span class="math notranslate nohighlight">\(\gamma\)</span> 因子</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{1}{ \sqrt{ 1 - \frac{v^2}{c^2} } }\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>gamma</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Clock.speed">
+<code class="sig-name descname">speed</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#Clock.speed" title="永久链接至目标">¶</a></dt>
+<dd><p>设置该钟表相对观察者的速度.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>v</strong> (<em>float</em>) – 速度, 单位 m/s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Clock.position">
+<code class="sig-name descname">position</code><a class="headerlink" href="#Clock.position" title="永久链接至目标">¶</a></dt>
+<dd><p>该物体相对观察者的位置 <code class="docutils literal notranslate"><span class="pre">(float</span> <span class="pre">x,</span> <span class="pre">float</span> <span class="pre">y)</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<ul>
+<li><p>方法使用 <code class="docutils literal notranslate"><span class="pre">method</span></code> , 可接受的修饰和 <a class="reference internal" href="#id1">函数</a> 一致.</p></li>
+<li><p>类/方法/属性, 可以使用 <a class="reference internal" href="#Clock" title="Clock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clock</span></code></a>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">gamma()</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code> 来创建链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> Clock(speed=0.0)
+
+<span class="p">    ..</span> <span class="ow">method</span><span class="p">::</span> gamma()
+
+        求解 <span class="na">:math:</span><span class="nv">`\gamma`</span> 因子
+
+<span class="p">        ..</span> <span class="ow">math</span><span class="p">::</span> \gamma = \frac{1}{ \sqrt{ 1 - \frac{v^2}{c^2} } }
+
+        <span class="nc">:return:</span> gamma
+        <span class="nc">:rtype:</span> float
+
+<span class="p">    ..</span> <span class="ow">method</span><span class="p">::</span> speed(v)
+
+        设置该钟表相对观察者的速度.
+
+        <span class="nc">:param float v:</span> 速度, 单位 m/s
+
+<span class="p">    ..</span> <span class="ow">attribute</span><span class="p">::</span> position
+
+        该物体相对观察者的位置 <span class="s">``(float x, float y)``</span>.
+
+类/方法/属性, 可以使用 <span class="na">:class:</span><span class="nv">`Clock`</span>, <span class="na">:meth:</span><span class="nv">`gamma`</span>, <span class="na">:attr:</span><span class="nv">`position`</span> 来创建链接
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>用于解释程序中出现的一些重要数据, 比如全局变量/常量.</p>
+<dl class="data">
+<dt id="NULL">
+<code class="sig-name descname">NULL</code><a class="headerlink" href="#NULL" title="永久链接至目标">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd></dl>
+
+<p>并且, 使用 <a class="reference internal" href="#NULL" title="NULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">NULL</span></code></a> 来创建一个指向该块的链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">data</span><span class="p">::</span> NULL
+
+    <span class="s">``0``</span>
+
+并且, 使用 <span class="na">:data:</span><span class="nv">`NULL`</span> 来创建一个指向该块的链接
+</pre></div>
+</div>
+<div class="section" id="sphinx-latex-pdf">
+<h3>使用 Sphinx 生成 LaTeX 文件 (最终得到 PDF)<a class="headerlink" href="#sphinx-latex-pdf" title="永久链接至标题">¶</a></h3>
+<p>在 LaTeX 设置中, 设置以下参数:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>latex_engine = &quot;xelatex&quot;
+latex_elements = {
+    &#39;papersize&#39;: &#39;a4paper&#39;,
+    &#39;utf8extra&#39;: &#39;&#39;,
+    &#39;inputenc&#39;: &#39;&#39;,
+    &#39;cmappkg&#39;: &#39;&#39;,
+    &#39;fontenc&#39;: &#39;&#39;,
+    &#39;preamble&#39;: r&#39;&#39;&#39;
+        \usepackage{xeCJK}
+        \parindent 2em
+        \setcounter{tocdepth}{3}
+        \renewcommand\familydefault{\ttdefault}
+        \renewcommand\CJKfamilydefault{\CJKrmdefault}
+    &#39;&#39;&#39;,
+}
+</pre></div>
+</div>
+<p>就能获得良好的 TeX 代码输出, 进入到 <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> 目录下 <code class="docutils literal notranslate"><span class="pre">make</span></code>, 就能自动调用 xelatex 编译 PDF 了</p>
+<p>注意, make 文件中, 查找的 LaTeX 文件与这个设置有关:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+latex_documents = [
+    (master_doc, 文件名, 封面标题,
+    author, &#39;manual&#39;),
+]
+</pre></div>
+</div>
+<p>在文件名中, 最好不要有非 ASCII 字符, xelatex 恐怕无法找到含还有中文字符的文件名.</p>
+<p>默认情况下, 生成的 PDF 是双页打印模式的, 在电脑上浏览会发现有很多空白, 这是那些左侧有文字, 右侧没有内容, 且下面的内容在下一个章节的情况下, 会留空.</p>
+<p>要设置这一点, 在 <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> 中添加一项</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+<span class="hll">    <span class="s1">&#39;extraclassoptions&#39;</span><span class="p">:</span> <span class="s1">&#39;openany,oneside&#39;</span><span class="p">,</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>那么, 就会按照单页样式打印.</p>
+</div>
 </div>
 </div>
 

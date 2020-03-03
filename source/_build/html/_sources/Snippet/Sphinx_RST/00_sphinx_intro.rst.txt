@@ -215,4 +215,6 @@ GitHub Page 可以将 master, gh-pages 分支下的根目录或 master 分支的
 
 为了方便管理, 可以在 build/html 目录下新建一个 git 仓库, 并重命名为 gh-pages 分支. 将这个分支 push 到 github 的 gh-pages 上, 充当 GitHub Page 的资源. (注意, build 目录应当在根目录下的 .gitignore 中被忽略)
 
-这样, 在项目根目录只需要一个 master 分支, 在这个分支编辑源文件, 然后 ``make html``, ``git add *``, ``git commit``, ``git push``, 之后就进入 ``build/html`` 目录, 再 ``git`` 一通即可. 非常舒服.
+这样, 在项目根目录只需要一个 master 分支, 在这个分支编辑源文件, 然后 ``make html``, ``git add *``, ``git commit``, ``git push``, 之后就进入 ``build/html`` 目录, 再 ``git`` 一通即可. 非常舒服. [#RTD]_
+
+.. [#RTD] https://docs.readthedocs.io/en/stable/config-file/v2.html
