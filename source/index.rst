@@ -21,6 +21,12 @@ This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 3
+    :caption: Notes:
+
+    Notes/UrbanExpansion.md
+
+.. toctree::
+    :maxdepth: 3
     :caption: Discussion:
 
     Discussion/bian.rst

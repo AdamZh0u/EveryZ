@@ -6,7 +6,7 @@
 # GULD Framework
 ## title
 
-Urban density and urban form: a global comparative analysis of
+Urban land density and urban form: a global comparative analysis of
 across Time and Space
 using google earth engine
 Applying spatial metrics
@@ -57,7 +57,7 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
   * 本文侧重讨论城市化土地，因此基于人口来划分城市级别并不适用
   * 通过面积来划分城市级别
   * 100km2的城市人口可能在20-100万人口
-
+*
 ### 2.2 分区
 面积阈值计算斑块
 分区计算中心
