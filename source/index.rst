@@ -23,7 +23,7 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 3
     :caption: Notes:
 
-    Notes/UrbanExpansion.md
+    Notes/Notes.rst
 
 .. toctree::
     :maxdepth: 3
