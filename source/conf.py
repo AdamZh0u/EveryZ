@@ -16,7 +16,7 @@
 ## import sphinx_rtd_theme
 import recommonmark
 ## import murray
-import rtcat_sphinx_theme
+# import rtcat_sphinx_theme
 import karma_sphinx_theme
 # -- Project information -----------------------------------------------------
 

@@ -4,7 +4,7 @@ sphinx+reStructuredText
 .. toctree::
     :numbered:
     :maxdepth: 3
-    :caption: reStructuredText
+    :caption: Sphinx
 
     Sphinx_RST/00_sphinx_intro
     Sphins_RST/01_Rst_intro
