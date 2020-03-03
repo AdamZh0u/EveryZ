@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>使用 Sphinx 书写 API 文档 &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="../../index.html">
+                EveryThing
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a></li>
+        
+      <li>使用 Sphinx 书写 API 文档</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/Sphinx_RST/04_Sphins_inDepth.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="../../search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="转向" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Python/LinkedList.html">1. 链表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tree.html">2. 树</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Plots.html">Plots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html">1. loglogplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#scientific-style-plot">2. Scientific style plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#scientific-style">3. Scientific style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#ieee-style">4. IEEE style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#hdi-ldi">5. HDI-LDI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#proportion-and-change-rate">6. Proportion and change rate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GEE/Function.html">1. Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GEE/Gallery.html">2. Gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GEE/Course1.html">3. Course1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../RST.html">sphinx+reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="00_sphinx_intro.html">1. Sphinx 简单入门</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Rhino/01_Intro.html">1. Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rhino/01_Intro.html#grasshopper">2. Grasshopper 参数化建模</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html">1、沉默的辩手与不规则动词（不规则动词理论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id2">2、紫心勋章的秘密（揭示实质分歧）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id3">3、耍滑头的最高境界（包容性立论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id4">4、不翼而飞的帐篷和适度饮酒的陷阱（人存原则-弱化因果性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id5">5、动听地说“不”（顺势而为）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id6">6、大道理应该怎么讲（亦庄亦谐/邪）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id7">7、不说人话的风格是如何炼成的（清晰即力量）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id8">8、为什么要分清“诗”与“思”（诗与思的合而不同）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id9">9、文科生卢梭是如何“贻害社会”的（诗与思的合而不同）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id10">10、我们的立场由抽签决定（包容性立论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id11">11、命名权的威力（说服性定义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id12">12、思维定势这把锤子（包容性立论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id13">13、温顺的白鼠与偏见的囚徒（人存原则）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id14">14、自洽的、太自洽的（正确的废话）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id15">15、乾隆为何不紧张（同情之理解）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id16">16、庄子的“忘”境（反心灵鸡汤-不破不立）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id17">17、如何证明不可能（顺势而为）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id18">18、扑杀小清新的秘诀（类比为王/妄）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id19">19、统计数字中的现代巫术（数据的包装/拆解）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id20">20、滑坡论证的是与非（滑坡/反滑坡论证）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#ess">21、迟到的士兵与ESS原则（存在的合理性-反方的推定利益）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id21">22、见仁见智不是和稀泥（包容性立论-左与右）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id22">23、二货改变历史（知行关系）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id23">24、成功为什么不可复制（反鸡汤）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id24">25、讲不“通”道理怎么办（二向箔攻击-体系间思维）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id25">26、斯当东的“翻译”技巧（二向箔攻击-体系间思维）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id26">27、纠结的因与果（如何弱化因果性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id27">28、正能量的迷魂汤（亦庄亦谐）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id28">29、人中大师，马中汉斯（感知的力量）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id29">30、不可言说的悟性（诗与思）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id30">31、类比为王，类比为妄（类比的重要性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id31">32、诉诸“稳态”的辩论策略（进化论思维的意义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id32">33、辩论中的“二向箔攻击”（错与锉）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id33">34 对手才是真知音（辩论的意义是理解力训练）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id34">35 “十动然拒”的破解之道（理由和原因不一样）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id35">36 语言是个“筌”（语言的引导与误导）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id36">37 相干谬误与红鲱鱼（不相干才是最常见的谬误）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id37">38 蛤蟆鼓式的归谬法（辩论不是抬杠）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id38">39 自嘲是种大智慧（把对方辩友内化于心）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id39">40　价值冲突的草蛇灰线（价值是辩论的终极问题）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id40">41 多盯着对手的长处 （找准最应该反驳的点）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id41">42 正确的错话（说话要因势因时）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id42">43 春秋时期的挟尸要价（谈判的要义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#urge">44 不满的意义（urge 才有感染力）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id43">45 公正世界的幻觉（善解人心）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id44">46 五十步笑百步的陷阱（道德绑架的奥秘）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id45">47 贝叶斯定理的意义（数据分析是门大学问）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id46">48 以第三方为指向的意义（辩论与争吵的区别）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id47">49 斯宾诺莎式的谦让（充分辩论才是和谐之道）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id48">50 聪明人为什么办不成事（不要想当然的以己度人）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id49">51 反驳的八个层次（对反驳的分析）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id50">52 史上第一次忽悠（误导）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id51">53 无孔不入的忽悠（继续谈误导）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id52">54 交流中的“言”与“意”（语言的意向性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id53">·56 商人的大义（义利之辩新解）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id54">·57 偏执的意义（辩论的意义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id55">·58 励志不必太苦情（反鸡汤，得智慧）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id56">·59 谦卑的底色（善解人意）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id57">·60 抽象性的误导（概念思维的局限性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id58">61 清晰叙事的诀窍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id59">62：“你行你上”怎么破</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id60">63：幸存者的谬误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id61">64：学习的悖论与说服的诀窍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id62">107</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id63">108：缺失性比较的是与非</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id64">116：善于攻辩，和谐争吵</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id65">117：细节里的大魔王</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id66">118：无机锋，不辩论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id67">119：辩手怎么渡劫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id68">120：论“鸡贼”</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Write/WritingTools.html">1. Branch to the Right</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Write/WritingTools.html#use-strong-verbs">2. Use Strong Verbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Write/WritingTools.html#beware-of-adverbs">3. Beware of Adverbs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/00_Main.html">1. TOEFL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html">2. TPO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-2">3. TPO 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-3">4. TPO 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-4">5. TPO 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-5">6. TPO 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-6">7. TPO 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-7">8. TPO 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-8">9. TPO 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-10">10. TPO 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-30">11. TPO 30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo52">12. TPO52</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo53">13. TPO53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo54">14. TPO54</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html">15. 2-2 Behaviorism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#economics">16. 6-2 Economics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#theater">17. 9-2 Theater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#geology">18. 15-5 geology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#id1">19. 16-2 geology***</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#id2">20. </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/04_Speaking.html">21. Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/04_Speaking.html#writing">22. writing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/04_Speaking.html#speaking">23. speaking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#principles-of-research">PRINCIPLES  OF  RESEARCH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id1">今日中国谁最该做院士？-饶毅 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id2">我的世界观</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id3">当你动笔，成败已定 黄昕</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id4">辩论–说服的艺术</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id1">9.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id2">10.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id3">11.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id4">12.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id5">14.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id6">15.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id7">20.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id8">21.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id9">24.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id10">25.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id11">26.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id12">27.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id13">28.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id14">29.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id15">2.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id16">3.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id19">4.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id20">5.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id21">6.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id22">7.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id23">9.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id24">10.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id25">16.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id26">23.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id27">25.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id28">26.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id29">29.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id30">7.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id31">14.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id32">22.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id33">23.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id34">25.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id35">26.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id36">28.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id37">2.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id38">2.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id39">4.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id40">7.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id41">10.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id42">15.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id43">17.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id44">18.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id45">20.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id46">22.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id47">26.12.2019</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html">1. 1.5.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id2">2. 1.6.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id3">3. 1.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id4">4. 1.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id6">5. 1.13.2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id7">6. 1.17.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Feb20.html">7. 19.2.2020</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <div class="section" id="sphinx-api">
+<h1>使用 Sphinx 书写 API 文档<a class="headerlink" href="#sphinx-api" title="永久链接至标题">¶</a></h1>
+<p>程序中有哪些结构? 变量,函数,类 …… 等等. 在 Sphinx 中定义了相应的指令或角色来描述它们, 并且, 也可以写进源代码的 docstring 中, 让 <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> 自动生成.</p>
+<p>此文参考官方文档 <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html</a> .</p>
+<div class="section" id="id1">
+<h2>函数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="getDate">
+<code class="sig-name descname">getDate</code><span class="sig-paren">(</span><em class="sig-param">time</em>, <em class="sig-param">mode=&quot;YYYY-MM-DD hh:mm:ss&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#getDate" title="永久链接至目标">¶</a></dt>
+<dd><p>解析传入的时间, 得到一个可读的时间字符串.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>int</em>) – 从 1970 至今的秒数</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – 解析模式</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>表示时间的字符串 <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">hh:mm:ss</span></code></p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – 不能传入一个负值</p>
+</dd>
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><p><strong>test</strong> – 一个无关的测试量</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>使用 <code class="docutils literal notranslate"><span class="pre">function</span></code> 描述一个函数:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> getDate(time, mode)
+
+    解析传入的时间, 得到一个可读的时间字符串.
+
+    <span class="nc">:param int time:</span> 从 1970 至今的秒数
+    <span class="nc">:param mode:</span> 解析模式
+    <span class="nc">:type mode:</span> str
+
+    <span class="nc">:return:</span> 表示时间的字符串 <span class="s">``YYYY-MM-DD hh:mm:ss``</span>
+    <span class="nc">:rtype:</span> str
+
+    <span class="nc">:raise ValueError:</span> 不能传入一个负值
+    <span class="nc">:var test:</span> 一个无关的测试量
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">function</span></code> 指令后书写函数原型, 应当处于同一行中.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">xxx:</span></code> 描述一个参数的名称 <code class="docutils literal notranslate"><span class="pre">xxx</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:type</span> <span class="pre">xxx:</span></code> 描述参数 <code class="docutils literal notranslate"><span class="pre">xxx</span></code> 的类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">type</span> <span class="pre">name:</span></code> 同时描述一个参数的类型与名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:return:</span></code> 描述返回值.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:rtype:</span></code> 描述返回值的类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:raise</span> <span class="pre">xxx:</span></code> 描述抛出的异常.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:var</span> <span class="pre">yyy:</span></code> 描述用到的一个变量.</p></li>
+</ul>
+<p>并且可以通过 <a class="reference internal" href="#getDate" title="getDate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getDate()</span></code></a> 来创建一个指向该函数的链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>并且可以用过 <span class="na">:func:</span><span class="nv">`getDate`</span> 来创建一个指向该函数的链接
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>类<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="Clock">
+<em class="property">class </em><code class="sig-name descname">Clock</code><span class="sig-paren">(</span><em class="sig-param">speed=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#Clock" title="永久链接至目标">¶</a></dt>
+<dd><dl class="method">
+<dt id="Clock.gamma">
+<code class="sig-name descname">gamma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Clock.gamma" title="永久链接至目标">¶</a></dt>
+<dd><p>求解 <span class="math notranslate nohighlight">\(\gamma\)</span> 因子</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{1}{ \sqrt{ 1 - \frac{v^2}{c^2} } }\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>gamma</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Clock.speed">
+<code class="sig-name descname">speed</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#Clock.speed" title="永久链接至目标">¶</a></dt>
+<dd><p>设置该钟表相对观察者的速度.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>v</strong> (<em>float</em>) – 速度, 单位 m/s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Clock.position">
+<code class="sig-name descname">position</code><a class="headerlink" href="#Clock.position" title="永久链接至目标">¶</a></dt>
+<dd><p>该物体相对观察者的位置 <code class="docutils literal notranslate"><span class="pre">(float</span> <span class="pre">x,</span> <span class="pre">float</span> <span class="pre">y)</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<ul>
+<li><p>方法使用 <code class="docutils literal notranslate"><span class="pre">method</span></code> , 可接受的修饰和 <a class="reference internal" href="#id1">函数</a> 一致.</p></li>
+<li><p>类/方法/属性, 可以使用 <a class="reference internal" href="#Clock" title="Clock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clock</span></code></a>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">gamma()</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code> 来创建链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> Clock(speed=0.0)
+
+<span class="p">    ..</span> <span class="ow">method</span><span class="p">::</span> gamma()
+
+        求解 <span class="na">:math:</span><span class="nv">`\gamma`</span> 因子
+
+<span class="p">        ..</span> <span class="ow">math</span><span class="p">::</span> \gamma = \frac{1}{ \sqrt{ 1 - \frac{v^2}{c^2} } }
+
+        <span class="nc">:return:</span> gamma
+        <span class="nc">:rtype:</span> float
+
+<span class="p">    ..</span> <span class="ow">method</span><span class="p">::</span> speed(v)
+
+        设置该钟表相对观察者的速度.
+
+        <span class="nc">:param float v:</span> 速度, 单位 m/s
+
+<span class="p">    ..</span> <span class="ow">attribute</span><span class="p">::</span> position
+
+        该物体相对观察者的位置 <span class="s">``(float x, float y)``</span>.
+
+类/方法/属性, 可以使用 <span class="na">:class:</span><span class="nv">`Clock`</span>, <span class="na">:meth:</span><span class="nv">`gamma`</span>, <span class="na">:attr:</span><span class="nv">`position`</span> 来创建链接
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>用于解释程序中出现的一些重要数据, 比如全局变量/常量.</p>
+<dl class="data">
+<dt id="NULL">
+<code class="sig-name descname">NULL</code><a class="headerlink" href="#NULL" title="永久链接至目标">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd></dl>
+
+<p>并且, 使用 <a class="reference internal" href="#NULL" title="NULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">NULL</span></code></a> 来创建一个指向该块的链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">data</span><span class="p">::</span> NULL
+
+    <span class="s">``0``</span>
+
+并且, 使用 <span class="na">:data:</span><span class="nv">`NULL`</span> 来创建一个指向该块的链接
+</pre></div>
+</div>
+<div class="section" id="sphinx-latex-pdf">
+<h3>使用 Sphinx 生成 LaTeX 文件 (最终得到 PDF)<a class="headerlink" href="#sphinx-latex-pdf" title="永久链接至标题">¶</a></h3>
+<p>在 LaTeX 设置中, 设置以下参数:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>latex_engine = &quot;xelatex&quot;
+latex_elements = {
+    &#39;papersize&#39;: &#39;a4paper&#39;,
+    &#39;utf8extra&#39;: &#39;&#39;,
+    &#39;inputenc&#39;: &#39;&#39;,
+    &#39;cmappkg&#39;: &#39;&#39;,
+    &#39;fontenc&#39;: &#39;&#39;,
+    &#39;preamble&#39;: r&#39;&#39;&#39;
+        \usepackage{xeCJK}
+        \parindent 2em
+        \setcounter{tocdepth}{3}
+        \renewcommand\familydefault{\ttdefault}
+        \renewcommand\CJKfamilydefault{\CJKrmdefault}
+    &#39;&#39;&#39;,
+}
+</pre></div>
+</div>
+<p>就能获得良好的 TeX 代码输出, 进入到 <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> 目录下 <code class="docutils literal notranslate"><span class="pre">make</span></code>, 就能自动调用 xelatex 编译 PDF 了</p>
+<p>注意, make 文件中, 查找的 LaTeX 文件与这个设置有关:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+latex_documents = [
+    (master_doc, 文件名, 封面标题,
+    author, &#39;manual&#39;),
+]
+</pre></div>
+</div>
+<p>在文件名中, 最好不要有非 ASCII 字符, xelatex 恐怕无法找到含还有中文字符的文件名.</p>
+<p>默认情况下, 生成的 PDF 是双页打印模式的, 在电脑上浏览会发现有很多空白, 这是那些左侧有文字, 右侧没有内容, 且下面的内容在下一个章节的情况下, 会留空.</p>
+<p>要设置这一点, 在 <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> 中添加一项</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+<span class="hll">    <span class="s1">&#39;extraclassoptions&#39;</span><span class="p">:</span> <span class="s1">&#39;openany,oneside&#39;</span><span class="p">,</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>那么, 就会按照单页样式打印.</p>
+</div>
+</div>
+</div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; 版权所有 2020, AdamZhou.
+        由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0 创建。
+        </div>
+    </div>  
+
+</body>
+</html>

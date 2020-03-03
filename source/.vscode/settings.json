@@ -1,4 +1,10 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}",
-    "python.pythonPath": "D:\\Anaconda\\envs\\sphinx\\python.exe"
+    "restructuredtext.confPath"               : "${workspaceFolder}",
+    "python.pythonPath"                       : "D:\\Anaconda\\envs\\sphinx\\python.exe",
+    "restructuredtext.updateOnTextChanged"    : "false",
+    "restructuredtext.updateDelay"            : 1000,
+    "restructuredtext.linter.executablePath"  : "PathToExecutable",
+    "restructuredtext.linter.run": "onSave",
+    "restructuredtext.preview.scrollEditorWithPreview": false,
+    "restructuredtext.preview.scrollPreviewWithEditor": false
 }

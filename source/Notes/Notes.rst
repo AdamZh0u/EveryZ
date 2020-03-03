@@ -6,4 +6,3 @@ Notes
     :caption: UrbanExpansion
     :numbered:
 
-    UrbanExpansion/UrbanExpansion.md

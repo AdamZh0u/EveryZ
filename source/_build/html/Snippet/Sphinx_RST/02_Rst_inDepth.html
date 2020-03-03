@@ -1,0 +1,853 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rst 指令 &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="../../index.html">
+                EveryThing
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a></li>
+        
+      <li>rst 指令</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/Sphinx_RST/02_Rst_inDepth.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="../../search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="转向" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Python/LinkedList.html">1. 链表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tree.html">2. 树</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Plots.html">Plots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html">1. loglogplot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#scientific-style-plot">2. Scientific style plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#scientific-style">3. Scientific style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#ieee-style">4. IEEE style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#hdi-ldi">5. HDI-LDI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Plots/Matplotlib.html#proportion-and-change-rate">6. Proportion and change rate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../GEE/Function.html">1. Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GEE/Gallery.html">2. Gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GEE/Course1.html">3. Course1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../R/Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../RST.html">sphinx+reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="00_sphinx_intro.html">1. Sphinx 简单入门</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Rhino/01_Intro.html">1. Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Rhino/01_Intro.html#grasshopper">2. Grasshopper 参数化建模</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html">1、沉默的辩手与不规则动词（不规则动词理论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id2">2、紫心勋章的秘密（揭示实质分歧）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id3">3、耍滑头的最高境界（包容性立论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id4">4、不翼而飞的帐篷和适度饮酒的陷阱（人存原则-弱化因果性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id5">5、动听地说“不”（顺势而为）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id6">6、大道理应该怎么讲（亦庄亦谐/邪）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id7">7、不说人话的风格是如何炼成的（清晰即力量）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id8">8、为什么要分清“诗”与“思”（诗与思的合而不同）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id9">9、文科生卢梭是如何“贻害社会”的（诗与思的合而不同）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id10">10、我们的立场由抽签决定（包容性立论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id11">11、命名权的威力（说服性定义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id12">12、思维定势这把锤子（包容性立论）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id13">13、温顺的白鼠与偏见的囚徒（人存原则）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id14">14、自洽的、太自洽的（正确的废话）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id15">15、乾隆为何不紧张（同情之理解）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id16">16、庄子的“忘”境（反心灵鸡汤-不破不立）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id17">17、如何证明不可能（顺势而为）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id18">18、扑杀小清新的秘诀（类比为王/妄）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id19">19、统计数字中的现代巫术（数据的包装/拆解）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id20">20、滑坡论证的是与非（滑坡/反滑坡论证）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#ess">21、迟到的士兵与ESS原则（存在的合理性-反方的推定利益）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id21">22、见仁见智不是和稀泥（包容性立论-左与右）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id22">23、二货改变历史（知行关系）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id23">24、成功为什么不可复制（反鸡汤）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id24">25、讲不“通”道理怎么办（二向箔攻击-体系间思维）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id25">26、斯当东的“翻译”技巧（二向箔攻击-体系间思维）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id26">27、纠结的因与果（如何弱化因果性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id27">28、正能量的迷魂汤（亦庄亦谐）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id28">29、人中大师，马中汉斯（感知的力量）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id29">30、不可言说的悟性（诗与思）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id30">31、类比为王，类比为妄（类比的重要性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id31">32、诉诸“稳态”的辩论策略（进化论思维的意义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id32">33、辩论中的“二向箔攻击”（错与锉）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id33">34 对手才是真知音（辩论的意义是理解力训练）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id34">35 “十动然拒”的破解之道（理由和原因不一样）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id35">36 语言是个“筌”（语言的引导与误导）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id36">37 相干谬误与红鲱鱼（不相干才是最常见的谬误）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id37">38 蛤蟆鼓式的归谬法（辩论不是抬杠）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id38">39 自嘲是种大智慧（把对方辩友内化于心）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id39">40　价值冲突的草蛇灰线（价值是辩论的终极问题）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id40">41 多盯着对手的长处 （找准最应该反驳的点）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id41">42 正确的错话（说话要因势因时）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id42">43 春秋时期的挟尸要价（谈判的要义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#urge">44 不满的意义（urge 才有感染力）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id43">45 公正世界的幻觉（善解人心）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id44">46 五十步笑百步的陷阱（道德绑架的奥秘）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id45">47 贝叶斯定理的意义（数据分析是门大学问）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id46">48 以第三方为指向的意义（辩论与争吵的区别）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id47">49 斯宾诺莎式的谦让（充分辩论才是和谐之道）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id48">50 聪明人为什么办不成事（不要想当然的以己度人）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id49">51 反驳的八个层次（对反驳的分析）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id50">52 史上第一次忽悠（误导）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id51">53 无孔不入的忽悠（继续谈误导）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id52">54 交流中的“言”与“意”（语言的意向性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id53">·56 商人的大义（义利之辩新解）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id54">·57 偏执的意义（辩论的意义）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id55">·58 励志不必太苦情（反鸡汤，得智慧）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id56">·59 谦卑的底色（善解人意）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id57">·60 抽象性的误导（概念思维的局限性）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id58">61 清晰叙事的诀窍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id59">62：“你行你上”怎么破</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id60">63：幸存者的谬误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id61">64：学习的悖论与说服的诀窍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id62">107</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id63">108：缺失性比较的是与非</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id64">116：善于攻辩，和谐争吵</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id65">117：细节里的大魔王</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id66">118：无机锋，不辩论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id67">119：辩手怎么渡劫</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Bian/Bian.html#id68">120：论“鸡贼”</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Write/WritingTools.html">1. Branch to the Right</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Write/WritingTools.html#use-strong-verbs">2. Use Strong Verbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/Write/WritingTools.html#beware-of-adverbs">3. Beware of Adverbs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/00_Main.html">1. TOEFL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html">2. TPO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-2">3. TPO 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-3">4. TPO 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-4">5. TPO 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-5">6. TPO 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-6">7. TPO 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-7">8. TPO 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-8">9. TPO 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-10">10. TPO 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo-30">11. TPO 30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo52">12. TPO52</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo53">13. TPO53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/01_TPO.html#tpo54">14. TPO54</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html">15. 2-2 Behaviorism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#economics">16. 6-2 Economics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#theater">17. 9-2 Theater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#geology">18. 15-5 geology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#id1">19. 16-2 geology***</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/02_dictation.html#id2">20. </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/04_Speaking.html">21. Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/04_Speaking.html#writing">22. writing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/En/04_Speaking.html#speaking">23. speaking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#principles-of-research">PRINCIPLES  OF  RESEARCH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id1">今日中国谁最该做院士？-饶毅 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id2">我的世界观</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id3">当你动笔，成败已定 黄昕</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Discussion/article.html#id4">辩论–说服的艺术</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id1">9.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id2">10.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id3">11.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id4">12.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id5">14.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id6">15.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id7">20.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id8">21.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id9">24.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id10">25.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id11">26.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id12">27.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id13">28.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id14">29.9.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id15">2.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id16">3.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id19">4.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id20">5.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id21">6.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id22">7.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id23">9.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id24">10.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id25">16.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id26">23.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id27">25.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id28">26.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id29">29.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id30">7.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id31">14.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id32">22.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id33">23.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id34">25.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id35">26.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id36">28.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id37">2.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id38">2.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id39">4.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id40">7.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id41">10.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id42">15.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id43">17.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id44">18.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id45">20.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id46">22.12.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/Daily.html#id47">26.12.2019</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html">1. 1.5.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id2">2. 1.6.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id3">3. 1.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id4">4. 1.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id6">5. 1.13.2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Jan20.html#id7">6. 1.17.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Daily/2020/Feb20.html">7. 19.2.2020</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <div class="section" id="rst">
+<h1>rst 指令<a class="headerlink" href="#rst" title="永久链接至标题">¶</a></h1>
+<p>指令语法如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-------+-------------------------------+</span>
+<span class="o">|</span>  <span class="o">..</span>   <span class="o">|</span> <span class="n">指令</span>  <span class="p">::</span>  <span class="n">主参数</span>              <span class="o">|</span>
+<span class="o">+-------+</span>    <span class="p">:</span><span class="n">额外参数</span><span class="p">:</span>                 <span class="o">|</span>
+        <span class="o">|</span>                               <span class="o">|</span>
+        <span class="o">|</span>    <span class="n">内容</span>                       <span class="o">|</span>
+        <span class="o">+-------------------------------+</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h2>目录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="n">para</span>
+    <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">para</span>
+    <span class="p">:</span><span class="n">numbered</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">titlesonly</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">glob</span><span class="p">:</span>
+    <span class="p">:</span><span class="nb">reversed</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">hidden</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">includehidden</span><span class="p">:</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">para</span></code> 接受一个参数, 应该为数字, 设置目录树展开的深度.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">para</span></code> 接受一个参数, 为任意字符串, 设置该目录树的标题.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> 为目录自动编号</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:titlesonly:</span></code> 只生成文件的一级标题, 不展开子标题. 会覆盖 <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:glob:</span></code> 启用通配符</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:reversed:</span></code> 启用通配符时, 反转目录排序.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> 只显示标题, 而不创建超链接.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:includehidden:</span></code> 只创建一级标题的超链接.</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>警告<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>警告将会显示为特殊的样式. 在 主参数和内容 位置处, 可以编写段落. 这个指令的所有参数都是被显示的内容.</p>
+<div class="admonition danger">
+<p class="admonition-title">危险</p>
+<p>危险!</p>
+<p>这是一个危险操作.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. danger:: 危险!
+
+    这是一个危险操作.
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>提示</p>
+<p>提示条目</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">tip</span><span class="p">::</span> <span class="n">提示</span>
+
+    <span class="n">提示条目</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">警告</p>
+<p>小心</p>
+<p>小心, 注意安全</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">caution</span><span class="p">::</span> <span class="n">小心</span>
+
+    <span class="n">小心</span><span class="p">,</span> <span class="n">注意安全</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>注意</p>
+<p>集中注意力</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">note</span><span class="p">::</span> <span class="n">注意</span>
+
+    <span class="n">集中注意力</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>警告</p>
+<p>警告条目</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">warning</span><span class="p">::</span> <span class="n">警告</span>
+
+    <span class="n">警告条目</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>重要</p>
+<p>重要内容</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">important</span><span class="p">::</span> <span class="n">重要</span>
+
+    <span class="n">重要内容</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>参见某某某</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">seealso</span><span class="p">::</span>
+
+    <span class="n">参见某某某</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>版本更新<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">0.0.1 新版功能: </span>添加了一些内容</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionadded</span><span class="p">::</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+    <span class="n">添加了一些内容</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 0.0.1 版更改: </span>修改了一些内容</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">versionchanged</span><span class="p">::</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+    <span class="n">修改了一些内容</span>
+</pre></div>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">0.0.1 版后已移除: </span>某些功能被删除, 使用 某某 代替</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">deprecated</span><span class="p">::</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+    <span class="n">某某</span> <span class="n">被删除</span><span class="p">,</span> <span class="n">使用</span> <span class="n">某某</span> <span class="n">代替</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>文本样式<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p class="rubric">一个标题, 但是不计入 toctree</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">rubric</span><span class="p">::</span> <span class="n">一个标题</span><span class="p">,</span> <span class="n">但是不计入</span> <span class="n">toctree</span>
+</pre></div>
+</div>
+<p class="centered">
+<strong>demo</strong></p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">centered</span><span class="p">::</span> <span class="n">居中的文本</span>
+</pre></div>
+</div>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>1</p></li>
+<li><p>2</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>3</p></li>
+<li><p>4</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>5</p></li>
+<li><p>6</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>7</p></li>
+</ul>
+</td></tr></table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">hlist</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">columns</span><span class="p">:</span> <span class="mi">4</span>
+
+    <span class="o">-</span> <span class="mi">1</span>
+    <span class="o">-</span> <span class="mi">2</span>
+    <span class="o">-</span> <span class="mi">3</span>
+    <span class="o">-</span> <span class="mi">4</span>
+    <span class="o">-</span> <span class="mi">5</span>
+    <span class="o">-</span> <span class="mi">6</span>
+    <span class="o">-</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>图片<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>处理图片可能用到两个指令: <code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code>.</p>
+<div class="section" id="image">
+<h3>image<a class="headerlink" href="#image" title="永久链接至标题">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/loglogplot1.png"><img alt="响爷" src="../../_images/loglogplot1.png" style="height: 100px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">image</span>
+    <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">xxx</span>
+    <span class="p">:</span><span class="n">height</span><span class="p">:</span> <span class="n">xxx</span>
+    <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="n">xxx</span>
+    <span class="p">:</span><span class="n">scale</span><span class="p">:</span> <span class="n">xxx</span>
+    <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">top</span> <span class="o">|</span> <span class="n">middle</span> <span class="o">|</span> <span class="n">bottom</span> <span class="o">|</span> <span class="n">left</span> <span class="o">|</span> <span class="n">center</span> <span class="o">|</span> <span class="n">right</span>
+    <span class="p">:</span><span class="n">target</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">target</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alt</span></code> : 文本. 替换文本: 当应用无法显示图片时, 会显示图片的一个简短的描述或由应用为视觉受损的用户读出.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code> : 高度. 当高度与宽度只指定一个时, 会按照比例不变的原则进行缩放.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> : 宽度.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> : 缩放率.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">align</span></code> : “top | middle | bottom | left | center | right” 6 选 1.    图片的对齐方式, 与 CSS 一致.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> : 超链接(URI或引用名称)    将图片变为超链接引用(可点击), 可选参数是一个URI(相对或绝对), 或一个包含下划线前缀的 “引用名称”.</p></li>
+</ul>
+</div>
+<div class="section" id="figure">
+<h3>figure<a class="headerlink" href="#figure" title="永久链接至标题">¶</a></h3>
+<p>一个 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 可以理解为 “画布”, 在其上可以嵌入其他 rst 结构, 包括 <code class="docutils literal notranslate"><span class="pre">image</span></code>.</p>
+<div class="figure align-default" id="id12">
+<img alt="../../_images/loglogplot1.png" src="../../_images/loglogplot1.png" />
+<p class="caption"><span class="caption-text">这是 figure 的标题, 嵌入其他结构时需保证缩进.</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
+<div class="legend">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>这里随便嵌入了一个列表</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="n">img</span><span class="o">/</span><span class="mi">59498721</span><span class="n">_p0</span><span class="o">.</span><span class="n">jpg</span>
+
+    <span class="n">这是</span> <span class="n">figure</span> <span class="n">的标题</span><span class="p">,</span> <span class="n">嵌入其他结构时需保证缩进</span><span class="o">.</span>
+
+    <span class="o">+-----------------------------------------+</span>
+    <span class="o">|</span> <span class="n">这里随便嵌入了一个列表</span>                  <span class="o">|</span>
+    <span class="o">+-----------------------------------------+</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">figure</span></code> 接受的参数和 image 相同.</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>代码<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id7">
+<h3>代码块<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">c</span>
+    <span class="p">:</span><span class="n">linenos</span><span class="p">:</span>
+
+    <span class="nb">int</span> <span class="n">main</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>接受的参数</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> 为代码块生成行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenothreshold:</span> <span class="pre">n</span></code> 超过 n 行的代码块才会标注行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lineno-start:</span> <span class="pre">n</span></code> 为代码块生成行号, 并且从 n 开始.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span> <span class="pre">m,n,...</span></code> 着重显示 m,n 等行. 行选择可以使用 <code class="docutils literal notranslate"><span class="pre">m-n</span></code> 来选择连续的行.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span></code> 为该代码块命名.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:dedent:</span> <span class="pre">n</span></code> 调整代码缩进, 减少 n 个空格.</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>引用外部代码<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>“引用外部代码” 衍生自 <code class="docutils literal notranslate"><span class="pre">include</span></code> 指令, 将外部的代码文件内容嵌入文本.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">literalinclude</span><span class="p">::</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">file</span>
+    <span class="p">:</span><span class="n">language</span><span class="p">:</span> <span class="n">codelanguage</span>
+</pre></div>
+</div>
+<p>接受的参数</p>
+<p>允许使用 <code class="docutils literal notranslate"><span class="pre">code-block</span></code> 的参数, 除此之外可能需要指定文件字符编码. 并且, <code class="docutils literal notranslate"><span class="pre">code-block</span></code> 中高亮模式在主参数指定, 而 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 需要 <code class="docutils literal notranslate"><span class="pre">:language:</span></code> 参数.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:language:</span> <span class="pre">example</span></code> 指定高亮模式.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:encoding:</span> <span class="pre">gbk</span></code> 指定 gbk 文本编码.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lines:</span> <span class="pre">m,n,a-b,...</span></code> 只嵌入指定行.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> 为代码块生成行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lineno-start:</span> <span class="pre">n</span></code> 为代码块生成行号, 并且从 n 开始.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span> <span class="pre">m,n,...</span></code> 着重显示 m,n 等行. 行选择可以使用 <code class="docutils literal notranslate"><span class="pre">m-n</span></code> 来选择连续的行.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span></code> 为该行代码块命名.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:dedent:</span> <span class="pre">n</span></code> 调整代码缩进, 减少 n 个空格.</p></li>
+</ul>
+<p>如果 目标文件是一个 Python 模块, 还可以从 Python 语义结构上引入指定结构:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">literalinclude</span><span class="p">::</span> <span class="n">code</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">py</span>
+    <span class="p">:</span><span class="n">pyobject</span><span class="p">:</span> <span class="n">add</span>
+</pre></div>
+</div>
+<p>还可以与另一个文件做对比:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">literalinclude</span><span class="p">::</span> <span class="n">code</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">py</span>
+    <span class="p">:</span><span class="n">diff</span><span class="p">:</span> <span class="n">code</span><span class="o">/</span><span class="n">example_diff</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="highlight">
+<h3>highlight<a class="headerlink" href="#highlight" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令影响的是段落中使用 <code class="docutils literal notranslate"><span class="pre">::</span></code> 之后的默认渲染语言.</p>
+<p>它的影响范围一直持续到下一个 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令. 每一个 rst 文件, 段落后 <code class="docutils literal notranslate"><span class="pre">::</span></code> 缩进一个单位会被认为一个一个 code-block, 其渲染模式为 Python. 如果 使用了 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">highlight::</span> <span class="pre">cpp</span></code>, 那么默认渲染模式会变为 C++. 以此类推.</p>
+<p>这里做一个例子:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello World!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. highlight:: cpp
+
+这里做一个例子::
+
+    std::cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; std::endl;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>数学环境<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>使用 LaTeX 语法. <code class="docutils literal notranslate"><span class="pre">math</span></code> 指令将创建一个段落级别的数学环境, 要在行内使用, 需要用 <code class="docutils literal notranslate"><span class="pre">math</span></code> 角色. math 指令唯一的参数就是 LaTeX 语句, 不管它是在主参数位置还是在内容位置, 并且, 没有其他参数.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span> \frac{\partial y}{\partial x} = x
+
+<span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+
+    \begin{bmatrix}
+        1 &amp; 2 \\
+        3 &amp; 4 \\
+    \end{bmatrix}
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{\partial y}{\partial x} = x\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+    1 &amp; 2 \\
+    3 &amp; 4 \\
+\end{bmatrix}\end{split}\]</div>
+<div class="section" id="table">
+<h3>table<a class="headerlink" href="#table" title="永久链接至标题">¶</a></h3>
+<p>table 指令用于生成表格. 实际上, 在用格式符编辑列表时就隐式地使用了该指令. 而显式地使用 table 指令, 可以附加额外的属性.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">table</span><span class="p">::</span> 列表的标题
+    <span class="nc">:widths:</span> auto
+    <span class="nc">:align:</span> center
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:width:</span></code> 各列的宽度, 用逗号分隔, 或者使用 “auto”, “grid” 参数.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span></code> 整个列表在页面中的对齐方式, 可选 “left”, “center”, “right”.</p></li>
+</ul>
+<p>注意, 编辑的表格仍然需要遵守语法, 而且, 和 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">table</span></code> 指令需要有一个单位的缩进.</p>
+</div>
+<div class="section" id="list-table">
+<h3>list-table<a class="headerlink" href="#list-table" title="永久链接至标题">¶</a></h3>
+<p>可以通过 list 来创建表格, 这比标准的表格语法输入要简单一点:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+  <span class="nc">:header-rows:</span> int, 表头的行数, 默认为 0
+  <span class="nc">:stub-columns:</span> int, 从左开始计数, 将被合并为一格的列
+</pre></div>
+</div>
+<p>在 content 中 需要用二维列表来编辑表格中的单元:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+
+  <span class="m">*</span> - (0, 0)
+    <span class="m">-</span> (1, 0)
+    <span class="m">-</span> (2, 0)
+  <span class="m">*</span> - (0, 1)
+    <span class="m">-</span> (1, 1)
+    <span class="m">-</span> (2, 1)
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>(0, 0)</p></td>
+<td><p>(1, 0)</p></td>
+<td><p>(2, 0)</p></td>
+</tr>
+<tr class="row-even"><td><p>(0, 1)</p></td>
+<td><p>(1, 1)</p></td>
+<td><p>(2, 1)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>其他指令<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="include">
+<h3>include<a class="headerlink" href="#include" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">include</span></code> 将会把另一个文件嵌入当前文本. 和 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 不同, <code class="docutils literal notranslate"><span class="pre">include</span></code> 嵌入的不一定是纯文本. 如果嵌入 rst 文件, 那么对应的文字也会被渲染.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> path/to/file
+    <span class="nc">:start-line:</span> a  # 从第 a 行开始
+    <span class="nc">:end-line:</span> b    # 到第 b 行结束
+    <span class="nc">:start-after:</span> string    # 从这个 string 在目标文本中第一次出现时开始.
+    <span class="nc">:end-before:</span> string     # 到这个 string 在目标文本中第一次出现时结束.
+    <span class="nc">:literal:</span>       # 作为纯文本插入, 等同于 literalinclude
+    <span class="nc">:code:</span> type     # 作为源代码插入, 等同于 literalinclude 设置相应语言模式
+    <span class="nc">:number-lines:</span> n        # 从 n 开始编号, 默认从 1 开始
+    <span class="nc">:encoding:</span> utf-8        # 设置字符编码
+    <span class="nc">:tab-width:</span> 4           # 设置制表符宽度为 4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h1>rst 角色<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h1>
+<p>“角色” 在 rst 中, 就是给一个文本加上特定的身份, 基于这个身份, 实现一系列效果. 可以类比为 CSS 中的 <code class="docutils literal notranslate"><span class="pre">class</span></code></p>
+<p>语法如下:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:rolename:</span><span class="nv">`content`</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rolename</span></code> 的效果与行为可以使用 Sphinx 预定义的, 也可以自定义.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> 是指文本中的对象.</p></li>
+</ul>
+<div class="section" id="ref">
+<span id="role-ref"></span><h2>ref<a class="headerlink" href="#ref" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ref</span></code> 可以在整个项目的文档中进行交叉引用. 它使用这样的语法:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`Label`</span>
+</pre></div>
+</div>
+<p>可以在正文的任意位置使用它来引用 Label 所指的内容. 要定义 Label, 需要在一个标题前使用指令:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_示例标签:</span>
+
+<span class="gh">该标签对应段落的标题</span>
+<span class="gh">--------------------</span>
+
+这是一个示例段落, 这里有一个引用了它自己的 REF ---- <span class="na">:ref:</span><span class="nv">`示例标签`</span>
+</pre></div>
+</div>
+<p>立刻尝试! <a class="reference internal" href="#role-ref"><span class="std std-ref">ref</span></a>.</p>
+<p>引用角色还可以用于 图片, 表格 等对象. 只需要在他们前面使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_标签名:</span></code> 指令即可 也可以为对象指定 <code class="docutils literal notranslate"><span class="pre">:name:</span></code> 属性.</p>
+<p>下面的两种语法是等效的:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_图片:</span>
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> path
+
+--------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> path
+    <span class="nc">:name:</span> 图片
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>与隐式链接不同, ref 角色可以跨文件,
+而隐式链接只是链接到当前页面的标题.</p>
+</div>
+</div>
+<div class="section" id="doc">
+<h2>doc<a class="headerlink" href="#doc" title="永久链接至标题">¶</a></h2>
+<p>doc 角色是指向项目内的某篇文档的链接.
+链接目标可以用命名或路径方式指定. 不需要扩展名.</p>
+<p>对于命名方式指定的文档, 需要其被包含在某个 toctree 当中,
+例如 <span class="xref std std-doc">latex</span> 将会链接到本项目中的 /latex.rst 文档,
+因为它被包含在 /index.rst 的 toctree 当中.</p>
+<p>如果要以路径方式指定, 那么可以用根路径 <code class="docutils literal notranslate"><span class="pre">/</span></code> 开头,
+或者用 <code class="docutils literal notranslate"><span class="pre">.</span></code> 或 <code class="docutils literal notranslate"><span class="pre">..</span></code> 开头.
+从根路径指定的 <span class="xref std std-doc">/matplotlib</span> 将会指向 /matplotlib.rst,
+而从 <code class="docutils literal notranslate"><span class="pre">.</span></code> 或 <code class="docutils literal notranslate"><span class="pre">..</span></code> 开头的, 则会以当前文档的位置为基准,
+指向相对路径上的文档.</p>
+<p>如果不指定链接命名的话, 则显示名为对应文档的标题.
+<span class="xref std std-doc">雷太赫</span></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`latex`</span>
+
+<span class="na">:doc:</span><span class="nv">`/matplotlib`</span>
+
+# 设定命名
+<span class="na">:doc:</span><span class="nv">`雷太赫 &lt;latex&gt;`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download">
+<h2>download<a class="headerlink" href="#download" title="永久链接至标题">¶</a></h2>
+<p>download 角色是指向项目中非 rst 文档, 而是可下载的文件的链接.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:download:</span><span class="nv">`example.zip`</span>
+</pre></div>
+</div>
+<p>指定的文件路径可以是相对路径或绝对路径.
+相对路径以当前文档为基准,
+绝对路径以项目根目录为根.</p>
+<p>被引用的文件将会在构建时被复制到 <code class="docutils literal notranslate"><span class="pre">_download</span></code> 目录里,
+重复的文件名将会被处理.</p>
+</div>
+</div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.0.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; 版权所有 2020, AdamZhou.
+        由 <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0 创建。
+        </div>
+    </div>  
+
+</body>
+</html>

@@ -15,7 +15,7 @@ This is an open source book written for myself to review my tools.
     Snippet/Plots.rst
     Snippet/GEE.rst
     Snippet/R.rst
-    Snippet/reStructuredText.rst
+    Snippet/RST.rst
     Snippet/Git.rst
     Snippet/Rhino.rst
 
