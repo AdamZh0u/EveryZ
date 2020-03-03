@@ -13,11 +13,11 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-## import sphinx_rtd_theme
+import sphinx_rtd_theme
 import recommonmark
 ## import murray
 # import rtcat_sphinx_theme
-import karma_sphinx_theme
+#import karma_sphinx_theme
 # -- Project information -----------------------------------------------------
 
 project = 'EveryThing'
@@ -60,9 +60,9 @@ master_doc = 'index'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_rtd_theme'
 # html_theme = "default"
-html_theme = 'karma_sphinx_theme'
+#html_theme = 'karma_sphinx_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
