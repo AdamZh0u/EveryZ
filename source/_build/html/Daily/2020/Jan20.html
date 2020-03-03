@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 1.5.2019 &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="7. 19.2.2020" href="Feb20.html" />
+    <link rel="prev" title="Daily2020" href="../2020.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/GEE.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../2020.html">Daily2020</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 1.5.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2. 1.6.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3. 1.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4. 1.11.2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#h-14-00-16-00">4.1. 更快地矢量距离计算方法？ 2h 14:00-16:00</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4.2. 用这个结果分析什么问题？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gee">4.3. 使用Gee进行聚类和城市分析</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">5. 1.13.2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">6. 1.17.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Feb20.html">7. 19.2.2020</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../2020.html">Daily2020</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>1.5.2019</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Daily/2020/Jan20.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">1. </span>1.5.2019<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>qgis +google engine</p></li>
+<li><p>latex workshop</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1><span class="section-number">2. </span>1.6.2019<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>win中安装gee
+https://blog.csdn.net/RS_cj/article/details/85008690
+os.environ[‘HTTP_PROXY’] = ‘http://127.0.0.1:10809’
+os.environ[‘HTTPS_PROXY’] = ‘http://127.0.0.1:10809’</p></li>
+<li><p>Rstudio中使用Python
+https://rstudio.github.io/reticulate/articles/versions.html</p></li>
+<li><p>Gee中的领域统计
+https://developers.google.com/earth-engine/reducers_reduce_neighborhood</p></li>
+<li><p>在qgis中加载gee
+认证
+proxy参数设置</p></li>
+<li><p>现有的工具总结</p>
+<ul>
+<li><p>大尺度的矢量计算与景观格局计算
+景观格局必须对于整体进行计算。</p></li>
+<li><p>景观格局的尺度效应</p></li>
+<li><p>开源软件低效</p></li>
+</ul>
+</li>
+<li><p>实现思路与步骤</p>
+<ul>
+<li><p>投影对面积与距离计算的影响</p></li>
+<li><p>不同距离，不同密度，不同年限</p></li>
+<li><p>多线程计算的方法</p></li>
+<li><p>算一幅图需要多久</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h1><span class="section-number">3. </span>1.10.2019<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>arcgis python api
+http://kikitamap.com/2017/01/22/PythonAPIFunction1/
+https://learn.arcgis.com/zh-cn/trial/
+试用
+https://github.com/Esri/arcgis-python-api</p></li>
+<li><p>word 查找域 F11
+显示域底纹</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h1><span class="section-number">4. </span>1.11.2019<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>以论文为导向，发不了就转</p></li>
+</ul>
+<div class="section" id="h-14-00-16-00">
+<h2><span class="section-number">4.1. </span>更快地矢量距离计算方法？ 2h 14:00-16:00<a class="headerlink" href="#h-14-00-16-00" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>方案一：rgeos gDistance</p></li>
+<li></li>
+<li><p>方案二：Near_analysis in arcgis</p></li>
+<li><p>knnJ K-nearest neighbor join</p></li>
+<li><p>nngeo in R</p>
+<ul>
+<li><p>这个好像还是用sf包算的，为什么arcgis的算法那么快</p></li>
+</ul>
+</li>
+<li><p>一般的distance 都有这个功能？</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">4.2. </span>用这个结果分析什么问题？<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="gee">
+<h2><span class="section-number">4.3. </span>使用Gee进行聚类和城市分析<a class="headerlink" href="#gee" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id6">
+<h1><span class="section-number">5. </span>1.13.2020<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h1>
+<p>提取的方法已经基本完成
+分析的方法： 从现象中提取结论</p>
+<p>微观尺度，PEI
+城市的宏观尺度 反s
+系统的尺度 缺失</p>
+<p>文章分类
+土地利用分类图
+建设用地图
+城市范围图</p>
+<ol class="simple">
+<li><p>反s大法 中心，水体 全球城市土地密度比较</p></li>
+<li><p>不同规模城市的空间分布规律
+平均距离</p></li>
+<li><p>和angel数据进行比较</p></li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h1><span class="section-number">6. </span>1.17.2019<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h1>
+<p>城市-人口</p>
+<p>不同扩张模式下城市人口密度的变化</p>
+<p>城市扩张对其他用地的直接影响</p>
+<ol class="simple">
+<li><p>交互模型</p></li>
+<li><p>letter of intent</p></li>
+<li><p>UConn TTU sydney</p></li>
+<li><p>GEE打卡</p></li>
+<li><p>库</p></li>
+<li><p>一篇论文</p></li>
+<li><p>marc keushinigg</p></li>
+</ol>
+<p>https://philippgaertner.github.io/</p>
+<p>全球城市人口密度</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#设置参数</span>
+<span class="nb">set</span> <span class="n">http_proxy</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">1080</span>
+<span class="nb">set</span> <span class="n">http_proxy_user</span><span class="o">=</span><span class="n">zhangsan</span>
+<span class="nb">set</span> <span class="n">http_proxy_pass</span><span class="o">=</span><span class="n">lisi</span>
+
+<span class="c1">#删除参数</span>
+<span class="nb">set</span> <span class="n">http_proxy</span><span class="o">=</span>
+<span class="nb">set</span> <span class="n">http_proxy_user</span><span class="o">=</span>
+<span class="nb">set</span> <span class="n">http_proxy_pass</span><span class="o">=</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Feb20.html" class="btn btn-neutral float-right" title="7. 19.2.2020" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../2020.html" class="btn btn-neutral float-left" title="Daily2020" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

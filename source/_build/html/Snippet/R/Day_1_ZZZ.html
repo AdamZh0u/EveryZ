@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Introduction to R &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="3. Graphs" href="Day_2_ZZZ.html" />
+    <link rel="prev" title="1. Day 0" href="Day_0_zzz.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../R.html">R</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Introduction to R</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-r">2.1. Working with R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workspace">2.2. Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-and-output">2.3. Input and Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#packages">2.4. Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">2.5. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-dataset">2.6. Creating a dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-structures">2.7. Data Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-input">2.8. Data Input</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keyboard-input">2.8.1. Keyboard Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delimited-text-file">2.8.2. Delimited text file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#excel">2.8.3. Excel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web">2.8.4. Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dbmss">2.8.5. DBMSs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#annotating-datasets">2.9. Annotating datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#useful-function">2.10. Useful function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Introduction to R</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_1_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-r">
+<h1><span class="section-number">2. </span>Introduction to R<a class="headerlink" href="#introduction-to-r" title="永久链接至标题">¶</a></h1>
+<div class="section" id="working-with-r">
+<h2><span class="section-number">2.1. </span>Working with R<a class="headerlink" href="#working-with-r" title="永久链接至标题">¶</a></h2>
+<div class="highlight-flow notranslate"><div class="highlight"><pre><span></span>s=&gt;start: Import Data
+e=&gt;end: Produce report
+P=&gt;operation: Prepare,explore,and clean data
+F=&gt;operation: Fit a statistical model
+C=&gt;operation: Cross-validate the model
+E1=&gt;operation: Evaluate the model fit 
+E2=&gt;operation: Evaluate model prediction on new data
+
+s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>R is a case-sensitive, interpreted language.</p></li>
+<li><p>For R, everything has an class attribute telling R how to handle it.</p></li>
+<li><p>Get help <code class="docutils literal notranslate"><span class="pre">example(foo)</span></code> <code class="docutils literal notranslate"><span class="pre">apropos(&quot;foo&quot;,mode=funtion)</span></code> <code class="docutils literal notranslate"><span class="pre">data()</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="workspace">
+<h2><span class="section-number">2.2. </span>Workspace<a class="headerlink" href="#workspace" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">getwd</span><span class="p">()</span>
+<span class="nf">setwd</span><span class="p">()</span>
+<span class="nf">ls</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="input-and-output">
+<h2><span class="section-number">2.3. </span>Input and Output<a class="headerlink" href="#input-and-output" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">soure</span><span class="p">(</span><span class="s">&quot;filename&quot;</span><span class="p">)</span><span class="c1"># input module</span>
+<span class="nf">sink</span><span class="p">(</span><span class="s">&quot;filename&quot;</span><span class="p">,</span><span class="n">expand</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># text output redirect</span>
+<span class="nf">png</span><span class="p">(</span><span class="s">&quot;filename.png&quot;</span><span class="p">)</span>
+<span class="nf">pdf</span><span class="p">(</span><span class="s">&quot;filename.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="packages">
+<h2><span class="section-number">2.4. </span>Packages<a class="headerlink" href="#packages" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">.libPath</span><span class="p">()</span> <span class="c1"># lib path</span>
+<span class="nf">library</span><span class="p">()</span><span class="c1"># installed lib</span>
+<span class="nf">search</span><span class="p">()</span><span class="c1"># loaded lib</span>
+<span class="nf">install.packages</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2><span class="section-number">2.5. </span>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">help.start</span><span class="p">()</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;vcd&quot;</span><span class="p">)</span>
+<span class="nf">help</span><span class="p">(</span><span class="n">package</span><span class="o">=</span><span class="s">&quot;vcd&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
+<span class="nf">data</span><span class="p">()</span>
+<span class="nf">help</span><span class="p">(</span><span class="n">Arthritis</span><span class="p">)</span><span class="c1"># discribe data</span>
+<span class="n">Arthritis</span>
+<span class="nf">example</span><span class="p">(</span><span class="n">Arthritis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="creating-a-dataset">
+<h2><span class="section-number">2.6. </span>Creating a dataset<a class="headerlink" href="#creating-a-dataset" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="data-structures">
+<h2><span class="section-number">2.7. </span>Data Structures<a class="headerlink" href="#data-structures" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>Vectors: one-dimensional arrays.</p>
+<ul>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">a</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">)</span><span class="c1">#numeric </span>
+  <span class="n">a</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+  <span class="n">b</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;one&quot;</span><span class="p">,</span><span class="s">&quot;two&quot;</span><span class="p">)</span><span class="c1">#character</span>
+  <span class="n">c</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span><span class="kc">FALSE</span><span class="p">)</span><span class="c1">#logical</span>
+  <span class="n">d</span><span class="o">&lt;-</span><span class="m">4</span><span class="c1">#scalas</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="c1">#Slice</span>
+  <span class="n">a</span><span class="nf">[</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">)</span><span class="n">]</span>
+  <span class="n">a[1</span><span class="o">:</span><span class="m">3</span><span class="n">]</span>
+  <span class="n">a[3]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Matrix: two-dimensional array.</p>
+<ul>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">matrix</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">nrow</span><span class="o">=</span><span class="n">number_of_rows</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="n">number_of_columns</span><span class="p">,</span>
+                   <span class="n">byrow</span><span class="o">=</span><span class="n">logical_value</span><span class="p">,</span> <span class="c1">#filled in by row</span>
+                   <span class="n">dimnames</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">char_vector_rownames</span><span class="p">,</span><span class="n">char_vector_colnames</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">y</span><span class="o">&lt;-</span><span class="nf">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">20</span><span class="p">,</span><span class="n">nrows</span><span class="o">=</span><span class="m">5</span><span class="p">,</span><span class="n">ncol</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">cells</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">26</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">68</span><span class="p">)</span>
+  <span class="n">rnames</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;R1&quot;</span><span class="p">,</span> <span class="s">&quot;R2&quot;</span><span class="p">)</span>
+  <span class="n">cnames</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;C1&quot;</span><span class="p">,</span> <span class="s">&quot;C2&quot;</span><span class="p">)</span> 
+  <span class="n">mymatrix</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="n">cells</span><span class="p">,</span> <span class="n">nrow</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> 
+                     <span class="n">byrow</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">dimnames</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">rnames</span><span class="p">,</span> <span class="n">cnames</span><span class="p">))</span> 
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="c1">#slice</span>
+  <span class="n">x[i</span><span class="p">,</span><span class="n">j]</span>
+  <span class="n">x[i</span><span class="p">,</span><span class="n">]</span>
+  <span class="n">x[</span><span class="p">,</span><span class="n">j]</span>
+  <span class="n">x[i</span><span class="p">,</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">)</span><span class="n">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Array</strong>: can be more than two dimensions.</p>
+<ul>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">myarray</span> <span class="o">&lt;-</span> <span class="nf">array</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">dimnames</span><span class="p">)</span>
+  <span class="n">dim1</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">,</span> <span class="s">&quot;A2&quot;</span><span class="p">)</span>
+  <span class="n">dim2</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;B1&quot;</span><span class="p">,</span> <span class="s">&quot;B2&quot;</span><span class="p">,</span> <span class="s">&quot;B3&quot;</span><span class="p">)</span>
+  <span class="n">dim3</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;C1&quot;</span><span class="p">,</span> <span class="s">&quot;C2&quot;</span><span class="p">,</span> <span class="s">&quot;C3&quot;</span><span class="p">,</span> <span class="s">&quot;C4&quot;</span><span class="p">)</span>
+  <span class="n">z</span> <span class="o">&lt;-</span> <span class="nf">array</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">24</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="n">dimnames</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">dim1</span><span class="p">,</span> <span class="n">dim2</span><span class="p">,</span> <span class="n">dim3</span><span class="p">))</span>
+  <span class="n">z[1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="n">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Data frames</strong>: different columns contain different modes of data</p>
+<ul>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">col3</span><span class="p">,</span><span class="kc">...</span><span class="p">)</span>
+  <span class="n">patientdata[1</span><span class="o">:</span><span class="m">2</span><span class="n">]</span>
+  <span class="n">patientdata</span><span class="nf">[c</span><span class="p">(</span><span class="s">&quot;diabetes&quot;</span><span class="p">,</span> <span class="s">&quot;status&quot;</span><span class="p">)</span><span class="n">]</span>
+  <span class="c1"># cross-tabulate </span>
+  <span class="nf">table</span><span class="p">(</span><span class="n">patientdata</span><span class="o">$</span><span class="n">diabetes</span><span class="p">,</span> <span class="n">patientdata</span><span class="o">$</span><span class="n">status</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="nf">attach</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+  <span class="nf">plot</span><span class="p">(</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">)</span>
+  <span class="nf">detach</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="c1"># with</span>
+  <span class="nf">with</span><span class="p">(</span><span class="n">df</span><span class="p">,{</span>
+      <span class="nf">print</span><span class="p">(</span><span class="nf">summary</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+      <span class="nf">plot</span><span class="p">(</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">)</span>
+  <span class="p">})</span>
+  <span class="c1">#</span>
+  <span class="nf">with</span><span class="p">(</span><span class="n">df</span><span class="p">,{</span>
+      <span class="n">a</span><span class="o">&lt;-</span><span class="n">col1</span>  <span class="c1"># Local variable</span>
+      <span class="n">b</span><span class="o">&lt;&lt;-</span><span class="n">col2</span> <span class="c1"># global</span>
+  <span class="p">})</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="c1"># case identifier</span>
+  <span class="n">patientdata</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">patientID</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">diabetes</span><span class="p">,</span> 
+                            <span class="n">status</span><span class="p">,</span> <span class="n">row.names</span><span class="o">=</span><span class="n">patientID</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>Factors: Categorical(nominal) and ordered categorical(ordinal) variables in R.</p>
+<ul>
+<li><p>nominal example: type 1, type 2.</p></li>
+<li><p>ordinal example: small, big.</p></li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">types</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Type1&quot;</span><span class="p">,</span> <span class="s">&quot;Type2&quot;</span><span class="p">,</span> <span class="s">&quot;Type1&quot;</span><span class="p">,</span> <span class="s">&quot;Type1&quot;</span><span class="p">)</span>
+  <span class="n">nominal</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">types</span><span class="p">)</span>
+  <span class="c1">#created in alphabetical order by default</span>
+  <span class="n">status</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Poor&quot;</span><span class="p">,</span> <span class="s">&quot;Improved&quot;</span><span class="p">,</span> <span class="s">&quot;Excellent&quot;</span><span class="p">)</span>
+  <span class="n">ordinal</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
+  <span class="c1">#specifying a levels option</span>
+  <span class="n">ordinal</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> 
+                   <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Poor&quot;</span><span class="p">,</span> <span class="s">&quot;Improved&quot;</span><span class="p">,</span> <span class="s">&quot;Excellent&quot;</span><span class="p">))</span>
+  <span class="c1"># convert to unordered factor</span>
+  <span class="n">sex</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Male&quot;</span><span class="p">,</span> <span class="s">&quot;Female&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">patientID</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
+  <span class="n">age</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">25</span><span class="p">,</span> <span class="m">34</span><span class="p">,</span> <span class="m">28</span><span class="p">,</span> <span class="m">52</span><span class="p">)</span>
+  <span class="n">diabetes</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Type1&quot;</span><span class="p">,</span> <span class="s">&quot;Type2&quot;</span><span class="p">,</span> <span class="s">&quot;Type1&quot;</span><span class="p">,</span> <span class="s">&quot;Type1&quot;</span><span class="p">)</span>
+  <span class="n">status</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Poor&quot;</span><span class="p">,</span> <span class="s">&quot;Improved&quot;</span><span class="p">,</span> <span class="s">&quot;Excellent&quot;</span><span class="p">,</span> <span class="s">&quot;Poor&quot;</span><span class="p">)</span>
+  <span class="n">diabetes</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">diabetes</span><span class="p">)</span>
+  <span class="n">status</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+  <span class="n">patientdata</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">patientID</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">diabetes</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+  <span class="nf">str</span><span class="p">(</span><span class="n">patientdata</span><span class="p">)</span><span class="c1">#str(object) provides information about an object in R</span>
+  <span class="nf">summary</span><span class="p">(</span><span class="n">patientdata</span><span class="p">)</span><span class="c1">#</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>List： an ordered collections of objects</p>
+<ul>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">mylist</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">object1</span><span class="p">,</span> <span class="n">object2</span><span class="p">)</span>
+  <span class="n">mylist</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">name1</span><span class="o">=</span><span class="n">object1</span><span class="p">,</span> <span class="n">name2</span><span class="o">=</span><span class="n">object2</span><span class="p">)</span>
+  <span class="n">mylist[[2]]</span>
+  <span class="n">mylist</span><span class="o">$</span><span class="n">columnsname</span>
+</pre></div>
+</div>
+</li>
+<li><p>list is important in R:</p>
+<ul class="simple">
+<li><p>organize and recall disparate information in simple way</p></li>
+<li><p>many R function return lists making it easy for analysis to decide which part they want</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>It is allowed to assign a value to a nonexistent element of any data structures in R.</p>
+<p>But not in Python.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="data-input">
+<h2><span class="section-number">2.8. </span>Data Input<a class="headerlink" href="#data-input" title="永久链接至标题">¶</a></h2>
+<div class="section" id="keyboard-input">
+<h3><span class="section-number">2.8.1. </span>Keyboard Input<a class="headerlink" href="#keyboard-input" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="nf">numeric</span><span class="p">(</span><span class="m">0</span><span class="p">),</span> <span class="n">gender</span><span class="o">=</span><span class="nf">character</span><span class="p">(</span><span class="m">0</span><span class="p">),</span> <span class="n">weight</span><span class="o">=</span><span class="nf">numeric</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
+<span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">edit</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delimited-text-file">
+<h3><span class="section-number">2.8.2. </span>Delimited text file<a class="headerlink" href="#delimited-text-file" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>default transfer into factors</p></li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">grades</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;studentgrades.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>
+      <span class="n">row.names</span><span class="o">=</span><span class="s">&quot;StudentID&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">,</span>
+      <span class="n">colClasses</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;character&quot;</span><span class="p">,</span> <span class="s">&quot;character&quot;</span><span class="p">,</span> <span class="s">&quot;character&quot;</span><span class="p">,</span>  
+                   <span class="s">&quot;numeric&quot;</span><span class="p">,</span> <span class="s">&quot;numeric&quot;</span><span class="p">,</span> <span class="s">&quot;numeric&quot;</span><span class="p">))</span>
+  <span class="c1">## use colClasses to define date type</span>
+  <span class="c1"># na.string=c(-1,-9) transfer to NA</span>
+  <span class="c1"># skip =5 skip five lines</span>
+  <span class="c1"># stringAsFactors =TRUE </span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="excel">
+<h3><span class="section-number">2.8.3. </span>Excel<a class="headerlink" href="#excel" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>packages: xlsx, xlsxjars, rJava</p></li>
+<li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="nf">library</span><span class="p">(</span><span class="n">xlsx</span><span class="p">)</span>
+  <span class="n">workbook</span> <span class="o">&lt;-</span> <span class="s">&quot;c:/myworkbook.xlsx&quot;</span>
+  <span class="n">mydataframe</span> <span class="o">&lt;-</span> <span class="nf">read.xlsx</span><span class="p">(</span><span class="n">workbook</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="web">
+<h3><span class="section-number">2.8.4. </span>Web<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>API -&gt; readLines() -&gt; grep(),gsub()</p></li>
+<li><p>Rcurl, XML</p></li>
+<li><p>twitteR, Rfacebook, Rflickr</p></li>
+</ul>
+</div>
+<div class="section" id="dbmss">
+<h3><span class="section-number">2.8.5. </span>DBMSs<a class="headerlink" href="#dbmss" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Hadoop</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="annotating-datasets">
+<h2><span class="section-number">2.9. </span>Annotating datasets<a class="headerlink" href="#annotating-datasets" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="useful-function">
+<h2><span class="section-number">2.10. </span>Useful function<a class="headerlink" href="#useful-function" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">()</span>
+<span class="nf">dim</span><span class="p">()</span>
+<span class="nf">class</span><span class="p">()</span>
+<span class="nf">str</span><span class="p">()</span>
+<span class="nf">mode</span><span class="p">()</span>
+<span class="nf">names</span><span class="p">()</span>
+<span class="nf">cbind</span><span class="p">()</span><span class="c1"># combines as columns</span>
+<span class="nf">rbind</span><span class="p">()</span><span class="c1"># combines as rows</span>
+<span class="nf">head</span><span class="p">()</span>
+<span class="nf">tail</span><span class="p">()</span>
+<span class="nf">ls</span><span class="p">()</span>
+<span class="nf">fix</span><span class="p">()</span><span class="c1"># edits an object in place</span>
+<span class="nf">summary</span><span class="p">()</span>
+<span class="nf">edit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_2_ZZZ.html" class="btn btn-neutral float-right" title="3. Graphs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_0_zzz.html" class="btn btn-neutral float-left" title="1. Day 0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

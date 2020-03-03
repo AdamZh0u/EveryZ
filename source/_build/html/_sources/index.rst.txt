@@ -3,49 +3,43 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-Welcome to EveryPy's documentation!
+Welcome to EveryThing's documentation!
 ==================================================================
-This is an open source book written for myself to review the tools for Python.
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Basic:
-    :numbered:
-
-    Basic/py
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Advanced:
-    :numbered:
-
-    Advanced/py
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Snippet:
-    :numbered:
-
-    Snippet/py
-    Snippet/Matplotlib
+This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 3
-    :caption: Tools:
-    :numbered:
+    :caption: Snippet:
 
-    Tools/reStructuredText
-    Tools/Git
+    Snippet/python.rst
+    Snippet/Plots.rst
+    Snippet/GEE.rst
+    Snippet/R.rst
+    Snippet/reStructuredText.rst
+    Snippet/Git.rst
+    Snippet/Rhino.rst
+
+.. toctree::
+    :maxdepth: 3
+    :caption: Notes:
+
+    Notes/Notes.rst
 
 .. toctree::
     :maxdepth: 3
     :caption: Discussion:
 
-    Discussion/bian
-    Discussion/article
+    Discussion/bian.rst
+    Discussion/Write.rst
+    Discussion/En.rst
+    Discussion/article.rst
 
+.. toctree::
+    :maxdepth: 3
+    :caption: Daily:
 
-
+    Daily/Daily
+    Daily/2020
 
 Indices and tables
 ==================

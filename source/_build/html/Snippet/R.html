@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>R &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="1. Day 0" href="R/Day_0_zzz.html" />
+    <link rel="prev" title="3. Course1" href="GEE/Course1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>R</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Snippet/R.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="r">
+<h1>R<a class="headerlink" href="#r" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">R in Action</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="R/Day_0_zzz.html">1. Day 0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_0_zzz.html#markdown">1.1. Markdown 语法回顾</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_0_zzz.html#block-elements">1.1.1. Block Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_0_zzz.html#span-elements">1.1.2. Span Elements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_0_zzz.html#id1">1.2. 几点拓展与注意</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_0_zzz.html#rrstudio">1.3. 安装R与Rstudio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="R/Day_1_ZZZ.html">2. Introduction to R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#working-with-r">2.1. Working with R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#workspace">2.2. Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#input-and-output">2.3. Input and Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#packages">2.4. Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#example">2.5. Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#creating-a-dataset">2.6. Creating a dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#data-structures">2.7. Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#data-input">2.8. Data Input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_1_ZZZ.html#keyboard-input">2.8.1. Keyboard Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_1_ZZZ.html#delimited-text-file">2.8.2. Delimited text file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_1_ZZZ.html#excel">2.8.3. Excel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_1_ZZZ.html#web">2.8.4. Web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_1_ZZZ.html#dbmss">2.8.5. DBMSs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#annotating-datasets">2.9. Annotating datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_1_ZZZ.html#useful-function">2.10. Useful function</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="R/Day_2_ZZZ.html">3. Graphs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#working-with-graphs">3.1. Working with Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#plot-a-graph">3.2. Plot a graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#symbols-and-lines">3.3. Symbols  and lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#colors">3.4. Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#text-characteristics">3.5. Text characteristics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#graph-and-margin-diemensions">3.6. Graph and margin diemensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#text-customized-axes-legends-titles">3.7. Text, customized axes, legends, titles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_2_ZZZ.html#combining-graphs">3.8. Combining graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="R/Day_3_ZZZ.html">4. Basic Data Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#leadership-data-frame">4.1. Leadership data frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#creating-new-variables">4.2. Creating new variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#recoding-variables">4.3. Recoding variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#renaming-variables">4.4. Renaming variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#missing-value">4.5. Missing value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#data-values">4.6. Data values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#type-conversions">4.7. Type conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#sorting-data">4.8. Sorting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#merge-data">4.9. Merge data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#merge-cols">4.9.1. Merge Cols</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#merge-rows">4.9.2. Merge rows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#subset-datasets">4.10. Subset datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#selecting">4.10.1. Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#excluding">4.10.2. Excluding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#selecting-observations">4.10.3. Selecting observations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#the-subset-function">4.10.4. The subset() function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_3_ZZZ.html#random-samples">4.10.5. Random samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_3_ZZZ.html#using-sql">4.11. Using SQL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="R/Day_4_ZZZ.html">5. Advanced data management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_4_ZZZ.html#numerical-and-character-functions">5.1. Numerical and character functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#mathematical-functions">5.1.1. Mathematical functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#statistical-functions">5.1.2. Statistical functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#probability-functions">5.1.3. Probability functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#character-functions">5.1.4. Character functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#useful-functions">5.1.5. Useful functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#applying-functions-to-matrices-and-data-frame">5.1.6. Applying functions to matrices and data frame</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_4_ZZZ.html#a-solution-for-the-data-management-challenge">5.2. A solution for the data-management challenge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_4_ZZZ.html#control-flow">5.3. Control flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_4_ZZZ.html#user-written-functions">5.4. User-written functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_4_ZZZ.html#aggregation-and-reshaping">5.5. Aggregation and reshaping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_4_ZZZ.html#reshape2">5.5.1. Reshape2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="R/Day_5_ZZZ.html">6. Basic graphs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#bar-plot">6.1. Bar plot</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_5_ZZZ.html#simple-bar-plot">6.1.1. Simple bar plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_5_ZZZ.html#stacked-and-grouped-bar-plot">6.1.2. Stacked and grouped bar plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_5_ZZZ.html#mean-bar-plot">6.1.3. Mean bar plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_5_ZZZ.html#tweaking-bar-plot">6.1.4. Tweaking bar plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_5_ZZZ.html#spinograms">6.1.5. Spinograms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#pie-chart">6.2. Pie chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#histogram">6.3. Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#kernel-density-plot">6.4. Kernel density plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#box-plots">6.5. Box plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="R/Day_5_ZZZ.html#parallel-box-plot">6.5.1. Parallel box plot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#violin-plot">6.6. Violin plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R/Day_5_ZZZ.html#dot-plot">6.7. Dot plot</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="R/Day_0_zzz.html" class="btn btn-neutral float-right" title="1. Day 0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="GEE/Course1.html" class="btn btn-neutral float-left" title="3. Course1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Day 0 &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="2. Introduction to R" href="Day_1_ZZZ.html" />
+    <link rel="prev" title="R" href="../R.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../R.html">R</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Day 0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markdown">1.1. Markdown 语法回顾</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#block-elements">1.1.1. Block Elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#span-elements">1.1.2. Span Elements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.2. 几点拓展与注意</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rrstudio">1.3. 安装R与Rstudio</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Day 0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_0_zzz.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>[toc]</p>
+<div class="section" id="day-0">
+<h1><span class="section-number">1. </span>Day 0<a class="headerlink" href="#day-0" title="永久链接至标题">¶</a></h1>
+<div class="section" id="markdown">
+<h2><span class="section-number">1.1. </span>Markdown 语法回顾<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h2>
+<div class="section" id="block-elements">
+<h3><span class="section-number">1.1.1. </span>Block Elements<a class="headerlink" href="#block-elements" title="永久链接至标题">¶</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Paragraph : return
+Line breaks : shift+return/two spaces/ &lt;br/&gt;
+Headers : #
+Blockquotes : &gt;
+Unordered List : * / + / -
+Ordered List : 1.
+Task List : - [ ]
+Code Blocks : ```
+Math Blocks : $$
+Tables : | Columns1 | Columns2 |
+Footnotes : [^1]   [^1]:
+Horizontal Rules : * * * / ---
+Table of Contents : [toc]
+YAML Front Matter : --- (at top) 
+</pre></div>
+</div>
+</div>
+<div class="section" id="span-elements">
+<h3><span class="section-number">1.1.2. </span>Span Elements<a class="headerlink" href="#span-elements" title="永久链接至标题">¶</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Inline Links : []() / &lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt;
+Internal Links : [](# title)
+Reference Links : [][1]  [1]: 
+URLs : &lt;zhouzz400@gmail.com&gt;
+Images : ![caption](path)
+Emphasis : *demo* / _demo_
+Strong ： **demo**
+Code : `code`
+Strikethrough : ~ ~demo~ ~
+Underlines : &lt;u&gt; under &lt;/u&gt;
+Emoji : :smile:
+Subscript and Supscript : ~ / ^
+Highlight : == demo ==
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2><span class="section-number">1.2. </span>几点拓展与注意<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>:red_circle: 注意enter是下一段，shift+enter是换行，有差别</p></li>
+<li><p>:red_circle:无序列表按tab到下一级，shift+tab到上一级</p></li>
+<li><p>编辑网页的语言–html，也是一种标记语言（看看淘宝主页）。markdown中兼容html语言。</p></li>
+<li><p>在zotero中做笔记时，编辑邮件时，都可以使用markdown。</p></li>
+<li><p>几个用markdown生成的网页。</p>
+<ul>
+<li><p><a class="reference external" href="https://wizardforcel.gitbooks.io/markdown-simple-world/4.html">使用markdown制作网页电子书</a></p></li>
+<li><p><a class="reference external" href="https://github.com/AdamCh0u/RinAction">github的readme</a></p></li>
+<li><p><a class="reference external" href="https://jekyllcn.com/">使用markdown制作网页</a></p></li>
+</ul>
+</li>
+<li><p>使用markdown放小视频</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="rrstudio">
+<h2><span class="section-number">1.3. </span>安装R与Rstudio<a class="headerlink" href="#rrstudio" title="永久链接至标题">¶</a></h2>
+<p>略</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_1_ZZZ.html" class="btn btn-neutral float-right" title="2. Introduction to R" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../R.html" class="btn btn-neutral float-left" title="R" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

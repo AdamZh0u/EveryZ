@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>15. 2-2 Behaviorism &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="03_writeTempletes.html" />
+    <link rel="prev" title="2. TPO1" href="01_TPO.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/GEE.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Write.html">Write</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../En.html">To</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_Main.html">1. TOEFL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html">2. TPO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-2">3. TPO 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-3">4. TPO 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-4">5. TPO 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-5">6. TPO 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-6">7. TPO 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-7">8. TPO 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-8">9. TPO 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-10">10. TPO 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-30">11. TPO 30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo52">12. TPO52</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo53">13. TPO53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo54">14. TPO54</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">15. 2-2 Behaviorism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#economics">16. 6-2 Economics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#theater">17. 9-2 Theater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geology">18. 15-5 geology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">19. 16-2 geology***</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">20. </a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_Speaking.html">21. Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_Speaking.html#writing">22. writing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_Speaking.html#speaking">23. speaking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../En.html">To</a> &raquo;</li>
+        
+      <li><span class="section-number">15. </span>2-2 Behaviorism</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Discussion/En/02_dictation.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="behaviorism">
+<h1><span class="section-number">15. </span>2-2 Behaviorism<a class="headerlink" href="#behaviorism" title="永久链接至标题">¶</a></h1>
+<p>now many people consider JW to be the founder of behaviorism</p>
+<p>And like other behaviors, He believed that the psychology should study only the behaviors that can observe and measure</p>
+<p>They are not interested in mental process</p>
+<p>while a person could describe his thoughts, no one else can see or hear them to verify the accuracy of his report, but one thing you can observe is muscular habits</p>
+<p>what W did was to observe muscular habits. Because he viewed them as manifestation of thinking</p>
+<p>one kind of habits that he studied are Laryngeal habits</p>
+<p>LW thought laryngeal habits you know from larynx , in other words related with voice box, he thought those habits were an expression of thinking</p>
+<p>He argued that for very young children, thinking is really talking out loud to oneself because they talk out loud even if they’re not trying to communicate with someone in particular as the individual matures, that overt talking to oneself becomes covert talking to oneself but thinking stills shows up as a laryngeal habit</p>
+<p>One of the bits of evidence that support this is when people are trying to solve a problem they typically have increased muscular habit in the throat region</p>
+<p>That is if you put electrodes on the throat and measure muscle potential, muscle activity, you discover that when people are thinking like if they are diligently trying to solve a problem, that there is a muscle activity in the throat region</p>
+<p>So LW make the argument that problem solving and thinking can be defined as set of behaviors as set of response. And in this case the response he observed was the throat activity</p>
+<p>That is what he means when he calls it a Laryngeal Habit</p>
+<p>As I am thinking about what I am going to saying, my muscles in my throat are responding.</p>
+<p>So thinking can be measured as muscle activity</p>
+<p>Now the motor theory</p>
+<p>S: did he happen to look at people who sign I mean deaf people</p>
+<p>He did in dead, and to jump a head what one finds in deaf people who use sign language</p>
+<p>When they are given problems of various kind they have muscular changes in their hand, when they are trying to solve a problem, just like the muscle changed going on in the throat region for speaking individuals, so for LW, thinking is a identical activity with muscles</p>
+<p>Related concept was developed by William James it is called ideomotor action</p>
+<p>ideomotor action is a activity occurs without our noticing it. Without our being aware of it , I will give a simple example</p>
+<p>If you think of locations there tends to be eye movements that occurs with you thinking about your location.</p>
+<p>In particular, from where we were siting, imagine that you are asked to think of our university library, well if you close your eyes and think of the library, and if you are siting directly facing me then according to this notion, your eyeballs will slightly move to the left, to your left, cause library in the general direction</p>
+<p>J and others said this is the idea leading to a motor actions, and that is why it is called ideomotor action and idea leads to mode activity</p>
+<p>If you want to impress your friends and relatives, you can change the simple process into magic trick.</p>
+<p>Ask people to do something such as I’ve just described, thinking of something on their left, think something on their right, you get them to think thing on either side with their eyes closed, and you watch their eyes very carefully.</p>
+<p>And if you do that you will discover that you can see rather clearly the eye movements that is you can see the movements of the eyeballs</p>
+<p>Now then you say, think of either one and I will tell you which you are thinking of</p>
+<p>Ok well, W makes the assumption that muscular activity is equivalent to thinking but given everything we’ve been talking about here, one has to ask, are they alternatives to the motor theory this claim that muscular activities are equivalent to thinking</p>
+<p>Is there anything else that might account for this change in muscular activity, other than saying that it is thinking and the answer is clearly yes</p>
+<p>Is there any way to answer it the question definitively I think the answer is no.</p>
+<p>Diligently</p>
+<p>Notion</p>
+<p>thinking is identical with the activity of muscles.</p>
+<p>What is the professor mainly discussing?</p>
+<p>Why does the professor say this:</p>
+<p>What does the professor say about people who use sign language?</p>
+<p>What point does the professor make when he refers to the university library?</p>
+<p>The professor describes a magic trick to the class, what does the magic trick demonstrate?</p>
+<p>What is the professor’s opinion of the motor theory of thinking?</p>
+</div>
+<div class="section" id="economics">
+<h1><span class="section-number">16. </span>6-2 Economics<a class="headerlink" href="#economics" title="永久链接至标题">¶</a></h1>
+<p>Now when I mention the term boom and bust, what doe s that bring to mind?</p>
+<p>The dot com crush of the 19th</p>
+<p>The boom in the late 1990s when all those new internet companies sprang up and were then sold for huge amounts of money.</p>
+<p>Then the bust around 2001 when many of the same companies went out of business.</p>
+<p>Of course booms aren’t always follows by busts we’ve certainly see times when local economies expand rapidly for a while and went back to a normal pace of growth.</p>
+<p>But there’s a type of rapid expansion. What maight be called a historical or irrational boom that pretty much always leads to a bust.</p>
+<p>You see, people often create and intensify a boom when they were carried away by some new industry that seems like it will make lots of money fast.</p>
+<p>You’d think that by the 90s people would have learned from the past. If they did, well look at tulips,</p>
+<p>Tulips, you mean like the flower?</p>
+<p>Exactly. For instance, do you have any idea where tulips are from? Originally I mean</p>
+<p>Well, the Netherlands right?</p>
+<p>That is what most people think. But no, they are not native to Netherlands or even Europe.</p>
+<p>Tulips actually hail from an area that  Chinese called the celestial mountains in central Asia. A very remote mountainous region. It was Turkish nomads who first discovered tulips and spread them slowly westward .</p>
+<p>Now around the 16th century, Europe were travelling to Istanbul and turkey as ………merchants and diplomats.</p>
+<p>And Turks often give Europeans  tulip bulbs as  gifts. Which they would carry home with them. For the Europeans, tulips were totally unheard of a great novelty, the first bulb to show up in the Netherlands, the merchant who received them  roasted and ate them, they thought they were a kind of onion.</p>
+<p>It turns out that Netherlands were an ideal country for growing tulips, it had the right kind of sandy soil for one thing, but also it was a wealthy nation with a growing economic, willing to spend  lots of money on new exotic things. Plus the Dutch have a history of  gardening.</p>
+<p>What were some of the factors that contributed to the tulip craze in the Netherlands in the seventeenth century?</p>
+<p>A. wealthy gardeners liked to complete for rare plants</p>
+<p>B. the number of people with disposable income was growing</p>
+<p>C. tulip bulbs were initially cheap and easy to obtain</p>
+<p>D. tulips in the wild bloomed in unusual color combination</p>
+<p>In the wild?</p>
+<p>E. the tulip market was not regulated by the government</p>
+<p>Wealthy people would compete, spending enormous amounts of money to buy the rarest flowers for their gardens.</p>
+<p>Soon tulips were beginning to show up in different colors as growers tried to breed them specifically for colors which would make them even more valuable. But they were never completely sure what  they would get. Some of the most priced tulips were white with purple streaks, or red with yellow streaks On the petals– Even a dark purple tulip that was very much priced.</p>
+<p>What happened then was a crazy for those specialized tulips, we called that craze tulip mania.</p>
+<p>So, here we’ve got all the conditions for an irrational boom, a prosperous prospering economy, so more people had more disposable income, money to spend on luxuries. But they weren’t experienced at investing they new wealth. Then along comes to threaten thrilling  new commodity, sure the first specimen were just plain old red tulips. But they could be bred into some extraordinary variations. Like a dark purple tulip.</p>
+<p>And finally you have an unregulated market place, no government constrains, where prices could explode.</p>
+<p>And explode they did starting in the 1630s</p>
+<p>There were always much more demands of tulips than supply,</p>
+<p>Tulips did not bloom frequently like rose, tulips bloomed once in the early spring, and that was it for the year.</p>
+<p>Eventually, specially bred multicolored tulips became so valuable, well according to  records, one tulip bulb  was worth 24 tons of wheat, or thousand pounds of cheese.</p>
+<p>One particular tulip ball were sold and exchanged for a small ship.</p>
+<p>In other word, tulips were literately worth their way in gold.</p>
+<p>The professor mentions the practice of trading promissory note in the Netherlands in the 1630s, what does this practice explain?</p>
+<p>As demand grew, people began selling promissory notes, guaranteeing in the future delivery of priced tulip bulbs.</p>
+<p>The buyers of the piece of paper was resell the notes at market up prices.</p>
+<p>This promissory notes kept changing hands from buyer to buyer until the tulip was ready for delivery.</p>
+<p>But it was all pure speculation because as I said there was no way to know if the bulbl was really going to produce the variety, the color was promised.</p>
+<p>But that did not matter to the owner of the note, the owner only care about the piece of paper, so it could be traded later for the profit.</p>
+<p>And people were borrowing  mortgaging their homes in many cases to obtain those bits of paper, because they were sure that they’d found an easy way to make money.</p>
+<p>So now, you have got all the ingredients  for huge bust.</p>
+<p>And bust it did , one cold February morning,1637, a group of bulb traders  got together and discovered that suddenly there were no bidders, nobody want to buy.</p>
+<p>Panics spread like wild fire., and the tulips market collapse totally.</p>
+<p>promissory note</p>
+<p>mortgage</p>
+<p>disposable income</p>
+</div>
+<div class="section" id="theater">
+<h1><span class="section-number">17. </span>9-2 Theater<a class="headerlink" href="#theater" title="永久链接至标题">¶</a></h1>
+<p>As we have see, the second half of the 18th century was an exciting time in Europe, it was not only an age of great invention, but social changes also led to a rise in all sorts of entertainment, From reading to museums to travel.</p>
+<p>And finding himself in the middle of this excitement was an accomplished French theater named FJLB.</p>
+<p>LB arrived in England in 1771, and immediately went to work as a set designer at the famous DT theater in London.</p>
+<p>From his first shows, LB showed a knack  for imagination and stage design,  all in  the interested of  creating illusions that allowed the audience to suspend disbelieve completely.</p>
+<p>According to the professor, how did Loutherbourg create a feeling of greater depth on the stage?</p>
+<p>He carefully spaced separate pieces of scenery.</p>
+<p>He accomplished this by giving the stage a greater feeling of depth, which he did by cutting up some of the rigid  background scenery  and placing it at various angels and distances from the audience.</p>
+<p>Another realistic touch  was using 3d objects on the set, like rocks and bushes, as  opposed  to 2d painted scenery . He also paid much more attention to lighting and sound than had been done before.</p>
+<p>What can be inferred about theatergoers in eighteenth-century England?</p>
+<p>Now this sets were so elaborate that many people attended the theater more for them than for the actors of the stories.</p>
+<p>At that time, people were wild for travel and for experiencing new places but not everyone could afford it. LB outdid outdid himself , however with a show he set up in his own home. He called it the IDFSK</p>
+<p>ID means something like representation of nature, and that’s exactly what he intended to do, create realistic moving scenes that change before the audience’s eyes.</p>
+<p>In this, he synthesized emphasize for all his trick from DL,  mechanical motion, sound, light, other special effects to create if you will an  early multimedia  production</p>
+<p>The ID was LB’s attempt to release painting from the constrains of the picture frame.</p>
+<p>After all, even the most action-filled, exciting painting can represent only one moment in time, and any illusion of movements is gone after the first glance .</p>
+<p>But LB like other contemporary paintings, wanted to add the dimension of time to its paintings.</p>
+<p>What is the professor’s opinion about the relationship between English landscape painters and Loutherbourg?</p>
+<p>You know, the popular thinking is that LB is influenced by landscape paintings, but why can’t we say that the ID actually influence the painters?</p>
+<p>At the very least we have to consider that it was more of a mutual thing.</p>
+<p>We know for example the important English landscape painter, TG, attended all of the performances, and his later paintings, are notable for their increased color, and dynamic use of light.</p>
+<p>LB’s influence on the theater though, he was incredibly influential, the way he brought together design, lighting and sound as a unified feature of stage can easily be seen in English theater subsequent subsequent emphasis on lighting and emotion,</p>
+<p>What are two notable features of the Eidophusikon?</p>
+<p>A. It was identical to the Drury Lane Theatre.</p>
+<p>B. It did not make use of actors.</p>
+<p>C. It used paintings made by Gainsborough.</p>
+<p>D. It had a small stage.</p>
+<p>Now, the ID stage, with actually a box, a few meters wide, a couple meters tall, couple meters deep, that is the action toke place within this box.</p>
+<p>This was much more smaller of course than usual stage, but it also allowed LB to concentrate the lighting to better effect, also the audience was in the dark, which wouldn’t be a common feature of theater until 100 years later.</p>
+<p>The show consist of a series of scene, for example, a view of London, from sunrise, that changes, as the day moves on, mechanical figures such as cattle moved across the scene, and ships sail along the river.</p>
+<p>But what really got the people was the attention to detail, much like his work in DL.</p>
+<p>So for example, he painted very realistic ships, and varied  their size depending on their distance from the audience.</p>
+<p>Small boats move more quickly across the foreground, than larger one did it were closer to the horizon.</p>
+<p>Other effects, like waves, were also very convincing, they reflected the sunlight and moonlight depending on the time of the day or night, even the colors change as they would in nature.</p>
+<p>Sound and light were important in making his product realistic.</p>
+<p>He used a great numbers of lamps lumps, and it was able to change colors of light by using variously  pieces of glass to create effects like passing clouds that subtly changed in color.</p>
+<p>Furthermore, he use the effects to make patterns of shadows and light, rather than using the uniform lighting that was common at the time.</p>
+<p>And many of the  sound effects he pioneered are still in use today, like creating thunder by pulling on one of the corners of a thin copper sheet One of his most popular scenes was of a storm, and there is a story, that on one occasion, an actual storm passed overhead during the show, and some people went outside, and they claim LB’s thunder was actually better than the real thunder.</p>
+</div>
+<div class="section" id="geology">
+<h1><span class="section-number">18. </span>15-5 geology<a class="headerlink" href="#geology" title="永久链接至标题">¶</a></h1>
+<p>主旨、名词、关系、作用、exp. Evi</p>
+<p>What is the lecture mainly about?</p>
+<p>Recognizing when one geologic epoch ends and another begins</p>
+<p>As geologist, we examine layers of sediments on the earth surface to approximate the dates of past geologic time periods.</p>
+<p>Sediments as you know, is material like sand gravel, fossil fragments, that is transported by natural processes, like wind, water flow, or the movement of glaciers.</p>
+<p>So sediments is transported and then deposited and it forms layers on the Earth surface over time.</p>
+<p>We Examine these layers to learn about different geologic time periods including when they began and ended.</p>
+<p>Why does the professor mention the Pleistocene epoch?</p>
+<p>To give an example of a well-defined geologic epoch</p>
+<p>For example, from about 1.8 million years ago, to around 11000 years ago, was the  Pleistocene 更新世 epoch.</p>
+<p>Researchers study sediment in order to learn about the characteristics of past geologic epochs. What does the professor say that sediment reveals about a particular epoch?</p>
+<p>The climate on Earth when the sediment formed</p>
+<p>The organisms that lived when the sediment formed</p>
+<p>The EA was an ice age, during this epoch, sediments was made by the kind of erosion and weathering that happens when the climates is colder.</p>
+<p>And part of these sediments are fossils of plants and animals that lived at that time.</p>
+<p>The  Holocene 全新世 epoch followed, the EA, when the earth climate warmed up, around 11000 years ago, the HLS epoch is characterized by different sediments, once that formed when the climate is warmer.</p>
+<p>Because the climate changed, the types of plants and animals changed also,</p>
+<p>HLS sediments contain remnants ruminates more recent plants and animals, so it is pretty easy to differentiate  geologically between this two epochs.</p>
+<p>Now there is growing evidence that the presence of humans has altered the Earth so much, that a new epoch of geological history has began, the Anthropocene 人类世 epoch, a new human influenced epoch.</p>
+<p>According to the professor, what is the significance of the year 1800 C.E.?</p>
+<p>The human population reached 1 billion.</p>
+<p>Industrialization began to influence Earth’s environment.</p>
+<p>Common Era 公元</p>
+<p>This idea that we have entered a new A epoch was first purposed in 2002.</p>
+<p>The ideas that around 1800 C.E, the human population became large enough for around 1billion people, that its activities stared to altering the environment.</p>
+<p>This is also the time the industry revolution, which brought tremendous uses of  fossil fuels, such as coal.</p>
+<p>The exploitation of fossil fuels has brought planetwide developments, industrialization, construction, mass transport.</p>
+<p>And these developments have  cause major changes, like additional erosion of the earth surface in the deforestation, also, things like damming of river, has coursed increasing sediment production, not to mention the additional of carbon dioxide and methane in  the atmosphere.</p>
+<p>Also all this change show up in recent sediments, and these sediments are quiet different from pre-year 1800 sediments layers.</p>
+<p>Interestingly, there are some speculation that human started having a major impact on earth much earlier, about 8000 years ago, that is when agriculture became widespread.</p>
+<p>Early farmers started  clearing forest and livestock 牲畜 life stock produced a lot of extra methane g.</p>
+<p>What does the professor imply about the spread of agriculture 8,000 years ago?</p>
+<p>But I wanted to stress this is just a hypothesis, the idea that early humans could have such a major effect, well, I am just not sure we can compare it with industrial age,</p>
+<p>What does the professor say about future researchers?</p>
+<p>They will determine when the Anthropocene epoch began.</p>
+<p>Geologist in the far future will be able to exam the settlements being laid down today, whereas right now we can say the yes human impact on the earth is clear, it will be future researchers who will have a better respective and will be able to really draw a line between the HLS and A epoch.</p>
+</div>
+<div class="section" id="id1">
+<h1><span class="section-number">19. </span>16-2 geology***<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>There are some pretty interesting caves in parts of the western united states, especially in national parks.</p>
+<p>There is one park that has over a hundred caves, including some of the largest one in the world, one of the more interesting one is called LC. Lechuguilla cave</p>
+<p>LC has been explored a lot in recent decade, it is a pretty exciting place I think.</p>
+<p>It was mentioned only briefly in  your books, so can anyone remember what it said, Ellen?</p>
+<p>It is the deepest limestone cave in the US</p>
+<p>That’s right, it is one of the longest and deepest limestone caves not just in us but in the world. Now what else?</p>
+<p>It was formed because it sulfuric acid. Right?</p>
+<p>That’s it, yep, what happens is you have deep underground oil deposits and there are bacteria… here let me draw diagram.</p>
+<p>Part of the limestone rock layers permeated 渗透 by water from blow.</p>
+<p>Those curly lines are supposed to be cracks in the rock. Below the water table and rock is oil.</p>
+<p>Bacteria filled on this oil, and release hydrogen sulfide gas.</p>
+<p>This gas are hydrogen sulfide rises up and mixes with oxygen in the underground water that sits in the cracks and fissures in the limestone.</p>
+<p>And when hydrogen sulfide reacts with oxygen in the water, the result of that is sulfide acid.</p>
+<p>OK, sulfuric  acid eats away of limestone very aggressively, so you get bigger cracks, and then passage ways being formed along the openings in the rock. And it is all underground.</p>
+<p>Yes，paul？</p>
+<p>So that water, it’s not flowing, right? It’s still.</p>
+<p>Yes so there is two kinds of limestone caves, in about 90 percent of them you have water from the surface, streams, waterfalls, whatever.</p>
+<p>Moving water that flows though cracks found in the limestone, it is the moving water itself that wears  away at the rock and makes passage ways.</p>
+<p>Also, in surface water, there is a weak acid, carbonic acid, not  sulfuric  acid but carbonic acid that helps dissolve the rock.</p>
+<p>With a little help from these carbonic acid, moving waters form most of the world’s limestone caves.</p>
+<p>When I was researching these for a study few years ago, I visited a couple of these typical limestone caves, and there were all very wet, from stream and rivers.</p>
+<p>These flowing water carved out the caves and the structure inside them, but not LC?</p>
+<p>Dry as a bone, well, that might be a bit of an exaggeration , but it is safe to say that it is sulfuric  acid and not moving water that formed LC, and those few other ones like it.</p>
+<p>In fact, there is no evidence that, flowing water has ever gone in or out of the cave, so it is like a maze , have passageways all around, there are wide  passages narrow ones and all different depth, like underground tunnels  in limestone.</p>
+<p>And since they were created  underground, and not from flowing surface water, not all these passages ways have an opening to the outside world.</p>
+<p>And there is other evidence that flowing water wasn’t involved in LC.</p>
+<p>We have said that sulfide acid dissolves limestone, and from its passageways .</p>
+<p>What else did sulfide acid do?</p>
+<p>These are a chemical residue , Gypsum 石膏 right?</p>
+<p>Yep, you will find lots of gypsum  deposited  in the  LC.</p>
+<p>And as we know, gypsum  is soluble in water, so if there flowing water in the cave, it will dissolved the gypsum .</p>
+<p>This was part of what led us to the realization that LC is that small group of waterless caves.</p>
+<p>And LC is pretty much dormant 休眠的 now, it is not really forming anymore.</p>
+<p>But there is other one like it, for example, in Mexico, that are forming, and when cave researchers go to explore them. They see and smell, sulfide acid, and gases at work.</p>
+<p>Something else, think of  rotten eges,</p>
+<p>And it is not just the  smell, explores even need to wear  special masks  to protect themselves from  gases in these caves.</p>
+<p>How about these caves looks from on the inside.</p>
+<p>The formations are really something, there are such a variety there  like nothing anywhere else in the world, some of them are elaborate-looking , like decorations, and a lot of them made of gypsum , and could be up to 20 feet long, it is pretty impressive.</p>
+</div>
+<div class="section" id="id2">
+<h1><span class="section-number">20. </span><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="03_writeTempletes.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01_TPO.html" class="btn btn-neutral float-left" title="2. TPO1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

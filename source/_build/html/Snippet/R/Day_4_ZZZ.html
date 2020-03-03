@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Advanced data management &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="6. Basic graphs" href="Day_5_ZZZ.html" />
+    <link rel="prev" title="4. Basic Data Management" href="Day_3_ZZZ.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../R.html">R</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Advanced data management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#numerical-and-character-functions">5.1. Numerical and character functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-functions">5.1.1. Mathematical functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statistical-functions">5.1.2. Statistical functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#probability-functions">5.1.3. Probability functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#character-functions">5.1.4. Character functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#useful-functions">5.1.5. Useful functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#applying-functions-to-matrices-and-data-frame">5.1.6. Applying functions to matrices and data frame</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#a-solution-for-the-data-management-challenge">5.2. A solution for the data-management challenge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-flow">5.3. Control flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-written-functions">5.4. User-written functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aggregation-and-reshaping">5.5. Aggregation and reshaping</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reshape2">5.5.1. Reshape2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li><span class="section-number">5. </span>Advanced data management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_4_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advanced-data-management">
+<h1><span class="section-number">5. </span>Advanced data management<a class="headerlink" href="#advanced-data-management" title="永久链接至标题">¶</a></h1>
+<div class="section" id="numerical-and-character-functions">
+<h2><span class="section-number">5.1. </span>Numerical and character functions<a class="headerlink" href="#numerical-and-character-functions" title="永久链接至标题">¶</a></h2>
+<div class="section" id="mathematical-functions">
+<h3><span class="section-number">5.1.1. </span>Mathematical functions<a class="headerlink" href="#mathematical-functions" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">ceiling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="nf">floor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">trunc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="nf">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="nf">signif</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">cos</span> <span class="n">sin</span> <span class="n">tan</span> <span class="n">acos</span> <span class="n">asin</span> <span class="n">atan</span> <span class="n">cosh</span> <span class="n">sinh</span> <span class="n">tanh</span> <span class="n">acosh</span> <span class="n">asinh</span> <span class="n">atanh</span>
+<span class="nf">log</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">base</span> <span class="o">=</span> <span class="n">n</span><span class="p">)</span> <span class="nf">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="nf">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="nf">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="statistical-functions">
+<h3><span class="section-number">5.1.2. </span>Statistical functions<a class="headerlink" href="#statistical-functions" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">trim</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">mean</span><span class="p">()</span>  <span class="nf">median</span><span class="p">()</span> <span class="nf">sd</span><span class="p">()</span> <span class="nf">var</span><span class="p">()</span> 
+<span class="nf">mad</span><span class="p">()</span> <span class="c1">## median absolute deviation</span>
+<span class="nf">quantile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">probs</span><span class="p">)</span> <span class="c1">## quantile(x, c(.3,.84))</span>
+<span class="nf">range</span><span class="p">()</span>  <span class="nf">sum</span><span class="p">()</span>  <span class="nf">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">lag</span><span class="o">=</span><span class="n">n</span><span class="p">)</span><span class="c1">## lagged differences delat between values</span>
+<span class="nf">min</span><span class="p">()</span> <span class="nf">max</span><span class="p">()</span> <span class="nf">scale</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">center</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="c1">## Column center or standardize</span>
+
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">scale</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span><span class="c1"># standarizes the specified df</span>
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">transform</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="n">myvar</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">myvar</span><span class="p">)</span><span class="o">*</span><span class="m">10+50</span><span class="p">)</span> <span class="c1">## one col</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="probability-functions">
+<h3><span class="section-number">5.1.3. </span>Probability functions<a class="headerlink" href="#probability-functions" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">[dpqr</span><span class="nf">]distribution_abbreviation</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">density</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">distribution</span> <span class="n">function</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">quantile</span> <span class="n">function</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">random</span> <span class="nf">generation </span><span class="p">(</span><span class="n">random</span> <span class="n">deviates</span><span class="p">)</span>
+    
+<span class="n">beta</span>
+<span class="n">binom</span> <span class="c1">#Binomial</span>
+<span class="n">cauchy</span> 
+<span class="n">chisq</span> <span class="c1">#noncentral Chi-squared</span>
+<span class="n">exp</span> <span class="c1">#Exponential</span>
+<span class="n">f</span>
+<span class="n">gamma</span>
+<span class="n">geom</span>
+<span class="n">hyper</span>
+<span class="n">lnorm</span> <span class="c1"># Lognormal</span>
+<span class="n">logis</span>
+<span class="n">multinom</span> <span class="c1"># multinomial</span>
+<span class="n">nbinom</span> <span class="c1"># Negative binomial</span>
+<span class="n">norm</span>
+<span class="n">pois</span> <span class="c1"># poisson</span>
+<span class="n">signrank</span> <span class="c1"># Wilcoxon signed rank</span>
+<span class="n">t</span>
+<span class="n">unif</span>
+<span class="n">weibull</span>
+<span class="n">wilcox</span> <span class="c1"># wilcoxon rank sum</span>
+<span class="n">runif</span> <span class="c1">#pseudo-random numbers from a uniform distribution</span>
+
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">pretty</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="m">30</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">dnorm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nf">pnorm</span><span class="p">(</span><span class="m">1.96</span><span class="p">)</span>
+<span class="nf">qnorm</span><span class="p">(</span><span class="m">.9</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">500</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">100</span><span class="p">)</span>
+<span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">50</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="setting-the-seed-for-random-number-generation">
+<h4><span class="section-number">5.1.3.1. </span>Setting the seed for random number generation<a class="headerlink" href="#setting-the-seed-for-random-number-generation" title="永久链接至标题">¶</a></h4>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">runif</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+<span class="nf">runif</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generating-multivariate-normal-data">
+<h4><span class="section-number">5.1.3.2. </span>Generating multivariate normal data<a class="headerlink" href="#generating-multivariate-normal-data" title="永久链接至标题">¶</a></h4>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">digits</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">12</span><span class="p">)</span>
+<span class="n">mean</span><span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">230.7</span><span class="p">,</span> <span class="m">146.7</span><span class="p">,</span> <span class="m">3.6</span><span class="p">)</span>  
+<span class="n">sigma</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">15360.8</span><span class="p">,</span> <span class="m">6721.2</span><span class="p">,</span> <span class="m">-47.1</span><span class="p">,</span> 
+                  <span class="m">6721.2</span><span class="p">,</span> <span class="m">4700.9</span><span class="p">,</span> <span class="m">-16.5</span><span class="p">,</span>                   
+                  <span class="m">-47.1</span><span class="p">,</span>  <span class="m">-16.5</span><span class="p">,</span>   <span class="m">0.3</span><span class="p">),</span> <span class="n">nrow</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">mvrnorm</span><span class="p">(</span><span class="m">500</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span> 
+<span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>  
+<span class="nf">names</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="s">&quot;x1&quot;</span><span class="p">,</span><span class="s">&quot;x2&quot;</span><span class="p">)</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="character-functions">
+<h3><span class="section-number">5.1.4. </span>Character functions<a class="headerlink" href="#character-functions" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># number of characters</span>
+<span class="nf">nchar</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;ab&quot;</span><span class="p">,</span> <span class="s">&quot;cde&quot;</span><span class="p">,</span> <span class="s">&quot;fghij&quot;</span><span class="p">)</span>
+<span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="nf">nchar</span><span class="p">(</span><span class="n">x[3]</span><span class="p">)</span>
+
+<span class="c1"># extracts or replace substrings</span>
+<span class="nf">substr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="s">&quot;abcdef&quot;</span> 
+<span class="nf">substr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span> 
+<span class="nf">substr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="s">&quot;22222&quot;</span>
+
+<span class="c1"># grep find </span>
+<span class="nf">grep</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">ignore.case</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">fixed</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1"># replace </span>
+<span class="nf">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">replacement</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">ignore.case</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">fixed</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1"># splits</span>
+<span class="nf">strsplit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">fixed</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1"># concatenates string </span>
+<span class="nf">paste</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Uppercase</span>
+<span class="nf">toupper</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Lowercase</span>
+<span class="nf">tolower</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="useful-functions">
+<h3><span class="section-number">5.1.5. </span>Useful functions<a class="headerlink" href="#useful-functions" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">()</span>
+<span class="nf">seq</span><span class="p">(</span><span class="n">from</span><span class="p">,</span><span class="n">to</span><span class="p">,</span><span class="n">by</span><span class="p">)</span>
+
+<span class="c1">#Repeats x n times.</span>
+<span class="nf">rep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+
+<span class="c1"># divides the continuous variable x into a factor with n levels</span>
+<span class="nf">cut</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># creates pretty breakpoints</span>
+<span class="nf">pretty</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># concatenates the objects in </span>
+<span class="nf">cat</span><span class="p">(</span><span class="kc">...</span> <span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;myfile&quot;</span><span class="p">,</span> <span class="n">append</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span> <span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">)</span>
+<span class="c1"># cat separate each by a space so use \b</span>
+
+<span class="c1">#</span>
+<span class="nf">show</span><span class="p">()</span>
+<span class="n">\n</span> 
+<span class="n">\t</span> 
+<span class="n">\</span><span class="s">&#39;</span>
+<span class="n">\b</span>
+<span class="o">?</span><span class="n">Quotes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="applying-functions-to-matrices-and-data-frame">
+<h3><span class="section-number">5.1.6. </span>Applying functions to matrices and data frame<a class="headerlink" href="#applying-functions-to-matrices-and-data-frame" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># apply</span>
+<span class="nf">apply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">MARGIN</span><span class="p">,</span> <span class="n">FUN</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="c1"># margin : demension</span>
+<span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">30</span><span class="p">),</span> <span class="n">nrow</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
+<span class="nf">apply</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span> 
+<span class="nf">apply</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
+<span class="nf">apply</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="m">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="a-solution-for-the-data-management-challenge">
+<h2><span class="section-number">5.2. </span>A solution for the data-management challenge<a class="headerlink" href="#a-solution-for-the-data-management-challenge" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">digits</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>  
+ <span class="n">Student</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;John Davis&quot;</span><span class="p">,</span> <span class="s">&quot;Angela Williams&quot;</span><span class="p">,</span> <span class="s">&quot;Bullwinkle Moose&quot;</span> <span class="p">,</span><span class="s">&quot;David Jones&quot;</span><span class="p">,</span> <span class="s">&quot;Janice Markhammer&quot;</span><span class="p">,</span> <span class="s">&quot;Cheryl Cushing&quot;</span> <span class="p">,</span><span class="s">&quot;Reuven Ytzrhak&quot;</span><span class="p">,</span> <span class="s">&quot;Greg Knox&quot;</span><span class="p">,</span> <span class="s">&quot;Joel England&quot;</span><span class="p">,</span><span class="s">&quot;Mary Rayburn&quot;</span><span class="p">)</span>                                      
+<span class="n">Math</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">502</span><span class="p">,</span> <span class="m">600</span><span class="p">,</span> <span class="m">412</span><span class="p">,</span> <span class="m">358</span><span class="p">,</span> <span class="m">495</span><span class="p">,</span> <span class="m">512</span><span class="p">,</span> <span class="m">410</span><span class="p">,</span> <span class="m">625</span><span class="p">,</span> <span class="m">573</span><span class="p">,</span> <span class="m">522</span><span class="p">)</span>       
+<span class="n">Science</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">95</span><span class="p">,</span> <span class="m">99</span><span class="p">,</span> <span class="m">80</span><span class="p">,</span> <span class="m">82</span><span class="p">,</span> <span class="m">75</span><span class="p">,</span> <span class="m">85</span><span class="p">,</span> <span class="m">80</span><span class="p">,</span> <span class="m">95</span><span class="p">,</span> <span class="m">89</span><span class="p">,</span> <span class="m">86</span><span class="p">)</span>              
+<span class="n">English</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">25</span><span class="p">,</span> <span class="m">22</span><span class="p">,</span> <span class="m">18</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">28</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">27</span><span class="p">,</span> <span class="m">18</span><span class="p">)</span>              
+<span class="n">roster</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">Student</span><span class="p">,</span> <span class="n">Math</span><span class="p">,</span> <span class="n">Science</span><span class="p">,</span> <span class="n">English</span><span class="p">,</span> <span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="n">z</span> <span class="o">&lt;-</span> <span class="nf">scale</span><span class="p">(</span><span class="n">roster[</span><span class="p">,</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="n">]</span><span class="p">)</span> 
+<span class="n">score</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
+<span class="n">roster</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">roster</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">.8</span><span class="p">,</span><span class="m">.6</span><span class="p">,</span><span class="m">.4</span><span class="p">,</span><span class="m">.2</span><span class="p">))</span> 
+<span class="n">roster</span><span class="o">$</span><span class="n">grade[score</span> <span class="o">&gt;=</span> <span class="n">y[1]]</span> <span class="o">&lt;-</span> <span class="s">&quot;A&quot;</span>                                
+<span class="n">roster</span><span class="o">$</span><span class="n">grade[score</span> <span class="o">&lt;</span> <span class="n">y[1]</span> <span class="o">&amp;</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">y[2]]</span> <span class="o">&lt;-</span> <span class="s">&quot;B&quot;</span>             
+<span class="n">roster</span><span class="o">$</span><span class="n">grade[score</span> <span class="o">&lt;</span> <span class="n">y[2]</span> <span class="o">&amp;</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">y[3]]</span> <span class="o">&lt;-</span> <span class="s">&quot;C&quot;</span>               
+<span class="n">roster</span><span class="o">$</span><span class="n">grade[score</span> <span class="o">&lt;</span> <span class="n">y[3]</span> <span class="o">&amp;</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">y[4]]</span> <span class="o">&lt;-</span> <span class="s">&quot;D&quot;</span>               
+<span class="n">roster</span><span class="o">$</span><span class="n">grade[score</span> <span class="o">&lt;</span> <span class="n">y[4]]</span> <span class="o">&lt;-</span> <span class="s">&quot;F&quot;</span>      
+
+<span class="n">name</span> <span class="o">&lt;-</span> <span class="nf">strsplit</span><span class="p">((</span><span class="n">roster</span><span class="o">$</span><span class="n">Student</span><span class="p">),</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+<span class="n">Lastname</span> <span class="o">&lt;-</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">Firstname</span> <span class="o">&lt;-</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+<span class="n">roster</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">Firstname</span><span class="p">,</span><span class="n">Lastname</span><span class="p">,</span> <span class="n">roster[</span><span class="p">,</span><span class="m">-1</span><span class="n">]</span><span class="p">)</span>
+<span class="n">roster</span> <span class="o">&lt;-</span> <span class="n">roster</span><span class="nf">[order</span><span class="p">(</span><span class="n">Lastname</span><span class="p">,</span><span class="n">Firstname</span><span class="p">),</span><span class="n">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="control-flow">
+<h2><span class="section-number">5.3. </span>Control flow<a class="headerlink" href="#control-flow" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">## repetition and looping</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">var</span> <span class="n">in</span> <span class="n">seq</span><span class="p">)</span> <span class="n">statement</span>
+<span class="nf">while </span><span class="p">(</span><span class="n">cond</span><span class="p">)</span> <span class="n">statement</span>
+
+<span class="c1">## conditional execution</span>
+<span class="nf">if </span><span class="p">(</span><span class="n">cond</span><span class="p">)</span> <span class="n">statement1</span> <span class="n">else</span> <span class="n">statement2</span>
+<span class="nf">ifelse </span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="n">statement1</span><span class="p">,</span><span class="n">statement2</span><span class="p">)</span>
+<span class="nf">switch </span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="user-written-functions">
+<h2><span class="section-number">5.4. </span>User-written functions<a class="headerlink" href="#user-written-functions" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">myfunction</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">,</span><span class="kc">...</span><span class="p">){</span>
+	<span class="n">statements</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">mystats</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">parametric</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">print</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">if </span><span class="p">(</span><span class="n">parametric</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">center</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">spread</span> <span class="o">&lt;-</span> <span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+  <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
+    <span class="n">center</span> <span class="o">&lt;-</span> <span class="nf">median</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">spread</span> <span class="o">&lt;-</span> <span class="nf">mad</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+  <span class="p">}</span>
+  <span class="nf">if </span><span class="p">(</span><span class="n">print</span> <span class="o">&amp;</span> <span class="n">parametric</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Mean=&quot;</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">,</span> <span class="s">&quot;SD=&quot;</span><span class="p">,</span> <span class="n">spread</span><span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">)</span>
+  <span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="n">print</span> <span class="o">&amp;</span> <span class="o">!</span><span class="n">parametric</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Median=&quot;</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">,</span> <span class="s">&quot;MAD=&quot;</span><span class="p">,</span> <span class="n">spread</span><span class="p">,</span> <span class="s">&quot;\n&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="n">result</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">spread</span><span class="o">=</span><span class="n">spread</span><span class="p">)</span>
+  <span class="nf">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">)</span> 
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">mystats</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">mystats</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">parametric</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">print</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="n">mydate</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;long&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">switch</span><span class="p">(</span><span class="n">type</span><span class="p">,</span>
+         <span class="n">long</span> <span class="o">=</span>  <span class="nf">format</span><span class="p">(</span><span class="nf">Sys.time</span><span class="p">(),</span> <span class="s">&quot;%A %B %d %Y&quot;</span><span class="p">),</span>
+         <span class="n">short</span> <span class="o">=</span> <span class="nf">format</span><span class="p">(</span><span class="nf">Sys.time</span><span class="p">(),</span> <span class="s">&quot;%m-%d-%y&quot;</span><span class="p">),</span>
+         <span class="nf">cat</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="s">&quot;is not a recognized type\n&quot;</span><span class="p">)</span>        
+   <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">warning</span><span class="p">()</span>
+<span class="nf">message</span><span class="p">()</span>
+<span class="nf">stop</span><span class="p">()</span>
+
+<span class="n">venables</span><span class="o">&amp;</span><span class="n">ripley</span> <span class="m">2000</span>
+<span class="n">chambers</span> <span class="m">2008</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aggregation-and-reshaping">
+<h2><span class="section-number">5.5. </span>Aggregation and reshaping<a class="headerlink" href="#aggregation-and-reshaping" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span> <span class="o">&lt;-</span> <span class="n">mtcars[1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="n">]</span>
+<span class="nf">t</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span> <span class="c1">## transpose</span>
+
+<span class="c1">## aggregating</span>
+<span class="nf">aggregate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">FUN</span><span class="p">)</span> 
+<span class="c1"># by group by</span>
+
+<span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+<span class="n">aggdata</span> <span class="o">&lt;-</span><span class="nf">aggregate</span><span class="p">(</span><span class="n">mtcars</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">cyl</span><span class="p">,</span><span class="n">gear</span><span class="p">),</span> <span class="n">FUN</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="reshape2">
+<h3><span class="section-number">5.5.1. </span>Reshape2<a class="headerlink" href="#reshape2" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">reshape2</span><span class="p">)</span>
+<span class="c1">#melting</span>
+<span class="n">md</span> <span class="o">&lt;-</span> <span class="nf">melt</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="n">id</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">,</span> <span class="s">&quot;Time&quot;</span><span class="p">))</span>
+<span class="c1">#casting</span>
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">dcast</span><span class="p">(</span><span class="n">md</span><span class="p">,</span> <span class="n">formula</span><span class="p">,</span> <span class="n">fun.aggregate</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In formula,rowvar1 + rowvar2 + … ~ colvar1 + colvar2 + …</p></li>
+<li><p>rowvar1 + rowvar2+… defines the set of crossed variables that define the rows</p></li>
+<li><p>colvar1 + colvar2 + .. defines the set of crossed variables that define the columns</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_5_ZZZ.html" class="btn btn-neutral float-right" title="6. Basic graphs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_3_ZZZ.html" class="btn btn-neutral float-left" title="4. Basic Data Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

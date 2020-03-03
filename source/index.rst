@@ -12,7 +12,7 @@ This is an open source book written for myself to review my tools.
     :caption: Snippet:
 
     Snippet/python.rst
-    Snippet/Matplotlib.rst
+    Snippet/Plots.rst
     Snippet/GEE.rst
     Snippet/R.rst
     Snippet/reStructuredText.rst

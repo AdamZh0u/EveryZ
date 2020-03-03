@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Basic Data Management &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="5. Advanced data management" href="Day_4_ZZZ.html" />
+    <link rel="prev" title="3. Graphs" href="Day_2_ZZZ.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../R.html">R</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4. Basic Data Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#leadership-data-frame">4.1. Leadership data frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-new-variables">4.2. Creating new variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recoding-variables">4.3. Recoding variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#renaming-variables">4.4. Renaming variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#missing-value">4.5. Missing value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-values">4.6. Data values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type-conversions">4.7. Type conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sorting-data">4.8. Sorting data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge-data">4.9. Merge data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#merge-cols">4.9.1. Merge Cols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#merge-rows">4.9.2. Merge rows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#subset-datasets">4.10. Subset datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selecting">4.10.1. Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#excluding">4.10.2. Excluding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-observations">4.10.3. Selecting observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-subset-function">4.10.4. The subset() function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#random-samples">4.10.5. Random samples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-sql">4.11. Using SQL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li><span class="section-number">4. </span>Basic Data Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_3_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-data-management">
+<h1><span class="section-number">4. </span>Basic Data Management<a class="headerlink" href="#basic-data-management" title="永久链接至标题">¶</a></h1>
+<div class="section" id="leadership-data-frame">
+<h2><span class="section-number">4.1. </span>Leadership data frame<a class="headerlink" href="#leadership-data-frame" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">manager</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+<span class="n">date</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;10/24/08&quot;</span><span class="p">,</span> <span class="s">&quot;10/28/08&quot;</span><span class="p">,</span> <span class="s">&quot;10/1/08&quot;</span><span class="p">,</span> <span class="s">&quot;10/12/08&quot;</span><span class="p">,</span> <span class="s">&quot;5/1/09&quot;</span><span class="p">)</span>
+<span class="n">country</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;US&quot;</span><span class="p">,</span> <span class="s">&quot;US&quot;</span><span class="p">,</span> <span class="s">&quot;UK&quot;</span><span class="p">,</span> <span class="s">&quot;UK&quot;</span><span class="p">,</span> <span class="s">&quot;UK&quot;</span><span class="p">)</span>
+<span class="n">gender</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;M&quot;</span><span class="p">,</span> <span class="s">&quot;F&quot;</span><span class="p">,</span> <span class="s">&quot;F&quot;</span><span class="p">,</span> <span class="s">&quot;M&quot;</span><span class="p">,</span> <span class="s">&quot;F&quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">32</span><span class="p">,</span> <span class="m">45</span><span class="p">,</span> <span class="m">25</span><span class="p">,</span> <span class="m">39</span><span class="p">,</span> <span class="m">99</span><span class="p">)</span>
+<span class="n">q1</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">q2</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+<span class="n">q4</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="kc">NA</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">q5</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kc">NA</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+<span class="n">leadership</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> 
+                         <span class="n">q1</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">q3</span><span class="p">,</span> <span class="n">q4</span><span class="p">,</span> <span class="n">q5</span><span class="p">,</span> <span class="n">stringsAsFactors</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1">## mean deferantial score</span>
+
+<span class="c1">## handling incomplete data</span>
+
+<span class="c1">## create a subset dataset</span>
+
+<span class="c1">## recode</span>
+
+<span class="c1">## limit data period</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-new-variables">
+<h2><span class="section-number">4.2. </span>Creating new variables<a class="headerlink" href="#creating-new-variables" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">## Arithmetic operators</span>
+<span class="o">+</span> <span class="o">-</span> <span class="o">*</span> <span class="o">/</span>
+<span class="n">^</span> <span class="n">or</span> <span class="o">**</span> <span class="c1">## Exponentiation</span>
+<span class="n">x</span><span class="o">%%</span><span class="n">y</span> <span class="c1">## modulus</span>
+<span class="n">x</span><span class="o">%/%</span><span class="n">y</span> <span class="c1">## integer division</span>
+
+<span class="c1">## 3 ways to incorporate new variables into the origin data frame </span>
+<span class="n">mydata</span><span class="o">$</span><span class="n">sumx</span>  <span class="o">&lt;-</span>  <span class="n">mydata</span><span class="o">$</span><span class="n">x1</span> <span class="o">+</span> <span class="n">mydata</span><span class="o">$</span><span class="n">x2</span>
+<span class="n">mydata</span><span class="o">$</span><span class="n">meanx</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">mydata</span><span class="o">$</span><span class="n">x1</span> <span class="o">+</span> <span class="n">mydata</span><span class="o">$</span><span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="m">2</span>
+
+<span class="nf">attach</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>
+<span class="n">mydata</span><span class="o">$</span><span class="n">sumx</span>  <span class="o">&lt;-</span>  <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span>
+<span class="n">mydata</span><span class="o">$</span><span class="n">meanx</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="m">2</span>
+<span class="nf">detach</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>
+
+<span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">transform</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span>
+                    <span class="n">sumx</span>  <span class="o">=</span>  <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">,</span>
+                    <span class="n">meanx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">)</span><span class="c1">## create and add</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recoding-variables">
+<h2><span class="section-number">4.3. </span>Recoding variables<a class="headerlink" href="#recoding-variables" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">## logical operators</span>
+<span class="o">&lt;</span> <span class="o">&lt;=</span> <span class="o">&gt;</span> <span class="o">&gt;=</span> <span class="o">==</span> <span class="o">!=</span>
+<span class="o">!</span><span class="n">x</span> <span class="c1">## not x    </span>
+<span class="n">x</span><span class="o">|</span><span class="n">y</span> <span class="c1">## x or y</span>
+<span class="n">x</span><span class="o">&amp;</span><span class="n">y</span> <span class="c1">## x and y</span>
+<span class="nf">isTRUE</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">## whether x is True</span>
+
+<span class="c1">## Change a continuous variables into a set of categories</span>
+<span class="c1">## Replace miscoded values  with correct values</span>
+<span class="c1">## Create a pass/fail variable based on a set of cutoff scores</span>
+<span class="n">leadership</span><span class="o">$</span><span class="n">age[leadership</span><span class="o">$</span><span class="n">age</span>  <span class="o">==</span> <span class="m">99</span><span class="n">]</span>     <span class="o">&lt;-</span> <span class="kc">NA</span>
+
+<span class="n">leadership</span><span class="o">$</span><span class="n">agecat[leadership</span><span class="o">$</span><span class="n">age</span>  <span class="o">&gt;</span> <span class="m">75</span><span class="n">]</span>   <span class="o">&lt;-</span> <span class="s">&quot;Elder&quot;</span>
+<span class="n">leadership</span><span class="o">$</span><span class="n">agecat[leadership</span><span class="o">$</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="m">55</span> <span class="o">&amp;</span> 
+                  <span class="n">leadership</span><span class="o">$</span><span class="n">age</span> <span class="o">&lt;=</span> <span class="m">75</span><span class="n">]</span>   <span class="o">&lt;-</span> <span class="s">&quot;Middle Aged&quot;</span>
+<span class="n">leadership</span><span class="o">$</span><span class="n">agecat[leadership</span><span class="o">$</span><span class="n">age</span>  <span class="o">&lt;</span> <span class="m">55</span><span class="n">]</span>   <span class="o">&lt;-</span> <span class="s">&quot;Young&quot;</span>
+
+<span class="n">leadership</span> <span class="o">&lt;-</span> <span class="nf">within</span><span class="p">(</span><span class="n">leadership</span><span class="p">,{</span>
+                     <span class="n">agecat</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+                     <span class="n">agecat[age</span> <span class="o">&gt;</span> <span class="m">75</span><span class="n">]</span>              <span class="o">&lt;-</span> <span class="s">&quot;Elder&quot;</span>
+                     <span class="n">agecat[age</span> <span class="o">&gt;=</span> <span class="m">55</span> <span class="o">&amp;</span> <span class="n">age</span> <span class="o">&lt;=</span> <span class="m">75</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Middle Aged&quot;</span>
+                     <span class="n">agecat[age</span> <span class="o">&lt;</span> <span class="m">55</span><span class="n">]</span>              <span class="o">&lt;-</span> <span class="s">&quot;Young&quot;</span> <span class="p">})</span>
+<span class="c1">## within allows to modify the data frame      with()</span>
+<span class="c1">## recoding functions</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+<span class="nf">recode</span><span class="p">()</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">doBy</span><span class="p">)</span>
+<span class="nf">recodevar</span><span class="p">()</span>
+
+<span class="nf">cut</span><span class="p">()</span> <span class="n">in</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="renaming-variables">
+<h2><span class="section-number">4.4. </span>Renaming variables<a class="headerlink" href="#renaming-variables" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">leadership</span><span class="p">)</span><span class="n">[2]</span> <span class="o">&lt;-</span> <span class="s">&quot;testData&quot;</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">leadership</span><span class="p">)</span><span class="n">[6</span><span class="o">:</span><span class="m">10</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;item1&quot;</span><span class="p">,</span> <span class="s">&quot;item2&quot;</span><span class="p">,</span> <span class="s">&quot;item3&quot;</span><span class="p">,</span> <span class="s">&quot;item4&quot;</span><span class="p">,</span> <span class="s">&quot;item5&quot;</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">plyr</span><span class="p">)</span>
+<span class="nf">rename</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">oldname</span><span class="o">=</span><span class="s">&quot;newname&quot;</span><span class="p">,</span> <span class="n">oldname</span><span class="o">=</span><span class="s">&quot;newname&quot;</span><span class="p">,</span><span class="kc">...</span><span class="p">))</span>
+<span class="n">leadership</span> <span class="o">&lt;-</span> <span class="nf">rename</span><span class="p">(</span><span class="n">leadership</span><span class="p">,</span> 
+                     <span class="nf">c</span><span class="p">(</span><span class="n">manager</span><span class="o">=</span><span class="s">&quot;managerID&quot;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s">&quot;testDate&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="missing-value">
+<h2><span class="section-number">4.5. </span>Missing value<a class="headerlink" href="#missing-value" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>about NA</p>
+<ul>
+<li><p>NA for character and numeric is the same</p></li>
+<li><p>is.na() to test whether it is na</p></li>
+<li><p>==na is never TRUE</p></li>
+<li><p>Inf and -Inf :  5/0</p></li>
+<li><p>NaN : sin(Inf)  not a number</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">## recoding values to missing</span>
+<span class="n">leadership</span><span class="o">$</span><span class="n">age</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+<span class="n">leadership</span><span class="o">$</span><span class="n">age[leadership</span><span class="o">$</span><span class="n">age</span> <span class="o">==</span> <span class="m">99</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+
+<span class="c1">## Excluding missing value from analyses</span>
+<span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kc">NA</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="nf">na.omit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">leadership</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-values">
+<h2><span class="section-number">4.6. </span>Data values<a class="headerlink" href="#data-values" title="永久链接至标题">¶</a></h2>
+<p>| Symbol |        Meaning        | Example |
+| :—-: | :——————-: | :—–: |
+|   %d   |     day as number     |  1-31   |
+|   %a   |  Abbreviated weekday  |   Mon   |
+|   %A   | Unabbreviated weekday | Monday  |
+|   %m   |         month         |  00-12  |
+|   %b   |   Abbreviated month   |   Jan   |
+|   %B   |  Unabbreviated month  | January |
+|   %y   |    Two-digit year     |   19    |
+|   %Y   |    four-digit year    |  2019   |</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">as.Date</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s">&quot;input_format&quot;</span><span class="p">)</span>
+<span class="n">strDates</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;01/05/1965&quot;</span><span class="p">,</span> <span class="s">&quot;08/16/1975&quot;</span><span class="p">)</span>
+<span class="n">dates</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">strDates</span><span class="p">,</span> <span class="s">&quot;%m/%d/%Y&quot;</span><span class="p">)</span>
+
+<span class="nf">Sys.date</span><span class="p">()</span><span class="c1">## today&#39;s date</span>
+<span class="nf">date</span><span class="p">()</span><span class="c1">## current date and time</span>
+
+<span class="n">today</span> <span class="o">&lt;-</span> <span class="nf">Sys.Date</span><span class="p">()</span>
+<span class="nf">format</span><span class="p">(</span><span class="n">today</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">&quot;%B %d %Y&quot;</span><span class="p">)</span>
+
+<span class="c1">## perform arithmetic operations on date</span>
+<span class="n">startdate</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2004-02-13&quot;</span><span class="p">)</span>
+<span class="n">enddate</span>   <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2011-01-22&quot;</span><span class="p">)</span>
+<span class="n">days</span>      <span class="o">&lt;-</span> <span class="n">enddate</span> <span class="o">-</span> <span class="n">startdate</span>
+
+<span class="nf">difftime</span><span class="p">(</span><span class="n">enddate</span><span class="p">,</span> <span class="n">startdate</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s">&quot;weeks&quot;</span><span class="p">)</span>
+
+<span class="c1">## Converting dates to character variables</span>
+<span class="n">strDates</span> <span class="o">&lt;-</span> <span class="nf">as.character</span><span class="p">(</span><span class="n">dates</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-conversions">
+<h2><span class="section-number">4.7. </span>Type conversions<a class="headerlink" href="#type-conversions" title="永久链接至标题">¶</a></h2>
+<p>|      Test       |     Convert     |
+| :————-: | :————-: |
+|  is.numeric()   |  as.numeric()   |
+| is.character()  | as.character()  |
+|   is.vector()   |   as.vector()   |
+|   is.matrix()   |   as.matrix()   |
+| is.data.frame() | as.data.frame() |
+|   is.factor()   |   as.factor()   |
+|  is.logical()   |  as.logical()   |</p>
+</div>
+<div class="section" id="sorting-data">
+<h2><span class="section-number">4.8. </span>Sorting data<a class="headerlink" href="#sorting-data" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership</span><span class="nf">[order</span><span class="p">(</span><span class="n">leadership</span><span class="o">$</span><span class="n">age</span><span class="p">),</span><span class="n">]</span>
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership</span><span class="nf">[order</span><span class="p">(</span><span class="n">leadership</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="o">-</span><span class="n">leadership</span><span class="o">$</span><span class="n">gender</span><span class="p">),</span><span class="n">]</span> <span class="c1"># add - to indicate descending </span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="merge-data">
+<h2><span class="section-number">4.9. </span>Merge data<a class="headerlink" href="#merge-data" title="永久链接至标题">¶</a></h2>
+<div class="section" id="merge-cols">
+<h3><span class="section-number">4.9.1. </span>Merge Cols<a class="headerlink" href="#merge-cols" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">dataframeA</span><span class="p">,</span> <span class="n">dataframeB</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s">&quot;ID&quot;</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">&lt;-</span> <span class="nf">merge</span><span class="p">(</span><span class="n">dataframeA</span><span class="p">,</span> <span class="n">dataframeB</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">,</span><span class="s">&quot;Country&quot;</span><span class="p">))</span> 
+
+<span class="c1">## dont need a specified common key</span>
+<span class="n">total</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="merge-rows">
+<h3><span class="section-number">4.9.2. </span>Merge rows<a class="headerlink" href="#merge-rows" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">dataframeA</span><span class="p">,</span> <span class="n">dataframeB</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="subset-datasets">
+<h2><span class="section-number">4.10. </span>Subset datasets<a class="headerlink" href="#subset-datasets" title="永久链接至标题">¶</a></h2>
+<div class="section" id="selecting">
+<h3><span class="section-number">4.10.1. </span>Selecting<a class="headerlink" href="#selecting" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe[row</span> <span class="n">indices</span><span class="p">,</span> <span class="n">column</span> <span class="n">indices]</span>
+
+<span class="n">myvars</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;q1&quot;</span><span class="p">,</span> <span class="s">&quot;q2&quot;</span><span class="p">,</span> <span class="s">&quot;q3&quot;</span><span class="p">,</span> <span class="s">&quot;q4&quot;</span><span class="p">,</span> <span class="s">&quot;q5&quot;</span><span class="p">)</span> 
+<span class="n">newdata</span> <span class="o">&lt;-</span><span class="n">leadership[myvars]</span>
+
+<span class="n">myvars</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">,</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> 
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership[myvars]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="excluding">
+<h3><span class="section-number">4.10.2. </span>Excluding<a class="headerlink" href="#excluding" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">myvars</span> <span class="o">&lt;-</span> <span class="nf">names</span><span class="p">(</span><span class="n">leadership</span><span class="p">)</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;q3&quot;</span><span class="p">,</span> <span class="s">&quot;q4&quot;</span><span class="p">)</span> 
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership[</span><span class="o">!</span><span class="n">myvars]</span>
+
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership</span><span class="nf">[c</span><span class="p">(</span><span class="m">-8</span><span class="p">,</span><span class="m">-9</span><span class="p">)</span><span class="n">]</span>
+
+<span class="n">leadership</span><span class="o">$</span><span class="n">q3</span> <span class="o">&lt;-</span> <span class="n">leadership</span><span class="o">$</span><span class="n">q4</span> <span class="o">&lt;-</span> <span class="kc">NULL</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="selecting-observations">
+<h3><span class="section-number">4.10.3. </span>Selecting observations<a class="headerlink" href="#selecting-observations" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership[1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="n">]</span> 
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership[leadership</span><span class="o">$</span><span class="n">gender</span><span class="o">==</span><span class="s">&quot;M&quot;</span> <span class="o">&amp;</span>            
+                      <span class="n">leadership</span><span class="o">$</span><span class="n">age</span> <span class="o">&gt;</span> <span class="m">30</span><span class="p">,</span><span class="n">]</span>  
+
+<span class="n">leadership</span><span class="o">$</span><span class="n">date</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">leadership</span><span class="o">$</span><span class="n">date</span><span class="p">,</span> <span class="s">&quot;%m/%d/%y&quot;</span><span class="p">)</span>
+<span class="n">startdate</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2009-01-01&quot;</span><span class="p">)</span> 
+<span class="n">enddate</span>   <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2009-10-31&quot;</span><span class="p">)</span>
+
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">leadership</span><span class="nf">[which</span><span class="p">(</span><span class="n">leadership</span><span class="o">$</span><span class="n">date</span> <span class="o">&gt;=</span> <span class="n">startdate</span> <span class="o">&amp;</span>   
+           <span class="n">leadership</span><span class="o">$</span><span class="n">date</span> <span class="o">&lt;=</span> <span class="n">enddate</span><span class="p">),</span><span class="n">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-subset-function">
+<h3><span class="section-number">4.10.4. </span>The subset() function<a class="headerlink" href="#the-subset-function" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">leadership</span><span class="p">,</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="m">35</span> <span class="o">|</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="m">24</span><span class="p">,</span>
+                  <span class="n">select</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">q3</span><span class="p">,</span> <span class="n">q4</span><span class="p">))</span>  
+<span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">leadership</span><span class="p">,</span> <span class="n">gender</span><span class="o">==</span><span class="s">&quot;M&quot;</span> <span class="o">&amp;</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="m">25</span><span class="p">,</span>  
+                  <span class="n">select</span><span class="o">=</span><span class="n">gender</span><span class="o">:</span><span class="n">q4</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="random-samples">
+<h3><span class="section-number">4.10.5. </span>Random samples<a class="headerlink" href="#random-samples" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">mysample</span> <span class="o">&lt;-</span> <span class="n">leadership</span><span class="nf">[sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">leadership</span><span class="p">),</span> <span class="m">3</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">),</span><span class="n">]</span> 
+<span class="c1">## vector to choose from</span>
+<span class="c1">## number of elements</span>
+<span class="c1">## sampling without replacement </span>
+<span class="nf">library</span><span class="p">(</span><span class="n">sampling</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">survey</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-sql">
+<h2><span class="section-number">4.11. </span>Using SQL<a class="headerlink" href="#using-sql" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">sqldf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_4_ZZZ.html" class="btn btn-neutral float-right" title="5. Advanced data management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_2_ZZZ.html" class="btn btn-neutral float-left" title="3. Graphs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

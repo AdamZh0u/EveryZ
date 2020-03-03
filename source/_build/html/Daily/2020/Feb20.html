@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. 19.2.2020 &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="prev" title="1. 1.5.2019" href="Jan20.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/GEE.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../2020.html">Daily2020</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Jan20.html">1. 1.5.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Jan20.html#id2">2. 1.6.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Jan20.html#id3">3. 1.10.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Jan20.html#id4">4. 1.11.2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Jan20.html#id6">5. 1.13.2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Jan20.html#id7">6. 1.17.2019</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7. 19.2.2020</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gaia">7.1. 下载GAIA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gee">7.2. 如何上传到gee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">7.3. gee 投影</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">7.4. 矢量与栅格总面积是不是相等的？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">7.5. 栅格区域太大时切片计算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">7.6. 造掩膜填空</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../2020.html">Daily2020</a> &raquo;</li>
+        
+      <li><span class="section-number">7. </span>19.2.2020</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Daily/2020/Feb20.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">7. </span>19.2.2020<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>奶嘴</p>
+<div class="section" id="gaia">
+<h2><span class="section-number">7.1. </span>下载GAIA<a class="headerlink" href="#gaia" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://data.ess.tsinghua.edu.cn/data/GAIA/GAIA_1985_2018_00_008.tif&#39;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#if r.headers.get( &#39;Content-Type&#39;)== &#39;Content-Type&#39;:</span>
+<span class="n">r</span><span class="o">.</span><span class="n">content</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;demo.txt&quot;</span><span class="p">)</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;GAIA_1985_2018(_\-?\d</span><span class="si">{2}</span><span class="s2">)(_\-?\d</span><span class="si">{3}</span><span class="s2">).tif&quot;</span><span class="p">)</span>  
+<span class="n">result</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://data.ess.tsinghua.edu.cn/data/GAIA/GAIA_1985_2018&quot;</span><span class="o">+</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;.tif&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;GAIA_1985_2018&quot;</span><span class="o">+</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;.tif&quot;</span>
+    <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../GAIA_Data/&quot;</span><span class="o">+</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gee">
+<h2><span class="section-number">7.2. </span>如何上传到gee<a class="headerlink" href="#gee" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install --upgrade google-cloud-storage
+!gsutil ls gs://gaia-zzz/
+
+project_id = &#39;groovy-bay-266911&#39;
+import uuid
+bucket_name = &#39;colab-sample-bucket-&#39; + str(uuid.uuid1())
+from google.colab import auth
+auth.authenticate_user()
+
+!gcloud config set project {project_id}
+
+## test
+with open(&#39;/tmp/to_upload_-01.txt&#39;, &#39;w&#39;) as f:
+  f.write(&#39;my sample file&#39;)
+print(&#39;/tmp/to_upload.txt contains:&#39;)
+!cat /tmp/to_upload_-01.txt
+!gsutil cp /tmp/to_upload_-01.txt gs://gaia-zzz/
+
+lats = []
+lats.append(&quot;%02d&quot;% 0 )
+for i in range(1,80):
+    lats.append(&quot;%02d&quot; % i)
+    lats.append(&quot;%03d&quot; % -i)
+for lat in lats:
+    AssetID = &#39;users/zhouzz400/GAIA_2018_lat/GAIA_1985_2018_&#39;+lat
+    ImageFile = &#39;gs://gaia-zzz/GAIA_1985_2018_&#39; + lat + &#39;.tif&#39;
+    #print(ImageFile,AssetID)
+    line = &quot;earthengine --no-use_cloud_api upload image --asset_id={AssetID} --nodata_value=255 {ImageFile}&quot;.format(AssetID=AssetID,ImageFile=ImageFile)
+    print(line)
+    !eval {line}
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">7.3. </span>gee 投影<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>gee 使用geotools 库 不支持Interrupted_Goode_Homolosine
+可以使用mollwide
+https://gis.stackexchange.com/questions/272818/google-earth-engine-reprojection-to-non-epsg-defined-crs</p>
+<p>https://spatialreference.org/ref/sr-org/7619
+python接口会支持吗？</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="s2">&quot;SPA&quot;</span>
+<span class="kd">var</span> <span class="nx">boun</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/worldRegion&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Abbrv&quot;</span><span class="p">,</span><span class="nx">region</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">GAIA</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/GAIA&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">boun</span><span class="p">).</span><span class="nx">mosaic</span><span class="p">().</span><span class="nx">clip</span><span class="p">(</span><span class="nx">boun</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">GAIA_year</span> <span class="o">=</span> <span class="nx">GAIA</span><span class="p">.</span><span class="nx">gte</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">GAIA_viz</span> <span class="o">=</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">34</span><span class="p">,</span><span class="nx">palette</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;000000&quot;</span><span class="p">,</span><span class="s2">&quot;ff0000&quot;</span><span class="p">]}</span>
+<span class="c1">//Map.addLayer(GAIA,GAIA_viz)</span>
+
+<span class="kd">function</span> <span class="nx">getArea</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span><span class="nx">boun</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">area_imag</span> <span class="o">=</span> <span class="nx">image</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">())</span>
+  <span class="kd">var</span> <span class="nx">sumarea</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">area_imag</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+                  <span class="p">{</span><span class="s2">&quot;reducer&quot;</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+                  <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+                  <span class="s2">&quot;geometry&quot;</span><span class="o">:</span><span class="nx">boun</span>
+                  <span class="p">})</span>
+                  <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="nx">sumarea</span><span class="p">}</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">getArea</span><span class="p">(</span><span class="nx">GAIA_year</span><span class="p">,</span><span class="nx">boun</span><span class="p">)</span>
+
+<span class="c1">//Lambert cylindrical projection epsg:9843</span>
+<span class="c1">// WKT string</span>
+<span class="kd">var</span> <span class="nx">wkt</span> <span class="o">=</span> <span class="s1">&#39; \</span>
+<span class="s1">  PROJCS[&quot;World_Mollweide&quot;, \</span>
+<span class="s1">    GEOGCS[&quot;GCS_WGS_1984&quot;, \</span>
+<span class="s1">      DATUM[&quot;WGS_1984&quot;, \</span>
+<span class="s1">        SPHEROID[&quot;WGS_1984&quot;,6378137,298.257223563]], \</span>
+<span class="s1">      PRIMEM[&quot;Greenwich&quot;,0], \</span>
+<span class="s1">      UNIT[&quot;Degree&quot;,0.017453292519943295]], \</span>
+<span class="s1">    PROJECTION[&quot;Mollweide&quot;], \</span>
+<span class="s1">    PARAMETER[&quot;False_Easting&quot;,0], \</span>
+<span class="s1">    PARAMETER[&quot;False_Northing&quot;,0], \</span>
+<span class="s1">    PARAMETER[&quot;Central_Meridian&quot;,0], \</span>
+<span class="s1">    UNIT[&quot;Meter&quot;,1], \</span>
+<span class="s1">    AUTHORITY[&quot;EPSG&quot;,&quot;54009&quot;]]&#39;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">proj_mollweide</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Projection</span><span class="p">(</span><span class="nx">wkt</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">boun_moll</span> <span class="o">=</span> <span class="nx">boun</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span><span class="nx">proj_mollweide</span><span class="p">,</span>
+  <span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">boun_moll</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">1000</span><span class="p">)))</span><span class="c1">//5010868555175.95</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">1000</span><span class="p">)))</span><span class="c1">//5010868555175.796</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="nx">proj_mollweide</span><span class="p">))</span><span class="c1">//5022090468716.392</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">7.4. </span>矢量与栅格总面积是不是相等的？<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">boun2</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/China_Provinces&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="s2">&quot;湖北省&quot;</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">GAIA</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/GAIA&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">boun2</span><span class="p">)</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">GAIA</span><span class="p">.</span><span class="nx">mosaic</span><span class="p">().</span><span class="nx">clip</span><span class="p">(</span><span class="nx">boun2</span><span class="p">))</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">boun2</span><span class="p">)</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;mosaic area:&quot;</span><span class="p">,</span><span class="nx">getArea</span><span class="p">(</span><span class="nx">GAIA</span><span class="p">.</span><span class="nx">mosaic</span><span class="p">()))</span> <span class="c1">//185940066188.5224</span>
+
+<span class="kd">function</span> <span class="nx">getArea</span><span class="p">(</span><span class="nx">image</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">image</span><span class="p">).</span><span class="nx">gte</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">clip</span><span class="p">(</span><span class="nx">boun2</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">area_imag</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">())</span>
+  <span class="kd">var</span> <span class="nx">sumarea</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">area_imag</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+                <span class="p">{</span><span class="s2">&quot;reducer&quot;</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+                <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
+                <span class="s2">&quot;geometry&quot;</span><span class="o">:</span><span class="nx">boun2</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="nx">sumarea</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">GAIA</span><span class="p">.</span><span class="nx">toList</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">getArea</span><span class="p">).</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">())</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;map imgcol area:&quot;</span><span class="p">,</span><span class="nx">area</span><span class="p">)</span><span class="c1">//185905517767.81976</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;boun area:&quot;</span><span class="p">,</span><span class="nx">boun2</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span><span class="c1">//186114667454.5676</span>
+
+
+<span class="c1">// peojection area</span>
+<span class="kd">var</span> <span class="nx">wkt</span> <span class="o">=</span> <span class="s1">&#39; \</span>
+<span class="s1">  PROJCS[&quot;World_Mollweide&quot;, [&quot;GCS_WGS_1984&quot;, [&quot;WGS_1984&quot;,SPHEROID[&quot;WGS_1984&quot;,6378137,298.257223563]],PRIMEM[&quot;Greenwich&quot;,0],UNIT[&quot;Degree&quot;,0.017453292519943295]],PROJECTION[&quot;Mollweide&quot;],PARAMETER[&quot;False_Easting&quot;,0],PARAMETER[&quot;False_Northing&quot;,0],PARAMETER[&quot;Central_Meridian&quot;,0],UNIT[&quot;Meter&quot;,1],AUTHORITY[&quot;EPSG&quot;,&quot;54009&quot;]]&#39;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">proj_mollweide</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Projection</span><span class="p">(</span><span class="nx">wkt</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;boun transform area:&quot;</span><span class="p">,</span><span class="nx">boun2</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span><span class="nx">proj_mollweide</span><span class="p">,</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">area</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span> <span class="c1">//186114667454.5346</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;boun areapro area:&quot;</span><span class="p">,</span><span class="nx">boun2</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">ErrorMargin</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="nx">proj_mollweide</span><span class="p">))</span><span class="c1">//186531461977.6914</span>
+
+<span class="kd">function</span> <span class="nx">getAreaProject</span><span class="p">(</span><span class="nx">image</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">image</span><span class="p">).</span><span class="nx">gte</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">reproject</span><span class="p">(</span><span class="nx">proj_mollweide</span><span class="p">).</span><span class="nx">clip</span><span class="p">(</span><span class="nx">boun2</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">area_imag</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">())</span>
+  <span class="kd">var</span> <span class="nx">sumarea</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">area_imag</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+                <span class="p">{</span><span class="s2">&quot;reducer&quot;</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+                <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;geometry&quot;</span><span class="o">:</span><span class="nx">boun2</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="nx">sumarea</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">GAIA</span><span class="p">.</span><span class="nx">toList</span><span class="p">(</span><span class="mi">70</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">getArea</span><span class="p">).</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">())</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;img reproject area:&quot;</span><span class="p">,</span><span class="nx">area</span><span class="p">)</span><span class="c1">//185905517767.81976</span>
+
+<span class="nx">mosaic</span> <span class="nx">area</span><span class="o">:</span>
+<span class="mf">185940066188.5224</span>
+<span class="nx">map</span> <span class="nx">imgcol</span> <span class="nx">area</span><span class="o">:</span>
+<span class="mf">185905517767.81976</span>
+<span class="nx">boun</span> <span class="nx">area</span><span class="o">:</span>
+<span class="mf">186114667454.5676</span>
+<span class="nx">boun</span> <span class="nx">transform</span> <span class="nx">area</span><span class="o">:</span>
+<span class="mf">186114667454.5346</span>
+<span class="nx">boun</span> <span class="nx">areapro</span> <span class="nx">area</span><span class="o">:</span>
+<span class="mf">186531461977.6914</span>
+<span class="nx">img</span> <span class="nx">reproject</span> <span class="nx">area</span><span class="o">:</span>
+<span class="mf">185905517767.81976</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">7.5. </span>栅格区域太大时切片计算<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>var b = ee.Array(lslat).reshape([60,1])</p>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="s2">&quot;SPA&quot;</span>
+<span class="kd">var</span> <span class="nx">boun</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/worldRegion&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Abbrv&quot;</span><span class="p">,</span><span class="nx">region</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">bound</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">().</span><span class="nx">coordinates</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">pro</span> <span class="o">=</span> <span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">().</span><span class="nx">projection</span><span class="p">()</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">().</span><span class="nx">coordinates</span><span class="p">())</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">())</span>
+<span class="kd">var</span> <span class="nx">left</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">floor</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">right</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">ceil</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">down</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">floor</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">up</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">ceil</span><span class="p">()</span>
+
+<span class="c1">//92,236,-30,29</span>
+
+<span class="kd">var</span> <span class="nx">rec</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="nx">left</span><span class="p">,</span> <span class="nx">down</span><span class="p">,</span><span class="nx">right</span><span class="p">,</span> <span class="nx">up</span><span class="p">],</span><span class="kc">null</span><span class="p">,</span><span class="kc">false</span><span class="p">)</span>
+
+<span class="c1">// var ls = ee.List([])</span>
+<span class="c1">// for(var i = left; i &lt; right; i++) {</span>
+<span class="c1">//   for (var j = down; i&lt; up; i++){</span>
+<span class="c1">//     var rec = ee.Geometry.Rectangle([i, j,i.add(1), j.add(1)],null,false)</span>
+<span class="c1">//     ls.evaluate(function(rec){  //行不通，push不进去</span>
+<span class="c1">//       ls.add(rec)</span>
+<span class="c1">//       return ls})</span>
+<span class="c1">//   }</span>
+<span class="c1">// }</span>
+
+<span class="c1">// var lslat = ee.List.sequence(down,up)</span>
+<span class="c1">// var lslng = ee.List.sequence(left,right)</span>
+<span class="kd">var</span> <span class="nx">down</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">left</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">lslat</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">.</span><span class="nx">sequence</span><span class="p">(</span><span class="nx">down</span><span class="p">,</span><span class="nx">down</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">lslng</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">.</span><span class="nx">sequence</span><span class="p">(</span><span class="nx">left</span><span class="p">,</span><span class="nx">left</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">ls</span> <span class="o">=</span> <span class="nx">lslat</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">lat</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">lslng</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">lng</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="nx">lat</span><span class="p">,</span><span class="nx">lng</span><span class="p">])</span>
+  <span class="p">})</span>
+  <span class="k">return</span> <span class="nx">y</span>
+<span class="p">})</span>
+
+<span class="c1">//var array = ee.Array(ls).reshape([8700,2])</span>
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Array</span><span class="p">(</span><span class="nx">ls</span><span class="p">).</span><span class="nx">reshape</span><span class="p">([</span><span class="mi">121</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="kd">var</span> <span class="nx">rect</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">toList</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">point</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">point</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+  <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">point</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+  <span class="kd">var</span> <span class="nx">rec</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="nx">y</span><span class="p">,</span><span class="nx">x</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span><span class="nx">y</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nx">x</span><span class="p">],</span><span class="kc">null</span><span class="p">,</span><span class="kc">false</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nx">rec</span>
+<span class="p">})</span>
+<span class="c1">//var rectg = ee.List(ee.Geometry.MultiPolygon(rect))</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">MultiPolygon</span><span class="p">(</span><span class="nx">rect</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">rect</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">fets</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">fet</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">(</span><span class="nx">fets</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">GAIA</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/GAIA&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">fet</span><span class="p">).</span><span class="nx">mosaic</span><span class="p">().</span><span class="nx">clip</span><span class="p">(</span><span class="nx">fet</span><span class="p">).</span><span class="nx">gte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">GAIA</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">area_imag</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">())</span>
+  <span class="kd">var</span> <span class="nx">sumarea</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">area_imag</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+                <span class="p">{</span><span class="s2">&quot;reducer&quot;</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+                <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
+                <span class="s2">&quot;geometry&quot;</span><span class="o">:</span><span class="nx">fet</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="nx">sumarea</span>
+<span class="p">})</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">area</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">())</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">area</span><span class="p">)</span>
+<span class="c1">//3151140115.2027273</span>
+<span class="c1">//6305539433.349972</span>
+<span class="c1">//1482707901266.5425</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">7.6. </span>造掩膜填空<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="s2">&quot;SPA&quot;</span>
+<span class="kd">var</span> <span class="nx">boun</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/worldRegion&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Abbrv&quot;</span><span class="p">,</span><span class="nx">region</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">GAIA</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/GAIA&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">boun</span><span class="p">).</span><span class="nx">mosaic</span><span class="p">().</span><span class="nx">clip</span><span class="p">(</span><span class="nx">boun</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">GAIA_viz</span> <span class="o">=</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">34</span><span class="p">,</span><span class="nx">palette</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;000000&quot;</span><span class="p">,</span><span class="s2">&quot;ff0000&quot;</span><span class="p">]}</span>
+<span class="c1">//Map.addLayer(GAIA,GAIA_viz)</span>
+
+<span class="kd">var</span> <span class="nx">GAIA_masked</span> <span class="o">=</span> <span class="nx">GAIA</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">GAIA</span><span class="p">.</span><span class="nx">gte</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">emp</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">constant</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">select</span><span class="p">([</span><span class="s2">&quot;constant&quot;</span><span class="p">],[</span><span class="s2">&quot;b1&quot;</span><span class="p">])</span>
+<span class="c1">//print(emp.get(&quot;system:band_names&quot;))</span>
+<span class="c1">//print(emp.propertyNames())</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">emp</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">([</span><span class="nx">GAIA_masked</span><span class="p">,</span><span class="nx">emp</span><span class="p">]).</span><span class="nx">mosaic</span><span class="p">()</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">x</span><span class="p">,{</span><span class="nx">min</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">palette</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;000000&quot;</span><span class="p">,</span><span class="s2">&quot;ff0000&quot;</span><span class="p">]})</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="s2">&quot;SPA&quot;</span>
+<span class="kd">var</span> <span class="nx">boun</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/worldRegion&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Abbrv&quot;</span><span class="p">,</span><span class="nx">region</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">GAIA</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/GAIA&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">boun</span><span class="p">).</span><span class="nx">mosaic</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">emp</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">select</span><span class="p">([</span><span class="s2">&quot;constant&quot;</span><span class="p">],[</span><span class="s2">&quot;b1&quot;</span><span class="p">])</span>
+
+<span class="kd">var</span> <span class="nx">GAIA_mask</span> <span class="o">=</span> <span class="nx">GAIA</span><span class="p">.</span><span class="nx">mask</span><span class="p">().</span><span class="nx">toUint8</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">mask</span><span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">([</span><span class="nx">GAIA_mask</span><span class="p">,</span><span class="nx">GAIA</span><span class="p">]).</span><span class="nx">mosaic</span><span class="p">().</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">min</span><span class="p">())</span>
+<span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">GAIA</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">mask</span><span class="p">)</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">g</span><span class="p">,{</span><span class="nx">min</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">34</span><span class="p">,</span><span class="nx">palette</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;000000&quot;</span><span class="p">,</span><span class="s2">&quot;ff0000&quot;</span><span class="p">]})</span>
+
+
+
+<span class="kd">var</span> <span class="nx">bound</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">().</span><span class="nx">coordinates</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">pro</span> <span class="o">=</span> <span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">().</span><span class="nx">projection</span><span class="p">()</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">boun</span><span class="p">.</span><span class="nx">bounds</span><span class="p">())</span>
+<span class="kd">var</span> <span class="nx">left</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">floor</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">right</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">ceil</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">down</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">floor</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">up</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">bound</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)).</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)).</span><span class="nx">ceil</span><span class="p">()</span>
+
+<span class="c1">//92,236,-30,29</span>
+
+<span class="kd">var</span> <span class="nx">rec</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="nx">left</span><span class="p">,</span> <span class="nx">down</span><span class="p">,</span><span class="nx">right</span><span class="p">,</span> <span class="nx">up</span><span class="p">],</span><span class="kc">null</span><span class="p">,</span><span class="kc">false</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">lslat</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">.</span><span class="nx">sequence</span><span class="p">(</span><span class="nx">down</span><span class="p">,</span><span class="nx">up</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">lslng</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">.</span><span class="nx">sequence</span><span class="p">(</span><span class="nx">left</span><span class="p">,</span><span class="nx">right</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">ls</span> <span class="o">=</span> <span class="nx">lslat</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">lat</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">lslng</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">lng</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="nx">lat</span><span class="p">,</span><span class="nx">lng</span><span class="p">])</span>
+  <span class="p">})</span>
+  <span class="k">return</span> <span class="nx">y</span>
+<span class="p">})</span>
+
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Array</span><span class="p">(</span><span class="nx">ls</span><span class="p">).</span><span class="nx">reshape</span><span class="p">([</span><span class="mi">8700</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="kd">var</span> <span class="nx">rect</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">toList</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">point</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">point</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+  <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span><span class="nx">point</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+  <span class="kd">var</span> <span class="nx">rec</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Rectangle</span><span class="p">([</span><span class="nx">y</span><span class="p">,</span><span class="nx">x</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span><span class="nx">y</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nx">x</span><span class="p">],</span><span class="kc">null</span><span class="p">,</span><span class="kc">false</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nx">rec</span>
+<span class="p">})</span>
+<span class="c1">//var rectg = ee.List(ee.Geometry.MultiPolygon(rect))</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">MultiPolygon</span><span class="p">(</span><span class="nx">rect</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">rect</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">fets</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">fet</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">(</span><span class="nx">fets</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">clip</span><span class="p">(</span><span class="nx">boun</span><span class="p">).</span><span class="nx">gte</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+  <span class="kd">var</span> <span class="nx">area_imag</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">.</span><span class="nx">pixelArea</span><span class="p">())</span>
+  <span class="kd">var</span> <span class="nx">sumarea</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">area_imag</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+                <span class="p">{</span><span class="s2">&quot;reducer&quot;</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">(),</span>
+                <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
+                <span class="s2">&quot;geometry&quot;</span><span class="o">:</span><span class="nx">fet</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span> <span class="p">)</span>
+  <span class="k">return</span> <span class="nx">sumarea</span>
+<span class="p">})</span>
+<span class="kd">var</span> <span class="nx">area</span> <span class="o">=</span> <span class="nx">area</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">())</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">area</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>var bound = ee.List(boun.bounds().coordinates().get(0))
+var pro = boun.bounds().projection()
+Map.addLayer(boun.bounds())
+var left = ee.Number(ee.List(bound.get(0)).get(0)).floor()
+var right = ee.Number(ee.List(bound.get(1)).get(0)).ceil()
+var down = ee.Number(ee.List(bound.get(0)).get(1)).floor()
+var up = ee.Number(ee.List(bound.get(2)).get(1)).ceil()</p>
+<p>//92,236,-30,29</p>
+<p>var rec = ee.Geometry.Rectangle([left, down,right, up],null,false)
+var down = ee.Number(0)
+var lslat = ee.List.sequence(down,down.add(14),6)
+var lslng = ee.List.sequence(left,left.add(24),6)
+// var lslat = ee.List.sequence(down,up)
+// var lslng = ee.List.sequence(left,right)
+var ls = lslat.map(function(lat){
+var y = lslng.map(function(lng){
+return ee.List([lat,lng])
+})
+return y
+})
+var array = ee.Array(ls).reshape([15,2])</p>
+<p>var rect = array.toList().map(function(point){
+var x = ee.Number(ee.List(point).get(0))
+var y = ee.Number(ee.List(point).get(1))
+var rec = ee.Geometry.Rectangle([y,x.subtract(6) ,y.add(6), x],null,false)
+return rec
+})
+//var rectg = ee.List(ee.Geometry.MultiPolygon(rect))
+Map.addLayer(ee.Geometry.MultiPolygon(rect))
+var area = rect.map(function(fets){
+var fet = ee.Geometry(fets)
+var a = ee.Image(g.clip(boun).gte(3))
+var area_imag = a.multiply(ee.Image.pixelArea())
+var sumarea = ee.Number(area_imag.reduceRegion(
+{“reducer”: ee.Reducer.sum(),
+“scale”: 300,
+“geometry”:fet
+})
+.get(“b1”) )
+return sumarea
+})
+var area = area.reduce(ee.Reducer.sum())
+print(area)</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Jan20.html" class="btn btn-neutral float-left" title="1. 1.5.2019" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

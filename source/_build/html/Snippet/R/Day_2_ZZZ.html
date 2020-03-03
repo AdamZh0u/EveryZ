@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Graphs &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="4. Basic Data Management" href="Day_3_ZZZ.html" />
+    <link rel="prev" title="2. Introduction to R" href="Day_1_ZZZ.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../R.html">R</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. Graphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-graphs">3.1. Working with Graphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plot-a-graph">3.2. Plot a graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symbols-and-lines">3.3. Symbols  and lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colors">3.4. Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-characteristics">3.5. Text characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graph-and-margin-diemensions">3.6. Graph and margin diemensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-customized-axes-legends-titles">3.7. Text, customized axes, legends, titles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combining-graphs">3.8. Combining graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_5_ZZZ.html">6. Basic graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>Graphs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_2_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="graphs">
+<h1><span class="section-number">3. </span>Graphs<a class="headerlink" href="#graphs" title="永久链接至标题">¶</a></h1>
+<div class="section" id="working-with-graphs">
+<h2><span class="section-number">3.1. </span>Working with Graphs<a class="headerlink" href="#working-with-graphs" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">pdf</span><span class="p">(</span><span class="s">&quot;mygraph.pdf&quot;</span><span class="p">)</span><span class="c1"># set a destination</span>
+<span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">mpg</span><span class="p">)</span>
+<span class="nf">abline</span><span class="p">(</span><span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">wt</span><span class="p">))</span>
+<span class="nf">title</span><span class="p">(</span><span class="s">&quot;Regression of MPG on Weight&quot;</span><span class="p">)</span>
+<span class="nf">detach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+<span class="nf">dev.off</span><span class="p">()</span><span class="c1"># close </span>
+
+<span class="c1"># dev</span>
+<span class="nf">dev.new</span><span class="p">()</span>
+<span class="nf">dev.next</span><span class="p">()</span>
+<span class="nf">dev.prev</span><span class="p">()</span>
+<span class="nf">dev.set</span><span class="p">()</span>
+<span class="nf">dev.off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-a-graph">
+<h2><span class="section-number">3.2. </span>Plot a graph<a class="headerlink" href="#plot-a-graph" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">dose</span>  <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">40</span><span class="p">,</span> <span class="m">45</span><span class="p">,</span> <span class="m">60</span><span class="p">)</span>
+<span class="n">drugA</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">16</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">27</span><span class="p">,</span> <span class="m">40</span><span class="p">,</span> <span class="m">60</span><span class="p">)</span>
+<span class="n">drugB</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">15</span><span class="p">,</span> <span class="m">18</span><span class="p">,</span> <span class="m">25</span><span class="p">,</span> <span class="m">31</span><span class="p">,</span> <span class="m">40</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugA</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">)</span><span class="c1"># both points and lines</span>
+
+<span class="c1"># Custom：</span>
+<span class="c1"># One way</span>
+<span class="n">opar</span> <span class="o">&lt;-</span> <span class="nf">par</span><span class="p">(</span><span class="n">no.readonly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># get default options</span>
+<span class="nf">par</span><span class="p">(</span><span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">17</span><span class="p">)</span><span class="c1"># change options  </span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugA</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">)</span>   
+<span class="nf">par</span><span class="p">(</span><span class="n">opar</span><span class="p">)</span> <span class="c1"># recover options</span>
+
+<span class="c1"># other way</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugA</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">17</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="symbols-and-lines">
+<h2><span class="section-number">3.3. </span>Symbols  and lines<a class="headerlink" href="#symbols-and-lines" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">pch</span><span class="c1"># point style 0-25</span>
+<span class="n">cex</span><span class="c1"># point size</span>
+<span class="n">lty</span><span class="c1"># line style  1-6</span>
+<span class="n">lwd</span><span class="c1"># line width</span>
+<span class="n">col</span><span class="c1"># border color</span>
+<span class="n">bg</span><span class="c1"># fill color</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="colors">
+<h2><span class="section-number">3.4. </span>Colors<a class="headerlink" href="#colors" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="c1"># default color</span>
+<span class="n">col.axis</span> <span class="c1"># axis text</span>
+<span class="n">col.lab</span> <span class="c1"># axis label</span>
+<span class="n">col.main</span> <span class="c1"># titles</span>
+<span class="n">col.sub</span> <span class="c1"># subtitles</span>
+<span class="n">fg</span> <span class="c1"># foreground</span>
+<span class="n">bg</span> <span class="c1"># background</span>
+<span class="nf">colors</span><span class="p">()</span><span class="c1"># return all color</span>
+<span class="c1"># define color</span>
+<span class="n">col</span><span class="o">=</span><span class="m">1</span>
+<span class="n">col</span><span class="o">=</span><span class="s">&quot;white&quot;</span>
+<span class="n">col</span><span class="o">=</span><span class="s">&quot;#FFFFFF&quot;</span>
+<span class="n">col</span><span class="o">=</span><span class="nf">rgb</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+<span class="n">col</span><span class="o">=</span><span class="nf">hsv</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+<span class="c1">#generate color</span>
+<span class="nf">rainbow</span><span class="p">()</span>
+<span class="nf">heat.colors</span><span class="p">()</span>
+<span class="nf">terrain.colors</span><span class="p">()</span>
+<span class="nf">topo.colors</span><span class="p">()</span>
+<span class="nf">cm.colors</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>RColorBrewer: package for creating attractive color palettes</p></li>
+</ul>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">&lt;-</span> <span class="m">7</span>
+<span class="n">mycolors</span> <span class="o">&lt;-</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s">&quot;Set1&quot;</span><span class="p">)</span>
+<span class="nf">barplot</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">n</span><span class="p">),</span> <span class="n">col</span><span class="o">=</span><span class="n">mycolors</span><span class="p">)</span>
+
+<span class="n">brewer.pal.info</span>
+<span class="nf">display.brewer.all</span><span class="p">()</span>
+
+<span class="n">n</span> <span class="o">&lt;-</span> <span class="m">10</span>
+<span class="n">mycolors</span> <span class="o">&lt;-</span> <span class="nf">rainbow</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nf">pie</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="n">mycolors</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="n">mycolors</span><span class="p">)</span>
+<span class="n">mygrays</span> <span class="o">&lt;-</span> <span class="nf">gray</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="n">n</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="nf">pie</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="n">mygrays</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="n">mygrays</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="text-characteristics">
+<h2><span class="section-number">3.5. </span>Text characteristics<a class="headerlink" href="#text-characteristics" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">cex</span> <span class="c1"># scaled size</span>
+<span class="n">cex.axis</span> <span class="c1"># scaled axis text</span>
+<span class="n">cex.lab</span> <span class="c1"># scaled axis labels</span>
+<span class="n">cex.main</span> <span class="c1"># titles</span>
+<span class="n">cex.sub</span> <span class="c1"># subtitles</span>
+<span class="c1"># </span>
+<span class="n">font</span> <span class="c1"># style integer</span>
+<span class="n">ps</span> <span class="c1"># ps*cex =size inch</span>
+<span class="n">family</span> <span class="c1"># drawing text font family</span>
+<span class="c1"># &quot;serif&quot; &quot;sans&quot; &quot;mono&quot;</span>
+
+<span class="nf">windowsFonts</span><span class="p">(</span>
+  <span class="n">A</span><span class="o">=</span><span class="nf">windowsFont</span><span class="p">(</span><span class="s">&quot;Arial Black&quot;</span><span class="p">),</span>
+  <span class="n">B</span><span class="o">=</span><span class="nf">windowsFont</span><span class="p">(</span><span class="s">&quot;Bookman Old Style&quot;</span><span class="p">),</span>
+  <span class="n">C</span><span class="o">=</span><span class="nf">windowsFont</span><span class="p">(</span><span class="s">&quot;Comic Sans MS&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nf">par</span><span class="p">(</span><span class="n">family</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span><span class="p">)</span>
+
+<span class="c1"># PDF</span>
+<span class="nf">names</span><span class="p">(</span><span class="nf">pdfFonts</span><span class="p">())</span><span class="c1">#get all fonts</span>
+<span class="nf">pdf</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&quot;myplot.pdf&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s">&quot;fontname&quot;</span><span class="p">)</span>
+
+<span class="c1">#PS</span>
+<span class="nf">names</span><span class="p">(</span><span class="nf">postscriptFonts</span><span class="p">())</span>
+<span class="nf">postscript</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;myplot.ps&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s">&quot;fontname&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="graph-and-margin-diemensions">
+<h2><span class="section-number">3.6. </span>Graph and margin diemensions<a class="headerlink" href="#graph-and-margin-diemensions" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">pin</span> <span class="c1"># plot dimensions in inches</span>
+<span class="n">mai</span> <span class="c1"># numerical vector c(bottom, left, top, right) in inches</span>
+<span class="n">mar</span> <span class="c1"># in lines </span>
+<span class="nf">par</span><span class="p">(</span><span class="n">pin</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="n">mai</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">.5</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">.2</span><span class="p">))</span>
+
+<span class="n">opar</span> <span class="o">&lt;-</span> <span class="nf">par</span><span class="p">(</span><span class="n">no.readonly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>                  
+<span class="nf">par</span><span class="p">(</span><span class="n">pin</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>                              
+<span class="nf">par</span><span class="p">(</span><span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">cex</span><span class="o">=</span><span class="m">1.5</span><span class="p">)</span>                           
+<span class="nf">par</span><span class="p">(</span><span class="n">cex.axis</span><span class="o">=</span><span class="m">.75</span><span class="p">,</span> <span class="n">font.axis</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>                
+<span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugA</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>            
+<span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugB</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">23</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">6</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span>    
+<span class="nf">par</span><span class="p">(</span><span class="n">opar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="text-customized-axes-legends-titles">
+<h2><span class="section-number">3.7. </span>Text, customized axes, legends, titles<a class="headerlink" href="#text-customized-axes-legends-titles" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugA</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span>  
+     <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span>
+     <span class="n">main</span><span class="o">=</span><span class="s">&quot;Clinical Trials for Drug A&quot;</span><span class="p">,</span> 
+     <span class="n">sub</span><span class="o">=</span><span class="s">&quot;This is hypothetical data&quot;</span><span class="p">,</span> 
+     <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Dosage&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Drug Response&quot;</span><span class="p">,</span>
+     <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">60</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">70</span><span class="p">))</span>
+<span class="nf">title</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;main title&quot;</span><span class="p">,</span> <span class="n">sub</span><span class="o">=</span><span class="s">&quot;subtitle&quot;</span><span class="p">,</span> 
+      <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;x-axis label&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;y-axis label&quot;</span><span class="p">)</span>
+<span class="nf">title</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;My Title&quot;</span><span class="p">,</span> <span class="n">col.main</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> 
+      <span class="n">sub</span><span class="o">=</span><span class="s">&quot;My Subtitle&quot;</span><span class="p">,</span> <span class="n">col.sub</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> 
+      <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;My X label&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;My Y label&quot;</span><span class="p">,</span>
+      <span class="n">col.lab</span><span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">,</span> <span class="n">cex.lab</span><span class="o">=</span><span class="m">0.75</span><span class="p">)</span>
+
+<span class="c1"># axes</span>
+<span class="nf">axis</span><span class="p">(</span><span class="n">side</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="p">,</span> <span class="n">las</span><span class="o">=</span><span class="p">,</span> <span class="n">tck</span><span class="o">=</span><span class="p">)</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="kc">FALSE</span> <span class="c1"># suppresses all axes</span>
+<span class="n">frame.plot</span><span class="o">=</span><span class="kc">TRUE</span> <span class="c1"># </span>
+<span class="n">xaxt</span> <span class="o">=</span> <span class="s">&quot;n&quot;</span> <span class="c1"># suppress x axis </span>
+<span class="n">yaxt</span> <span class="o">=</span> <span class="s">&quot;n&quot;</span>
+<span class="nf">mtext</span><span class="p">()</span> <span class="c1"># add text to the margin</span>
+
+<span class="c1"># Minor tick marks</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">Hmisc</span><span class="p">)</span>
+<span class="nf">minor.tick</span><span class="p">(</span><span class="n">nx</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">tick.ratio</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="nf">minor.tick</span><span class="p">(</span><span class="n">nx</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">ny</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">tick.ratio</span><span class="o">=</span><span class="m">0.5</span><span class="p">)</span> 
+
+<span class="c1"># Reference Lines</span>
+<span class="nf">abline</span><span class="p">(</span><span class="n">h</span><span class="o">=</span><span class="n">yvalues</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="n">xvalues</span><span class="p">)</span>
+<span class="nf">abline</span><span class="p">(</span><span class="n">v</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+
+<span class="c1"># legend</span>
+<span class="nf">legend</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">legend</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+
+<span class="c1"># text annotations</span>
+<span class="nf">text</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="s">&quot;text to place&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">mtext</span><span class="p">(</span><span class="s">&quot;text to place&quot;</span><span class="p">,</span> <span class="n">side</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="n">pos</span> <span class="c1"># 1 bottom 2 left 3 up 4 right</span>
+<span class="n">offset</span>
+<span class="n">side</span> <span class="c1"># side to put text</span>
+
+<span class="c1"># math annotations</span>
+<span class="nf">plotmath</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>                          
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="n">x</span>                                   
+<span class="n">z</span> <span class="o">&lt;-</span> <span class="m">10</span><span class="o">/</span><span class="n">x</span>                             
+<span class="n">opar</span> <span class="o">&lt;-</span> <span class="nf">par</span><span class="p">(</span><span class="n">no.readonly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span> <span class="o">+</span> <span class="m">0.1</span><span class="p">)</span>        
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span>
+     <span class="n">pch</span><span class="o">=</span><span class="m">21</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>    
+     <span class="n">yaxt</span><span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">ann</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>    
+<span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">22</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">)</span> 
+<span class="nf">axis</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">col.axis</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">las</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">round</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="m">2</span><span class="p">),</span>
+     <span class="n">col.axis</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="n">las</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">cex.axis</span><span class="o">=</span><span class="m">0.7</span><span class="p">,</span> 	<span class="n">tck</span><span class="o">=</span><span class="m">-.01</span><span class="p">)</span>
+<span class="nf">mtext</span><span class="p">(</span><span class="s">&quot;y=1/x&quot;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="m">4</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">cex.lab</span><span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">las</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span> 
+<span class="nf">title</span><span class="p">(</span><span class="s">&quot;An Example of Creative Axes&quot;</span><span class="p">,</span>
+      <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;X values&quot;</span><span class="p">,</span>
+      <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Y=X&quot;</span><span class="p">)</span>
+
+<span class="nf">par</span><span class="p">(</span><span class="n">opar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="combining-graphs">
+<h2><span class="section-number">3.8. </span>Combining graphs<a class="headerlink" href="#combining-graphs" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">nrows</span><span class="p">,</span><span class="n">ncols</span><span class="p">))</span><span class="c1"># fill by rows</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">ann</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># suppress all titles and labels</span>
+
+<span class="nf">layout</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span><span class="c1"># matrix specifying the location</span>
+
+<span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+<span class="nf">layout</span><span class="p">(</span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span><span class="c1"># vector nrow ncol</span>
+       <span class="n">widths</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="n">heights</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">wt</span><span class="p">)</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">mpg</span><span class="p">)</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">disp</span><span class="p">)</span>
+<span class="nf">detach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">#Fine control</span>
+<span class="n">fig</span> <span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+
+<span class="c1"># example</span>
+<span class="n">opar</span> <span class="o">&lt;-</span> <span class="nf">par</span><span class="p">(</span><span class="n">no.readonly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">par</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0.8</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.8</span><span class="p">))</span>   <span class="c1"># 0-0.8 0-0.8</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">wt</span><span class="p">,</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span>                      
+     <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">,</span>                               
+     <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Car Weight&quot;</span><span class="p">)</span>
+
+<span class="nf">par</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0.8</span><span class="p">,</span> <span class="m">0.55</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="n">new</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>        <span class="c1"># 0-0.8 0.55-1                           </span>
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">wt</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> 
+
+<span class="nf">par</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.65</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.8</span><span class="p">),</span> <span class="n">new</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>          
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>   
+
+<span class="nf">mtext</span><span class="p">(</span><span class="s">&quot;Enhanced Scatterplot&quot;</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">outer</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="m">-3</span><span class="p">)</span>
+<span class="nf">par</span><span class="p">(</span><span class="n">opar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Day_3_ZZZ.html" class="btn btn-neutral float-right" title="4. Basic Data Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_1_ZZZ.html" class="btn btn-neutral float-left" title="2. Introduction to R" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

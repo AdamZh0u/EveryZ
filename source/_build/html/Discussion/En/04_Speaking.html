@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>21. Plan &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Articles" href="../article.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="03_writeTempletes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/GEE.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Snippet/Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Write.html">Write</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../En.html">To</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_Main.html">1. TOEFL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html">2. TPO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-2">3. TPO 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-3">4. TPO 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-4">5. TPO 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-5">6. TPO 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-6">7. TPO 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-7">8. TPO 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-8">9. TPO 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-10">10. TPO 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo-30">11. TPO 30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo52">12. TPO52</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo53">13. TPO53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_TPO.html#tpo54">14. TPO54</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_dictation.html">15. 2-2 Behaviorism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_dictation.html#economics">16. 6-2 Economics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_dictation.html#theater">17. 9-2 Theater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_dictation.html#geology">18. 15-5 geology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_dictation.html#id1">19. 16-2 geology***</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_dictation.html#id2">20. </a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">21. Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing">22. writing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-1">22.1. task 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2">22.2. task 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#speaking">23. speaking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task1">23.1. task1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task2">23.2. task2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-3">23.3. task 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-4">23.4. task 4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal-choice">23.4.1. Personal choice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../En.html">To</a> &raquo;</li>
+        
+      <li><span class="section-number">21. </span>Plan</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Discussion/En/04_Speaking.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plan">
+<h1><span class="section-number">21. </span>Plan<a class="headerlink" href="#plan" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>inferences 推断</p></li>
+<li><p>falsehood 假话</p></li>
+<li><p>violated 违反</p></li>
+<li><p>deceived  欺骗</p></li>
+<li><p>mineral 矿物质</p></li>
+<li><p>lens 透镜 玻璃灯</p></li>
+<li><p>inevitably</p></li>
+<li><p>dazzling 耀眼的</p></li>
+<li><p>coevolve 共同进化</p></li>
+<li><p>excrete 排泄</p></li>
+<li><p>carbonates phosphates silica</p></li>
+<li><p>photosynthesis 光合作用</p></li>
+<li><p>microbes 微生物</p></li>
+<li><p>anthropology 人类学</p></li>
+<li><p>ethnography</p></li>
+<li><p>cost a fortune</p></li>
+<li><p>gist 主旨</p></li>
+<li><p>ferment 发酵</p></li>
+<li><p>endorses 认可</p></li>
+<li><p>navigation 航行</p></li>
+<li><p>duplicates 复制品</p></li>
+<li><p>underfed 营养不良的</p></li>
+</ul>
+</div>
+<div class="section" id="writing">
+<h1><span class="section-number">22. </span>writing<a class="headerlink" href="#writing" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>indefensible</p></li>
+<li></li>
+</ul>
+<div class="section" id="task-1">
+<h2><span class="section-number">22.1. </span>task 1<a class="headerlink" href="#task-1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>In the lecture, the professor states that .</p></li>
+<li><ul>
+<li><p>On the other hand, the reading material contends that _.</p>
+<ul>
+<li><p>And the professor casts doubt on the reading passage by offering three specific points.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>First of all, according to the professor in the lecture, .</p></li>
+<li><ul>
+<li><p>However, this directly challenges the statement demonstrated in the reading passages that <strong>_</strong>.</p></li>
+</ul>
+</li>
+<li><p>Furthermore, contrary to the belief in the passage that**<em>**, the professor in the lecture asserts that **</em>**.</p></li>
+<li><ul>
+<li><p>To be specific, .</p></li>
+</ul>
+</li>
+<li><p>Finally, the professor points out that <strong>_</strong>.</p></li>
+<li><ul>
+<li><p>This is in direct contradiction with the claim in the reading passage.</p></li>
+</ul>
+</li>
+<li><p>In conclusion, the contents in the reading passage are refuted by the professor in the lecture, who uses three convincing points to weaken the argument.</p>
+<ul>
+<li><p>The reading material claims that it can be true that Peary has reached the North Pole. On the other hand, in the lecture, the professor states that the arguments that support the truth of Peary’s statement are not convincing at all. And the professor cast doubt on the reading passage by offering three specific points.</p></li>
+<li><p>First of all, the professor makes the point that the investigation conducted by the National Geographic Society is not objective, because, in the Society, there were many Peary’s friends and gave a lot of money to Peary for his adventure. The investigation was only last for two days. This directly challenges the belief in the passage that the investigation is persuasive enough to Peary’s claim.</p></li>
+<li><p>Furthermore, contrary to the statements in the reading passage that Peary can reach the North Pole in less than 37 days by giving the evidence that Avery made the same trek at the same time. The professor asserts that in Peary’s adventure, he carried more weight, and the weather is more unfavorable, this makes it too tricky for Peary to reach the Pole.</p></li>
+<li><p>Finally, the professor indicates that the photographs taken by Peary has been faded over time and can’t judge the Sun’s position just by the faded shadow in the photograph. This is in direct contradiction with the claim in the passage that these photographs can be strong evidence that Peary has reached the North Pole.</p></li>
+<li><p>In conclusion, the contents in the reading  passage are entirely refuted by the professor, who uses three convincing points to weaken the arguments in the passage.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="task-2">
+<h2><span class="section-number">22.2. </span>task 2<a class="headerlink" href="#task-2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>There has been constant drumbeat over whether or not.</p></li>
+<li><ul>
+<li><p>Despite dynamic efforts to settle the debate, thus far, a consensus has been lacking.</p>
+<ul>
+<li><p>Generally speaking, I think it is better for all concerned if, especially when.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>First of all, it is essential to consider.</p></li>
+<li><ul>
+<li><p>Indeed, it is possible for some</p>
+<ul>
+<li><p>However, in most parts of the world these days</p></li>
+<li><p>This, in turn, had adverse effects on things. like my performance.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Hence, in addition to the importance of, I think it is better for potential.</p></li>
+<li><ul>
+<li><p>With, it is a lot easier</p>
+<ul>
+<li><p>Admittedly, for some people in some situations, sth may be quite stressful.</p></li>
+<li><p>Nevertheless, I think it would be fair to say that</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Finally, doing sth doesn’t necessarily mean that sb cannot develop</p></li>
+<li><ul>
+<li><p>I will be the first to admit that, it’s instinctive in many of them</p>
+<ul>
+<li><p>Despite this possibility, even though</p></li>
+<li><p>I think this is the case for sb as well, so i do not believe it is necessarily fair to claim that</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>By way of conclusion, based on the arguments explored above, I am of the opinion that in most cases it</p>
+<ul>
+<li><p>There has been constant drumbeat over whether or not technology has made children more creative than they were in the past. Despite dynamic efforts to settle the debate, thus far, a consensus has been lacking. Generally speaking, I think it is better for all concerned to say that children have been more creative than they were in the past with the help of technology, especially when they embrace technology at an early age.</p></li>
+<li><p>First of all, it is essential to consider the knowledge that children have to learn. Indeed, it is possible for some children that they can get more knowledge without using new technology. However, for the most part of the world, these days, technology provides a more convenient way to access more experience in a limited time. I can recall trying to search for what is an animal in the books when I am a child, and nowadays, you can get information like this by a connected phone. The developments of technology, in turn, had significant effects on things like children’s creative performance.</p></li>
+<li><p>Furthermore, in addition to the importance of accessible knowledge, I think it is better for children’s potential. With the help of technology,  there will be more new patterns of things and forms of intelligence that can be introduced to them, like VR or something else. These things will arouse their inspiration to create a new idea. Admittedly, for some children in some situations, it may be addicted to the new forms of technology as web games, and they might not be able to get rid of it. Nevertheless, considering there have been constant constraints over the time that children can have on these addicting things, I think it would be fair to say that it is adequate for children to embrace the developments of technology.</p></li>
+<li><p>Finally, using new technology doesn’t necessarily mean that children cannot develop their creativeness. I will be the first one to admit that the creation depends on what time we saw it. Despite this possibility, I think it would be fair to say that nowadays there is more creation in this exact era. I believe this is the case for other children as well, so I do not believe it is necessarily fair to claim that technology has made less creative than they were in the past.</p></li>
+<li><p>By way of conclusion, based on the arguments discussed above, I am of the opinion that, in most cases, it is more beneficial for most children to embrace the new technology to get more inspiration.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="speaking">
+<h1><span class="section-number">23. </span>speaking<a class="headerlink" href="#speaking" title="永久链接至标题">¶</a></h1>
+<div class="section" id="task1">
+<h2><span class="section-number">23.1. </span>task1<a class="headerlink" href="#task1" title="永久链接至标题">¶</a></h2>
+<p>Well, in my opinion, I would definitely agree with the point that…</p>
+<p>The first reason I want to say is that i am a pretty introverted person</p>
+<ul class="simple">
+<li><p>enable me to make friends. By exchanging our opinions, our friendship will get deeper. With communication, I could learn how to discuss, how to persuade, how to negotiate, and how to compromise.</p></li>
+<li><p>sense of achievement. boost my confidence. proud of myself. since then, I have the solid belief in myself that all difficulties, troubles and challenges would be just a piece of cake to me.</p></li>
+<li><p>can be helpful to develop some skills, such as how to cooperate with partners, how to get along with others and so on. All of the skills are the key qualities needed in our daily lives.</p></li>
+<li><p>it is more convenient for me.</p></li>
+<li><p>it is more affordable for me. in nowday</p></li>
+</ul>
+</div>
+<div class="section" id="task2">
+<h2><span class="section-number">23.2. </span>task2<a class="headerlink" href="#task2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>In the conversation the man agrees the proposal that</p></li>
+<li><p>and here he gives servel reason s</p></li>
+<li><p>First of all, with regard to the statement that , he mentioned</p></li>
+<li><p>Secondly, facing the claim that , he pointed out</p></li>
+<li><p>finnaly, he further states that</p></li>
+</ul>
+</div>
+<div class="section" id="task-3">
+<h2><span class="section-number">23.3. </span>task 3<a class="headerlink" href="#task-3" title="永久链接至标题">¶</a></h2>
+<p>In the lecture, the professor mainly talked about the theory that…</p>
+<p>To reinforce the theory, the professor gave two reasons/examples in his speech.  The first one is that…  The other one is that…</p>
+</div>
+<div class="section" id="task-4">
+<h2><span class="section-number">23.4. </span>task 4<a class="headerlink" href="#task-4" title="永久链接至标题">¶</a></h2>
+<p>In the lecture, the professor provides two examples to illustrate the theory/phenomenon that…</p>
+<p>The first one is that…  Another example is that…</p>
+<div class="section" id="personal-choice">
+<h3><span class="section-number">23.4.1. </span>Personal choice<a class="headerlink" href="#personal-choice" title="永久链接至标题">¶</a></h3>
+<div class="section" id="media">
+<h4><span class="section-number">23.4.1.1. </span>media<a class="headerlink" href="#media" title="永久链接至标题">¶</a></h4>
+<p>电视, 手机, 网路</p>
+<p>– Does the TV have positive or negative effect on the modern society?</p>
+<p>– Whether parents should regulate their children to watch TV or the children should choose?</p>
+<p>– Do you learn more form the media or people?</p>
+<p>– Wheather Cell phone Should be prohibited in some areas or not?</p>
+<p>– Do you prefer to communicate with your family and friends by letter and e-mail or by telephone</p>
+</div>
+<div class="section" id="education">
+<h4><span class="section-number">23.4.1.2. </span>education<a class="headerlink" href="#education" title="永久链接至标题">¶</a></h4>
+<p>class size, online courses, research…</p>
+<p>– Do you prefer the big class or the small class?</p>
+<p>– Do you prefer studying in big city or small city?</p>
+<p>– Should universities open to anyone who would like to attend or just limited students.</p>
+<p>– Do you prefer the traditional courses or online courses?</p>
+<p>– Should a university offer the PE class?</p>
+<p>– Are people easier to succeed if they attend to college or not?</p>
+<p>– which one do you think is better to help do research, internet or academic books?</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../article.html" class="btn btn-neutral float-right" title="Articles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="03_writeTempletes.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

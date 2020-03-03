@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. Basic graphs &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="reStructuredText" href="../reStructuredText.html" />
+    <link rel="prev" title="5. Advanced data management" href="Day_4_ZZZ.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GEE.html">GEE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../R.html">R</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Day_0_zzz.html">1. Day 0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_1_ZZZ.html">2. Introduction to R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_2_ZZZ.html">3. Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_3_ZZZ.html">4. Basic Data Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day_4_ZZZ.html">5. Advanced data management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6. Basic graphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bar-plot">6.1. Bar plot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-bar-plot">6.1.1. Simple bar plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stacked-and-grouped-bar-plot">6.1.2. Stacked and grouped bar plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mean-bar-plot">6.1.3. Mean bar plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tweaking-bar-plot">6.1.4. Tweaking bar plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spinograms">6.1.5. Spinograms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pie-chart">6.2. Pie chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#histogram">6.3. Histogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kernel-density-plot">6.4. Kernel density plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#box-plots">6.5. Box plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parallel-box-plot">6.5.1. Parallel box plot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#violin-plot">6.6. Violin plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dot-plot">6.7. Dot plot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../R.html">R</a> &raquo;</li>
+        
+      <li><span class="section-number">6. </span>Basic graphs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/R/Day_5_ZZZ.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-graphs">
+<h1><span class="section-number">6. </span>Basic graphs<a class="headerlink" href="#basic-graphs" title="永久链接至标题">¶</a></h1>
+<div class="section" id="bar-plot">
+<h2><span class="section-number">6.1. </span>Bar plot<a class="headerlink" href="#bar-plot" title="永久链接至标题">¶</a></h2>
+<div class="section" id="simple-bar-plot">
+<h3><span class="section-number">6.1.1. </span>Simple bar plot<a class="headerlink" href="#simple-bar-plot" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">)</span>
+<span class="n">counts</span>
+
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span>                    
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Simple Bar Plot&quot;</span><span class="p">,</span>    
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Improvement&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span>    
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span>                         
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Horizontal Bar Plot&quot;</span><span class="p">,</span>    
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Improvement&quot;</span><span class="p">,</span>    
+        <span class="n">horiz</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>  
+<span class="nf">plot</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Simple Bar Plot&quot;</span><span class="p">,</span> 
+     <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Improved&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">)</span> 
+<span class="nf">plot</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">,</span> <span class="n">horiz</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Horizontal Bar Plot&quot;</span><span class="p">,</span> 
+     <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Improved&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stacked-and-grouped-bar-plot">
+<h3><span class="section-number">6.1.2. </span>Stacked and grouped bar plot<a class="headerlink" href="#stacked-and-grouped-bar-plot" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">,</span> <span class="n">Arthritis</span><span class="o">$</span><span class="n">Treatment</span><span class="p">)</span>
+<span class="n">counts</span>
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span>                  
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Stacked Bar Plot&quot;</span><span class="p">,</span>    
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Treatment&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">,</span>     
+        <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span><span class="p">,</span><span class="s">&quot;green&quot;</span><span class="p">),</span>    
+        <span class="n">legend</span><span class="o">=</span><span class="nf">rownames</span><span class="p">(</span><span class="n">counts</span><span class="p">))</span>    
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span>                     
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Grouped Bar Plot&quot;</span><span class="p">,</span> 
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Treatment&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">,</span>       
+        <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">),</span>    
+        <span class="n">legend</span><span class="o">=</span><span class="nf">rownames</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="section" id="mean-bar-plot">
+<h3><span class="section-number">6.1.3. </span>Mean bar plot<a class="headerlink" href="#mean-bar-plot" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">state.region</span><span class="p">,</span> <span class="n">state.x77</span><span class="p">)</span>
+
+<span class="n">means</span> <span class="o">&lt;-</span> <span class="nf">aggregate</span><span class="p">(</span><span class="n">states</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">state.region</span><span class="p">),</span> <span class="n">FUN</span><span class="o">=</span><span class="n">mean</span><span class="p">)</span>
+<span class="n">means</span>
+<span class="n">means</span> <span class="o">&lt;-</span> <span class="n">means</span><span class="nf">[order</span><span class="p">(</span><span class="n">means</span><span class="o">$</span><span class="n">x</span><span class="p">),</span><span class="n">]</span>    
+<span class="nf">barplot</span><span class="p">(</span><span class="n">means</span><span class="o">$</span><span class="n">x</span><span class="p">,</span> <span class="n">names.arg</span><span class="o">=</span><span class="n">means</span><span class="o">$</span><span class="n">Group.1</span><span class="p">)</span> 
+<span class="nf">title</span><span class="p">(</span><span class="s">&quot;Mean Illiteracy Rate&quot;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="section" id="tweaking-bar-plot">
+<h3><span class="section-number">6.1.4. </span>Tweaking bar plot<a class="headerlink" href="#tweaking-bar-plot" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>                    
+<span class="nf">par</span><span class="p">(</span><span class="n">las</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>                  
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">)</span> 
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> 
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Treatment Outcome&quot;</span><span class="p">,</span> 
+        <span class="n">horiz</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> 
+        <span class="n">cex.names</span><span class="o">=</span><span class="m">0.8</span><span class="p">,</span>             
+        <span class="n">names.arg</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;No Improvement&quot;</span><span class="p">,</span> <span class="s">&quot;Some Improvement&quot;</span><span class="p">,</span>   
+                    <span class="s">&quot;Marked Improvement&quot;</span><span class="p">))</span>               
+</pre></div>
+</div>
+</div>
+<div class="section" id="spinograms">
+<h3><span class="section-number">6.1.5. </span>Spinograms<a class="headerlink" href="#spinograms" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
+<span class="nf">attach</span><span class="p">(</span><span class="n">Arthritis</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Treatment</span><span class="p">,</span> <span class="n">Improved</span><span class="p">)</span>
+<span class="nf">spine</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Spinogram Example&quot;</span><span class="p">)</span>
+<span class="nf">detach</span><span class="p">(</span><span class="n">Arthritis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pie-chart">
+<h2><span class="section-number">6.2. </span>Pie chart<a class="headerlink" href="#pie-chart" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>             
+<span class="n">slices</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span><span class="m">4</span><span class="p">,</span> <span class="m">16</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span>    
+<span class="n">lbls</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;US&quot;</span><span class="p">,</span> <span class="s">&quot;UK&quot;</span><span class="p">,</span> <span class="s">&quot;Australia&quot;</span><span class="p">,</span> <span class="s">&quot;Germany&quot;</span><span class="p">,</span> <span class="s">&quot;France&quot;</span><span class="p">)</span>   
+<span class="nf">pie</span><span class="p">(</span><span class="n">slices</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">lbls</span><span class="p">,</span>
+    <span class="n">main</span><span class="o">=</span><span class="s">&quot;Simple Pie Chart&quot;</span><span class="p">)</span>
+
+<span class="n">pct</span> <span class="o">&lt;-</span> <span class="nf">round</span><span class="p">(</span><span class="n">slices</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">slices</span><span class="p">)</span><span class="o">*</span><span class="m">100</span><span class="p">)</span>      
+<span class="n">lbls2</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">lbls</span><span class="p">,</span> <span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">pct</span><span class="p">,</span> <span class="s">&quot;%&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>    
+<span class="nf">pie</span><span class="p">(</span><span class="n">slices</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">lbls2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">rainbow</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">lbls2</span><span class="p">)),</span>   
+    <span class="n">main</span><span class="o">=</span><span class="s">&quot;Pie Chart with Percentages&quot;</span><span class="p">)</span> 
+
+<span class="nf">library</span><span class="p">(</span><span class="n">plotrix</span><span class="p">)</span>
+<span class="nf">pie3D</span><span class="p">(</span><span class="n">slices</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">lbls</span><span class="p">,</span><span class="n">explode</span><span class="o">=</span><span class="m">0.1</span><span class="p">,</span>
+      <span class="n">main</span><span class="o">=</span><span class="s">&quot;3D Pie Chart &quot;</span><span class="p">)</span>
+<span class="n">mytable</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">state.region</span><span class="p">)</span>       
+<span class="n">lbls3</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">mytable</span><span class="p">),</span> <span class="s">&quot;\n&quot;</span><span class="p">,</span> <span class="n">mytable</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>   
+<span class="nf">pie</span><span class="p">(</span><span class="n">mytable</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">lbls3</span><span class="p">,</span>    
+    <span class="n">main</span><span class="o">=</span><span class="s">&quot;Pie Chart from a Table\n (with sample sizes)&quot;</span><span class="p">)</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">plotrix</span><span class="p">)</span>
+<span class="n">slices</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span><span class="m">4</span><span class="p">,</span> <span class="m">16</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span> 
+<span class="n">lbls</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;US&quot;</span><span class="p">,</span> <span class="s">&quot;UK&quot;</span><span class="p">,</span> <span class="s">&quot;Australia&quot;</span><span class="p">,</span> <span class="s">&quot;Germany&quot;</span><span class="p">,</span> <span class="s">&quot;France&quot;</span><span class="p">)</span>   
+<span class="nf">fan.plot</span><span class="p">(</span><span class="n">slices</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">lbls</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Fan Plot&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="histogram">
+<h2><span class="section-number">6.3. </span>Histogram<a class="headerlink" href="#histogram" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">)</span>             
+<span class="nf">hist</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span>                 
+     <span class="n">breaks</span><span class="o">=</span><span class="m">12</span><span class="p">,</span>    
+     <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>    
+     <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">,</span>    
+     <span class="n">main</span><span class="o">=</span><span class="s">&quot;Colored histogram with 12 bins&quot;</span><span class="p">)</span>    
+<span class="nf">hist</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span>                     
+     <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span>    
+     <span class="n">breaks</span><span class="o">=</span><span class="m">12</span><span class="p">,</span>    
+     <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>    
+     <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">,</span>    
+     <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram, rug plot, density curve&quot;</span><span class="p">)</span>    
+<span class="nf">rug</span><span class="p">(</span><span class="nf">jitter</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">))</span>    
+<span class="nf">lines</span><span class="p">(</span><span class="nf">density</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">),</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>    
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span>                        
+<span class="n">h</span><span class="o">&lt;-</span><span class="nf">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>    
+        <span class="n">breaks</span><span class="o">=</span><span class="m">12</span><span class="p">,</span>    
+        <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>    
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">,</span>    
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram with normal curve and box&quot;</span><span class="p">)</span>    
+<span class="n">xfit</span><span class="o">&lt;-</span><span class="nf">seq</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nf">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="m">40</span><span class="p">)</span>    
+<span class="n">yfit</span><span class="o">&lt;-</span><span class="nf">dnorm</span><span class="p">(</span><span class="n">xfit</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">sd</span><span class="o">=</span><span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>    
+<span class="n">yfit</span> <span class="o">&lt;-</span> <span class="n">yfit</span><span class="o">*</span><span class="nf">diff</span><span class="p">(</span><span class="n">h</span><span class="o">$</span><span class="n">mids[1</span><span class="o">:</span><span class="m">2</span><span class="n">]</span><span class="p">)</span><span class="o">*</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    
+<span class="nf">lines</span><span class="p">(</span><span class="n">xfit</span><span class="p">,</span> <span class="n">yfit</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>    
+<span class="nf">box</span><span class="p">()</span>    
+</pre></div>
+</div>
+</div>
+<div class="section" id="kernel-density-plot">
+<h2><span class="section-number">6.4. </span>Kernel density plot<a class="headerlink" href="#kernel-density-plot" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+<span class="n">d</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">)</span>   
+<span class="nf">plot</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>                   
+<span class="n">d</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">)</span>                                   
+<span class="nf">plot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Kernel Density of Miles Per Gallon&quot;</span><span class="p">)</span> 
+<span class="nf">polygon</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">border</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span> 
+<span class="nf">rug</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;brown&quot;</span><span class="p">)</span>
+
+<span class="c1">## sm </span>
+<span class="nf">library</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span>   
+<span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+<span class="n">cyl.f</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">cyl</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">8</span><span class="p">),</span>      
+                <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;4 cylinder&quot;</span><span class="p">,</span> <span class="s">&quot;6 cylinder&quot;</span><span class="p">,</span>     
+                           <span class="s">&quot;8 cylinder&quot;</span><span class="p">))</span> 
+<span class="nf">sm.density.compare</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">cyl</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span> 
+<span class="nf">title</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;MPG Distribution by Car Cylinders&quot;</span><span class="p">)</span>
+<span class="n">colfill</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">length</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">cyl.f</span><span class="p">))))</span>        
+<span class="nf">legend</span><span class="p">(</span><span class="nf">locator</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="nf">levels</span><span class="p">(</span><span class="n">cyl.f</span><span class="p">),</span> <span class="n">fill</span><span class="o">=</span><span class="n">colfill</span><span class="p">)</span>   
+<span class="c1"># click in the graph</span>
+<span class="nf">detach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>            
+</pre></div>
+</div>
+</div>
+<div class="section" id="box-plots">
+<h2><span class="section-number">6.5. </span>Box plots<a class="headerlink" href="#box-plots" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R\ notranslate"><div class="highlight"><pre><span></span>boxplot(mtcars$mpg, main=&quot;Box plot&quot;, ylab=&quot;Miles per Gallon&quot;)
+</pre></div>
+</div>
+<div class="section" id="parallel-box-plot">
+<h3><span class="section-number">6.5.1. </span>Parallel box plot<a class="headerlink" href="#parallel-box-plot" title="永久链接至标题">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dataframe</span><span class="p">)</span>
+
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">cyl</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">mtcars</span><span class="p">,</span>
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Car Mileage Data&quot;</span><span class="p">,</span> 
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Number of Cylinders&quot;</span><span class="p">,</span> 
+        <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span>
+<span class="c1">## notched box plot </span>
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">cyl</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">mtcars</span><span class="p">,</span> 
+        <span class="n">notch</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> 
+        <span class="n">varwidth</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>
+        <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span>
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;Car Mileage Data&quot;</span><span class="p">,</span> 
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Number of Cylinders&quot;</span><span class="p">,</span> 
+        <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span>
+<span class="c1">## Box plots for two crossed factors</span>
+<span class="n">mtcars</span><span class="o">$</span><span class="n">cyl.f</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="p">,</span>       
+                       <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">8</span><span class="p">),</span>    
+                       <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;6&quot;</span><span class="p">,</span><span class="s">&quot;8&quot;</span><span class="p">))</span>  
+
+<span class="n">mtcars</span><span class="o">$</span><span class="n">am.f</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">am</span><span class="p">,</span>              
+                      <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>    
+                      <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;auto&quot;</span><span class="p">,</span> <span class="s">&quot;standard&quot;</span><span class="p">))</span>  
+
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">am.f</span> <span class="o">*</span><span class="n">cyl.f</span><span class="p">,</span>     
+        <span class="n">data</span><span class="o">=</span><span class="n">mtcars</span><span class="p">,</span>    
+        <span class="n">varwidth</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>    
+        <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;gold&quot;</span><span class="p">,</span><span class="s">&quot;darkgreen&quot;</span><span class="p">),</span>    
+        <span class="n">main</span><span class="o">=</span><span class="s">&quot;MPG Distribution by Auto Type&quot;</span><span class="p">,</span>    
+        <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Auto Type&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="violin-plot">
+<h2><span class="section-number">6.6. </span>Violin plot<a class="headerlink" href="#violin-plot" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vioplot</span><span class="p">)</span>
+<span class="n">x1</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg[mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">4</span><span class="n">]</span> 
+<span class="n">x2</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg[mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">6</span><span class="n">]</span>
+<span class="n">x3</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg[mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">8</span><span class="n">]</span>
+<span class="nf">vioplot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">,</span> 
+        <span class="n">names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;4 cyl&quot;</span><span class="p">,</span> <span class="s">&quot;6 cyl&quot;</span><span class="p">,</span> <span class="s">&quot;8 cyl&quot;</span><span class="p">),</span> 
+        <span class="n">col</span><span class="o">=</span><span class="s">&quot;gold&quot;</span><span class="p">)</span>
+<span class="nf">title</span><span class="p">(</span><span class="s">&quot;Violin Plots of Miles Per Gallon&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">,</span>
+       <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Number of Cylinders&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dot-plot">
+<h2><span class="section-number">6.7. </span>Dot plot<a class="headerlink" href="#dot-plot" title="永久链接至标题">¶</a></h2>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">dotchart</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">row.names</span><span class="p">(</span><span class="n">mtcars</span><span class="p">),</span> <span class="n">cex</span><span class="o">=</span><span class="m">.7</span><span class="p">,</span>
+         <span class="n">main</span><span class="o">=</span><span class="s">&quot;Gas Mileage for Car Models&quot;</span><span class="p">,</span> 
+         <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="nf">[order</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">),</span><span class="n">]</span> 
+<span class="n">x</span><span class="o">$</span><span class="n">cyl</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">cyl</span><span class="p">)</span>                                                   
+<span class="n">x</span><span class="o">$</span><span class="n">color[x</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">4</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;red&quot;</span>                                       
+<span class="n">x</span><span class="o">$</span><span class="n">color[x</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">6</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;blue&quot;</span>                      
+<span class="n">x</span><span class="o">$</span><span class="n">color[x</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">8</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;darkgreen&quot;</span> 
+<span class="nf">dotchart</span><span class="p">(</span><span class="n">x</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span> 
+         <span class="n">labels</span> <span class="o">=</span> <span class="nf">row.names</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> 
+         <span class="n">cex</span><span class="o">=</span><span class="m">.7</span><span class="p">,</span>                                         
+         <span class="n">groups</span> <span class="o">=</span> <span class="n">x</span><span class="o">$</span><span class="n">cyl</span><span class="p">,</span>     
+         <span class="n">gcolor</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span>                                    
+         <span class="n">color</span> <span class="o">=</span> <span class="n">x</span><span class="o">$</span><span class="n">color</span><span class="p">,</span>                                               
+         <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span>
+         <span class="n">main</span> <span class="o">=</span> <span class="s">&quot;Gas Mileage for Car Models\ngrouped by cylinder&quot;</span><span class="p">,</span>
+         <span class="n">xlab</span> <span class="o">=</span> <span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../reStructuredText.html" class="btn btn-neutral float-right" title="reStructuredText" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Day_4_ZZZ.html" class="btn btn-neutral float-left" title="5. Advanced data management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

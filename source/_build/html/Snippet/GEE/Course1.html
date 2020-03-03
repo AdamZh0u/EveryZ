@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Course1 &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="R" href="../R.html" />
+    <link rel="prev" title="2. Gallery" href="Gallery.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Snippet:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../GEE.html">GEE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Function.html">1. Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gallery.html">2. Gallery</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. Course1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#string">3.1. String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dictionary">3.2. dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reducer">3.3. reducer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-math-transfer">3.3.1. create math transfer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#kernel">3.4. kernel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reStructuredText.html">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/bian.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../GEE.html">GEE</a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>Course1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Snippet/GEE/Course1.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="course1">
+<h1><span class="section-number">3. </span>Course1<a class="headerlink" href="#course1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="string">
+<h2><span class="section-number">3.1. </span>String<a class="headerlink" href="#string" title="永久链接至标题">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// create</span>
+<span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">String</span><span class="p">(</span><span class="s2">&quot;helloworld&quot;</span><span class="p">);</span>
+<span class="c1">// display</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+
+<span class="c1">// change</span>
+<span class="kd">var</span> <span class="nx">cat_string</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">cat</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">cat_string</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">rep_string</span> <span class="o">=</span> <span class="nx">cat_string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;zz&quot;</span><span class="p">,</span><span class="s2">&quot;g&quot;</span><span class="p">);</span><span class="c1">//global match</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">rep_string</span><span class="p">);</span>
+
+<span class="c1">// split</span>
+<span class="kd">var</span> <span class="nx">spl_string</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;o&quot;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">spl_string</span><span class="p">);</span>
+
+<span class="c1">// match</span>
+<span class="kd">var</span> <span class="nx">mat_string</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s2">&quot;o&quot;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">mat_string</span><span class="p">);</span>
+
+<span class="c1">// slice</span>
+<span class="kd">var</span> <span class="nx">sli_string</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">sli_string</span><span class="p">);</span>
+
+<span class="c1">// length</span>
+<span class="kd">var</span> <span class="nx">len_string</span> <span class="o">=</span> <span class="nx">string</span><span class="p">.</span><span class="nx">length</span><span class="p">()</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">len_string</span><span class="p">)</span>
+
+<span class="c1">// ## number</span>
+<span class="kd">var</span> <span class="nx">numb1</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mi">1237834050</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">numb2</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="o">-</span><span class="mf">3.1435963</span><span class="p">);</span>
+
+<span class="c1">// transfer</span>
+<span class="kd">var</span> <span class="nx">int_numb2</span> <span class="o">=</span> <span class="nx">numb2</span><span class="p">.</span><span class="nx">int8</span><span class="p">()</span>
+  <span class="c1">// int = toInt double = toDouble float = toFloat</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">int_numb2</span><span class="p">)</span>
+
+<span class="c1">// compare</span>
+  <span class="c1">// eq neq gt gte lt lte</span>
+  <span class="c1">// and or not</span>
+
+<span class="c1">// calculate</span>
+  <span class="c1">//floor round ceil  abs sqrt exp log log10</span>
+
+<span class="c1">// bitwise</span>
+<span class="kd">var</span> <span class="nx">numb3</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">numb4</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">numb_And</span> <span class="o">=</span> <span class="nx">numb3</span><span class="p">.</span><span class="nx">bitwiseAnd</span><span class="p">(</span><span class="nx">numb4</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">num_Or</span> <span class="o">=</span> <span class="nx">numb3</span><span class="p">.</span><span class="nx">bitwiseOr</span><span class="p">(</span><span class="nx">numb4</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">numb_And</span><span class="p">,</span><span class="nx">num_Or</span><span class="p">);</span>
+  <span class="c1">// leftshift</span>
+
+<span class="c1">// a great examp</span>
+    <span class="c1">// var meal= rice(50).wash(100, fliter).zheng(100).cheng(12,A&gt;B)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dictionary">
+<h2><span class="section-number">3.2. </span>dictionary<a class="headerlink" href="#dictionary" title="永久链接至标题">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// create ee.Dictionary()</span>
+<span class="kd">var</span> <span class="nx">Dic_1</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Dictionary</span><span class="p">({</span>
+  <span class="nx">Name</span><span class="o">:</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+  <span class="nx">Age</span><span class="o">:</span><span class="s2">&quot;20&quot;</span>
+<span class="p">})</span>
+<span class="kd">var</span> <span class="nx">Dic_2</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Dictionary</span><span class="p">({</span>
+  <span class="nx">Weight</span><span class="o">:</span><span class="s2">&quot;30&quot;</span><span class="p">,</span>
+  <span class="nx">Hight</span><span class="o">:</span><span class="s2">&quot;30&quot;</span>
+<span class="p">})</span>
+
+<span class="c1">// change dic.combine() dic.set()</span>
+<span class="kd">var</span> <span class="nx">Dic_combine</span> <span class="o">=</span> <span class="nx">Dic_1</span><span class="p">.</span><span class="nx">combine</span><span class="p">(</span><span class="nx">Dic_2</span><span class="p">,</span><span class="kc">true</span><span class="p">);</span><span class="c1">//use second first when conflict</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_combine</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">Dic_3</span> <span class="o">=</span> <span class="nx">Dic_1</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">);</span> <span class="c1">// add or change</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_3</span><span class="p">);</span>
+
+<span class="c1">// iquiry dic.keys dic.get dic.values</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_1</span><span class="p">.</span><span class="nx">keys</span><span class="p">());</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_1</span><span class="p">.</span><span class="nx">values</span><span class="p">().</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_1</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">));</span>
+
+<span class="c1">// compare dic.contains</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_1</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s2">&quot;Height&quot;</span><span class="p">));</span> <span class="c1">// if exsist?</span>
+
+<span class="c1">// size dic.size()</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Dic_1</span><span class="p">.</span><span class="nx">size</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reducer">
+<h2><span class="section-number">3.3. </span>reducer<a class="headerlink" href="#reducer" title="永久链接至标题">¶</a></h2>
+<div class="section" id="create-math-transfer">
+<h3><span class="section-number">3.3.1. </span>create math transfer<a class="headerlink" href="#create-math-transfer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// .count/.countEvery/.first()</span>
+<span class="kd">var</span> <span class="nx">Reducer_Count</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">count</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Reducer_CountEvery</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">countEvery</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Reducer_First</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">first</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">Provinces_Number_1</span> <span class="o">=</span> <span class="nx">China_Provinces</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span>
+  <span class="nx">Reducer_Count</span><span class="p">,[</span><span class="s2">&quot;Name&quot;</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">Provinces_Number_2</span> <span class="o">=</span> <span class="nx">China_Provinces</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span>
+  <span class="nx">Reducer_CountEvery</span><span class="p">,[]);</span> <span class="c1">// count every columns</span>
+<span class="kd">var</span> <span class="nx">Provinces_First</span> <span class="o">=</span> <span class="nx">China_Provinces</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span>
+  <span class="nx">Reducer_First</span><span class="p">,[</span><span class="s2">&quot;Name&quot;</span><span class="p">]);</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">China_Provinces</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">China_Provinces</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Reducer_Count&quot;</span><span class="p">,</span><span class="nx">Provinces_Number_1</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Reducer_CountEvery&quot;</span><span class="p">,</span><span class="nx">Provinces_Number_2</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Refucer_First&quot;</span><span class="p">,</span><span class="nx">Provinces_First</span><span class="p">);</span>
+
+<span class="c1">// .frequencyHistogram()</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">China_Cities</span><span class="p">.</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<span class="kd">var</span> <span class="nx">FrequencyHiso_Reducer</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">frequencyHistogram</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">City_Frequency</span> <span class="o">=</span> <span class="nx">China_Cities</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">FrequencyHiso_Reducer</span><span class="p">,[</span><span class="s2">&quot;省份&quot;</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">Fig_Histo</span> <span class="o">=</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">Chart</span><span class="p">.</span><span class="nx">feature</span><span class="p">.</span><span class="nx">histogram</span><span class="p">(</span><span class="nx">China_Cities</span><span class="p">,</span><span class="s2">&quot;省份&quot;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">City_Frequency</span><span class="p">,</span><span class="nx">Fig_Histo</span><span class="p">);</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">China_Cities</span><span class="p">);</span>
+
+<span class="c1">// .allNonZero/.anyNonZero()</span>
+<span class="kd">var</span> <span class="nx">No_Zero_Reducer</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">allNonZero</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Any_Non_Zero_Reducer</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">anyNonZero</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">List_Test_1</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">List_Test_2</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">Result_1</span> <span class="o">=</span> <span class="nx">List_Test_1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">No_Zero_Reducer</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Result_2</span> <span class="o">=</span> <span class="nx">List_Test_1</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">Any_Non_Zero_Reducer</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Result_3</span> <span class="o">=</span> <span class="nx">List_Test_2</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">No_Zero_Reducer</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Result_4</span> <span class="o">=</span> <span class="nx">List_Test_2</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">Any_Non_Zero_Reducer</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Result_1&quot;</span><span class="p">,</span><span class="nx">Result_1</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Result_2&quot;</span><span class="p">,</span><span class="nx">Result_2</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Result_3&quot;</span><span class="p">,</span><span class="nx">Result_3</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Result_4&quot;</span><span class="p">,</span><span class="nx">Result_4</span><span class="p">);</span>
+
+<span class="c1">// .toList()</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">China_Cities</span><span class="p">.</span><span class="nx">first</span><span class="p">());</span>
+<span class="kd">var</span> <span class="nx">Tolist_Reducer</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">toList</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">City_List</span> <span class="o">=</span> <span class="nx">China_Cities</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">Tolist_Reducer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Prefecture&quot;</span><span class="p">]);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">City_List</span><span class="p">);</span>
+
+<span class="c1">// .toCollection()</span>
+<span class="kd">var</span> <span class="nx">Reducer_to_Collection</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">toCollection</span><span class="p">([</span><span class="s2">&quot;provinces&quot;</span><span class="p">,</span><span class="s2">&quot;cities&quot;</span><span class="p">]);</span><span class="c1">//rename</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Reducer_to_Collection</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">City_Collection</span> <span class="o">=</span> <span class="nx">China_Cities</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">Reducer_to_Collection</span><span class="p">,[</span><span class="s2">&quot;省份&quot;</span><span class="p">,</span><span class="s2">&quot;Prefecture&quot;</span><span class="p">]);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">City_Collection</span><span class="p">);</span>
+
+<span class="c1">// .product/ sum/ mean/variance/sampleVariance/stdDev/sampleStdDev</span>
+<span class="kd">function</span> <span class="nx">Add_Area</span><span class="p">(</span><span class="nx">feature</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">The_Area</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="nx">feature</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
+  <span class="k">return</span> <span class="nx">feature</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;Area_km2&quot;</span><span class="p">,</span> <span class="nx">The_Area</span><span class="p">.</span><span class="nx">divide</span><span class="p">(</span><span class="mi">1000</span><span class="o">*</span><span class="mi">1000</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">City_WithArea</span> <span class="o">=</span> <span class="nx">China_Cities</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">Add_Area</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">City_WithArea</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">Reducer_Product</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">product</span><span class="p">();</span>
+  <span class="c1">//var Reducer_Product = ee.Reducer.product();sum,mean,variance,sampleVariance,stdDev</span>
+<span class="kd">var</span> <span class="nx">Area_Product</span> <span class="o">=</span> <span class="nx">City_WithArea</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">Reducer_Product</span><span class="p">,[</span><span class="s2">&quot;Area_km2&quot;</span><span class="p">]);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Area_Product&quot;</span><span class="p">,</span> <span class="nx">Area_Product</span><span class="p">)</span>
+
+<span class="c1">// .max/min/minMax/median/mode</span>
+<span class="kd">var</span> <span class="nx">Reducer_Max</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">max</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">Area_Max</span> <span class="o">=</span> <span class="nx">City_WithArea</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">Reducer_Max</span><span class="p">,[</span><span class="s2">&quot;Area_km2&quot;</span><span class="p">])</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Area_Max&quot;</span><span class="p">,</span><span class="nx">Area_Max</span><span class="p">)</span>
+
+<span class="c1">// image max</span>
+<span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">([</span><span class="s2">&quot;B4&quot;</span><span class="p">,</span><span class="s2">&quot;B3&quot;</span><span class="p">,</span><span class="s2">&quot;B2&quot;</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">maxValue</span> <span class="o">=</span> <span class="nx">image</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">max</span><span class="p">());</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span><span class="c1">//zoom</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">maxValue</span><span class="p">,{</span><span class="nx">max</span><span class="o">:</span><span class="mi">13000</span><span class="p">},</span><span class="s2">&quot;Maximum value image&quot;</span><span class="p">);</span>
+
+<span class="c1">// intervalMean/percentile</span>
+  <span class="c1">// 0, 50 mean</span>
+
+<span class="c1">// linearFit()</span>
+<span class="kd">var</span> <span class="nx">Data_X</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">Data_Y</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="mi">14</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">14</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">Linear_Reducer</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">linearFit</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Fited</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">List</span><span class="p">([</span><span class="nx">Data_X</span><span class="p">,</span><span class="nx">Data_Y</span><span class="p">]).</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">Linear_Reducer</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Fited</span><span class="p">);</span>
+
+<span class="c1">// linearFit use to pridict weather</span>
+<span class="kd">var</span> <span class="nx">createTimeBand</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">image</span><span class="p">){</span>
+  <span class="k">return</span> <span class="nx">image</span><span class="p">.</span><span class="nx">addBands</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nx">metadata</span><span class="p">(</span><span class="s2">&quot;system:time_start&quot;</span><span class="p">).</span><span class="nx">divide</span><span class="p">(</span><span class="mi">1</span><span class="nx">e18</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NASA/NEX-DCP30_ENSEMBLE_STATS&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;scenario&quot;</span><span class="p">,</span><span class="s2">&quot;rcp85&quot;</span><span class="p">))</span>
+  <span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2006-01-01&quot;</span><span class="p">),</span><span class="nx">ee</span><span class="p">.</span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;2050-01-01&quot;</span><span class="p">))</span>
+  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">createTimeBand</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">linearFit</span> <span class="o">=</span> <span class="nx">collection</span><span class="p">.</span><span class="nx">select</span><span class="p">([</span><span class="s2">&quot;system:time_start&quot;</span><span class="p">,</span><span class="s2">&quot;pr_mean&quot;</span><span class="p">])</span>
+  <span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">linearFit</span><span class="p">());</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">linearFit</span><span class="p">);</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">linearFit</span><span class="p">,</span>
+  <span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span>
+   <span class="nx">max</span><span class="o">:</span><span class="p">[</span><span class="o">-</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">8</span><span class="nx">e</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+   <span class="nx">bands</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;scale&quot;</span><span class="p">,</span><span class="s2">&quot;offset&quot;</span><span class="p">,</span><span class="s2">&quot;scale&quot;</span><span class="p">]},</span>
+  <span class="s2">&quot;fit&quot;</span><span class="p">);</span>
+<span class="c1">// setOutputs/getOutputs</span>
+<span class="kd">var</span> <span class="nx">Reducer_Original</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">minMax</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Reducer_Modified</span> <span class="o">=</span> <span class="nx">Reducer_Original</span><span class="p">.</span><span class="nx">setOutputs</span><span class="p">([</span><span class="s2">&quot;Range_Low&quot;</span><span class="p">,</span><span class="s2">&quot;Range_High&quot;</span><span class="p">]);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">,</span><span class="nx">Reducer_Original</span><span class="p">.</span><span class="nx">getOutputs</span><span class="p">());</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Modified&quot;</span><span class="p">,</span><span class="nx">Reducer_Modified</span><span class="p">.</span><span class="nx">getOutputs</span><span class="p">());</span>
+
+<span class="c1">// combine</span>
+<span class="kd">var</span> <span class="nx">Reducer_Max</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">max</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Reducer_Min</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">min</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">Reducer_Combine</span> <span class="o">=</span> <span class="nx">Reducer_Max</span><span class="p">.</span><span class="nx">combine</span><span class="p">(</span><span class="nx">Reducer_Min</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">Array_Example</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nb">Array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                              <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]);</span> <span class="c1">// axis = 0 updown</span>
+
+<span class="kd">var</span> <span class="nx">Combine_Reduced_1</span> <span class="o">=</span> <span class="nx">Array_Example</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+  <span class="nx">Reducer_Combine</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">);</span><span class="c1">// direction 0 field axis</span>
+<span class="kd">var</span> <span class="nx">Combine_Reduced_2</span> <span class="o">=</span> <span class="nx">Array_Example</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+  <span class="nx">Reducer_Combine</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Max of [1,3] and min of [2,4]&quot;</span><span class="p">,</span><span class="nx">Combine_Reduced_1</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Max of [1,2] and min of [3,4]&quot;</span><span class="p">,</span><span class="nx">Combine_Reduced_2</span><span class="p">);</span>
+
+<span class="c1">// repeat</span>
+<span class="kd">var</span> <span class="nx">China_Cities</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/China_Cities&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Reducer_Repeat</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">frequencyHistogram</span><span class="p">().</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Province_City_Frequency</span> <span class="o">=</span> <span class="nx">China_Cities</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">Reducer_Repeat</span><span class="p">,[</span><span class="s2">&quot;Prefecture&quot;</span><span class="p">,</span><span class="s2">&quot;省份&quot;</span><span class="p">]);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">Province_City_Frequency</span><span class="p">);</span>
+
+<span class="c1">// group</span>
+<span class="kd">var</span> <span class="nx">countries</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;ft:1S4EB6319wWW2sWQDPhDvmSBIVrD3iEmCLYB7nMM&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">sums</span> <span class="o">=</span> <span class="nx">countries</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span>
+    <span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">and</span><span class="p">(</span>
+      <span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">neq</span><span class="p">(</span><span class="s2">&quot;Census 2000 Population&quot;</span><span class="p">,</span><span class="kc">null</span><span class="p">),</span>
+      <span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">neq</span><span class="p">(</span><span class="s2">&quot;Census 2000 Housing Units&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">))</span>
+  <span class="p">)</span>
+  <span class="p">.</span><span class="nx">reduceColumns</span><span class="p">({</span>
+    <span class="nx">selectors</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;Census 2000 Population&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Census 2000 Housing Units&quot;</span><span class="p">,</span><span class="s2">&quot;StateName&quot;</span><span class="p">],</span>
+    <span class="nx">reducer</span><span class="o">:</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">sum</span><span class="p">().</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">group</span><span class="p">({</span>
+      <span class="nx">groupField</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span>
+      <span class="nx">groupName</span><span class="o">:</span><span class="s2">&quot;state&quot;</span><span class="p">,})</span>
+  <span class="p">});</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">sums</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="kernel">
+<h2><span class="section-number">3.4. </span>kernel<a class="headerlink" href="#kernel" title="永久链接至标题">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// DEM_Roberts</span>
+<span class="kd">var</span> <span class="nx">Provinces</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/China_Provinces&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">CQ_table</span> <span class="o">=</span> <span class="nx">Provinces</span><span class="p">.</span><span class="nx">reduceColumns</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">frequencyHistogram</span><span class="p">(),[</span><span class="s2">&quot;Name&quot;</span><span class="p">])</span>
+<span class="kd">var</span> <span class="nx">CQ</span> <span class="o">=</span> <span class="nx">Provinces</span><span class="p">.</span><span class="nx">filterMetadata</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="s2">&quot;equals&quot;</span><span class="p">,</span><span class="s2">&quot;上海市&quot;</span><span class="p">).</span><span class="nx">geometry</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">DEM</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s2">&quot;CGIAR/SRTM90_V4&quot;</span><span class="p">).</span><span class="nx">clip</span><span class="p">(</span><span class="nx">CQ</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">DEM_Roberts</span> <span class="o">=</span> <span class="nx">DEM</span><span class="p">.</span><span class="nx">convolve</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">roberts</span><span class="p">());</span><span class="c1">//卷积</span>
+<span class="kd">var</span> <span class="nx">DEM_prewitt</span> <span class="o">=</span> <span class="nx">DEM</span><span class="p">.</span><span class="nx">convolve</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">prewitt</span><span class="p">());</span>
+<span class="kd">var</span> <span class="nx">DEM_sobel</span> <span class="o">=</span> <span class="nx">DEM</span><span class="p">.</span><span class="nx">convolve</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">sobel</span><span class="p">());</span>
+<span class="kd">var</span> <span class="nx">DEM_compass</span> <span class="o">=</span> <span class="nx">DEM</span><span class="p">.</span><span class="nx">convolve</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">compass</span><span class="p">());</span>
+<span class="kd">var</span> <span class="nx">DEM_kirsch</span> <span class="o">=</span> <span class="nx">DEM</span><span class="p">.</span><span class="nx">convolve</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">kirsch</span><span class="p">());</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">DEM</span><span class="p">,{</span><span class="nx">min</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">2000</span><span class="p">},</span><span class="s2">&quot;DEM&quot;</span><span class="p">);</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">CQ</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">DEM_Roberts</span><span class="p">,{</span><span class="nx">min</span><span class="o">:-</span><span class="mi">60</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">60</span><span class="p">},</span><span class="s2">&quot;DEM_Roberts&quot;</span><span class="p">)</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">DEM_prewitt</span><span class="p">,{</span><span class="nx">min</span><span class="o">:-</span><span class="mi">270</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">270</span><span class="p">},</span><span class="s2">&quot;DEM_prewitt&quot;</span><span class="p">)</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">DEM_sobel</span><span class="p">,{</span><span class="nx">min</span><span class="o">:-</span><span class="mi">370</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">370</span><span class="p">},</span><span class="s2">&quot;DEM_sobel&quot;</span><span class="p">)</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">DEM_compass</span><span class="p">,{</span><span class="nx">min</span><span class="o">:-</span><span class="mi">300</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">300</span><span class="p">},</span><span class="s2">&quot;DEM_compass&quot;</span><span class="p">)</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">DEM_kirsch</span><span class="p">,{</span><span class="nx">min</span><span class="o">:-</span><span class="mi">1100</span><span class="p">,</span><span class="nx">max</span><span class="o">:</span><span class="mi">1100</span><span class="p">},</span><span class="s2">&quot;DEM_kirsch&quot;</span><span class="p">)</span>
+
+<span class="c1">// laplacian4 laplacian8</span>
+
+<span class="c1">// based on distance</span>
+  <span class="c1">// euclidean/gaussian/manhattan/chebyshev</span>
+
+<span class="c1">// shape kernel</span>
+  <span class="c1">// circle octagon square diamond cross plus fied</span>
+
+<span class="c1">// operation</span>
+  <span class="c1">// rotate 90*   add</span>
+
+<span class="c1">// print kernel</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">euclidean</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">gaussian</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">// function name(parameters){operation}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../R.html" class="btn btn-neutral float-right" title="R" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Gallery.html" class="btn btn-neutral float-left" title="2. Gallery" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
