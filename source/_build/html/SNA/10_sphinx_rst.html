@@ -1,0 +1,1873 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sphinx &mdash; EveryThing 2.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Regular Expression" href="20_regexp.html" />
+    <link rel="prev" title="Welcome to The Room of Requirement!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EveryThing
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">SNA:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Sphinx 简单入门</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">首先使用 Sphinx 的自动配置工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">如何规划目录结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">插件介绍</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">官方插件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">第三方插件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#toctree">toctree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">toctree 参数</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#html">更改 html 页面主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-page">在 GitHub Page 上展示文档</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rst">rst 基本语法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">标题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">段落</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#line">line</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">列表</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">无序列表与有序列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">定义列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">选项列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field">Field 列表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">文字块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">行块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">测试块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">代码块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">自定义代码高亮</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">表格</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id28">普通表格</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">网格表格</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">超链接</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id31">参考式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id32">内联式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id33">自动标题链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substitution-reference">替换引用(Substitution Reference)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#footnote-reference">脚注引用(Footnote Reference)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#citation-reference">引用参考(Citation Reference)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comments">注释(Comments)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">替换语法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">内联样式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id39">rst 指令</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id40">目录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">警告</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">版本更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">文本样式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">图片</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#image">image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#figure">figure</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">代码</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id46">代码块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47">引用外部代码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#highlight">highlight</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">数学环境</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#table">table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-table">list-table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">其他指令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#include">include</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id50">rst 角色</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ref">ref</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#doc">doc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download">download</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-api">使用 Sphinx 书写 API 文档</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id51">函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id52">类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">数据</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#graphviz">graphviz</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id54">语法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id55">配置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#matplotlib">matplotlib</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id56">语法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plot">plot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plot-pre-code"><code class="docutils literal notranslate"><span class="pre">plot_pre_code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-include-source"><code class="docutils literal notranslate"><span class="pre">plot_include_source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-basedir"><code class="docutils literal notranslate"><span class="pre">plot_basedir</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id58">自定义扩展</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id59">自定义指令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#helloworld">HelloWorld 扩展</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id60">接受参数的指令</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id61">域</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id62">RST的标题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="20_regexp.html">Regular Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Snippet/python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Snippet/Plots.html">Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Snippet/GEE.html">GEE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Snippet/R.html">R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Snippet/Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Snippet/Rhino.html">Rhino</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notes/Notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DIS/11_debate.html">辩行记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/Write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/En.html">To</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Discussion/article.html">Articles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Daily:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Daily/Daily.html">Q&amp;A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Daily/2020.html">Daily2020</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EveryThing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/SNA/10_sphinx_rst.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx">
+<h1>Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>Sphinx 简单入门<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>Sphinx 是一个用于生成 Python 文档的工具, 但是也可以用来制作电子书. 本文记录使用该工具的一些经验.</p>
+<div class="section" id="id2">
+<h3>首先使用 Sphinx 的自动配置工具<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>在准备好的工作目录下, 运行 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 将会弹出一堆文本, 并让你在其中选择要使用的配置, 一般情况下, 只需要手动修改两项, 其他保持默认即可. 让我们来看看 Sphinx 询问了我们哪些问题吧.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Welcome to the Sphinx 1.8.1 quickstart utility.
+Please enter values for the following settings (just press Enter to
+accept a default value, if one is given in brackets).
+
+Selected root path: .
+</pre></div>
+</div>
+<p>选择当前工作目录为项目根目录.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>You have two options for placing the build directory for Sphinx output.
+Either, you use a directory &quot;_build&quot; within the root path, or you separate
+&quot;source&quot; and &quot;build&quot; directories within the root path.
+&gt; Separate source and build directories (y/n) [n]: y
+</pre></div>
+</div>
+<p>是否将源文件(使用 .rst 或 .md 标记语言写的文档)和生成文件(html 或 epub, pdf 等)分开放置在不同的目录</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Inside the root directory, two more directories will be created; &quot;_templates&quot;
+for custom HTML templates and &quot;_static&quot; for custom stylesheets and other static
+files. You can enter another prefix (such as &quot;.&quot;) to replace the underscore.
+&gt; Name prefix for templates and static dir [_]:
+</pre></div>
+</div>
+<p>对于模板或静态目录(文件不被解析渲染), 设它们的前缀为 <cite>_</cite>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The project name will occur in several places in the built documentation.
+&gt; Project name: Learn-Sphinx
+&gt; Author name(s): Zombie110year
+&gt; Project release []:
+</pre></div>
+</div>
+<p>分别是 项目名, 作者名, Project release 是指项目发布版本, 根据实际项目来填.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If the documents are to be written in a language other than English,
+you can select a language here by its language code. Sphinx will then
+translate text that it generates into that language.
+
+For a list of supported codes, see
+http://sphinx-doc.org/config.html#confval-language.
+&gt; Project language [en]: zh_CN
+</pre></div>
+</div>
+<p>选择项目语言, 默认是英语, 用 zh_CN 表示简体中文, 可以在上面那个链接看支持的语言以及其表示代码. 这个选项会影响搜索功能, 英文情况下, 会以英语存储搜索索引, 这样就无法使用中文搜索. 搜索功能是用 JavaScript + 字典实现的.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The file name suffix for source files. Commonly, this is either &quot;.txt&quot;
+or &quot;.rst&quot;.  Only files with this suffix are considered documents.
+&gt; Source file suffix [.rst]:
+</pre></div>
+</div>
+<p>文档文件后缀, 只有拥有这些后缀的文件才会被解析, 在当前使用的版本(v1.8.2)中只能接受 .rst 与 .txt 后缀(但都是以 reStructuredText 的语法进行解析). 要解析 Markdown, 需要安装额外的插件 recommonmark, 这个稍后再讲.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>One document is special in that it is considered the top node of the
+&quot;contents tree&quot;, that is, it is the root of the hierarchical structure
+of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;
+document is a custom template, you can also set this to another filename.
+&gt; Name of your master document (without suffix) [index]:
+</pre></div>
+</div>
+<p>这个是主文件, 对于 html, 就是指 index.html 等能够被浏览器直接默认显示的. 建议保持默认.</p>
+<p>接下来就是插件配置. 这里的都是默认插件, 其中 imgmath 和 mathjax 不能同时选.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Indicate which of the following Sphinx extensions should be enabled:
+&gt; autodoc: automatically insert docstrings from modules (y/n) [n]: y
+&gt; doctest: automatically test code snippets in doctest blocks (y/n) [n]: n
+&gt; intersphinx: link between Sphinx documentation of different projects (y/n) [n]: y
+&gt; todo: write &quot;todo&quot; entries that can be shown or hidden on build (y/n) [n]: y
+&gt; coverage: checks for documentation coverage (y/n) [n]: n
+&gt; imgmath: include math, rendered as PNG or SVG images (y/n) [n]: n
+&gt; mathjax: include math, rendered in the browser by MathJax (y/n) [n]: y
+&gt; ifconfig: conditional inclusion of content based on config values (y/n) [n]: y
+&gt; viewcode: include links to the source code of documented Python objects (y/n) [n]: y
+&gt; githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: y
+</pre></div>
+</div>
+<p>然后询问是否创建 Makefile 或者 Windows 的批处理脚本, 这是为了方便使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx</span></code> 来构建文档.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A Makefile and a Windows command file can be generated for you so that you
+only have to run e.g. `make html&#39; instead of invoking sphinx-build
+directly.
+&gt; Create Makefile? (y/n) [y]: y
+&gt; Create Windows command file? (y/n) [y]: y
+</pre></div>
+</div>
+<p>就算在 quickstart 中有选项不满意, 也可以在接下来的 <cite>conf.py</cite> 中修改.</p>
+</div>
+<div class="section" id="id3">
+<h3>如何规划目录结构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>在运行了如上的 sphinx-quickstart 程序后, 目录下出现了以下文件/目录:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>├─build
+└─source
+    ├─_static
+    ├─_templates
+    |  conf.py
+    |  index.rst
+  Makefile
+</pre></div>
+</div>
+<p>在根目录下设置了 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 便于使用 make 工具自动构建, 而配置文件和索引则放在了 source 目录下.
+如果需要修改文件规划, 那么, 可以在 Makefile 中修改 <code class="docutils literal notranslate"><span class="pre">BUILDDIR</span></code> 和 <code class="docutils literal notranslate"><span class="pre">SOURCEDIR</span></code> 两项目.</p>
+</div>
+<div class="section" id="id4">
+<h3>插件介绍<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id5">
+<h4>官方插件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<ul class="simple">
+<li><p>autodoc: 自动从模块中抽取 docstring 插入文档</p></li>
+<li><p>doctest: 自动测试 doctest</p></li>
+<li><p>intersphinx: 链接多个 Sphinx 文档. 需要启用它才能使用 <code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> 这样的语法链接到官方文档</p></li>
+<li><p>todo: 写下 todo 在文件头部时, 将不会渲染该文件</p></li>
+<li><p>coverage: 检查封面</p></li>
+<li><p>imgmath: 将数学公式渲染为 png 或 svg 图像</p></li>
+<li><p>mathjax: 使用 Mathjax 渲染数学公式</p></li>
+<li><p>ifconfig: 通过配置的条件判断决定文档包含</p></li>
+<li><p>viewcode: 将源代码包含进文档项目, 并在 api 文档中创建指向源代码的链接</p></li>
+<li><p>githubpages: create .nojekyll file to publish the document on GitHub pages</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h4>第三方插件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<ul class="simple">
+<li><p><span class="xref std std-doc">graphviz</span>, 可在文档中嵌入 graphviz 代码, 在构建时生成图片</p></li>
+<li><p><span class="xref std std-doc">matplotlib</span>, 在文档中嵌入 matplotlib 代码, 在构建时生成图片</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="toctree">
+<h3>toctree<a class="headerlink" href="#toctree" title="永久链接至标题">¶</a></h3>
+<p>在 source 目录下添加 .rst 文件, 但是如果要在编译项目后从首页 (index.html) 进行访问, 还需要在 index.rst 中将这个文件添加到 <code class="docutils literal notranslate"><span class="pre">toctree</span></code> 中. 在原始的 index.rst 中, 应当有如下 toctree.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+</pre></div>
+</div>
+<p>要在 toctree 中添加一个文件, 应当在上面那个 toctree 结构下空一行, 添加文件名(不需要扩展)</p>
+<p>例如, 有一个 example.rst 就将 toctree 编辑为</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   example
+</pre></div>
+</div>
+<p>如果, 在 source 目录中, 添加了子目录, 将文档放在子目录里了, 那么, 只需要在原来 example 里面按相对于 index.rst 的路径填就可以了, 例如 /source/text/example.rst 就填:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
+   :maxdepth: 2
+
+   text/example
+</pre></div>
+</div>
+<div class="section" id="id7">
+<h4>toctree 参数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<p>toctree 下的 <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">Contents:</span></code> 等就是它的参数, 可以选用的参数有:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">n</span></code> 将目录的标题深度设为 n. 意思是 example 文件为目录的根标题, 在这个标题下, 会建立文件中的 1, 2, …, n 级标题的索引.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> 给标题自动编号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">xxx</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="html">
+<h3>更改 html 页面主题<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h3>
+<p>默认的 html 页面看起来并不是很好看, 可以使用 pip 安装 <code class="docutils literal notranslate"><span class="pre">sphinx_*_theme</span></code> 等包, 然后在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中引用, 就可以使用更多的主题.</p>
+<p>例如 <cite>sphinx_rtd_theme &lt;https://sphinx-rtd-theme.readthedocs.io/en/latest/</cite> 这个受很多人欢迎的主题.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 下载</span>
+pip install sphinx_rtd_theme
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># conf.py 中配置
+import sphinx_rtd_theme
+html_theme = &#39;sphinx_rtd_theme&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="github-page">
+<h3>在 GitHub Page 上展示文档<a class="headerlink" href="#github-page" title="永久链接至标题">¶</a></h3>
+<p>在使用 Sphinx 构建完毕后, 生成的 html 项目可以直接拿来用.</p>
+<p>GitHub Page 可以将 master, gh-pages 分支下的根目录或 master 分支的 /doc 目录渲染成页面.</p>
+<p>为了方便管理, 可以在 build/html 目录下新建一个 git 仓库, 并重命名为 gh-pages 分支. 将这个分支 push 到 github 的 gh-pages 上, 充当 GitHub Page 的资源. (注意, build 目录应当在根目录下的 .gitignore 中被忽略)</p>
+<p>这样, 在项目根目录只需要一个 master 分支, 在这个分支编辑源文件, 然后 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, 之后就进入 <code class="docutils literal notranslate"><span class="pre">build/html</span></code> 目录, 再 <code class="docutils literal notranslate"><span class="pre">git</span></code> 一通即可. 非常舒服. <a class="footnote-reference brackets" href="#rtd" id="id8">1</a></p>
+<dl class="footnote brackets">
+<dt class="label" id="rtd"><span class="brackets"><a class="fn-backref" href="#id8">1</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.readthedocs.io/en/stable/config-file/v2.html">https://docs.readthedocs.io/en/stable/config-file/v2.html</a></p>
+</dd>
+</dl>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="rst">
+<h2>rst 基本语法<a class="headerlink" href="#rst" title="永久链接至标题">¶</a></h2>
+<p>Sphinx 默认使用 reStructureText(rst) 标记语言, 要能够处理 Markdown 还需要额外的渲染器, 而且在了解一番过后, 发现 rst 支持的内容比 Markdown 更丰富, 于是决定学习一下. 建议克隆该库, 自己使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 编译结果, 再对照源码学习 reStructureText 的语法.</p>
+<p>rst 和 Python 一样, 很多样式的表达都依赖缩进. (所以你的编辑器上最好有📏2333)</p>
+<div class="section" id="id9">
+<h3>标题<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>x 级标题分别对应 <code class="docutils literal notranslate"><span class="pre">&lt;hx&gt;...&lt;/hx&gt;</span></code>.</p>
+<p>rst 中各级标题使用符号衬在文字下一行, 并且, 符号的数目应不少于文字数目. 对于中文等宽字符, 一个字符对应两个普通符号.</p>
+<p>注意, rst 并不在意使用的符号类型, 只需要是 “相同符号衬托文字” 就会被解析为标题, 并根据符号的出现顺序与嵌套结构划分标题层级.</p>
+<p>一般来讲, 会用以下符号来标注标题层级.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>一级标题
+########
+
+二级标题
+********
+
+三级标题
+========
+
+四级标题
+--------
+
+五级标题
+^^^^^^^^
+
+六级标题
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+</pre></div>
+</div>
+<p>实际上, 只有下方衬有字符与上下包裹字符都是一样的. 下面的说法是错误的:</p>
+<div class="admonition error">
+<p class="admonition-title">错误</p>
+<p>以上是章节标题, 还有一种标题是 “文档标题”, 对应 html 标签 <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&lt;subtitle&gt;</span></code>. 和章节标题类似, 文档标题只是用两行相同符号包裹文字. 这个貌似和主题有关, <code class="docutils literal notranslate"><span class="pre">sphinx_rst_theme</span></code> 把多余的标题解析成 <code class="docutils literal notranslate"><span class="pre">&lt;h7&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;h8&gt;</span></code> 了.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>======
+主标题
+======
+
+------
+副标题
+------
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>段落<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>这一点 rst 几乎和 md 一样, 都是由空行划分的段落. 只不过, rst 中, 缩进也是控制段落的一个因素, 相同层级的段落, 缩进应当是一样的. 段落的缩进, 会影响渲染后文字的缩进.</p>
+<p>这是一个 reStructureText 段落.</p>
+<p>这是第二个 reStructureText 段落.</p>
+<blockquote>
+<div><p>这个段落被缩进了一下.</p>
+</div></blockquote>
+<p>段落是被空行分割的文字片段，左侧必须对齐（没有空格，或者有相同多的空格）。
+缩进的段落被视为引文。</p>
+<blockquote>
+<div><dl class="simple">
+<dt>这是引文</dt><dd><dl class="simple">
+<dt>demo</dt><dd><p>demodemo</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<div class="section" id="line">
+<h4>line<a class="headerlink" href="#line" title="永久链接至标题">¶</a></h4>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id11">
+<h3>列表<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id12">
+<h4>无序列表与有序列表<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h4>
+<p>和 Markdown 的列表标记差不多. 无序列表可以使用 <code class="docutils literal notranslate"><span class="pre">*</span></code> <code class="docutils literal notranslate"><span class="pre">-</span></code> 等符号, 有序列表则是枚举编号后跟一个点.</p>
+<ul class="simple">
+<li><p>无序列表第一位</p></li>
+<li><p>无序列表第二位
+也可以换行写, 只需要保持相同的缩进</p>
+<ul>
+<li><p>也可以嵌套, 但是需要空一行, 并且增加一级缩进.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple" start="0">
+<li><p>有序列表</p></li>
+<li><p>有序列表第二项</p></li>
+<li><p>编号乱跳是不行的, 只能按顺序来. (如果把前面的序号从 2 变成 3 或其他任何不是 2 的数字, 就会报错, 并且不会被解析为列表的下一项, 而是直接解在上一项的后面.)</p></li>
+</ol>
+<p>阿拉伯数字: 1, 2, 3, … (无上限)。
+大写字母: A-Z。
+小写字母: a-z。
+大写罗马数字: I, II, III, IV, …, MMMMCMXCIX (4999)。
+小写罗马数字: i, ii, iii, iv, …, mmmmcmxcix (4999)。</p>
+<p>可以为序号添加前缀和后缀，下面的是被允许的。前后缀区分层级
+#. 自动编号会接在同一缩进的有序列表下, 除非有其他段落隔断.</p>
+<p>比如我这里就随便输了一个段落进行隔断.</p>
+<ol class="arabic simple">
+<li><p>自动编号</p></li>
+</ol>
+<p>另外, 列表前缀有多种形式可以使用, 例如 拉丁字母(a,b,c…) 罗马字母, 用括号代替点号等.</p>
+</div>
+<div class="section" id="id13">
+<h4>定义列表<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h4>
+<p>条目占一行，解释文本要有缩进；多层可根据缩进实现。</p>
+<dl class="simple">
+<dt>定义1</dt><dd><p>demo</p>
+</dd>
+<dt>定义2</dt><dd><p>demodemo
+demodemo</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id14">
+<h4>选项列表<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
+<p>选项列表看起来就是为了方便命令行参数帮助的展示而定义的样式.</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>command-line option “a”</p>
+</dd>
+<dt><kbd><span class="option">-b <var>file</var></span></kbd></dt>
+<dd><p>options can have arguments and long descriptions</p>
+</dd>
+<dt><kbd><span class="option">--long</span></kbd></dt>
+<dd><p>options can be long also</p>
+</dd>
+<dt><kbd><span class="option">--input=<var>file</var></span></kbd></dt>
+<dd><p>long options can also have
+arguments</p>
+</dd>
+<dt><kbd><span class="option">/V</span></kbd></dt>
+<dd><p>DOS/VMS-style options too</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="field">
+<h4>Field 列表<a class="headerlink" href="#field" title="永久链接至标题">¶</a></h4>
+<p>应当用在代码的文档字符串中.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param arg1</dt>
+<dd class="field-odd"><p>第一个参数</p>
+</dd>
+<dt class="field-even">param arg2</dt>
+<dd class="field-even"><p>第二个参数</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>返回值</p>
+</dd>
+<dt class="field-even">Authors</dt>
+<dd class="field-even"><p>Tony J. (Tibs) Ibbs,
+David Goodger
+(and sundry other good-natured folks)</p>
+</dd>
+<dt class="field-odd">Version</dt>
+<dd class="field-odd"><p>1.0 of 2001/08/08</p>
+</dd>
+<dt class="field-even">Dedication</dt>
+<dd class="field-even"><p>To my father.</p>
+</dd>
+</dl>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def function(arg1, arg2)
+    &quot;&quot;&quot;
+    :param arg1: 第一个参数
+    :param arg2: 第二个参数
+    :returns: 返回值
+    &quot;&quot;&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>块<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h4>文字块<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h4>
+<p>文字块就是一段文字信息，在需要插入文本块的段落后面加上 ::，接着一个空行，然后就是文字块了。文字块不能定顶头写，要有缩进，结束标志是，新的一段文本贴开头，即没有缩进。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>空白、换行、空行和各种标记(比如*this* or \this)由文字块保存。
+
+只包含“::”的段落将从结果中省略。
+</pre></div>
+</div>
+<p>‘’:: ‘’可以附加在任何段落的末尾。
+如果’’::’’前面有空格，就会被省略。’’:: ‘’将被转换成一个冒号，如果前面有文本，就像这样:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>It&#39;s very convenient to use this form.
+</pre></div>
+</div>
+<p>当文本返回到前一段的缩进时，文字块结束。
+这意味着像这样的事情是可能的:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>We start here and continue here and end here.
+</pre></div>
+</div>
+<p>引用也可以用于无缩进的文字块:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Useful for quotes from email and
+&gt; for Haskell literate programming.
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h4>行块<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h4>
+<p>行块对于地址、诗句以及无装饰列表是非常有用的。行块是以 | 开头，每一个行块可以是多段文本。
+<a href="#id18"><span class="problematic" id="id19">`</span></a>| <a href="#id20"><span class="problematic" id="id21">`</span></a>后加一个空格，可缩进。</p>
+<div class="line-block">
+<div class="line">这是一段行块内容</div>
+<div class="line">这同样也是行块内容</div>
+<div class="line-block">
+<div class="line">还是行块内容</div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h4>测试块<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h4>
+<p>Doctest块是交互式Python会话。它们以` &gt;&gt;&gt; <a href="#id23"><span class="problematic" id="id24">`</span></a>开头，以空行结束。</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s2">&quot;This is a doctest block.&quot;</span>
+<span class="go">This is a doctest block.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h4>代码块<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h4>
+<p>这下面是一个 C 语言的代码块. 只需要一个 <code class="docutils literal notranslate"><span class="pre">::</span></code> 符号, 在之后空一行, 并缩进一级后编辑代码. 当缩进结束时, 代表代码块结束. 可以指定代码高亮模式, 默认是  代码的高亮模式.</p>
+<p>要指定高亮模式, 应使用 <code class="docutils literal notranslate"><span class="pre">code-block</span></code> 指令. code-block 可以指定其他属性, 例如 <code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> 显示行号等.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h4>自定义代码高亮<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h4>
+<p>Sphinx 是调用 pygments 进行语法高亮的.</p>
+</div>
+</div>
+<div class="section" id="id27">
+<h3>表格<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<p>在 VsCode 上编辑表格, 最好下载一个 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=shuworks.vscode-table-formatter">Table Formatter</a> 否则就会被打格式符烦死.</p>
+<div class="section" id="id28">
+<h4>普通表格<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=====  =====  ======
+    Inputs     Output
+------------  ------
+A      B      A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+</pre></div>
+</div>
+</div>
+<div class="section" id="id29">
+<h4>网格表格<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>网格1</p></td>
+<td><p>网格2</p></td>
+</tr>
+<tr class="row-even"><td><p>无等宽字体</p></td>
+<td><p>就特别烦</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+------------+----------+
+| 网格1      | 网格2    |
++------------+----------+
+| 无等宽字体 | 就特别烦 |
++------------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id30">
+<h3>超链接<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id31">
+<h4>参考式<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h4>
+<p>参考式链接是在文本中使用链接文本, 将链接地址放在文档其他地方. <strong>链接的地址需要指定协议, 否则会被当做相对路径.</strong></p>
+<p>例如本文档参考了 <a class="reference external" href="https://macplay.github.io/posts/cong-markdown-dao-restructuredtext/#id21">从 Markdown 到 reStructureText</a>.</p>
+<p>引用处, 下划线在后面, 参考处, 下划线在前面。 如果文本中含有空格, 可以使用反引号 <code class="docutils literal notranslate"><span class="pre">\`</span></code> 将本文包括住。</p>
+<p>如果一个链接对应多个文本, 可以这么表示:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_文本表示1:
+_文本表示2:
+_文本表示最后: https://python.org
+</pre></div>
+</div>
+<p>这样, <code class="docutils literal notranslate"><span class="pre">文本表示1</span></code>, <code class="docutils literal notranslate"><span class="pre">文本表示2</span></code>, <code class="docutils literal notranslate"><span class="pre">文本表示最后</span></code> 都对应一个链接.</p>
+</div>
+<div class="section" id="id32">
+<h4>内联式<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h4>
+<p>行内形式，引用的文字可以带有空格或者符号。
+这篇文章来自我的Github,请参考 <a class="reference external" href="https://github.com/demo/">demo</a>。</p>
+<p>内联式, 是将文本和链接写在一块. 相比参考式, 这更难以管理, 如果有多处引用了该链接, 需要多次输入链接. 但是, 对于那些临时使用的跳转链接, 这种方式还是很合适的.</p>
+<p>用尖括号括住之后添加下划线, 或者直接书写链接. Sphinx 会自动将链接文本显示为 url:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;https://python.org&gt;_
+</pre></div>
+</div>
+<p>或者使用反引号括住, 在前半部分书写显示文本 <a class="reference external" href="python.org">Python 官网</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`Python 官网 &lt;https://python.org&gt;`_
+</pre></div>
+</div>
+</div>
+<div class="section" id="id33">
+<h4>自动标题链接<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h4>
+<p>每一个标题, 都会自动生成一个锚点, 可以直接使用标题文本进行链接, 例如 <a class="reference internal" href="#id33">自动标题链接</a>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`自动标题链接`_
+</pre></div>
+</div>
+</div>
+<div class="section" id="substitution-reference">
+<h4>替换引用(Substitution Reference)<a class="headerlink" href="#substitution-reference" title="永久链接至标题">¶</a></h4>
+<p>替换引用就是用定义的指令替换对应的文字或图片，和内置指令(inline directives)类似。
+这是 <img alt="logo" src="https://help.github.com/assets/images/site/favicon.ico" /> github的Logo，我的github用户名是:adamCh0u。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>这是 |logo| github的Logo，我的github用户名是:|name|。
+.. |logo| image:: https://help.github.com/assets/images/site/favicon.ico
+.. |name| replace:: adamCh0u
+</pre></div>
+</div>
+</div>
+<div class="section" id="footnote-reference">
+<h4>脚注引用(Footnote Reference)<a class="headerlink" href="#footnote-reference" title="永久链接至标题">¶</a></h4>
+<p>脚注引用，有这几个方式：有手工序号(标记序号123之类)、自动序号(填入#号会自动填充序号)、自动符号(填入*会自动生成符号)。
+手工序号可以和#结合使用，会自动延续手工的序号。
+# 表示的方法可以在后面加上一个名称，这个名称就会生成一个链接。</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>脚注引用一 [1]_
+脚注引用二 [#]_
+脚注引用三 [#链接]_
+脚注引用四 [*]_
+脚注引用五 [*]_
+
+.. [1] 脚注内容一
+.. [#] 脚注内容三
+.. [#链接] 脚注内容四 链接_
+.. [*] 脚注内容五
+</pre></div>
+</div>
+<p>尾注 <a class="footnote-reference brackets" href="#f1" id="id34">3</a> 和链接用法类似. 源代码中尾注内容可以放在任何位置, 但是引用尾注处必须使用空格与其他文本分开.</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">[#]</span></code> 自动编号. 或者使用 <code class="docutils literal notranslate"><span class="pre">[#name]</span></code> 为特定尾注命名:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>尾注 [#fn]_
+
+.. [#fn] 或者叫脚注, footnote.
+</pre></div>
+</div>
+<p>尾注 <a class="footnote-reference brackets" href="#fn" id="id35">2</a></p>
+<dl class="footnote brackets">
+<dt class="label" id="fn"><span class="brackets"><a class="fn-backref" href="#id35">2</a></span></dt>
+<dd><p>或者叫脚注, footnote.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="citation-reference">
+<h4>引用参考(Citation Reference)<a class="headerlink" href="#citation-reference" title="永久链接至标题">¶</a></h4>
+<p>引用参考与上面的脚注有点类似。</p>
+<p>引用参考的内容通常放在页面结尾处，比如 <a class="reference internal" href="#one">One</a>，<a class="reference internal" href="#two">Two</a></p>
+<dl class="citation">
+<dt class="label" id="one"><span class="brackets">One</span></dt>
+<dd><p>参考引用一</p>
+</dd>
+<dt class="label" id="two"><span class="brackets">Two</span></dt>
+<dd><p>参考引用二</p>
+</dd>
+</dl>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>One_，Two_
+.. [One] 参考引用一
+.. [Two] 参考引用二
+</pre></div>
+</div>
+</div>
+<div class="section" id="comments">
+<h4>注释(Comments)<a class="headerlink" href="#comments" title="永久链接至标题">¶</a></h4>
+<p>注释以 .. 开头，后面接注释内容即可，可以是多行内容，多行时每行开头要加一个空格。
+..</p>
+<blockquote>
+<div><p>我是注释内容
+你们看不到我</p>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>..
+ 我是注释内容
+ 你们看不到我
+
+.. This text will not be shown
+    (but, for instance, in HTML might be
+    rendered as an HTML comment)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id36">
+<h3>替换语法<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
+<p>替换语法中的文本, 会在渲染时自动被定义好的语句替换.</p>
+<p>语法:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>|yufa|
+
+.. |yufa| replace:: 语法
+</pre></div>
+</div>
+</div>
+<div class="section" id="id37">
+<h3>图片<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
+<p>Sphinx 使用指令来作为 reStructureText 的扩展. 指令的一大作用, 就是快速添加文档结构, 而无需对底层代码进行修改.</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">image</span></code> 指令. 开头两个点, 空一格, 输入 <code class="docutils literal notranslate"><span class="pre">image</span></code>, 然后连用两个冒号 <code class="docutils literal notranslate"><span class="pre">::</span></code> 再空一格, 输入到图片的路径, 可以使用相对路径或绝对路径, 相对路径是相对于文档文件的. 可以在下面添加属性, 所有属性和 HTML 中的图片属性是一样的.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. image:: img/59498721_p0.jpg
+:alt: 示例图片
+</pre></div>
+</div>
+</div>
+<div class="section" id="id38">
+<h3>内联样式<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h3>
+<p><em>斜体</em> <strong>粗体</strong> <code class="docutils literal notranslate"><span class="pre">代码</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*斜体* **粗体** ``代码``
+</pre></div>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id34">3</a></span></dt>
+<dd><p>尾注的文本最好放在源代码末端, 便于管理</p>
+</dd>
+</dl>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id39">
+<h2>rst 指令<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
+<p>指令语法如下:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+-------+-------------------------------+
+|  ..   | 指令  ::  主参数              |
++-------+    :额外参数:                 |
+        |                               |
+        |    内容                       |
+        +-------------------------------+
+</pre></div>
+</div>
+<div class="section" id="id40">
+<h3>目录<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. toctree::
+    :maxdepth: para
+    :caption: para
+    :numbered:
+    :titlesonly:
+    :glob:
+    :reversed:
+    :hidden:
+    :includehidden:
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">para</span></code> 接受一个参数, 应该为数字, 设置目录树展开的深度.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">para</span></code> 接受一个参数, 为任意字符串, 设置该目录树的标题.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> 为目录自动编号</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:titlesonly:</span></code> 只生成文件的一级标题, 不展开子标题. 会覆盖 <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:glob:</span></code> 启用通配符</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:reversed:</span></code> 启用通配符时, 反转目录排序.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> 只显示标题, 而不创建超链接.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:includehidden:</span></code> 只创建一级标题的超链接.</p></li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h3>警告<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<p>警告将会显示为特殊的样式. 在 主参数和内容 位置处, 可以编写段落. 这个指令的所有参数都是被显示的内容.</p>
+<div class="admonition danger">
+<p class="admonition-title">危险</p>
+<p>危险!</p>
+<p>这是一个危险操作.</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. danger:: 危险!
+
+    这是一个危险操作.
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>提示</p>
+<p>提示条目</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. tip:: 提示
+
+    提示条目
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">警告</p>
+<p>小心</p>
+<p>小心, 注意安全</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. caution:: 小心
+
+    小心, 注意安全
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>注意</p>
+<p>集中注意力</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. note:: 注意
+
+    集中注意力
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>警告</p>
+<p>警告条目</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. warning:: 警告
+
+    警告条目
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>重要</p>
+<p>重要内容</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. important:: 重要
+
+    重要内容
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>参见某某某</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. seealso::
+
+    参见某某某
+</pre></div>
+</div>
+</div>
+<div class="section" id="id42">
+<h3>版本更新<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">0.0.1 新版功能: </span>添加了一些内容</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. versionadded:: 0.0.1
+    添加了一些内容
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 0.0.1 版更改: </span>修改了一些内容</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. versionchanged:: 0.0.1
+    修改了一些内容
+</pre></div>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">0.0.1 版后已移除: </span>某些功能被删除, 使用 某某 代替</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. deprecated:: 0.0.1
+    某某 被删除, 使用 某某 代替
+</pre></div>
+</div>
+</div>
+<div class="section" id="id43">
+<h3>文本样式<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<p class="rubric">一个标题, 但是不计入 toctree</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. rubric:: 一个标题, 但是不计入 toctree
+</pre></div>
+</div>
+<p class="centered">
+<strong>demo</strong></p><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. centered:: 居中的文本
+</pre></div>
+</div>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>1</p></li>
+<li><p>2</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>3</p></li>
+<li><p>4</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>5</p></li>
+<li><p>6</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>7</p></li>
+</ul>
+</td></tr></table>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. hlist::
+    :columns: 4
+
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+</pre></div>
+</div>
+</div>
+<div class="section" id="id44">
+<h3>图片<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<p>处理图片可能用到两个指令: <code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code>.</p>
+<div class="section" id="image">
+<h4>image<a class="headerlink" href="#image" title="永久链接至标题">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/loglogplot1.png"><img alt="响爷" src="../_images/loglogplot1.png" style="height: 100px;" /></a>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. image:: path/to/image
+    :alt: xxx
+    :height: xxx
+    :width: xxx
+    :scale: xxx
+    :align: top | middle | bottom | left | center | right
+    :target: path/to/target
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alt</span></code> : 文本. 替换文本: 当应用无法显示图片时, 会显示图片的一个简短的描述或由应用为视觉受损的用户读出.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code> : 高度. 当高度与宽度只指定一个时, 会按照比例不变的原则进行缩放.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> : 宽度.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> : 缩放率.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">align</span></code> : “top | middle | bottom | left | center | right” 6 选 1.    图片的对齐方式, 与 CSS 一致.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> : 超链接(URI或引用名称)    将图片变为超链接引用(可点击), 可选参数是一个URI(相对或绝对), 或一个包含下划线前缀的 “引用名称”.</p></li>
+</ul>
+</div>
+<div class="section" id="figure">
+<h4>figure<a class="headerlink" href="#figure" title="永久链接至标题">¶</a></h4>
+<p>一个 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 可以理解为 “画布”, 在其上可以嵌入其他 rst 结构, 包括 <code class="docutils literal notranslate"><span class="pre">image</span></code>.</p>
+<div class="figure align-default" id="id63">
+<img alt="../_images/loglogplot1.png" src="../_images/loglogplot1.png" />
+<p class="caption"><span class="caption-text">这是 figure 的标题, 嵌入其他结构时需保证缩进.</span><a class="headerlink" href="#id63" title="永久链接至图片">¶</a></p>
+<div class="legend">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>这里随便嵌入了一个列表</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. figure:: img/59498721_p0.jpg
+
+    这是 figure 的标题, 嵌入其他结构时需保证缩进.
+
+    +-----------------------------------------+
+    | 这里随便嵌入了一个列表                  |
+    +-----------------------------------------+
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">figure</span></code> 接受的参数和 image 相同.</p>
+</div>
+</div>
+<div class="section" id="id45">
+<h3>代码<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id46">
+<h4>代码块<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h4>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. code-block:: c
+    :linenos:
+
+    int main()
+    {
+        return 0;
+    }
+</pre></div>
+</div>
+<p>接受的参数</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> 为代码块生成行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenothreshold:</span> <span class="pre">n</span></code> 超过 n 行的代码块才会标注行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lineno-start:</span> <span class="pre">n</span></code> 为代码块生成行号, 并且从 n 开始.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span> <span class="pre">m,n,...</span></code> 着重显示 m,n 等行. 行选择可以使用 <code class="docutils literal notranslate"><span class="pre">m-n</span></code> 来选择连续的行.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span></code> 为该代码块命名.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:dedent:</span> <span class="pre">n</span></code> 调整代码缩进, 减少 n 个空格.</p></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h4>引用外部代码<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h4>
+<p>“引用外部代码” 衍生自 <code class="docutils literal notranslate"><span class="pre">include</span></code> 指令, 将外部的代码文件内容嵌入文本.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. literalinclude:: path/to/file
+    :language: codelanguage
+</pre></div>
+</div>
+<p>接受的参数</p>
+<p>允许使用 <code class="docutils literal notranslate"><span class="pre">code-block</span></code> 的参数, 除此之外可能需要指定文件字符编码. 并且, <code class="docutils literal notranslate"><span class="pre">code-block</span></code> 中高亮模式在主参数指定, 而 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 需要 <code class="docutils literal notranslate"><span class="pre">:language:</span></code> 参数.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:language:</span> <span class="pre">example</span></code> 指定高亮模式.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:encoding:</span> <span class="pre">gbk</span></code> 指定 gbk 文本编码.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lines:</span> <span class="pre">m,n,a-b,...</span></code> 只嵌入指定行.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> 为代码块生成行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:lineno-start:</span> <span class="pre">n</span></code> 为代码块生成行号, 并且从 n 开始.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span> <span class="pre">m,n,...</span></code> 着重显示 m,n 等行. 行选择可以使用 <code class="docutils literal notranslate"><span class="pre">m-n</span></code> 来选择连续的行.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:caption:</span></code> 为该行代码块命名.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:dedent:</span> <span class="pre">n</span></code> 调整代码缩进, 减少 n 个空格.</p></li>
+</ul>
+<p>如果 目标文件是一个 Python 模块, 还可以从 Python 语义结构上引入指定结构:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. literalinclude:: code/example.py
+    :pyobject: add
+</pre></div>
+</div>
+<p>还可以与另一个文件做对比:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. literalinclude:: code/example.py
+    :diff: code/example_diff.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="highlight">
+<h4>highlight<a class="headerlink" href="#highlight" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令影响的是段落中使用 <code class="docutils literal notranslate"><span class="pre">::</span></code> 之后的默认渲染语言.</p>
+<p>它的影响范围一直持续到下一个 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> 指令. 每一个 rst 文件, 段落后 <code class="docutils literal notranslate"><span class="pre">::</span></code> 缩进一个单位会被认为一个一个 code-block, 其渲染模式为 Python. 如果 使用了 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">highlight::</span> <span class="pre">cpp</span></code>, 那么默认渲染模式会变为 C++. 以此类推.</p>
+<p>这里做一个例子:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello World!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. highlight:: cpp
+
+这里做一个例子::
+
+    std::cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; std::endl;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id48">
+<h3>数学环境<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
+<p>使用 LaTeX 语法. <code class="docutils literal notranslate"><span class="pre">math</span></code> 指令将创建一个段落级别的数学环境, 要在行内使用, 需要用 <code class="docutils literal notranslate"><span class="pre">math</span></code> 角色. math 指令唯一的参数就是 LaTeX 语句, 不管它是在主参数位置还是在内容位置, 并且, 没有其他参数.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">math</span><span class="p">::</span> \frac{\partial y}{\partial x} = x
+
+<span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+
+    \begin{bmatrix}
+        1 &amp; 2 \\
+        3 &amp; 4 \\
+    \end{bmatrix}
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{\partial y}{\partial x} = x\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+    1 &amp; 2 \\
+    3 &amp; 4 \\
+\end{bmatrix}\end{split}\]</div>
+<div class="section" id="table">
+<h4>table<a class="headerlink" href="#table" title="永久链接至标题">¶</a></h4>
+<p>table 指令用于生成表格. 实际上, 在用格式符编辑列表时就隐式地使用了该指令. 而显式地使用 table 指令, 可以附加额外的属性.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">table</span><span class="p">::</span> 列表的标题
+    <span class="nc">:widths:</span> auto
+    <span class="nc">:align:</span> center
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:width:</span></code> 各列的宽度, 用逗号分隔, 或者使用 “auto”, “grid” 参数.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span></code> 整个列表在页面中的对齐方式, 可选 “left”, “center”, “right”.</p></li>
+</ul>
+<p>注意, 编辑的表格仍然需要遵守语法, 而且, 和 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">table</span></code> 指令需要有一个单位的缩进.</p>
+</div>
+<div class="section" id="list-table">
+<h4>list-table<a class="headerlink" href="#list-table" title="永久链接至标题">¶</a></h4>
+<p>可以通过 list 来创建表格, 这比标准的表格语法输入要简单一点:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+  <span class="nc">:header-rows:</span> int, 表头的行数, 默认为 0
+  <span class="nc">:stub-columns:</span> int, 从左开始计数, 将被合并为一格的列
+</pre></div>
+</div>
+<p>在 content 中 需要用二维列表来编辑表格中的单元:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+
+  <span class="m">*</span> - (0, 0)
+    <span class="m">-</span> (1, 0)
+    <span class="m">-</span> (2, 0)
+  <span class="m">*</span> - (0, 1)
+    <span class="m">-</span> (1, 1)
+    <span class="m">-</span> (2, 1)
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>(0, 0)</p></td>
+<td><p>(1, 0)</p></td>
+<td><p>(2, 0)</p></td>
+</tr>
+<tr class="row-even"><td><p>(0, 1)</p></td>
+<td><p>(1, 1)</p></td>
+<td><p>(2, 1)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id49">
+<h3>其他指令<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
+<div class="section" id="include">
+<h4>include<a class="headerlink" href="#include" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">include</span></code> 将会把另一个文件嵌入当前文本. 和 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code> 不同, <code class="docutils literal notranslate"><span class="pre">include</span></code> 嵌入的不一定是纯文本. 如果嵌入 rst 文件, 那么对应的文字也会被渲染.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> path/to/file
+    <span class="nc">:start-line:</span> a  # 从第 a 行开始
+    <span class="nc">:end-line:</span> b    # 到第 b 行结束
+    <span class="nc">:start-after:</span> string    # 从这个 string 在目标文本中第一次出现时开始.
+    <span class="nc">:end-before:</span> string     # 到这个 string 在目标文本中第一次出现时结束.
+    <span class="nc">:literal:</span>       # 作为纯文本插入, 等同于 literalinclude
+    <span class="nc">:code:</span> type     # 作为源代码插入, 等同于 literalinclude 设置相应语言模式
+    <span class="nc">:number-lines:</span> n        # 从 n 开始编号, 默认从 1 开始
+    <span class="nc">:encoding:</span> utf-8        # 设置字符编码
+    <span class="nc">:tab-width:</span> 4           # 设置制表符宽度为 4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id50">
+<h2>rst 角色<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h2>
+<p>“角色” 在 rst 中, 就是给一个文本加上特定的身份, 基于这个身份, 实现一系列效果. 可以类比为 CSS 中的 <code class="docutils literal notranslate"><span class="pre">class</span></code></p>
+<p>语法如下:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:rolename:</span><span class="nv">`content`</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rolename</span></code> 的效果与行为可以使用 Sphinx 预定义的, 也可以自定义.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> 是指文本中的对象.</p></li>
+</ul>
+<div class="section" id="ref">
+<span id="role-ref"></span><h3>ref<a class="headerlink" href="#ref" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ref</span></code> 可以在整个项目的文档中进行交叉引用. 它使用这样的语法:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`Label`</span>
+</pre></div>
+</div>
+<p>可以在正文的任意位置使用它来引用 Label 所指的内容. 要定义 Label, 需要在一个标题前使用指令:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_示例标签:</span>
+
+<span class="gh">该标签对应段落的标题</span>
+<span class="gh">--------------------</span>
+
+这是一个示例段落, 这里有一个引用了它自己的 REF ---- <span class="na">:ref:</span><span class="nv">`示例标签`</span>
+</pre></div>
+</div>
+<p>立刻尝试! <a class="reference internal" href="#role-ref"><span class="std std-ref">ref</span></a>.</p>
+<p>引用角色还可以用于 图片, 表格 等对象. 只需要在他们前面使用 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_标签名:</span></code> 指令即可 也可以为对象指定 <code class="docutils literal notranslate"><span class="pre">:name:</span></code> 属性.</p>
+<p>下面的两种语法是等效的:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_图片:</span>
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> path
+
+--------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> path
+    <span class="nc">:name:</span> 图片
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>与隐式链接不同, ref 角色可以跨文件,
+而隐式链接只是链接到当前页面的标题.</p>
+</div>
+</div>
+<div class="section" id="doc">
+<h3>doc<a class="headerlink" href="#doc" title="永久链接至标题">¶</a></h3>
+<p>doc 角色是指向项目内的某篇文档的链接.
+链接目标可以用命名或路径方式指定. 不需要扩展名.</p>
+<p>对于命名方式指定的文档, 需要其被包含在某个 toctree 当中,
+例如 <span class="xref std std-doc">latex</span> 将会链接到本项目中的 /latex.rst 文档,
+因为它被包含在 /index.rst 的 toctree 当中.</p>
+<p>如果要以路径方式指定, 那么可以用根路径 <code class="docutils literal notranslate"><span class="pre">/</span></code> 开头,
+或者用 <code class="docutils literal notranslate"><span class="pre">.</span></code> 或 <code class="docutils literal notranslate"><span class="pre">..</span></code> 开头.
+从根路径指定的 <span class="xref std std-doc">/matplotlib</span> 将会指向 /matplotlib.rst,
+而从 <code class="docutils literal notranslate"><span class="pre">.</span></code> 或 <code class="docutils literal notranslate"><span class="pre">..</span></code> 开头的, 则会以当前文档的位置为基准,
+指向相对路径上的文档.</p>
+<p>如果不指定链接命名的话, 则显示名为对应文档的标题.
+<span class="xref std std-doc">雷太赫</span></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`latex`</span>
+
+<span class="na">:doc:</span><span class="nv">`/matplotlib`</span>
+
+# 设定命名
+<span class="na">:doc:</span><span class="nv">`雷太赫 &lt;latex&gt;`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download">
+<h3>download<a class="headerlink" href="#download" title="永久链接至标题">¶</a></h3>
+<p>download 角色是指向项目中非 rst 文档, 而是可下载的文件的链接.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:download:</span><span class="nv">`example.zip`</span>
+</pre></div>
+</div>
+<p>指定的文件路径可以是相对路径或绝对路径.
+相对路径以当前文档为基准,
+绝对路径以项目根目录为根.</p>
+<p>被引用的文件将会在构建时被复制到 <code class="docutils literal notranslate"><span class="pre">_download</span></code> 目录里,
+重复的文件名将会被处理.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sphinx-api">
+<h2>使用 Sphinx 书写 API 文档<a class="headerlink" href="#sphinx-api" title="永久链接至标题">¶</a></h2>
+<p>程序中有哪些结构? 变量,函数,类 …… 等等. 在 Sphinx 中定义了相应的指令或角色来描述它们, 并且, 也可以写进源代码的 docstring 中, 让 <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code> 自动生成.</p>
+<p>此文参考官方文档 <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html</a> .</p>
+<div class="section" id="id51">
+<h3>函数<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
+<dl class="function">
+<dt id="getDate">
+<code class="sig-name descname">getDate</code><span class="sig-paren">(</span><em class="sig-param">time</em>, <em class="sig-param">mode=&quot;YYYY-MM-DD hh:mm:ss&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#getDate" title="永久链接至目标">¶</a></dt>
+<dd><p>解析传入的时间, 得到一个可读的时间字符串.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>int</em>) – 从 1970 至今的秒数</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – 解析模式</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>表示时间的字符串 <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">hh:mm:ss</span></code></p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – 不能传入一个负值</p>
+</dd>
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><p><strong>test</strong> – 一个无关的测试量</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>使用 <code class="docutils literal notranslate"><span class="pre">function</span></code> 描述一个函数:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> getDate(time, mode)
+
+    解析传入的时间, 得到一个可读的时间字符串.
+
+    <span class="nc">:param int time:</span> 从 1970 至今的秒数
+    <span class="nc">:param mode:</span> 解析模式
+    <span class="nc">:type mode:</span> str
+
+    <span class="nc">:return:</span> 表示时间的字符串 <span class="s">``YYYY-MM-DD hh:mm:ss``</span>
+    <span class="nc">:rtype:</span> str
+
+    <span class="nc">:raise ValueError:</span> 不能传入一个负值
+    <span class="nc">:var test:</span> 一个无关的测试量
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">function</span></code> 指令后书写函数原型, 应当处于同一行中.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">xxx:</span></code> 描述一个参数的名称 <code class="docutils literal notranslate"><span class="pre">xxx</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:type</span> <span class="pre">xxx:</span></code> 描述参数 <code class="docutils literal notranslate"><span class="pre">xxx</span></code> 的类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">type</span> <span class="pre">name:</span></code> 同时描述一个参数的类型与名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:return:</span></code> 描述返回值.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:rtype:</span></code> 描述返回值的类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:raise</span> <span class="pre">xxx:</span></code> 描述抛出的异常.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:var</span> <span class="pre">yyy:</span></code> 描述用到的一个变量.</p></li>
+</ul>
+<p>并且可以通过 <a class="reference internal" href="#getDate" title="getDate"><code class="xref py py-func docutils literal notranslate"><span class="pre">getDate()</span></code></a> 来创建一个指向该函数的链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>并且可以用过 <span class="na">:func:</span><span class="nv">`getDate`</span> 来创建一个指向该函数的链接
+</pre></div>
+</div>
+</div>
+<div class="section" id="id52">
+<h3>类<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<dl class="class">
+<dt id="Clock">
+<em class="property">class </em><code class="sig-name descname">Clock</code><span class="sig-paren">(</span><em class="sig-param">speed=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#Clock" title="永久链接至目标">¶</a></dt>
+<dd><dl class="method">
+<dt id="Clock.gamma">
+<code class="sig-name descname">gamma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Clock.gamma" title="永久链接至目标">¶</a></dt>
+<dd><p>求解 <span class="math notranslate nohighlight">\(\gamma\)</span> 因子</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{1}{ \sqrt{ 1 - \frac{v^2}{c^2} } }\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>gamma</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Clock.speed">
+<code class="sig-name descname">speed</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#Clock.speed" title="永久链接至目标">¶</a></dt>
+<dd><p>设置该钟表相对观察者的速度.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>v</strong> (<em>float</em>) – 速度, 单位 m/s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Clock.position">
+<code class="sig-name descname">position</code><a class="headerlink" href="#Clock.position" title="永久链接至目标">¶</a></dt>
+<dd><p>该物体相对观察者的位置 <code class="docutils literal notranslate"><span class="pre">(float</span> <span class="pre">x,</span> <span class="pre">float</span> <span class="pre">y)</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<ul>
+<li><p>方法使用 <code class="docutils literal notranslate"><span class="pre">method</span></code> , 可接受的修饰和 <a class="reference internal" href="#id51">函数</a> 一致.</p></li>
+<li><p>类/方法/属性, 可以使用 <a class="reference internal" href="#Clock" title="Clock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clock</span></code></a>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">gamma()</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code> 来创建链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> Clock(speed=0.0)
+
+<span class="p">    ..</span> <span class="ow">method</span><span class="p">::</span> gamma()
+
+        求解 <span class="na">:math:</span><span class="nv">`\gamma`</span> 因子
+
+<span class="p">        ..</span> <span class="ow">math</span><span class="p">::</span> \gamma = \frac{1}{ \sqrt{ 1 - \frac{v^2}{c^2} } }
+
+        <span class="nc">:return:</span> gamma
+        <span class="nc">:rtype:</span> float
+
+<span class="p">    ..</span> <span class="ow">method</span><span class="p">::</span> speed(v)
+
+        设置该钟表相对观察者的速度.
+
+        <span class="nc">:param float v:</span> 速度, 单位 m/s
+
+<span class="p">    ..</span> <span class="ow">attribute</span><span class="p">::</span> position
+
+        该物体相对观察者的位置 <span class="s">``(float x, float y)``</span>.
+
+类/方法/属性, 可以使用 <span class="na">:class:</span><span class="nv">`Clock`</span>, <span class="na">:meth:</span><span class="nv">`gamma`</span>, <span class="na">:attr:</span><span class="nv">`position`</span> 来创建链接
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id53">
+<h3>数据<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+<p>用于解释程序中出现的一些重要数据, 比如全局变量/常量.</p>
+<dl class="data">
+<dt id="NULL">
+<code class="sig-name descname">NULL</code><a class="headerlink" href="#NULL" title="永久链接至目标">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd></dl>
+
+<p>并且, 使用 <a class="reference internal" href="#NULL" title="NULL"><code class="xref py py-data docutils literal notranslate"><span class="pre">NULL</span></code></a> 来创建一个指向该块的链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">data</span><span class="p">::</span> NULL
+
+    <span class="s">``0``</span>
+
+并且, 使用 <span class="na">:data:</span><span class="nv">`NULL`</span> 来创建一个指向该块的链接
+</pre></div>
+</div>
+<p>在 LaTeX 设置中, 设置以下参数:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>latex_engine = &quot;xelatex&quot;
+latex_elements = {
+    &#39;papersize&#39;: &#39;a4paper&#39;,
+    &#39;utf8extra&#39;: &#39;&#39;,
+    &#39;inputenc&#39;: &#39;&#39;,
+    &#39;cmappkg&#39;: &#39;&#39;,
+    &#39;fontenc&#39;: &#39;&#39;,
+    &#39;preamble&#39;: r&#39;&#39;&#39;
+        \usepackage{xeCJK}
+        \parindent 2em
+        \setcounter{tocdepth}{3}
+        \renewcommand\familydefault{\ttdefault}
+        \renewcommand\CJKfamilydefault{\CJKrmdefault}
+    &#39;&#39;&#39;,
+}
+</pre></div>
+</div>
+<p>就能获得良好的 TeX 代码输出, 进入到 <code class="docutils literal notranslate"><span class="pre">build/latex</span></code> 目录下 <code class="docutils literal notranslate"><span class="pre">make</span></code>, 就能自动调用 xelatex 编译 PDF 了</p>
+<p>注意, make 文件中, 查找的 LaTeX 文件与这个设置有关:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span># Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+latex_documents = [
+    (master_doc, 文件名, 封面标题,
+    author, &#39;manual&#39;),
+]
+</pre></div>
+</div>
+<p>在文件名中, 最好不要有非 ASCII 字符, xelatex 恐怕无法找到含还有中文字符的文件名.</p>
+<p>默认情况下, 生成的 PDF 是双页打印模式的, 在电脑上浏览会发现有很多空白, 这是那些左侧有文字, 右侧没有内容, 且下面的内容在下一个章节的情况下, 会留空.</p>
+<p>要设置这一点, 在 <code class="docutils literal notranslate"><span class="pre">latex_elements</span></code> 中添加一项</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latex_elements</span> <span class="o">=</span> <span class="p">{</span>
+<span class="hll">    <span class="s1">&#39;extraclassoptions&#39;</span><span class="p">:</span> <span class="s1">&#39;openany,oneside&#39;</span><span class="p">,</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>那么, 就会按照单页样式打印.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphviz">
+<h2>graphviz<a class="headerlink" href="#graphviz" title="永久链接至标题">¶</a></h2>
+<p>见 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html">https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html</a></p>
+<div class="section" id="id54">
+<h3>语法<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<p>可以使用指令:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">graphviz</span><span class="p">::</span> code/example.gv
+</pre></div>
+</div>
+<p>来包含一个用 graphviz 语法编辑的文件, 将在构建时渲染为图片.</p>
+<p>或者用同样的指令:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">graphviz</span><span class="p">::</span>
+
+    digraph foo {
+        &quot;bar&quot; -&gt; &quot;baz&quot;;
+    }
+</pre></div>
+</div>
+<p>或者用子指令, 分别生成有向图与无向图:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">digraph</span><span class="p">::</span> 名字
+
+    foo -&gt; bar;
+
+<span class="p">..</span> <span class="ow">graph</span><span class="p">::</span> 另一个名字
+
+    foo -- bar;
+</pre></div>
+</div>
+</div>
+<div class="section" id="id55">
+<h3>配置<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">extensions</span></code> 列表中添加项目 <code class="docutils literal notranslate"><span class="pre">&quot;sphinx.ext.graphviz&quot;</span></code> 以启用本插件.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">graphviz_dot</span></code> 设置渲染器路径, 默认为 <code class="docutils literal notranslate"><span class="pre">dot</span></code>, 如果下载安装的 graphviz 套件未添加进 PATH, 那么需要完整的绝对路径.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">graphviz_dot_args</span></code> 传递给渲染器的命令行参数, 应该为一个列表, 类似于 <code class="xref py py-data docutils literal notranslate"><span class="pre">sys.argv</span></code>, 或者说 <code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code> 所解析的格式. 默认为空列表 <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">graphviz_output_format</span></code> 设置构建 HTML 时的输出格式, 默认为 <code class="docutils literal notranslate"><span class="pre">'png'</span></code>, 必须在 <code class="docutils literal notranslate"><span class="pre">'png'</span></code> 或 <code class="docutils literal notranslate"><span class="pre">'svg'</span></code> 中二选一. 如果选择了 svg, 那么为了使图片超链接正常工作, 需要在代码中指定相关的 HTML 属性:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">graphviz</span><span class="p">::</span>
+
+    digraph example {
+        a [label=&quot;sphinx&quot;, href=&quot;http://sphinx-doc.org&quot;, target=&quot;_top&quot;];
+        b [label=&quot;other&quot;];
+        a -&gt; b;
+    }
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="matplotlib">
+<h2>matplotlib<a class="headerlink" href="#matplotlib" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id56">
+<h3>语法<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<p>提供了 <code class="docutils literal notranslate"><span class="pre">plot</span></code> 等指令.</p>
+<div class="section" id="plot">
+<h4>plot<a class="headerlink" href="#plot" title="永久链接至标题">¶</a></h4>
+<p>见 <a class="reference external" href="https://matplotlib.org/devel/plot_directive.html">https://matplotlib.org/devel/plot_directive.html</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">plot</span></code> 可以包含一个编写 matplotlib 作图的 Python 代码, 并将其渲染为图形. 同样也可以在下方一个缩进单位的区块中直接编写代码:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">plot</span><span class="p">::</span> _code/sinx.py
+    <span class="nc">:include-source:</span>
+
+    添加一些描述(可选的)
+
+<span class="p">..</span> <span class="ow">plot</span><span class="p">::</span>
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    x = np.linspace(-6, 6, 1000)
+    y = np.sin(x)
+    plt.plot(x, y)
+    plt.title(&quot;sin(x)&quot;)
+
+    # 最后必须要调用 show 方法, 才能显示
+    plt.show()
+</pre></div>
+</div>
+<p>默认会生成 png, big png, pdf 三种格式的图片.</p>
+<ul class="simple">
+<li><p>可以给 <code class="docutils literal notranslate"><span class="pre">plot</span></code> 指令使用参数 <code class="docutils literal notranslate"><span class="pre">:include-source:</span></code> 将源代码插入到图片上方.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id57">
+<h3>配置<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<p>需要在conf.py 文件的 extension 列表中添加项目 <code class="docutils literal notranslate"><span class="pre">'matplotlib.sphinxext.plot_directive'</span></code> 项目, 以启用 <code class="docutils literal notranslate"><span class="pre">plot</span></code> 指令.</p>
+<p>其他可设置项:</p>
+<div class="section" id="plot-pre-code">
+<h4><code class="docutils literal notranslate"><span class="pre">plot_pre_code</span></code><a class="headerlink" href="#plot-pre-code" title="永久链接至标题">¶</a></h4>
+<p>在每幅图的代码中都会首先执行的代码, 设置后将不需要在代码中重复书写:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_pre_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">import numpy as np</span>
+<span class="s2">import matplotlib.pyplot as plt</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-include-source">
+<h4><code class="docutils literal notranslate"><span class="pre">plot_include_source</span></code><a class="headerlink" href="#plot-include-source" title="永久链接至标题">¶</a></h4>
+<p>设置每幅图的 <code class="docutils literal notranslate"><span class="pre">:include-source:</span></code> 选项的默认值:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_include_source</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-basedir">
+<h4><code class="docutils literal notranslate"><span class="pre">plot_basedir</span></code><a class="headerlink" href="#plot-basedir" title="永久链接至标题">¶</a></h4>
+<p>生成图像的默认储存位置, 默认为代码文件所在目录:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_basedir</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id58">
+<h2>自定义扩展<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<p>一个 reStructuredText 扩展就是一个 Python 模块,
+首先, 需要在文档的 conf.py 中,
+将扩展模块文件所在的目录添加到 <code class="xref py py-data docutils literal notranslate"><span class="pre">sys.path</span></code> 之中.</p>
+<p>然后, 根据扩展中定义的指令, 角色编写 <code class="docutils literal notranslate"><span class="pre">setup</span></code> 函数:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">DirectiveClass</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_role</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">RoleClass</span><span class="p">)</span>
+
+    <span class="c1">#....</span>
+</pre></div>
+</div>
+<p>参数 app 是由 sphinx 在调用时传递的.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>以下内容未完成.
+代码可能无效或出错.</p>
+</div>
+<div class="section" id="id59">
+<h3>自定义指令<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<div class="section" id="helloworld">
+<h4>HelloWorld 扩展<a class="headerlink" href="#helloworld" title="永久链接至标题">¶</a></h4>
+<p>定义一个指令, 需要继承 <code class="xref py py-class docutils literal notranslate"><span class="pre">docutils.parser.rst.Directive</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parser.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+
+<span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>对于子类, 需要定义一个 <code class="docutils literal notranslate"><span class="pre">run</span></code> 方法:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>在 run 方法中, 返回一个 <code class="xref py py-mod docutils literal notranslate"><span class="pre">docutils.nodes</span></code> 实例列表:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>以下为完整代码:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parser.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<span class="k">class</span> <span class="nc">Hello</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">main</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">main</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="n">Hello</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>然后在 rst 文档中:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">hello</span><span class="p">::</span>
+</pre></div>
+</div>
+<p>编译后该指令被替换为:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Hello World!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id60">
+<h3>接受参数的指令<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<p>一个指令如下使用参数:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">指令名</span><span class="p">::</span> <span class="n">指令的</span> <span class="n">content</span>
+    <span class="p">:</span><span class="n">指令的</span> <span class="n">option</span><span class="p">:</span>
+
+    <span class="n">指令的</span> <span class="n">content</span>
+</pre></div>
+</div>
+<p>指令的 content 是除了包裹在 <code class="docutils literal notranslate"><span class="pre">:option:</span></code> 之外的一切内容,
+包括双冒号后的输入, 以及次级缩进块中的普通文本.</p>
+</div>
+</div>
+<div class="section" id="id61">
+<h2>域<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<p>所谓的域其实就是用来描述代码中结构的指令.</p>
+<p>sphinx 直接支持的代码域有 Python, C, C++, JavaScript.
+并且还支持 reStructuredText 与 Math 域.</p>
+<p>其他可用的域以插件方式提供, 参见
+<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#more-domains">More Domains</a></p>
+<div class="section" id="id62">
+<h3>RST的标题<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<p>不同文件下相同的级别的标题如何叠加？
+能否在一个页面上显示</p>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="20_regexp.html" class="btn btn-neutral float-right" title="Regular Expression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to The Room of Requirement!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AdamZhou
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

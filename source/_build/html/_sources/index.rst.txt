@@ -3,19 +3,20 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-Welcome to EveryThing's documentation!
-==================================================================
+Welcome to The Room of Requirement!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This is an open source book written for myself to review my tools.
 
 .. toctree::
-    :maxdepth: 3
-    :caption: Snippet:
+    :maxdepth: 4
+    :caption: SNA:
 
+    SNA/10_sphinx_rst.rst
+    SNA/20_regexp.rst
     Snippet/python.rst
     Snippet/Plots.rst
     Snippet/GEE.rst
     Snippet/R.rst
-    Snippet/RST.rst
     Snippet/Git.rst
     Snippet/Rhino.rst
 
@@ -29,7 +30,7 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 3
     :caption: Discussion:
 
-    Discussion/bian.rst
+    DIS/11_debate.rst
     Discussion/Write.rst
     Discussion/En.rst
     Discussion/article.rst
