@@ -9,7 +9,7 @@ This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 4
-    :caption: SNA:
+    :caption: SNA
 
     SNA/10_sphinx_rst.rst
     SNA/20_regexp.rst
@@ -22,13 +22,13 @@ This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 3
-    :caption: Notes:
+    :caption: Notes
 
-    Notes/Notes.rst
+    Notes/10_notes.rst
 
 .. toctree::
     :maxdepth: 3
-    :caption: Discussion:
+    :caption: Discussion
 
     DIS/11_debate.rst
     DIS/12_articles.rst
@@ -38,7 +38,7 @@ This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 3
-    :caption: Daily:
+    :caption: Daily
 
     Daily/Daily
     Daily/2020
