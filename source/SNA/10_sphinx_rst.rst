@@ -3,7 +3,7 @@ Sphinx
 ^^^^^^^^^^^^^^^^^^^^^^^
 ################
 Sphinx 简单入门
-################ 
+################
 
 Sphinx 是一个用于生成 Python 文档的工具, 但是也可以用来制作电子书. 本文记录使用该工具的一些经验.
 
@@ -335,15 +335,71 @@ line
 
 另外, 列表前缀有多种形式可以使用, 例如 拉丁字母(a,b,c...) 罗马字母, 用括号代替点号等.
 
+1. Arabic numerals.
+
+   a) lower alpha)
+
+      (i) (lower roman)
+
+          A. upper alpha.
+
+             I) upper roman)
+
+2. Lists that don't start at 1:
+
+   3. Three
+
+   4. Four
+
+   C. C
+
+   D. D
+
+   iii. iii
+
+   iv. iv
+
+#. List items may also be auto-enumerated.
+
+::
+
+    1. Arabic numerals.
+
+    a) lower alpha)
+
+        (i) (lower roman)
+
+            A. upper alpha.
+
+                I) upper roman)
+
+    2. Lists that don't start at 1:
+
+    3. Three
+
+    4. Four
+
+    C. C
+
+    D. D
+
+    iii. iii
+
+    iv. iv
+
+    #. List items may also be auto-enumerated.
+
 定义列表
 ----------------
 条目占一行，解释文本要有缩进；多层可根据缩进实现。
 
 定义1
     demo
-定义2
-    demodemo
-    demodemo
+
+::
+
+    定义1
+        demo
 
 选项列表
 ---------------
@@ -352,19 +408,18 @@ line
 
 -a              command-line option "a"
 -b file         options can have arguments and long descriptions
---long          options can be long also
---input=file    long options can also have
-                arguments
-/V              DOS/VMS-style options too
 
-Field 列表
+::
+
+    -a              command-line option "a"
+    -b file         options can have arguments and long descriptions
+
+
+字段列表
 ----------
 
 应当用在代码的文档字符串中.
 
-:param arg1: 第一个参数
-:param arg2: 第二个参数
-:returns: 返回值
 :Authors:
     Tony J. (Tibs) Ibbs,
     David Goodger
@@ -374,6 +429,13 @@ Field 列表
 :Dedication: To my father.
 ::
 
+    :Authors:
+        Tony J. (Tibs) Ibbs,
+        David Goodger
+        (and sundry other good-natured folks)
+
+    :Version: 1.0 of 2001/08/08
+    :Dedication: To my father.
     def function(arg1, arg2)
         """
         :param arg1: 第一个参数
@@ -383,6 +445,18 @@ Field 列表
 
 块
 ========
+
+#. 直接缩进文字块 有效
+
+    demo
+    demo
+
+#. 冒号后无缩进 无效
+
+::
+
+demo
+demo
 
 文字块
 -------------------
@@ -408,6 +482,18 @@ Field 列表
 
 > Useful for quotes from email and
 > for Haskell literate programming.
+
+#. 直接缩进文字块 有效
+
+    demo
+    demo
+
+#. 冒号后无缩进 无效
+
+::
+
+demo
+demo
 
 行块
 -------------
@@ -597,6 +683,35 @@ True   True   True
     .. [One] 参考引用一
     .. [Two] 参考引用二
 
+引用示例
+----------
+standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
+
+.. [1] A footnote contains body elements, consistently
+   indented by at least 3 spaces.
+
+.. [CIT2002] Just like a footnote, except the label is
+   textual.
+
+.. _Python: http://www.python.org
+
+.. |example| function:: module=xml.xslt class=Processor
+
+.. _example:
+
+::
+
+    standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
+
+    .. [1] A footnote contains body elements, consistently indented by at least 3 spaces.
+
+    .. [CIT2002] Just like a footnote, except the label is textual.
+
+    .. _Python: http://www.python.org
+
+    .. |example| function:: module=xml.xslt class=Processor
+
+    .. _example:
 
 
 注释(Comments)
@@ -1596,9 +1711,9 @@ HelloWorld 扩展
 包括双冒号后的输入, 以及次级缩进块中的普通文本.
 
 
-##
+####
 域
-##
+####
 
 所谓的域其实就是用来描述代码中结构的指令.
 
@@ -1614,6 +1729,28 @@ RST的标题
 不同文件下相同的级别的标题如何叠加？
 能否在一个页面上显示
 
+一个文件显示一页，即使解析的标题是一个级别，页面上还是会显示
+
+toctree的生成取决于文档内的标题结构
 
 ----------------
+.. [repo] : https://raw.githubusercontent.com/zombie110year/learn-rst 
 
+###########
+配置
+###########
+vscode 预览设置
+::
+
+    {
+    "restructuredtext.confPath"               : "${workspaceFolder}",
+    "python.pythonPath"                       : "D:\\Anaconda\\envs\\sphinx\\python.exe",
+    "restructuredtext.updateOnTextChanged"    : "false",
+    "restructuredtext.updateDelay"            : 1000,
+    "restructuredtext.linter.executablePath"  : "PathToExecutable",
+    "restructuredtext.linter.run": "onSave",
+    "restructuredtext.preview.scrollEditorWithPreview": false,
+    "restructuredtext.preview.scrollPreviewWithEditor": false
+    }
+
+预览快捷键`Ctrl+k Ctrl+S`
