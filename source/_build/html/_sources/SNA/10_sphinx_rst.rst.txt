@@ -703,11 +703,9 @@ standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), in
 
     standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
 
-    .. [1] A footnote contains body elements, consistently
-    indented by at least 3 spaces.
+    .. [1] A footnote contains body elements, consistently indented by at least 3 spaces.
 
-    .. [CIT2002] Just like a footnote, except the label is
-    textual.
+    .. [CIT2002] Just like a footnote, except the label is textual.
 
     .. _Python: http://www.python.org
 
