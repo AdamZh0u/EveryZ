@@ -12,12 +12,12 @@ This is an open source book written for myself to review my tools.
     :caption: Sphinx:
     :numbered:
 
-    Snippt/Sphinx_RST/00_sphinx_intro.rst
-    Snippt/Sphins_RST/01_Rst_intro.rst
-    Snippt/Sphins_RST/02_Rst_inDepth.rst
-    Snippt/Sphins_RST/04_Sphinx_inDepth.rst
-    Snippt/Sphins_RST/05_GraphViz_Matplotlib.rst
-    Snippt/Sphins_RST/06_Appendix.rst
+    Snippet/Sphinx_RST/00_sphinx_intro.rst
+    Snippet/Sphinx_RST/01_Rst_intro.rst
+    Snippet/Sphinx_RST/02_Rst_inDepth.rst
+    Snippet/Sphinx_RST/04_Sphinx_inDepth.rst
+    Snippet/Sphinx_RST/05_GraphViz_Matplotlib.rst
+    Snippet/Sphinx_RST/06_Appendix.rst
 
 .. toctree::
     :maxdepth: 4
