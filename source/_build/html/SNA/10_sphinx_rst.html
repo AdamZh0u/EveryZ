@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Regular Expression" href="20_regexp.html" />
+    <link rel="next" title="Python" href="../Snippet/python.html" />
     <link rel="prev" title="Welcome to The Room of Requirement!" href="../index.html" /> 
 </head>
 
@@ -82,7 +82,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">SNA:</span></p>
+              <p class="caption"><span class="caption-text">SNA</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Sphinx 简单入门</a><ul>
@@ -215,26 +215,20 @@
 <li class="toctree-l2"><a class="reference internal" href="#id69">配置</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="20_regexp.html">Regular Expression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Snippet/python.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Snippet/Plots.html">Plots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/GEE.html">GEE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Snippet/R.html">R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/Git.html">Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/Rhino.html">Rhino</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Notes:</span></p>
+<p class="caption"><span class="caption-text">Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Notes/Notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Notes/10_notes.html">Notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Discussion:</span></p>
+<p class="caption"><span class="caption-text">Discussion</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../DIS/11_debate.html">辩行记</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Discussion/Write.html">Write</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Discussion/En.html">To</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Discussion/article.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIS/12_articles.html">Articles</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Daily:</span></p>
+<p class="caption"><span class="caption-text">Daily</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Daily/Daily.html">Q&amp;A</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Daily/2020.html">Daily2020</a></li>
@@ -588,23 +582,20 @@ html_theme = &#39;sphinx_rtd_theme&#39;
 <li><p>自动编号</p></li>
 </ol>
 <p>另外, 列表前缀有多种形式可以使用, 例如 拉丁字母(a,b,c…) 罗马字母, 用括号代替点号等.</p>
+<p>同缩进的，同符号系列的 会删除空行</p>
 <ol class="arabic">
-<li><p>Arabic numerals.</p>
-<ol class="loweralpha simple">
-<li><p>lower alpha)</p>
-<ol class="lowerroman simple">
+<li><p>Arabic numerals.
+a) lower alpha)</p>
+<blockquote>
+<div><ol class="lowerroman simple">
 <li><p>(lower roman)</p>
 <ol class="upperalpha simple">
-<li><p>upper alpha.</p>
-<ol class="upperroman simple">
-<li><p>upper roman)</p></li>
+<li><p>upper alpha.
+I) upper roman)</p></li>
 </ol>
 </li>
 </ol>
-</li>
-</ol>
-</li>
-</ol>
+</div></blockquote>
 </li>
 <li><p>Lists that don’t start at 1:</p>
 <ol class="arabic simple" start="3">
@@ -634,19 +625,19 @@ a) lower alpha)
 
 2. Lists that don&#39;t start at 1:
 
-3. Three
+    3. Three
 
-4. Four
+    4. Four
 
-C. C
+    C. C
 
-D. D
+    D. D
 
-iii. iii
+    iii. iii
 
-iv. iv
+    iv. iv
 
-#. List items may also be auto-enumerated.
+    #. List items may also be auto-enumerated.
 </pre></div>
 </div>
 </div>
@@ -1231,7 +1222,7 @@ textual.</p>
 <p>处理图片可能用到两个指令: <code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code>.</p>
 <div class="section" id="image">
 <h4>image<a class="headerlink" href="#image" title="永久链接至标题">¶</a></h4>
-<a class="reference internal image-reference" href="../_images/loglogplot1.png"><img alt="响爷" src="../_images/loglogplot1.png" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="../_images/loglogplot.png"><img alt="响爷" src="../_images/loglogplot.png" style="height: 100px;" /></a>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. image:: path/to/image
     :alt: xxx
     :height: xxx
@@ -1254,7 +1245,7 @@ textual.</p>
 <h4>figure<a class="headerlink" href="#figure" title="永久链接至标题">¶</a></h4>
 <p>一个 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 可以理解为 “画布”, 在其上可以嵌入其他 rst 结构, 包括 <code class="docutils literal notranslate"><span class="pre">image</span></code>.</p>
 <div class="figure align-default" id="id70">
-<img alt="../_images/loglogplot1.png" src="../_images/loglogplot1.png" />
+<img alt="../_images/loglogplot.png" src="../_images/loglogplot.png" />
 <p class="caption"><span class="caption-text">这是 figure 的标题, 嵌入其他结构时需保证缩进.</span><a class="headerlink" href="#id70" title="永久链接至图片">¶</a></p>
 <div class="legend">
 <table class="docutils align-default">
@@ -1930,6 +1921,7 @@ latex_documents = [
 能否在一个页面上显示</p>
 <p>一个文件显示一页，即使解析的标题是一个级别，页面上还是会显示</p>
 <p>toctree的生成取决于文档内的标题结构</p>
+<p>空格开头的标题识别不出来，不会识别为标题而识别为缩进。</p>
 </div>
 </div>
 <div class="section" id="id69">
@@ -1959,7 +1951,7 @@ latex_documents = [
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="20_regexp.html" class="btn btn-neutral float-right" title="Regular Expression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Snippet/python.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to The Room of Requirement!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

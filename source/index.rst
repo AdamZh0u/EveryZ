@@ -12,11 +12,12 @@ This is an open source book written for myself to review my tools.
     :caption: SNA
 
     SNA/10_sphinx_rst.rst
-    SNA/20_regexp.rst
     Snippet/python.rst
     Snippet/Plots.rst
-    Snippet/GEE.rst
     Snippet/R.rst
+.. 
+    SNA/20_regexp.rst
+    Snippet/GEE.rst
     Snippet/Git.rst
     Snippet/Rhino.rst
 
@@ -32,6 +33,7 @@ This is an open source book written for myself to review my tools.
 
     DIS/11_debate.rst
     DIS/12_articles.rst
+.. 
     Discussion/Write.rst
     Discussion/En.rst
 

@@ -36,9 +36,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Python" href="../Snippet/python.html" />
-    <link rel="prev" title="Sphinx" href="10_sphinx_rst.html" /> 
+    <link rel="search" title="搜索" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,29 +80,20 @@
               
             
             
-              <p class="caption"><span class="caption-text">SNA:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="10_sphinx_rst.html">Sphinx</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Regular Expression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/python.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/Plots.html">Plots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/GEE.html">GEE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/R.html">R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/Git.html">Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Snippet/Rhino.html">Rhino</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Notes:</span></p>
+              <p class="caption"><span class="caption-text">SNA</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Notes/Notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_sphinx_rst.html">Sphinx</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Discussion:</span></p>
+<p class="caption"><span class="caption-text">Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notes/10_notes.html">Notes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Discussion</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../DIS/11_debate.html">辩行记</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Discussion/Write.html">Write</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Discussion/En.html">To</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Discussion/article.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DIS/12_articles.html">Articles</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Daily:</span></p>
+<p class="caption"><span class="caption-text">Daily</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Daily/Daily.html">Q&amp;A</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Daily/2020.html">Daily2020</a></li>
@@ -176,6 +165,17 @@
 <h1>Regular Expression<a class="headerlink" href="#regular-expression" title="永久链接至标题">¶</a></h1>
 <hr class="docutils" />
 <hr class="docutils" />
+<div class="section" id="vscode">
+<h2>在VSCode 中使用正则替换<a class="headerlink" href="#vscode" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Expression
+##(\s?\d*.*\n?) \s 空格 \d数字 .任意字符 \n换行
+替换为 $1=   $1 替换内容
+
+\s+·(\d+)
+$1
+替换 ·59 为 59
+</pre></div>
+</div>
 <p><a class="reference internal" href="#minreg">30minReg</a>  、<a class="reference internal" href="#id2">精通正则表达式</a> 、<a class="reference internal" href="#id1">测试工具</a>
 <a class="reference external" href="http://www.zjmainstay.cn/">http://www.zjmainstay.cn/</a></p>
 <dl class="citation">
@@ -190,21 +190,13 @@
 </dd>
 </dl>
 </div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Snippet/python.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="10_sphinx_rst.html" class="btn btn-neutral float-left" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

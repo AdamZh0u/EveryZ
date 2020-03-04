@@ -9,35 +9,38 @@ This is an open source book written for myself to review my tools.
 
 .. toctree::
     :maxdepth: 4
-    :caption: SNA:
+    :caption: SNA
 
     SNA/10_sphinx_rst.rst
-    SNA/20_regexp.rst
     Snippet/python.rst
     Snippet/Plots.rst
-    Snippet/GEE.rst
     Snippet/R.rst
+.. 
+    SNA/20_regexp.rst
+    Snippet/GEE.rst
     Snippet/Git.rst
     Snippet/Rhino.rst
 
 .. toctree::
     :maxdepth: 3
-    :caption: Notes:
+    :caption: Notes
 
-    Notes/Notes.rst
+    Notes/10_notes.rst
 
 .. toctree::
     :maxdepth: 3
-    :caption: Discussion:
+    :caption: Discussion
 
     DIS/11_debate.rst
+    DIS/12_articles.rst
+.. 
     Discussion/Write.rst
     Discussion/En.rst
-    Discussion/article.rst
+
 
 .. toctree::
     :maxdepth: 3
-    :caption: Daily:
+    :caption: Daily
 
     Daily/Daily
     Daily/2020

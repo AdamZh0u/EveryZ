@@ -335,14 +335,13 @@ line
 
 另外, 列表前缀有多种形式可以使用, 例如 拉丁字母(a,b,c...) 罗马字母, 用括号代替点号等.
 
+同缩进的，同符号系列的 会删除空行
+
 1. Arabic numerals.
-
    a) lower alpha)
-
       (i) (lower roman)
 
           A. upper alpha.
-
              I) upper roman)
 
 2. Lists that don't start at 1:
@@ -375,19 +374,19 @@ line
 
     2. Lists that don't start at 1:
 
-    3. Three
+        3. Three
 
-    4. Four
+        4. Four
 
-    C. C
+        C. C
 
-    D. D
+        D. D
 
-    iii. iii
+        iii. iii
 
-    iv. iv
+        iv. iv
 
-    #. List items may also be auto-enumerated.
+        #. List items may also be auto-enumerated.
 
 定义列表
 ----------------
@@ -1732,6 +1731,8 @@ RST的标题
 一个文件显示一页，即使解析的标题是一个级别，页面上还是会显示
 
 toctree的生成取决于文档内的标题结构
+
+空格开头的标题识别不出来，不会识别为标题而识别为缩进。
 
 ----------------
 .. [repo] : https://raw.githubusercontent.com/zombie110year/learn-rst 
