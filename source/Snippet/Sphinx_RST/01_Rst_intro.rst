@@ -1,6 +1,3 @@
-#############
-rst 基本语法
-############
 
 Sphinx 默认使用 reStructureText(rst) 标记语言, 要能够处理 Markdown 还需要额外的渲染器, 而且在了解一番过后, 发现 rst 支持的内容比 Markdown 更丰富, 于是决定学习一下. 建议克隆该库, 自己使用 ``make html`` 编译结果, 再对照源码学习 reStructureText 的语法.
 
