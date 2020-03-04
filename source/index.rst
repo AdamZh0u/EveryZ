@@ -31,9 +31,10 @@ This is an open source book written for myself to review my tools.
     :caption: Discussion:
 
     DIS/11_debate.rst
+    DIS/12_articles.rst
     Discussion/Write.rst
     Discussion/En.rst
-    Discussion/article.rst
+
 
 .. toctree::
     :maxdepth: 3
