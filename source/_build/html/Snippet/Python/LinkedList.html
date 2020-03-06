@@ -36,7 +36,9 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="2. 树" href="Tree.html" />
+    <link rel="prev" title="Python" href="../python.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,12 +83,88 @@
             
             
               <p class="caption"><span class="caption-text">SNA</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../SNA/10_sphinx_rst.html">Sphinx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python.html">Python</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 链表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.1. 实现</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.1.1. 创建一个新链表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next">1.1.2. next 关键字</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.1.3. 递归打印**</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.2. 基本操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">1.2.1. 计算链表长度，从前后插入，查找，删除</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">1.2.2. 实践</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q160">1.3. Q160 找出链表的交点*****</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">1.3.1. 暴力法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">1.3.2. 哈希表法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">1.3.3. 双指针法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q206">1.4. Q206 链表反转****</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">1.4.1. 双指针迭代</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">1.4.2. 递归</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q21">1.5. Q21 合并两个有序链表 ***</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">1.5.1. 递归法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">1.5.2. 迭代</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q83">1.6. Q83 从有序链表中删除重复节点 **</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wrong1">1.6.1. wrong1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#demo2">1.6.2. demo2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">1.6.3. 直接法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">1.6.4. 递归***</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q19-n">1.7. Q19 删除链表的倒数第N个节点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">1.7.1. 两次遍历方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">1.7.2. 一次遍历方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">1.7.3. 递归</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q24">1.8. Q24 两两交换链表中的相邻结点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id21">1.8.1. 指针</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">1.8.2. 递归</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q445-add-two-numbers-ii">1.9. Q445 Add Two Numbers II *****</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">1.9.1. 加法递归</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">1.9.2. 双栈法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q234-palindrome-linked-list">1.10. Q234 Palindrome Linked List****</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id25">1.10.1. 链表反转</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">1.10.2. 数组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">1.10.3. 递归&#64;&#64;</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q725-split-linked-list-in-parts-medium">1.11. Q725. Split Linked List in Parts(Medium)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id28">1.11.1. 新列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">1.11.2. 拆分链表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#q328-odd-even-linked-list-medium">1.12. Q328 Odd Even Linked List (Medium)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id30">1.12.1. 简写</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tree.html">2. 树</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Plots.html">Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../R.html">R</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Notes/10_notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/10_notes.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/10_notes.html#data">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Notes/10_notes.html#notes">Notes</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Discussion</span></p>
 <ul>
@@ -141,6 +219,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../python.html">Python</a> &raquo;</li>
         
       <li><span class="section-number">1. </span>链表</li>
     
@@ -1878,6 +1958,15 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Tree.html" class="btn btn-neutral float-right" title="2. 树" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../python.html" class="btn btn-neutral float-left" title="Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

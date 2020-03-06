@@ -756,7 +756,21 @@ Sphinx 使用指令来作为 reStructureText 的扩展. 指令的一大作用, �
     .. image:: img/59498721_p0.jpg
     :alt: 示例图片
 
+视频
+===========
+<video> 是 HTML5 引入的新标签，RST 默认没有这个标签的指令，但可以通过 raw 指令插入原生的 HTML 代码将视频插入页面。
 
+.. raw:: html
+
+    <video src="https://v.qq.com/x/page/b06319g21yt.html" width="100%" controls="controls">
+    </video>
+
+::
+
+    .. raw:: html
+
+        <video src="https://v.qq.com/x/page/b06319g21yt.html" width="100%" controls="controls">
+        </video>
 内联样式
 ========
 
