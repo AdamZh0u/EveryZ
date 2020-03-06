@@ -1,62 +1,29 @@
-^^^^^^^^^
-Methods
-^^^^^^^^^
-
-.. class:: Regression()
-
-    .. method:: gamma
-        
-        文本
-
-        :return: gamma
-        :rtype: float
-
-        :param float v: 速度, 单位 m/s
-
-    .. attribute:: position
-
-        
-
-^^^^^^^^
-Data
-^^^^^^^^
-
-.. data:: GAIA
-
-    ``0``
-
-
 ^^^^^^^^
 Notes
 ^^^^^^^^
+.. tip::
+    文章，方法，语言，数据
+    文章中的问题
+    逻辑
+    思路
+
+    概念：使用样式引用
+    主题和关键词不需要标明，在文章中可以找到
+    加粗主要点
+    没有第二级就不会有第三级
+    类用大写开头
+    方法用小写开头 会带括号
+    属性小写开头 
+
+    danger,tip,caution,note,warning,important,seealso
 
 2010_Seto,Karen
 ##############################
-文章，方法，语言，数据
-文章中的问题
-逻辑
-思路
 
-概念：使用样式引用
-主题和关键词不需要标明，在文章中可以找到
-加粗主要点
-||
-没有第二级就不会有第三级
-类用大写开头
-方法用小写开头 会带括号
-属性小写开头 
 
 文章 `2010 Seto,Karen`_
 
-替换引用 适用于常更新的东西
-|logo|
 
-|example| 替代需要更新的内容
-[#demo]_
-`demo2`_
-
-.. [#demo] as you wish 
-.. _`demo2`: 隐藏
 
 
 2016 Liu,Xingjian
@@ -66,14 +33,11 @@ Notes
     How polycentric is urban China and why? A case study of 318 cities
     Xingjian Liu, Mingshu Wang
 
-danger,tip,caution,note,warning,important,seealso
-
 .. important::
     * Over 90% of cities have four or fewer intra-city centers. 
     * Higher degree of polycentricity is found in mountainous cities. 
     * Polycentricity is positively associated with GDP per capita in Eastern China. 
     * Identified patterns of centers in a number of cities are largely consistent with corresponding master plans.
-
 
 Abstract
 **************
@@ -97,3 +61,31 @@ Intro
 ::
 
     流程
+
+
+
+^^^^^^^^^
+Methods
+^^^^^^^^^
+
+.. class:: Regression()
+
+    .. method:: gamma
+        
+        文本
+
+        :return: gamma
+        :rtype: float
+
+        :param float v: 速度, 单位 m/s
+
+    .. attribute:: position
+
+
+^^^^^^^^
+Data
+^^^^^^^^
+
+.. data:: GAIA
+
+    ``0``

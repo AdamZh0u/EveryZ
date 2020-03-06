@@ -8,7 +8,7 @@ Welcome to The Room of Requirement!
 This is an open source book written for myself to review my tools.
 
 .. toctree::
-    :maxdepth: 4
+    :maxdepth: 1
     :caption: SNA
 
     SNA/10_sphinx_rst.rst
@@ -22,13 +22,13 @@ This is an open source book written for myself to review my tools.
     Snippet/Rhino.rst
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
     :caption: Notes
 
     Notes/10_notes.rst
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
     :caption: Discussion
 
     DIS/11_debate.rst
@@ -39,11 +39,12 @@ This is an open source book written for myself to review my tools.
 
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
     :caption: Daily
 
-    Daily/Daily
     Daily/2020
+..    Daily/Daily
+
 
 Indices and tables
 ==================

@@ -712,6 +712,11 @@ standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), in
 
     .. _example:
 
+.. important::
+    #. 上标：数字 加括号/ * 加括号/ # 加括号 + 引用数字加括号
+    #. 文字标： 文字_ + [文字]
+    #. 隐藏文字标: demo_ + _demo:/ `文字 <www>`_
+    #. 替换引用: |image|+ ..|image| replace:: /
 
 注释(Comments)
 ---------------
