@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7. 19.2.2020 &mdash; EveryThing 2.0.0 文档</title>
+  <title>7. 19.2.2020 &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="1. 1.5.2019" href="Jan20.html" /> 
 </head>
 
@@ -186,10 +185,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><span class="section-number">7. </span>19.2.2020<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">7. </span>19.2.2020<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>奶嘴</p>
 <div class="section" id="gaia">
-<h2><span class="section-number">7.1. </span>下载GAIA<a class="headerlink" href="#gaia" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">7.1. </span>下载GAIA<a class="headerlink" href="#gaia" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://data.ess.tsinghua.edu.cn/data/GAIA/GAIA_1985_2018_00_008.tif&#39;</span>
@@ -213,7 +212,7 @@
 </div>
 </div>
 <div class="section" id="gee">
-<h2><span class="section-number">7.2. </span>如何上传到gee<a class="headerlink" href="#gee" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">7.2. </span>如何上传到gee<a class="headerlink" href="#gee" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install --upgrade google-cloud-storage
 !gsutil ls gs://gaia-zzz/
 
@@ -248,7 +247,7 @@ for lat in lats:
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">7.3. </span>gee 投影<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">7.3. </span>gee 投影<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>gee 使用geotools 库 不支持Interrupted_Goode_Homolosine
 可以使用mollwide
 https://gis.stackexchange.com/questions/272818/google-earth-engine-reprojection-to-non-epsg-defined-crs</p>
@@ -302,7 +301,7 @@ python接口会支持吗？</p>
 </div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">7.4. </span>矢量与栅格总面积是不是相等的？<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">7.4. </span>矢量与栅格总面积是不是相等的？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">boun2</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/China_Provinces&quot;</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="s2">&quot;湖北省&quot;</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>
 
@@ -367,7 +366,7 @@ python接口会支持吗？</p>
 </div>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">7.5. </span>栅格区域太大时切片计算<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">7.5. </span>栅格区域太大时切片计算<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>var b = ee.Array(lslat).reshape([60,1])</p>
 <div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="s2">&quot;SPA&quot;</span>
 <span class="kd">var</span> <span class="nx">boun</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/worldRegion&quot;</span><span class="p">)</span>
@@ -441,7 +440,7 @@ python接口会支持吗？</p>
 </div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">7.6. </span>造掩膜填空<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">7.6. </span>造掩膜填空<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-Javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">region</span> <span class="o">=</span> <span class="s2">&quot;SPA&quot;</span>
 <span class="kd">var</span> <span class="nx">boun</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/worldRegion&quot;</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">eq</span><span class="p">(</span><span class="s2">&quot;Abbrv&quot;</span><span class="p">,</span><span class="nx">region</span><span class="p">)).</span><span class="nx">geometry</span><span class="p">()</span>

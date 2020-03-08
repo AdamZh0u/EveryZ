@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. loglogplot &mdash; EveryThing 2.0.0 文档</title>
+  <title>1. loglogplot &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="R" href="../R.html" />
     <link rel="prev" title="Plots" href="../Plots.html" /> 
 </head>
@@ -178,7 +177,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="loglogplot">
-<h1><span class="section-number">1. </span>loglogplot<a class="headerlink" href="#loglogplot" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">1. </span>loglogplot<a class="headerlink" href="#loglogplot" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loglogplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">labelx</span><span class="o">=</span><span class="s2">&quot;LogPop&quot;</span><span class="p">,</span><span class="n">labely</span><span class="o">=</span><span class="s2">&quot;LogArea&quot;</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
     <span class="n">xd</span><span class="p">,</span><span class="n">yd</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -237,7 +236,7 @@
 <p><img alt="loglogplot" src="../../_images/loglogplot1.png" /></p>
 </div>
 <div class="section" id="scientific-style-plot">
-<h1><span class="section-number">2. </span>Scientific style plot<a class="headerlink" href="#scientific-style-plot" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">2. </span>Scientific style plot<a class="headerlink" href="#scientific-style-plot" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -302,7 +301,7 @@
 <p><img alt="../../_images/CA_FI-rat0_2.0.png" src="../../_images/CA_FI-rat0_2.0.png" /></p>
 </div>
 <div class="section" id="scientific-style">
-<h1><span class="section-number">3. </span>Scientific style<a class="headerlink" href="#scientific-style" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">3. </span>Scientific style<a class="headerlink" href="#scientific-style" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># I:\Home\.matplotlib\stylelib\science.mplstyle</span>
 <span class="c1"># Matplotlib style for general scientific plots</span>
 
@@ -353,7 +352,7 @@
 </div>
 </div>
 <div class="section" id="ieee-style">
-<h1><span class="section-number">4. </span>IEEE style<a class="headerlink" href="#ieee-style" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">4. </span>IEEE style<a class="headerlink" href="#ieee-style" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># Matplotlib style for IEEE plots</span>
 <span class="c1"># This style should work for most two-column journals</span>
@@ -372,7 +371,7 @@
 </div>
 </div>
 <div class="section" id="hdi-ldi">
-<h1><span class="section-number">5. </span>HDI-LDI<a class="headerlink" href="#hdi-ldi" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">5. </span>HDI-LDI<a class="headerlink" href="#hdi-ldi" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -450,7 +449,7 @@
 <p><img alt="../../_images/HDI-LDI-plot_8_31.png" src="../../_images/HDI-LDI-plot_8_31.png" /></p>
 </div>
 <div class="section" id="proportion-and-change-rate">
-<h1><span class="section-number">6. </span>Proportion and change rate<a class="headerlink" href="#proportion-and-change-rate" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">6. </span>Proportion and change rate<a class="headerlink" href="#proportion-and-change-rate" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>

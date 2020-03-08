@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Graphs &mdash; EveryThing 2.0.0 文档</title>
+  <title>3. Graphs &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4. Basic Data Management" href="Day_3_ZZZ.html" />
     <link rel="prev" title="2. Introduction to R" href="Day_1_ZZZ.html" /> 
 </head>
@@ -188,9 +187,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="graphs">
-<h1><span class="section-number">3. </span>Graphs<a class="headerlink" href="#graphs" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">3. </span>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="working-with-graphs">
-<h2><span class="section-number">3.1. </span>Working with Graphs<a class="headerlink" href="#working-with-graphs" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Working with Graphs<a class="headerlink" href="#working-with-graphs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">pdf</span><span class="p">(</span><span class="s">&quot;mygraph.pdf&quot;</span><span class="p">)</span><span class="c1"># set a destination</span>
 <span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
 <span class="nf">plot</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">mpg</span><span class="p">)</span>
@@ -209,7 +208,7 @@
 </div>
 </div>
 <div class="section" id="plot-a-graph">
-<h2><span class="section-number">3.2. </span>Plot a graph<a class="headerlink" href="#plot-a-graph" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Plot a graph<a class="headerlink" href="#plot-a-graph" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">dose</span>  <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">40</span><span class="p">,</span> <span class="m">45</span><span class="p">,</span> <span class="m">60</span><span class="p">)</span>
 <span class="n">drugA</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">16</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">27</span><span class="p">,</span> <span class="m">40</span><span class="p">,</span> <span class="m">60</span><span class="p">)</span>
 <span class="n">drugB</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">15</span><span class="p">,</span> <span class="m">18</span><span class="p">,</span> <span class="m">25</span><span class="p">,</span> <span class="m">31</span><span class="p">,</span> <span class="m">40</span><span class="p">)</span>
@@ -228,7 +227,7 @@
 </div>
 </div>
 <div class="section" id="symbols-and-lines">
-<h2><span class="section-number">3.3. </span>Symbols  and lines<a class="headerlink" href="#symbols-and-lines" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Symbols  and lines<a class="headerlink" href="#symbols-and-lines" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">pch</span><span class="c1"># point style 0-25</span>
 <span class="n">cex</span><span class="c1"># point size</span>
 <span class="n">lty</span><span class="c1"># line style  1-6</span>
@@ -239,7 +238,7 @@
 </div>
 </div>
 <div class="section" id="colors">
-<h2><span class="section-number">3.4. </span>Colors<a class="headerlink" href="#colors" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="c1"># default color</span>
 <span class="n">col.axis</span> <span class="c1"># axis text</span>
 <span class="n">col.lab</span> <span class="c1"># axis label</span>
@@ -282,7 +281,7 @@
 </div>
 </div>
 <div class="section" id="text-characteristics">
-<h2><span class="section-number">3.5. </span>Text characteristics<a class="headerlink" href="#text-characteristics" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Text characteristics<a class="headerlink" href="#text-characteristics" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">cex</span> <span class="c1"># scaled size</span>
 <span class="n">cex.axis</span> <span class="c1"># scaled axis text</span>
 <span class="n">cex.lab</span> <span class="c1"># scaled axis labels</span>
@@ -312,7 +311,7 @@
 </div>
 </div>
 <div class="section" id="graph-and-margin-diemensions">
-<h2><span class="section-number">3.6. </span>Graph and margin diemensions<a class="headerlink" href="#graph-and-margin-diemensions" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Graph and margin diemensions<a class="headerlink" href="#graph-and-margin-diemensions" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">pin</span> <span class="c1"># plot dimensions in inches</span>
 <span class="n">mai</span> <span class="c1"># numerical vector c(bottom, left, top, right) in inches</span>
 <span class="n">mar</span> <span class="c1"># in lines </span>
@@ -329,7 +328,7 @@
 </div>
 </div>
 <div class="section" id="text-customized-axes-legends-titles">
-<h2><span class="section-number">3.7. </span>Text, customized axes, legends, titles<a class="headerlink" href="#text-customized-axes-legends-titles" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.7. </span>Text, customized axes, legends, titles<a class="headerlink" href="#text-customized-axes-legends-titles" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">dose</span><span class="p">,</span> <span class="n">drugA</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;b&quot;</span><span class="p">,</span>  
      <span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span>
      <span class="n">main</span><span class="o">=</span><span class="s">&quot;Clinical Trials for Drug A&quot;</span><span class="p">,</span> 
@@ -396,7 +395,7 @@
 </div>
 </div>
 <div class="section" id="combining-graphs">
-<h2><span class="section-number">3.8. </span>Combining graphs<a class="headerlink" href="#combining-graphs" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">3.8. </span>Combining graphs<a class="headerlink" href="#combining-graphs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">nrows</span><span class="p">,</span><span class="n">ncols</span><span class="p">))</span><span class="c1"># fill by rows</span>
 <span class="nf">hist</span><span class="p">(</span><span class="n">ann</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># suppress all titles and labels</span>
 

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Advanced data management &mdash; EveryThing 2.0.0 文档</title>
+  <title>5. Advanced data management &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="6. Basic graphs" href="Day_5_ZZZ.html" />
     <link rel="prev" title="4. Basic Data Management" href="Day_3_ZZZ.html" /> 
 </head>
@@ -196,11 +195,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="advanced-data-management">
-<h1><span class="section-number">5. </span>Advanced data management<a class="headerlink" href="#advanced-data-management" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">5. </span>Advanced data management<a class="headerlink" href="#advanced-data-management" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="numerical-and-character-functions">
-<h2><span class="section-number">5.1. </span>Numerical and character functions<a class="headerlink" href="#numerical-and-character-functions" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Numerical and character functions<a class="headerlink" href="#numerical-and-character-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mathematical-functions">
-<h3><span class="section-number">5.1.1. </span>Mathematical functions<a class="headerlink" href="#mathematical-functions" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span>Mathematical functions<a class="headerlink" href="#mathematical-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nf">ceiling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="nf">floor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nf">trunc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="nf">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
@@ -211,7 +210,7 @@
 </div>
 </div>
 <div class="section" id="statistical-functions">
-<h3><span class="section-number">5.1.2. </span>Statistical functions<a class="headerlink" href="#statistical-functions" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.2. </span>Statistical functions<a class="headerlink" href="#statistical-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">trim</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 <span class="nf">mean</span><span class="p">()</span>  <span class="nf">median</span><span class="p">()</span> <span class="nf">sd</span><span class="p">()</span> <span class="nf">var</span><span class="p">()</span> 
 <span class="nf">mad</span><span class="p">()</span> <span class="c1">## median absolute deviation</span>
@@ -225,7 +224,7 @@
 </div>
 </div>
 <div class="section" id="probability-functions">
-<h3><span class="section-number">5.1.3. </span>Probability functions<a class="headerlink" href="#probability-functions" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.3. </span>Probability functions<a class="headerlink" href="#probability-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">[dpqr</span><span class="nf">]distribution_abbreviation</span><span class="p">()</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">density</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">distribution</span> <span class="n">function</span>
@@ -264,7 +263,7 @@
 </pre></div>
 </div>
 <div class="section" id="setting-the-seed-for-random-number-generation">
-<h4><span class="section-number">5.1.3.1. </span>Setting the seed for random number generation<a class="headerlink" href="#setting-the-seed-for-random-number-generation" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">5.1.3.1. </span>Setting the seed for random number generation<a class="headerlink" href="#setting-the-seed-for-random-number-generation" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">runif</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
 <span class="nf">set.seed</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 <span class="nf">runif</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
@@ -272,7 +271,7 @@
 </div>
 </div>
 <div class="section" id="generating-multivariate-normal-data">
-<h4><span class="section-number">5.1.3.2. </span>Generating multivariate normal data<a class="headerlink" href="#generating-multivariate-normal-data" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">5.1.3.2. </span>Generating multivariate normal data<a class="headerlink" href="#generating-multivariate-normal-data" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">digits</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
 <span class="nf">set.seed</span><span class="p">(</span><span class="m">12</span><span class="p">)</span>
@@ -290,7 +289,7 @@
 </div>
 </div>
 <div class="section" id="character-functions">
-<h3><span class="section-number">5.1.4. </span>Character functions<a class="headerlink" href="#character-functions" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.4. </span>Character functions<a class="headerlink" href="#character-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># number of characters</span>
 <span class="nf">nchar</span><span class="p">()</span>
 <span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;ab&quot;</span><span class="p">,</span> <span class="s">&quot;cde&quot;</span><span class="p">,</span> <span class="s">&quot;fghij&quot;</span><span class="p">)</span>
@@ -324,7 +323,7 @@
 </div>
 </div>
 <div class="section" id="useful-functions">
-<h3><span class="section-number">5.1.5. </span>Useful functions<a class="headerlink" href="#useful-functions" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.5. </span>Useful functions<a class="headerlink" href="#useful-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">()</span>
 <span class="nf">seq</span><span class="p">(</span><span class="n">from</span><span class="p">,</span><span class="n">to</span><span class="p">,</span><span class="n">by</span><span class="p">)</span>
 
@@ -355,7 +354,7 @@
 </div>
 </div>
 <div class="section" id="applying-functions-to-matrices-and-data-frame">
-<h3><span class="section-number">5.1.6. </span>Applying functions to matrices and data frame<a class="headerlink" href="#applying-functions-to-matrices-and-data-frame" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.1.6. </span>Applying functions to matrices and data frame<a class="headerlink" href="#applying-functions-to-matrices-and-data-frame" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># apply</span>
 <span class="nf">apply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">MARGIN</span><span class="p">,</span> <span class="n">FUN</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
 <span class="c1"># margin : demension</span>
@@ -368,7 +367,7 @@
 </div>
 </div>
 <div class="section" id="a-solution-for-the-data-management-challenge">
-<h2><span class="section-number">5.2. </span>A solution for the data-management challenge<a class="headerlink" href="#a-solution-for-the-data-management-challenge" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.2. </span>A solution for the data-management challenge<a class="headerlink" href="#a-solution-for-the-data-management-challenge" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">digits</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>  
  <span class="n">Student</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;John Davis&quot;</span><span class="p">,</span> <span class="s">&quot;Angela Williams&quot;</span><span class="p">,</span> <span class="s">&quot;Bullwinkle Moose&quot;</span> <span class="p">,</span><span class="s">&quot;David Jones&quot;</span><span class="p">,</span> <span class="s">&quot;Janice Markhammer&quot;</span><span class="p">,</span> <span class="s">&quot;Cheryl Cushing&quot;</span> <span class="p">,</span><span class="s">&quot;Reuven Ytzrhak&quot;</span><span class="p">,</span> <span class="s">&quot;Greg Knox&quot;</span><span class="p">,</span> <span class="s">&quot;Joel England&quot;</span><span class="p">,</span><span class="s">&quot;Mary Rayburn&quot;</span><span class="p">)</span>                                      
 <span class="n">Math</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">502</span><span class="p">,</span> <span class="m">600</span><span class="p">,</span> <span class="m">412</span><span class="p">,</span> <span class="m">358</span><span class="p">,</span> <span class="m">495</span><span class="p">,</span> <span class="m">512</span><span class="p">,</span> <span class="m">410</span><span class="p">,</span> <span class="m">625</span><span class="p">,</span> <span class="m">573</span><span class="p">,</span> <span class="m">522</span><span class="p">)</span>       
@@ -396,7 +395,7 @@
 </div>
 </div>
 <div class="section" id="control-flow">
-<h2><span class="section-number">5.3. </span>Control flow<a class="headerlink" href="#control-flow" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">## repetition and looping</span>
 <span class="nf">for </span><span class="p">(</span><span class="n">var</span> <span class="n">in</span> <span class="n">seq</span><span class="p">)</span> <span class="n">statement</span>
 <span class="nf">while </span><span class="p">(</span><span class="n">cond</span><span class="p">)</span> <span class="n">statement</span>
@@ -409,7 +408,7 @@
 </div>
 </div>
 <div class="section" id="user-written-functions">
-<h2><span class="section-number">5.4. </span>User-written functions<a class="headerlink" href="#user-written-functions" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.4. </span>User-written functions<a class="headerlink" href="#user-written-functions" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">myfunction</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">,</span><span class="kc">...</span><span class="p">){</span>
 	<span class="n">statements</span>
     <span class="nf">return</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
@@ -455,7 +454,7 @@
 </div>
 </div>
 <div class="section" id="aggregation-and-reshaping">
-<h2><span class="section-number">5.5. </span>Aggregation and reshaping<a class="headerlink" href="#aggregation-and-reshaping" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Aggregation and reshaping<a class="headerlink" href="#aggregation-and-reshaping" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span> <span class="o">&lt;-</span> <span class="n">mtcars[1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="n">]</span>
 <span class="nf">t</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span> <span class="c1">## transpose</span>
 
@@ -468,7 +467,7 @@
 </pre></div>
 </div>
 <div class="section" id="reshape2">
-<h3><span class="section-number">5.5.1. </span>Reshape2<a class="headerlink" href="#reshape2" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">5.5.1. </span>Reshape2<a class="headerlink" href="#reshape2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">reshape2</span><span class="p">)</span>
 <span class="c1">#melting</span>
 <span class="n">md</span> <span class="o">&lt;-</span> <span class="nf">melt</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="n">id</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">,</span> <span class="s">&quot;Time&quot;</span><span class="p">))</span>

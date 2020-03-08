@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Function &mdash; EveryThing 2.0.0 文档</title>
+  <title>1. Function &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -166,9 +165,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="function">
-<h1><span class="section-number">1. </span>Function<a class="headerlink" href="#function" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">1. </span>Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="function-compute-area">
-<h2><span class="section-number">1.1. </span>function compute area<a class="headerlink" href="#function-compute-area" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.1. </span>function compute area<a class="headerlink" href="#function-compute-area" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">Cities</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/Boundries/China_Cities&quot;</span><span class="p">)</span>
 <span class="nx">print</span><span class="p">(</span><span class="nx">Cities</span><span class="p">);</span>
 
@@ -184,7 +183,7 @@
 </div>
 </div>
 <div class="section" id="function-compute-ndvi">
-<h2><span class="section-number">1.2. </span>function compute NDVI<a class="headerlink" href="#function-compute-ndvi" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.2. </span>function compute NDVI<a class="headerlink" href="#function-compute-ndvi" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">L8</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;LANDSAT/LC08/C01/T1_TOA&quot;</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">(</span><span class="mf">107.193</span><span class="p">,</span><span class="mf">29.1373</span><span class="p">))</span>
   <span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s2">&quot;2019-01-01&quot;</span><span class="p">,</span><span class="s2">&quot;2020-01-01&quot;</span><span class="p">)</span>

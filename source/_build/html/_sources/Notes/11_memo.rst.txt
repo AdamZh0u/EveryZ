@@ -1,0 +1,8 @@
+.. note::
+    Geographical Analysis 是什么
+    影响因子不高但是被引用数这么高
+
+    Local indicators of spatial association—LISA
+    Luc Anselin google引用7万次
+
+    Spatial econometrics: methods and models

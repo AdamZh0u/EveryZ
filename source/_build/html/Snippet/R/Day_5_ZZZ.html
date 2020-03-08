@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Basic graphs &mdash; EveryThing 2.0.0 文档</title>
+  <title>6. Basic graphs &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Notes" href="../../Notes/10_notes.html" />
     <link rel="prev" title="5. Advanced data management" href="Day_4_ZZZ.html" /> 
 </head>
@@ -197,11 +196,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="basic-graphs">
-<h1><span class="section-number">6. </span>Basic graphs<a class="headerlink" href="#basic-graphs" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">6. </span>Basic graphs<a class="headerlink" href="#basic-graphs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="bar-plot">
-<h2><span class="section-number">6.1. </span>Bar plot<a class="headerlink" href="#bar-plot" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Bar plot<a class="headerlink" href="#bar-plot" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="simple-bar-plot">
-<h3><span class="section-number">6.1.1. </span>Simple bar plot<a class="headerlink" href="#simple-bar-plot" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.1.1. </span>Simple bar plot<a class="headerlink" href="#simple-bar-plot" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
 <span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">)</span>
 <span class="n">counts</span>
@@ -221,7 +220,7 @@
 </div>
 </div>
 <div class="section" id="stacked-and-grouped-bar-plot">
-<h3><span class="section-number">6.1.2. </span>Stacked and grouped bar plot<a class="headerlink" href="#stacked-and-grouped-bar-plot" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.1.2. </span>Stacked and grouped bar plot<a class="headerlink" href="#stacked-and-grouped-bar-plot" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">,</span> <span class="n">Arthritis</span><span class="o">$</span><span class="n">Treatment</span><span class="p">)</span>
 <span class="n">counts</span>
 <span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span>                  
@@ -238,7 +237,7 @@
 </div>
 </div>
 <div class="section" id="mean-bar-plot">
-<h3><span class="section-number">6.1.3. </span>Mean bar plot<a class="headerlink" href="#mean-bar-plot" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.1.3. </span>Mean bar plot<a class="headerlink" href="#mean-bar-plot" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">state.region</span><span class="p">,</span> <span class="n">state.x77</span><span class="p">)</span>
 
 <span class="n">means</span> <span class="o">&lt;-</span> <span class="nf">aggregate</span><span class="p">(</span><span class="n">states</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">state.region</span><span class="p">),</span> <span class="n">FUN</span><span class="o">=</span><span class="n">mean</span><span class="p">)</span>
@@ -250,7 +249,7 @@
 </div>
 </div>
 <div class="section" id="tweaking-bar-plot">
-<h3><span class="section-number">6.1.4. </span>Tweaking bar plot<a class="headerlink" href="#tweaking-bar-plot" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.1.4. </span>Tweaking bar plot<a class="headerlink" href="#tweaking-bar-plot" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>                    
 <span class="nf">par</span><span class="p">(</span><span class="n">las</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>                  
 <span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Arthritis</span><span class="o">$</span><span class="n">Improved</span><span class="p">)</span> 
@@ -264,7 +263,7 @@
 </div>
 </div>
 <div class="section" id="spinograms">
-<h3><span class="section-number">6.1.5. </span>Spinograms<a class="headerlink" href="#spinograms" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.1.5. </span>Spinograms<a class="headerlink" href="#spinograms" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
 <span class="nf">attach</span><span class="p">(</span><span class="n">Arthritis</span><span class="p">)</span>
 <span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">Treatment</span><span class="p">,</span> <span class="n">Improved</span><span class="p">)</span>
@@ -275,7 +274,7 @@
 </div>
 </div>
 <div class="section" id="pie-chart">
-<h2><span class="section-number">6.2. </span>Pie chart<a class="headerlink" href="#pie-chart" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Pie chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>             
 <span class="n">slices</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span><span class="m">4</span><span class="p">,</span> <span class="m">16</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span>    
 <span class="n">lbls</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;US&quot;</span><span class="p">,</span> <span class="s">&quot;UK&quot;</span><span class="p">,</span> <span class="s">&quot;Australia&quot;</span><span class="p">,</span> <span class="s">&quot;Germany&quot;</span><span class="p">,</span> <span class="s">&quot;France&quot;</span><span class="p">)</span>   
@@ -303,7 +302,7 @@
 </div>
 </div>
 <div class="section" id="histogram">
-<h2><span class="section-number">6.3. </span>Histogram<a class="headerlink" href="#histogram" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
 <span class="nf">hist</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">)</span>             
 <span class="nf">hist</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span>                 
@@ -334,7 +333,7 @@
 </div>
 </div>
 <div class="section" id="kernel-density-plot">
-<h2><span class="section-number">6.4. </span>Kernel density plot<a class="headerlink" href="#kernel-density-plot" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Kernel density plot<a class="headerlink" href="#kernel-density-plot" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
 <span class="n">d</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">)</span>   
 <span class="nf">plot</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>                   
@@ -359,12 +358,12 @@
 </div>
 </div>
 <div class="section" id="box-plots">
-<h2><span class="section-number">6.5. </span>Box plots<a class="headerlink" href="#box-plots" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Box plots<a class="headerlink" href="#box-plots" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R\ notranslate"><div class="highlight"><pre><span></span>boxplot(mtcars$mpg, main=&quot;Box plot&quot;, ylab=&quot;Miles per Gallon&quot;)
 </pre></div>
 </div>
 <div class="section" id="parallel-box-plot">
-<h3><span class="section-number">6.5.1. </span>Parallel box plot<a class="headerlink" href="#parallel-box-plot" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">6.5.1. </span>Parallel box plot<a class="headerlink" href="#parallel-box-plot" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dataframe</span><span class="p">)</span>
 
 <span class="nf">boxplot</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">cyl</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">mtcars</span><span class="p">,</span>
@@ -399,7 +398,7 @@
 </div>
 </div>
 <div class="section" id="violin-plot">
-<h2><span class="section-number">6.6. </span>Violin plot<a class="headerlink" href="#violin-plot" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.6. </span>Violin plot<a class="headerlink" href="#violin-plot" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vioplot</span><span class="p">)</span>
 <span class="n">x1</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg[mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">4</span><span class="n">]</span> 
 <span class="n">x2</span> <span class="o">&lt;-</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg[mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="o">==</span><span class="m">6</span><span class="n">]</span>
@@ -413,7 +412,7 @@
 </div>
 </div>
 <div class="section" id="dot-plot">
-<h2><span class="section-number">6.7. </span>Dot plot<a class="headerlink" href="#dot-plot" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">6.7. </span>Dot plot<a class="headerlink" href="#dot-plot" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">dotchart</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">row.names</span><span class="p">(</span><span class="n">mtcars</span><span class="p">),</span> <span class="n">cex</span><span class="o">=</span><span class="m">.7</span><span class="p">,</span>
          <span class="n">main</span><span class="o">=</span><span class="s">&quot;Gas Mileage for Car Models&quot;</span><span class="p">,</span> 
          <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Miles Per Gallon&quot;</span><span class="p">)</span>

@@ -19,14 +19,9 @@ Notes
 
     alt+<-
 
-2010_Seto,Karen
-##############################
+    碰到一个名词，想想自己知不知道，真的知道了吗？
 
-
-文章 `2010_Seto,Karen`_
-
-
-
+    论文那么多 focus最重要
 
 2016 Liu,Xingjian
 #######################
@@ -34,6 +29,7 @@ Notes
 
     How polycentric is urban China and why? A case study of 318 cities
     Xingjian Liu, Mingshu Wang
+    Landscape and urban planning
 
 .. important::
     * Over 90% of cities have four or fewer intra-city centers. 
@@ -82,11 +78,16 @@ data and study area
 Our analysis starts with 364 Mainland Chinese cities at the prefectural level and above. **To ease comprehension for international readers, the nature of a prefecture-level city needs some clarification** (see Li, 2014 for a comprehensive review of the Chinese planning and administrative system): Within the Chinese administrative division system, a prefectural-level city (di ji shi) ranks below a provincial-level unit but above county-level units. A prefectural level city usually comprises of core urban districts and their surrounding region which in turn contains districts, county-level cities, counties, towns, and/or other sub-divisions. In other words, a Chinese prefectural city resembles an intra-city urban system, consisting of a central urban area and outlying urbanized areas such as the seats of counties. In addition to prefecture-level cities, our analysis includes four `municipalities`_ under direct control of the central government (i.e., Beijing, Tianjing, Shanghai, and Chongqing), which have the same administrative ranks as provinces. 
 
 .. _`municipalities`: 直辖市
+
 .. seealso::
-    `2014 Yu,Li`_
+    2014 Yu,Li 各种行政城市是如何定义的
+    Chinese city and regional planning systems
+    于立
+
 .. warning::
     于立 应该是Yu,Li 2014
     prefecture-level cities，prefectural level city，prefectural-level city
+
 .. tip::
     To ease comprehension for international readers
 
@@ -115,28 +116,62 @@ City-level Gross Domestic Product (GDP) and population statistics for 2012 are c
 .. tip::
     Following the definition of Chinese macro-regions in Fan and Sun
 
-
-
 Defining and measuring polycentricity
 ========================================
-We employ a straightforward and morphological definition of polycentricity (Halbert et al., 2006). The polycentricity of individual cities is measured based on the size and distribution of intra-city centers; a city is deemed more polycentric if it is characterized by a more balanced distribution of centers (Meijers & Burger, 2010; Musterd & Kloosterman, 2001; Parr, 2004). In other words, a polycentric city would be consist of a group of urban centers with a relatively even distribution of importance. Various urban characteristics have been employed to approximate the ‘importance’ of individual centers, such as population size, employment counts, and GDP (Batty, 2013; Meijers & Burger, 2010). In addition, we are aware of the functional, relational, and political dimensions of polycentricity (Halbert et al., 2006; Liu, Derudder et al., 2015). Although these perspectives generate more nuanced understandings of polycentric cities, they usually have higher data requirements. For example, functional and relational approaches to polycentricity require information about the flows of people, information and goods among individual centers. However, measuring intra-city flows is difficult, especially for a large number of cities (Liu, Derudder et al., 2015). Still, there is usually a positive association between morphological and other forms of polycentricity (Burger & Meijers, 2012; Vasanen, 2012). Therefore, our analysis adopts a morphological definition of polycentricity.
+We employ a straightforward and morphological definition of polycentricity (Halbert et al., 2006). The polycentricity of individual cities is measured based on the size and distribution of intra-city centers; a city is deemed more polycentric if it is characterized by a more balanced distribution of centers (Meijers & Burger, 2010; Musterd & Kloosterman, 2001; Parr, 2004). In other words, a polycentric city would be consist of a group of urban centers with a relatively even distribution of importance. Various urban characteristics have been employed to approximate the ‘importance’ of individual centers, such as population size, employment counts, and GDP (Batty, 2013; Meijers & Burger, 2010). In addition, we are aware of the functional, relational, and political dimensions of polycentricity (Halbert et al., 2006; Liu, Derudder et al., 2015). **Although these perspectives generate more nuanced understandings of polycentric cities, they usually have higher data requirements.** For example, functional and relational approaches to polycentricity require information about the flows of people, information and goods among individual centers. However, measuring intra-city flows is difficult, especially for a large number of cities (Liu, Derudder et al., 2015). Still, there is usually a positive association between morphological and other forms of polycentricity (Burger & Meijers, 2012; Vasanen, 2012). Therefore, our analysis adopts a morphological definition of polycentricity.
 
-Polycentricity can also be measured in a number of different ways. A first rank-size based method characterizes polycentricity by either the slope of the regression line that characterizes the rank-size distribution of centers within a city (Batty, 2008; Meijers & Burger, 2010), and/or the degree to which the largest center deviates from the rank-size distribution (Meijers, 2008). A number of modifications and improvements have been proposed to rank-size based methods, such as estimating polycentricity based on the second, third and fourth largest (sub) centers within a given city (Meijers & Burger, 2010); and transforming the actual rank to reduce small sample bias (Gabaix & Ibragimov, 2011). However, it is difficult to normalize polycentricity measures produced by rank- size based methods, making the interpretation less straightforward (Green, 2007). 
+Polycentricity can also be measured in a number of different ways. A first rank-size based method characterizes polycentricity by either the slope of the regression line that characterizes the rank-size distribution of centers within a city (Batty, 2008; Meijers & Burger, 2010), and/or the degree to which the largest center deviates from the rank-size distribution (Meijers, 2008). A number of modifications and improvements have been proposed to rank-size based methods, such as estimating polycentricity based on the second, third and fourth largest (sub) centers within a given city (Meijers & Burger, 2010); and transforming the actual rank to reduce small sample bias (Gabaix & Ibragimov, 2011). However, it is difficult to normalize polycentricity measures produced by rank-size based methods, making the interpretation less straightforward (Green, 2007). 
 
-A second type of polycentricity indices draws upon (in) equality measures, such as the Gini Coefficient (Combes & Overman, 2004). More recently, Pereira, Nadalin, Monasterio, and Albuquerque (2013) have reviewed the shortcomings of existing (in) equality measures and propose a new urban centrality index (UCI) to gauge the degree of centrality/polycentricity. Nevertheless, the calcula- tion of UCI is computationally intensive for gridded data as the process involves computing pairwise distances among all grids.
+A second type of polycentricity indices draws upon (in) equality measures, such as the Gini Coefficient (Combes & Overman, 2004). More recently, Pereira, Nadalin, Monasterio, and Albuquerque (2013) have reviewed the shortcomings of existing (in) equality measures and propose a new urban centrality index (UCI) to gauge the degree of centrality/polycentricity. Nevertheless, the calculation of UCI is computationally intensive for gridded data as the process involves computing pairwise distances among all grids.
 
 Therefore, we adopt a third polycentricity indicator which is defined by examining the standard deviation of (the size of) (sub) centers (Green, 2007; Liu, Derudder, et al., 2015)
 
 .. math:: P = 1-\frac{\sigma_{obs}}{\sigma_{max}}
 
-where P represents the morphological polycentricity of a city; ?obs represents the standard deviation of ‘importance’ (for example, measured in population and GDP) of individual centers within the city; and ?max is the standard deviation of ‘importance’ in a two- center city where one center has ‘no importance’ and the other has the maximum observed ‘importance’. This method generates a normalized polycentricity measure; the theoretical value of P ranges from 0 to 1, with a value of zero denoting a total lack of polycentricity within the corresponding city and one suggesting a city consisted of several centers of the same size. According to Eq. (1), cities with only one center would have a polycentricity score of zero. Furthermore, indices such as the number of centers and the proportion of population in the largest center have been employed in previous studies (e.g., Lee & Lee, 2014) to gauge polycentricity and will be reported as supplementary measurements.
+.. note::
+    度量多中心性的方法
+
+    #. 使用rank-size的指数，但是这种方法难以标准化，解释不直接。
+    #. 使用不平衡指数测度，但是这种方法computationally intensive,要计算格网间的两两距离。
+    #. 第三种方法
+
+
+.. seealso::
+    #. 2010 Meijers,EJ 
+    #. 2008 Batty,Micheal science  The Size, Scale, and Shape of Cities
+    #. UCI Pereira, Nadalin, Monasterio, and Albuquerque (2013)
+    
+    Spatial structure and productivity in US metropolitan areas
+    EJ Meijers, MJ Burger 
+    Environment and planning A.
 
 
 Identifying centers
 ======================
+Our measurement of polycentricity is based on the identification of centers. In the study of urban form, **a working definition of centers is a cluster of analytic units (be they census tracts or grids) that have significantly higher density of population, employment and/or business than surrounding areas** (Leslie, 2010). As implied above, centers identified in our approach would include both core urban districts (such as CBDs) and subcenters (such as satellite towns and edge cities). There is a rich literature in identifying urban centers, using different criteria (e.g., population size, employment size, and land use mix) and based on different spatial units (e.g., census tract and regular grids; Cervero, 1989; Lee, 2007). Conventional meth- ods apply single cut-offs on different attributes, such as population and employment counts (Giuliano & Small, 1991). The key shortcoming of this single (absolute) minimum cut-off approach is that there are no one-size-fits-all criteria for all cities. As a corollary, diverse urban development patterns in China make it difficult to adopt this single cut-off approach.** More recent studies use relative criteria of varied types, including adapted criteria (Lee, 2007), spatial statistical (McMillen, 2001), Kernel density (Leslie, 2010), and spatial clustering (Vasanen, 2012) methods.**
+
+.. note::
+    如何定义城市中心
+
+    #. 传统方法采用简单的一刀切
+    #. criteria (Lee, 2007), spatial statistical (McMillen, 2001), Kernel density (Leslie, 2010), and spatial clustering (Vasanen, 2012) methods.
+
+.. seealso::
+    #. 2007 lee Edge or edgeless cities? Urban spatial structure in us metropolitan areas, 1980–2000. Journal of Regional Science
+    #. McMillen, D. P. (2001). Nonparametric employment subcenter identification. Journal of Urban Economics, 50(3), 448–473.
+    #. Leslie, T. (2010). Identification and differentiation of urban centers in Phoenix throught a multi-criteria kernel-density approach. International Regional Science Review, 33, 205–235
+    #. Vasanen, A. (2012). Functional polycentricity: examining metropolitan spatial structure through the connectivity of urban sub-centres. Urban Studies, 49(16), 3627–3644.
+
+
+Following Lee (2007), we adopt a relative minimum cut-off approach. For each city, we identify densely populated LandScan grids by set a minimum density cutoffs at the level of its 95- percentile population density (i.e., selecting the top 5% of most densely populated LandScan grids within a city). This threshold is set to 90-percentile for Beijing, Shanghai, Guangzhou, Shenzhen and Tianjin. The rationale for applying such a ``hybrid criteria`` is based on an analysis of density profiles. A city’s density profile is created based on the distribution of population density in individual grids within the corresponding city. Kolmogorov-Smirnov tests :meth:`kolmogorov_smirnov_tests` are employed to assess whether two cities’ density profiles :meth:`profile` are significantly different from each other. Results suggest that the density profiles of the five cities mentioned above (i.e., Beijing, Shanghai, Guangzhou, Shenzhen and Tianjin) are less similar to those of other cities. In addition, a visual inspection suggests that the density profiles of these five cities follow a bimodal distribution :meth:`biomodel_distribution`, while other Chinese cities usually have one ‘peak’ in their density profiles. Consequently, having a lower minimum cutoff (90-percentile instead of 95-percentile) would help us to characterize the bimodal density profiles of these five cities. Furthermore, a sensitivity analysis :meth:`sensitivity_analysis` is reported in section 2.6 to assess whether employing separate thresholds for the five cities would significantly affect our results. Once identified, significantly dense population grids that are adjacent to each other (i.e., rook contiguity) are combined to form clusters. We then define ‘centers’ as those clusters of grids that contain more than 100,000 inhabitants and include at least three grids. The population size of individual centers in a city is inserted into Equitation 1 to calculate polycentricity. 
+
+A ``preliminary experiment`` suggests that individual centers identified by our cut-off based approach are mostly large and spatially separated urbanized areas within a prefectural level city, such as the core urban districts, county-level cities, county seas, and new towns/districts (See for example, Figs. 3 and 4 ). In other words, our polycentricity measure tends to characterize the spatial structure of urbanized areas (i.e., intra-city urban systems) within a prefecture-level city rather than individual clusters of population within the urban core.(我们的多中心测度倾向于表征在地级市内部的城市化区域的空间结构(即城市内空间结构)，而不是城市核心内的单个人口集群。) **Nevertheless, this focus on intra-city urban systems coincides with the geographical scale of many plans and policies that aim to foster polycentricity**(尽管如此，这种对城市内部系统的关注与许多旨在促进多中心的计划和政策的地理范围是一致的). For example, polycentric urban patterns are oftentimes pursued through establishing/developing new towns and districts outside the old city centers in Beijing, Tianjin, and Shanghai (e.g., Sun & Wei, 2015).
 
 Regression analysis
 ==========================
+We conduct an exploratory regression analysis to assess the association between Green’s polycentricity index (P) and physi- cal (Curvature) and socioeconomic factors (GDP per capita;GDP). This regression analysis would help us generate preliminary but important hypotheses regarding the formation of polycentric cities. As we have grouped Chinese cities into three regions, a categori- cal variable (Region) is introduced to capture regional differences. Total land area for each city (Area) is also included as a control variable. Our curvature measure reflects a second order deriva- tive of DEM, indicating the marginal change of landscape slope. Therefore, within a given city, the standard deviation of the cur- vature of landform represents the dispersion of the marginal slope change, depicting the overall topographical characteristics of that city. We take logarithm of total area and GDP per capita to scale all variables in a similar magnitude. We note that our regression analysis is largely exploratory and future analysis could incorpo- rate additional theoretically informed variables. We have employed a forward model selection strategy. Results for both intermediate and full models are reported in Table 3, with the full model taking the following form:
+
+.. math:: P=\beta_0+\beta_1*\log{(GDP)}+\beta_2*\log{(Area)}+\beta_3*Curvature+\beta_4*Region+\beta_5*\log{(GDP)}*Region
 
 Sensitivity analysis
 ========================
@@ -172,19 +207,49 @@ Definition
 
 
 
-2014 Yu,Li
-====================
-::
-    Chinese city and regional planning systems
-    于立
+
+
+
 
 
 
 ^^^^^^^^^
 Methods
 ^^^^^^^^^
-
 .. class:: Regression()
+
+    .. method:: 
+
+
+.. class:: Stat()
+
+    .. method:: profile
+
+        `通过分布判断`
+
+    .. method:: biomodel_distribution
+
+        双峰分布
+    
+    .. method:: sensitivity_analysis
+
+        敏感性分析 评价是否有影响
+
+    .. method:: kolmogorov_smirnov_tests
+
+        KS检验 检验是否符合某种分布或者两个分布是否相同
+        t-检验的假设是检验的数据满足正态分布，否则对于小样本不满足正态分布的数据用t-检验就会造成较大的偏差，虽然对于大样本不满足正态分布的数据而言t-检验还是相当精确有效的手段。
+
+.. note::
+    https://www.cnblogs.com/arkenstone/p/5496761.html
+    经常使用的拟合优度检验和Kolmogorov-Smirnov检验的检验功效较低，在许多计算机软件的Kolmogorov-Smirnov检验无论是大小样本都用大样本近似的公式，很不精准，一般使用Shapiro-Wilk检验和Lilliefor检验。
+    Kolmogorov-Smirnov检验只能检验是否一个样本来自于一个已知样本，而Lilliefor检验可以检验是否来自未知总体。
+    Shapiro-Wilk检验和Lilliefor检验都是进行大小排序后得到的，所以易受异常值的影响。
+    Shapiro-Wilk检验只适用于小样本场合（3≤n≤50）,其他方法的检验功效一般随样本容量的增大而增大。
+    拟合优度检验和Kolmogorov-Smirnov检验都采用实际频数和期望频数进行检验，前者既可用于连续总体，又可用于离散总体，而Kolmogorov-Smirnov检验只适用于连续和定量数据。
+    拟合优度检验的检验结果依赖于分组，而其他方法的检验结果与区间划分无关。
+
+.. class:: demo()
 
     .. method:: gamma
         
@@ -196,7 +261,6 @@ Methods
         :param float v: 速度, 单位 m/s
 
     .. attribute:: position
-
 
 ^^^^^^^^
 Data

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GULD Framework &mdash; EveryThing 2.0.0 文档</title>
+  <title>GULD Framework &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -168,9 +167,9 @@
   <hr class="docutils" />
 <p>![TOC]</p>
 <div class="section" id="guld-framework">
-<h1>GULD Framework<a class="headerlink" href="#guld-framework" title="永久链接至标题">¶</a></h1>
+<h1>GULD Framework<a class="headerlink" href="#guld-framework" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="title">
-<h2>title<a class="headerlink" href="#title" title="永久链接至标题">¶</a></h2>
+<h2>title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h2>
 <p>Urban land density and urban form: a global comparative analysis of
 across Time and Space
 using google earth engine
@@ -179,7 +178,7 @@ over the past three decades
 A longitudinal study of changes</p>
 </div>
 <div class="section" id="introduction">
-<h2>1 Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h2>
+<h2>1 Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>预测2030年会有三倍多的城市增长，这些增长会发生在哪里
 过去30年，城市增长发生在城市内部还是外部
 不同规模城市表现出的差异</p>
@@ -190,18 +189,18 @@ A longitudinal study of changes</p>
 在全球尺度上讨论城市扩张模式变得可能</p>
 </div>
 <div class="section" id="data-and-methods">
-<h2>2 Data and methods<a class="headerlink" href="#data-and-methods" title="永久链接至标题">¶</a></h2>
+<h2>2 Data and methods<a class="headerlink" href="#data-and-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h3>2.1 确定中心点<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<h3>2.1 确定中心点<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id2">
-<h4>方案一：分区域 人口识别<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h4>
+<h4>方案一：分区域 人口识别<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>ranksize
 以LandScan数据为主
 手动调整 分区 逐一识别
 https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/</p>
 </div>
 <div class="section" id="id3">
-<h4>方案二：用空间的土地利用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
+<h4>方案二：用空间的土地利用<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>焦点统计后 用2015年数据
 1密度大于10% 的斑块面积&gt;50km2  2400个 小城市 中等城市 大城市
 2包含密度大于50%的区域</p>
@@ -210,7 +209,7 @@ https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-pl
 例如加州</p>
 </div>
 <div class="section" id="id4">
-<h4>方案三：从人口入手<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<h4>方案三：从人口入手<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>GPW
 https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-population-estimates-rev11</p></li>
@@ -230,7 +229,7 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 </div>
 </div>
 <div class="section" id="id5">
-<h3>2.2 分区<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<h3>2.2 分区<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>面积阈值计算斑块
 分区计算中心</p>
 <ul class="simple">
@@ -240,7 +239,7 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 <p>http://www.citypopulation.de/</p>
 </div>
 <div class="section" id="defining-and-measuring-urban-area">
-<h3>2.1 Defining and measuring urban area<a class="headerlink" href="#defining-and-measuring-urban-area" title="永久链接至标题">¶</a></h3>
+<h3>2.1 Defining and measuring urban area<a class="headerlink" href="#defining-and-measuring-urban-area" title="Permalink to this headline">¶</a></h3>
 <p>通过人口和经济定义城市非常不准确
 提取中心
 这个中心接近2018年的中心
@@ -248,7 +247,7 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 叠加看看这个中心行不行？</p>
 </div>
 <div class="section" id="density">
-<h3>2.2 Density<a class="headerlink" href="#density" title="永久链接至标题">¶</a></h3>
+<h3>2.2 Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
 <p>中心做圈层</p>
 <ul class="simple">
 <li><p>美国和一些大城市拿出来单独做</p></li>
@@ -264,16 +263,16 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 </div>
 </div>
 <div class="section" id="results">
-<h2>3 Results<a class="headerlink" href="#results" title="永久链接至标题">¶</a></h2>
+<h2>3 Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="area-change">
-<h3>3.1 Area change<a class="headerlink" href="#area-change" title="永久链接至标题">¶</a></h3>
+<h3>3.1 Area change<a class="headerlink" href="#area-change" title="Permalink to this headline">¶</a></h3>
 <p>1985年各区域面积，2000年各区域面积，2018年各区域面积
 中心面积，</p>
 <p>区域内的总建成区面积，识别为城市的面积</p>
 <p>Figure 1. Spatial distribution of 200 global cities</p>
 </div>
 <div class="section" id="pattern-variation">
-<h3>3.2 pattern variation<a class="headerlink" href="#pattern-variation" title="永久链接至标题">¶</a></h3>
+<h3>3.2 pattern variation<a class="headerlink" href="#pattern-variation" title="Permalink to this headline">¶</a></h3>
 <p>讨论不同规模的城市，增长模式上的差异</p>
 <ul class="simple">
 <li><p>大城市外部</p></li>
@@ -283,7 +282,7 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 </div>
 </div>
 <div class="section" id="discussion">
-<h2>4 Discussion<a class="headerlink" href="#discussion" title="永久链接至标题">¶</a></h2>
+<h2>4 Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h2>
 <p>最高密度与未来城市增长模式
 填充城市内部而不是外部
 改变土地利用模式，尽可能充分利用土地，是有可能消化这三倍的量的。</p>
@@ -292,16 +291,16 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 高分辨率的影像可能误导了我们对城市扩张程度的认识</p>
 </div>
 <div class="section" id="conclusions">
-<h2>5 Conclusions<a class="headerlink" href="#conclusions" title="永久链接至标题">¶</a></h2>
+<h2>5 Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="intro">
-<h3>intro<a class="headerlink" href="#intro" title="永久链接至标题">¶</a></h3>
+<h3>intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h3>
 <p>城市扩张
 城市密度的影响
 城市密度的重要性
 高精度的城市密度变化可以反映一些在低精度分类上提取不到的信息</p>
 </div>
 <div class="section" id="id6">
-<h3>细节<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3>细节<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>UN分区</p></li>
 <li><p>城市扩张的模式 城市土地密度的变化模式</p></li>
@@ -313,7 +312,7 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 </ol>
 </div>
 <div class="section" id="id7">
-<h3>思路<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<h3>思路<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>c&lt;0.1进行分组</p></li>
 <li><p>根据增长模式进行聚类</p></li>
@@ -329,10 +328,10 @@ https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-popul
 </ul>
 </div>
 <div class="section" id="id8">
-<h3>分组<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<h3>分组<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="id9">
-<h3>延伸想法<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<h3>延伸想法<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>到底应该如何度量城市形态<br />一个综述  将所有的城市叠加起来  进行聚类</p>
 <p>城市扩张观测的尺度效应–全球尺度
 低分辨率的城市扩张预测很可能高估了城市扩张的效应

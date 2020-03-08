@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Introduction to R &mdash; EveryThing 2.0.0 文档</title>
+  <title>2. Introduction to R &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. Graphs" href="Day_2_ZZZ.html" />
     <link rel="prev" title="1. Day 0" href="Day_0_zzz.html" /> 
 </head>
@@ -197,9 +196,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="introduction-to-r">
-<h1><span class="section-number">2. </span>Introduction to R<a class="headerlink" href="#introduction-to-r" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">2. </span>Introduction to R<a class="headerlink" href="#introduction-to-r" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="working-with-r">
-<h2><span class="section-number">2.1. </span>Working with R<a class="headerlink" href="#working-with-r" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Working with R<a class="headerlink" href="#working-with-r" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-flow notranslate"><div class="highlight"><pre><span></span>s=&gt;start: Import Data
 e=&gt;end: Produce report
 P=&gt;operation: Prepare,explore,and clean data
@@ -218,7 +217,7 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </ul>
 </div>
 <div class="section" id="workspace">
-<h2><span class="section-number">2.2. </span>Workspace<a class="headerlink" href="#workspace" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Workspace<a class="headerlink" href="#workspace" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">getwd</span><span class="p">()</span>
 <span class="nf">setwd</span><span class="p">()</span>
 <span class="nf">ls</span><span class="p">()</span>
@@ -226,7 +225,7 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </div>
 </div>
 <div class="section" id="input-and-output">
-<h2><span class="section-number">2.3. </span>Input and Output<a class="headerlink" href="#input-and-output" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">soure</span><span class="p">(</span><span class="s">&quot;filename&quot;</span><span class="p">)</span><span class="c1"># input module</span>
 <span class="nf">sink</span><span class="p">(</span><span class="s">&quot;filename&quot;</span><span class="p">,</span><span class="n">expand</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># text output redirect</span>
 <span class="nf">png</span><span class="p">(</span><span class="s">&quot;filename.png&quot;</span><span class="p">)</span>
@@ -235,7 +234,7 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </div>
 </div>
 <div class="section" id="packages">
-<h2><span class="section-number">2.4. </span>Packages<a class="headerlink" href="#packages" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">.libPath</span><span class="p">()</span> <span class="c1"># lib path</span>
 <span class="nf">library</span><span class="p">()</span><span class="c1"># installed lib</span>
 <span class="nf">search</span><span class="p">()</span><span class="c1"># loaded lib</span>
@@ -244,7 +243,7 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </div>
 </div>
 <div class="section" id="example">
-<h2><span class="section-number">2.5. </span>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.5. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">help.start</span><span class="p">()</span>
 <span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;vcd&quot;</span><span class="p">)</span>
 <span class="nf">help</span><span class="p">(</span><span class="n">package</span><span class="o">=</span><span class="s">&quot;vcd&quot;</span><span class="p">)</span>
@@ -258,10 +257,10 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </div>
 <hr class="docutils" />
 <div class="section" id="creating-a-dataset">
-<h2><span class="section-number">2.6. </span>Creating a dataset<a class="headerlink" href="#creating-a-dataset" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.6. </span>Creating a dataset<a class="headerlink" href="#creating-a-dataset" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="data-structures">
-<h2><span class="section-number">2.7. </span>Data Structures<a class="headerlink" href="#data-structures" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.7. </span>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Vectors: one-dimensional arrays.</p>
 <ul>
@@ -418,16 +417,16 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </ul>
 </div>
 <div class="section" id="data-input">
-<h2><span class="section-number">2.8. </span>Data Input<a class="headerlink" href="#data-input" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.8. </span>Data Input<a class="headerlink" href="#data-input" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="keyboard-input">
-<h3><span class="section-number">2.8.1. </span>Keyboard Input<a class="headerlink" href="#keyboard-input" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.8.1. </span>Keyboard Input<a class="headerlink" href="#keyboard-input" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="nf">numeric</span><span class="p">(</span><span class="m">0</span><span class="p">),</span> <span class="n">gender</span><span class="o">=</span><span class="nf">character</span><span class="p">(</span><span class="m">0</span><span class="p">),</span> <span class="n">weight</span><span class="o">=</span><span class="nf">numeric</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
 <span class="n">mydata</span> <span class="o">&lt;-</span> <span class="nf">edit</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="delimited-text-file">
-<h3><span class="section-number">2.8.2. </span>Delimited text file<a class="headerlink" href="#delimited-text-file" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.8.2. </span>Delimited text file<a class="headerlink" href="#delimited-text-file" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>default transfer into factors</p></li>
 <li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="n">grades</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;studentgrades.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>
@@ -444,7 +443,7 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </ul>
 </div>
 <div class="section" id="excel">
-<h3><span class="section-number">2.8.3. </span>Excel<a class="headerlink" href="#excel" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.8.3. </span>Excel<a class="headerlink" href="#excel" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>packages: xlsx, xlsxjars, rJava</p></li>
 <li><div class="highlight-R notranslate"><div class="highlight"><pre><span></span>  <span class="nf">library</span><span class="p">(</span><span class="n">xlsx</span><span class="p">)</span>
@@ -456,7 +455,7 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </ul>
 </div>
 <div class="section" id="web">
-<h3><span class="section-number">2.8.4. </span>Web<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.8.4. </span>Web<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>API -&gt; readLines() -&gt; grep(),gsub()</p></li>
 <li><p>Rcurl, XML</p></li>
@@ -464,17 +463,17 @@ s-&gt;P-&gt;F-&gt;E1-&gt;C-&gt;E2-&gt;e
 </ul>
 </div>
 <div class="section" id="dbmss">
-<h3><span class="section-number">2.8.5. </span>DBMSs<a class="headerlink" href="#dbmss" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.8.5. </span>DBMSs<a class="headerlink" href="#dbmss" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Hadoop</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="annotating-datasets">
-<h2><span class="section-number">2.9. </span>Annotating datasets<a class="headerlink" href="#annotating-datasets" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.9. </span>Annotating datasets<a class="headerlink" href="#annotating-datasets" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="useful-function">
-<h2><span class="section-number">2.10. </span>Useful function<a class="headerlink" href="#useful-function" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.10. </span>Useful function<a class="headerlink" href="#useful-function" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">()</span>
 <span class="nf">dim</span><span class="p">()</span>
 <span class="nf">class</span><span class="p">()</span>

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. 链表 &mdash; EveryThing 2.0.0 文档</title>
+  <title>1. 链表 &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -35,8 +34,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2. 树" href="Tree.html" />
     <link rel="prev" title="Python" href="../python.html" /> 
 </head>
@@ -241,7 +240,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><span class="section-number">1. </span>链表<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">1. </span>链表<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>是一种线性表，在每一个节点里存到下一个节点的<a class="reference external" href="https://zh.wikipedia.org/wiki/%E6%8C%87%E6%A8%99_(%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8)">指针</a>(Pointer)</p></li>
 <li><p>链表与顺序表</p>
@@ -273,9 +272,9 @@
 </li>
 </ul>
 <div class="section" id="id2">
-<h2><span class="section-number">1.1. </span>实现<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.1. </span>实现<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id3">
-<h3><span class="section-number">1.1.1. </span>创建一个新链表<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.1.1. </span>创建一个新链表<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">cargo</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">next</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cargo</span> <span class="o">=</span> <span class="n">cargo</span>
@@ -315,7 +314,7 @@
 </div>
 </div>
 <div class="section" id="next">
-<h3><span class="section-number">1.1.2. </span>next 关键字<a class="headerlink" href="#next" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.1.2. </span>next 关键字<a class="headerlink" href="#next" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">cargo</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">nonext</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cargo</span> <span class="o">=</span> <span class="n">cargo</span>
@@ -363,9 +362,9 @@
 </ul>
 </div>
 <div class="section" id="id4">
-<h3><span class="section-number">1.1.3. </span>递归打印**<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.1.3. </span>递归打印**<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="solution1">
-<h4><span class="section-number">1.1.3.1. </span>solution1<a class="headerlink" href="#solution1" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.1.3.1. </span>solution1<a class="headerlink" href="#solution1" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printBackward1</span><span class="p">(</span><span class="n">lists</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">lists</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span>
@@ -408,7 +407,7 @@
 </div>
 </div>
 <div class="section" id="solution2">
-<h4><span class="section-number">1.1.3.2. </span>solution2<a class="headerlink" href="#solution2" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.1.3.2. </span>solution2<a class="headerlink" href="#solution2" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printBackward2</span><span class="p">(</span><span class="n">lists</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">lists</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span><span class="k">return</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">lists</span><span class="p">)</span>
@@ -426,10 +425,10 @@
 </div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">1.2. </span>基本操作<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.2. </span>基本操作<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>针对非循环链表的，从头节点开始操作，而且不能插入 None值到链表中。</p>
 <div class="section" id="id6">
-<h3><span class="section-number">1.2.1. </span>计算链表长度，从前后插入，查找，删除<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.2.1. </span>计算链表长度，从前后插入，查找，删除<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="c1">#节点类</span>
     <span class="c1">#功能：输入一个值data，将值变为一个节点</span>
@@ -512,7 +511,7 @@
 </div>
 </div>
 <div class="section" id="id7">
-<h3><span class="section-number">1.2.2. </span>实践<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.2.2. </span>实践<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nodea1</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span>
 <span class="n">nodea2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span>
 <span class="n">nodea3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span>
@@ -583,7 +582,7 @@
 </div>
 </div>
 <div class="section" id="q160">
-<h2><span class="section-number">1.3. </span>Q160 找出链表的交点*****<a class="headerlink" href="#q160" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Q160 找出链表的交点*****<a class="headerlink" href="#q160" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>如果两个链表没有交点，返回 null.</p></li>
 <li><p>在返回结果后，两个链表仍须保持原有的结构。</p></li>
@@ -591,7 +590,7 @@
 <li><p>程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。</p></li>
 </ul>
 <div class="section" id="id8">
-<h3><span class="section-number">1.3.1. </span>暴力法<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.3.1. </span>暴力法<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>对链表A中的每一个结点 $a_i$，遍历整个链表 B 并检查链表 B 中是否存在结点和$a_i$ 相同。</p></li>
 <li><p>复杂度分析</p>
@@ -625,7 +624,7 @@
 </div>
 </div>
 <div class="section" id="id9">
-<h3><span class="section-number">1.3.2. </span>哈希表法<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.3.2. </span>哈希表法<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>遍历链表 A 并将每个结点的地址/引用存储在哈希表中。然后检查链表 B 中的每一个结点 $b_i$是否在哈希表中。若在，则$b_i$为相交结点。</p></li>
 <li><p>复杂度分析</p>
@@ -660,7 +659,7 @@
 </div>
 </div>
 <div class="section" id="id10">
-<h3><span class="section-number">1.3.3. </span>双指针法<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.3.3. </span>双指针法<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p><img alt="将链表变成环" src="https://pic.leetcode-cn.com/396526c47e043feb977e59f98d8df9165ae249d5042ca60ee4d3121c05fea067-%E5%8A%A8%E6%80%81%E5%9B%BE.gif" /></p>
 <p><img alt="长度差" src="https://pic.leetcode-cn.com/5651993ddb76ae6a42f0b338aec9382206f567041113f49d6ca670832ac75791-Picture1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">findIntersectionNode3</span><span class="p">(</span><span class="n">ll1</span><span class="p">,</span><span class="n">ll2</span><span class="p">):</span>
@@ -678,7 +677,7 @@
 </pre></div>
 </div>
 <div class="section" id="tips-if-else">
-<h4><span class="section-number">1.3.3.1. </span>Tips: If Else 简写<a class="headerlink" href="#tips-if-else" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.3.3.1. </span>Tips: If Else 简写<a class="headerlink" href="#tips-if-else" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#值1 if 条件 else 值2</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span> <span class="k">else</span> <span class="n">b</span>
@@ -718,7 +717,7 @@
 </div>
 </div>
 <div class="section" id="q206">
-<h2><span class="section-number">1.4. </span>Q206 链表反转****<a class="headerlink" href="#q206" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Q206 链表反转****<a class="headerlink" href="#q206" title="Permalink to this headline">¶</a></h2>
 <p>https://leetcode-cn.com/problems/reverse-linked-list/</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nodea1</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span>
 <span class="n">nodea2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span>
@@ -735,7 +734,7 @@
 </pre></div>
 </div>
 <div class="section" id="id11">
-<h3><span class="section-number">1.4.1. </span>双指针迭代<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>双指针迭代<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p><img alt="https://pic.leetcode-cn.com/7d8712af4fbb870537607b1dd95d66c248eb178db4319919c32d9304ee85b602-%E8%BF%AD%E4%BB%A3.gif" src="https://pic.leetcode-cn.com/7d8712af4fbb870537607b1dd95d66c248eb178db4319919c32d9304ee85b602-%E8%BF%AD%E4%BB%A3.gif" /></p>
 <ul class="simple">
 <li><p>时间复杂度：$O(n)$，假设 $n$ 是列表的长度</p></li>
@@ -774,7 +773,7 @@
 </pre></div>
 </div>
 <div class="section" id="tips">
-<h4><span class="section-number">1.4.1.1. </span>Tips: 同行等式与分行等式<a class="headerlink" href="#tips" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.4.1.1. </span>Tips: 同行等式与分行等式<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## 同行等式左右分别对应，同时赋值,左右分别当做数组</span>
 <span class="n">cur1</span><span class="p">,</span><span class="n">pre</span> <span class="o">=</span> <span class="n">ll</span><span class="o">.</span><span class="n">head</span><span class="p">,</span><span class="n">cur1</span><span class="o">.</span><span class="n">next</span>
 <span class="n">cur1</span><span class="p">,</span><span class="n">pre</span>
@@ -812,7 +811,7 @@
 </div>
 </div>
 <div class="section" id="id12">
-<h3><span class="section-number">1.4.2. </span>递归<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.4.2. </span>递归<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p><img alt="https://pic.leetcode-cn.com/dacd1bf55dec5c8b38d0904f26e472e2024fc8bee4ea46e3aa676f340ba1eb9d-%E9%80%92%E5%BD%92.gif" src="https://pic.leetcode-cn.com/dacd1bf55dec5c8b38d0904f26e472e2024fc8bee4ea46e3aa676f340ba1eb9d-%E9%80%92%E5%BD%92.gif" /></p>
 <ul class="simple">
 <li><p>时间复杂度：$O(n)$，假设 n 是列表的长度，那么时间复杂度为 O(n)。</p></li>
@@ -852,7 +851,7 @@
 </div>
 </div>
 <div class="section" id="q21">
-<h2><span class="section-number">1.5. </span>Q21 合并两个有序链表 ***<a class="headerlink" href="#q21" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Q21 合并两个有序链表 ***<a class="headerlink" href="#q21" title="Permalink to this headline">¶</a></h2>
 <p>https://leetcode-cn.com/problems/merge-two-sorted-lists/</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
@@ -872,7 +871,7 @@
 </pre></div>
 </div>
 <div class="section" id="id13">
-<h3><span class="section-number">1.5.1. </span>递归法<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>递归法<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>时间复杂度：$O(n + m)$。 因为每次调用递归都会去掉 l1 或者 l2 的头元素（直到至少有一个链表为空），函数 mergeTwoList 中只会遍历每个元素一次。所以，时间复杂度与合并后的链表长度为线性关系。</p></li>
 <li><p>空间复杂度：$O(n + m)$。调用 mergeTwoLists 退出时 l1 和 l2 中每个元素都一定已经被遍历过了，所以 n + m个栈帧会消耗$O(n+m)$ 的空间。</p></li>
@@ -920,7 +919,7 @@
 </div>
 </div>
 <div class="section" id="id14">
-<h3><span class="section-number">1.5.2. </span>迭代<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.5.2. </span>迭代<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span>
@@ -952,7 +951,7 @@
 </pre></div>
 </div>
 <div class="section" id="tips-self">
-<h4><span class="section-number">1.5.2.1. </span>Tips: self 是干什么的  &#64;&#64;&#64;<a class="headerlink" href="#tips-self" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.5.2.1. </span>Tips: self 是干什么的  &#64;&#64;&#64;<a class="headerlink" href="#tips-self" title="Permalink to this headline">¶</a></h4>
 <p>https://blog.csdn.net/CLHugh/article/details/75000104</p>
 <ul class="simple">
 <li><p>__init__方法的第一参数永远是self，表示创建的类实例本身</p></li>
@@ -1041,7 +1040,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q83">
-<h2><span class="section-number">1.6. </span>Q83 从有序链表中删除重复节点 **<a class="headerlink" href="#q83" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.6. </span>Q83 从有序链表中删除重复节点 **<a class="headerlink" href="#q83" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">x</span>
@@ -1060,7 +1059,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="wrong1">
-<h3><span class="section-number">1.6.1. </span>wrong1<a class="headerlink" href="#wrong1" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.6.1. </span>wrong1<a class="headerlink" href="#wrong1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">deleteDuplicates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">head</span><span class="p">):</span>
         <span class="n">des</span> <span class="o">=</span> <span class="n">head</span>
@@ -1098,7 +1097,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="demo2">
-<h3><span class="section-number">1.6.2. </span>demo2<a class="headerlink" href="#demo2" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.6.2. </span>demo2<a class="headerlink" href="#demo2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">deleteDuplicates2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">head</span><span class="p">):</span>
         <span class="n">des</span> <span class="o">=</span> <span class="n">head</span>
@@ -1118,7 +1117,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id15">
-<h3><span class="section-number">1.6.3. </span>直接法<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.6.3. </span>直接法<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">deleteDuplicates3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">head</span><span class="p">):</span>
         <span class="n">cur</span> <span class="o">=</span> <span class="n">head</span>
@@ -1145,7 +1144,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id16">
-<h3><span class="section-number">1.6.4. </span>递归***<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.6.4. </span>递归***<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">deleteDuplicates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">head</span><span class="o">.</span><span class="n">next</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1204,7 +1203,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </li>
 </ul>
 <div class="section" id="tips-fib">
-<h4><span class="section-number">1.6.4.1. </span>Tips: 递归fib<a class="headerlink" href="#tips-fib" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.6.4.1. </span>Tips: 递归fib<a class="headerlink" href="#tips-fib" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>缓存装饰器</p></li>
 </ul>
@@ -1303,7 +1302,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q19-n">
-<h2><span class="section-number">1.7. </span>Q19 删除链表的倒数第N个节点<a class="headerlink" href="#q19-n" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Q19 删除链表的倒数第N个节点<a class="headerlink" href="#q19-n" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span>
@@ -1346,7 +1345,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="id17">
-<h3><span class="section-number">1.7.1. </span>两次遍历方法<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.7.1. </span>两次遍历方法<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>添加哑结点，简化极端情况</p></li>
 <li><p>时间复杂度：$O(L)$，该算法对列表进行了两次遍历，首先计算了列表的长度 L 其次找到第 $(L - n)$个结点。 操作执行了 $2L-n$。</p></li>
@@ -1372,7 +1371,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id18">
-<h3><span class="section-number">1.7.2. </span>一次遍历方法<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.7.2. </span>一次遍历方法<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>快慢指针间隔n</p></li>
 <li><p>时间复杂度：$O(L)$，该算法对含有 $L$ 个结点的列表进行了一次遍历。</p></li>
@@ -1395,7 +1394,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id19">
-<h3><span class="section-number">1.7.3. </span>递归<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.7.3. </span>递归<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> 
     <span class="k">def</span> <span class="nf">removeNthFromEnd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1437,7 +1436,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="id20">
-<h4><span class="section-number">1.7.3.1. </span>Tips: 全局变量 局部变量与 非局部变量<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.7.3.1. </span>Tips: 全局变量 局部变量与 非局部变量<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="n">i</span>
 <span class="k">nonlocal</span> <span class="n">i</span>
 </pre></div>
@@ -1450,7 +1449,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q24">
-<h2><span class="section-number">1.8. </span>Q24 两两交换链表中的相邻结点<a class="headerlink" href="#q24" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.8. </span>Q24 两两交换链表中的相邻结点<a class="headerlink" href="#q24" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span>
@@ -1465,7 +1464,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="id21">
-<h3><span class="section-number">1.8.1. </span>指针<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.8.1. </span>指针<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>四个指针+哑结点</p></li>
 <li><p>时间复杂度：$O(N)$，其中 N 指的是链表的节点数量。</p></li>
@@ -1484,7 +1483,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id22">
-<h3><span class="section-number">1.8.2. </span>递归<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.8.2. </span>递归<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">swapPairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">head</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">head</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>
@@ -1513,9 +1512,9 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q445-add-two-numbers-ii">
-<h2><span class="section-number">1.9. </span>Q445 Add Two Numbers II *****<a class="headerlink" href="#q445-add-two-numbers-ii" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.9. </span>Q445 Add Two Numbers II *****<a class="headerlink" href="#q445-add-two-numbers-ii" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id23">
-<h3><span class="section-number">1.9.1. </span>加法递归<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.9.1. </span>加法递归<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
         <span class="c1">## 计算长度 使l1为长链</span>
@@ -1573,7 +1572,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id24">
-<h3><span class="section-number">1.9.2. </span>双栈法<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.9.2. </span>双栈法<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>&#64;关键点：</p></li>
 </ul>
@@ -1623,9 +1622,9 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q234-palindrome-linked-list">
-<h2><span class="section-number">1.10. </span>Q234 Palindrome Linked List****<a class="headerlink" href="#q234-palindrome-linked-list" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.10. </span>Q234 Palindrome Linked List****<a class="headerlink" href="#q234-palindrome-linked-list" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id25">
-<h3><span class="section-number">1.10.1. </span>链表反转<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.10.1. </span>链表反转<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>找到前半部分链表的尾节点：</p>
 <ul class="simple">
@@ -1715,7 +1714,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id26">
-<h3><span class="section-number">1.10.2. </span>数组<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.10.2. </span>数组<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>时间复杂度：$O(n)$，其中 $n$ 指的是链表的元素个数。</p>
 <ul>
@@ -1738,7 +1737,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id27">
-<h3><span class="section-number">1.10.3. </span>递归&#64;&#64;<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.10.3. </span>递归&#64;&#64;<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">end_of_first_half</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">):</span>
 
@@ -1759,7 +1758,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q725-split-linked-list-in-parts-medium">
-<h2><span class="section-number">1.11. </span>Q725. Split Linked List in Parts(Medium)<a class="headerlink" href="#q725-split-linked-list-in-parts-medium" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.11. </span>Q725. Split Linked List in Parts(Medium)<a class="headerlink" href="#q725-split-linked-list-in-parts-medium" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">splitListToParts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
         <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1789,7 +1788,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="id28">
-<h3><span class="section-number">1.11.1. </span>新列表<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.11.1. </span>新列表<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>时间复杂度：$O(N + k)$。$N$ 指的是链表的结点数，若 kk 很大，则还需要添加许多空列表。</p></li>
 <li><p>空间复杂度：$O(max(N, k))$，存放答案所需的空间。</p></li>
@@ -1834,7 +1833,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="id29">
-<h3><span class="section-number">1.11.2. </span>拆分链表<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.11.2. </span>拆分链表<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>时间复杂度：$O(N+k)$。$N$ 指的是所给链表的结点数，若 $k$很大，则还需要添加许多空列表。</p></li>
 <li><p>空间复杂度：$O(k)$，存储答案时所需的额外空格</p></li>
@@ -1862,7 +1861,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </div>
 </div>
 <div class="section" id="q328-odd-even-linked-list-medium">
-<h2><span class="section-number">1.12. </span>Q328 Odd Even Linked List (Medium)<a class="headerlink" href="#q328-odd-even-linked-list-medium" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">1.12. </span>Q328 Odd Even Linked List (Medium)<a class="headerlink" href="#q328-odd-even-linked-list-medium" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span>
@@ -1909,7 +1908,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="id30">
-<h3><span class="section-number">1.12.1. </span>简写<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">1.12.1. </span>简写<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">oddEvenList</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">return</span> <span class="n">head</span>
@@ -1922,7 +1921,7 @@ self in Desc: &lt;__main__.Desc object at 0x000002EFA5103F88&gt;
 </pre></div>
 </div>
 <div class="section" id="tips-and">
-<h4><span class="section-number">1.12.1.1. </span>Tips: and 和 &amp;<a class="headerlink" href="#tips-and" title="永久链接至标题">¶</a></h4>
+<h4><span class="section-number">1.12.1.1. </span>Tips: and 和 &amp;<a class="headerlink" href="#tips-and" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>位运算  1的二进制01，2的二进制10 1&amp;2 = 0</p>
 <ul>
