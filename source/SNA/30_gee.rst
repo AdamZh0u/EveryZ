@@ -4,8 +4,6 @@ GEE
 
 ############
 
-***************
-
 =================
 
 -------
@@ -288,7 +286,6 @@ function
 
 Gallery
 ################
-
 
 区域均值
 ========================
@@ -674,6 +671,7 @@ function compute area
 
 .. code-block:: javascript
     :linenos:
+
     var Cities = ee.FeatureCollection("users/zhouzz400/Boundries/China_Cities")
     print(Cities);
 
@@ -804,6 +802,9 @@ dictionary
 
 reducer
 ==============
+.. code-block:: javascript
+    :linenos:
+
     // .count/.countEvery/.first()
     var Reducer_Count = ee.Reducer.count();
     var Reducer_CountEvery = ee.Reducer.countEvery();
