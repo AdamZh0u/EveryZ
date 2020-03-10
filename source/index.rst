@@ -12,12 +12,13 @@ This is an open source book written for myself to review my tools.
     :caption: SNA
 
     SNA/10_sphinx_rst.rst
+    SNA/30_gee.rst
     Snippet/python.rst
     Snippet/Plots.rst
     Snippet/R.rst
+
 .. 
     SNA/20_regexp.rst
-    Snippet/GEE.rst
     Snippet/Git.rst
     Snippet/Rhino.rst
 

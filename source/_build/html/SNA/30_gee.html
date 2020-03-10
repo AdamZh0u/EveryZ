@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; EveryThing 2.0.0 documentation</title>
+  <title>GEE &mdash; EveryThing 2.0.0 documentation</title>
   
 
   
@@ -145,7 +145,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>GEE</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -164,7 +164,192 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="gee">
+<h1>GEE<a class="headerlink" href="#gee" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<hr class="docutils" />
+<div class="section" id="gallery">
+<h2>Gallery<a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gaia">
+<h3>GAIA 处理<a class="headerlink" href="#gaia" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>可视化<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// 34年渐变</span>
+<span class="kd">var</span> <span class="nx">sh</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s2">&quot;users/zhouzz400/shanghai_GAIA&quot;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">sh</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">Viz_Color</span> <span class="o">=</span>  <span class="p">{</span><span class="nx">palette</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]}</span>
+<span class="kd">var</span> <span class="nx">Viz_GAIA</span> <span class="o">=</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="mi">34</span><span class="p">,</span> <span class="nx">palette</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;FFFFFF&#39;</span><span class="p">,</span> <span class="s1">&#39;FF0000&#39;</span><span class="p">]};</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">sh</span><span class="p">,</span><span class="nx">Viz</span><span class="p">)</span>
+
+<span class="c1">// 某一年不透水面</span>
+<span class="kd">var</span> <span class="nx">sh_10</span> <span class="o">=</span> <span class="nx">sh</span><span class="p">.</span><span class="nx">gte</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">Viz2</span> <span class="o">=</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">palette</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;FFFFFF&#39;</span><span class="p">,</span> <span class="s1">&#39;FF0000&#39;</span><span class="p">]};</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">sh_10</span><span class="p">,</span><span class="nx">Viz2</span><span class="p">)</span>
+
+<span class="c1">// kernal stats</span>
+<span class="kd">var</span> <span class="nx">ker_sq</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">square</span><span class="p">({</span>
+<span class="nx">radius</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">units</span><span class="o">:</span> <span class="s1">&#39;pixels&#39;</span><span class="p">,</span> <span class="nx">normalize</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+
+<span class="c1">// ee.Kernel.circle(7)</span>
+<span class="kd">var</span> <span class="nx">ker_st</span> <span class="o">=</span> <span class="nx">sh_10</span><span class="p">.</span><span class="nx">reduceNeighborhood</span><span class="p">({</span>
+<span class="nx">reducer</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">mean</span><span class="p">(),</span>
+<span class="nx">kernel</span><span class="o">:</span> <span class="nx">ker_sq</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">des_25</span> <span class="o">=</span> <span class="nx">ker_st</span><span class="p">.</span><span class="nx">gte</span><span class="p">(</span><span class="mf">0.25</span><span class="p">).</span><span class="nx">selfMask</span><span class="p">().</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;Dens_25&#39;</span><span class="p">);</span>
+<span class="c1">//Map.addLayer(des_25,Viz4)</span>
+<span class="c1">//print(des_25)</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">des_25</span><span class="p">,</span> <span class="p">{</span><span class="nx">palette</span><span class="o">:</span> <span class="s1">&#39;FF0000&#39;</span><span class="p">});</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">des_25</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">objectId</span> <span class="o">=</span> <span class="nx">des_25</span><span class="p">.</span><span class="nx">connectedComponents</span><span class="p">({</span>
+<span class="nx">connectedness</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="nx">maxSize</span><span class="o">:</span> <span class="mi">256</span>
+<span class="p">});</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">objectId</span><span class="p">.</span><span class="nx">randomVisualizer</span><span class="p">(),</span> <span class="kc">null</span><span class="p">,</span> <span class="s1">&#39;Objects&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">des_25_v</span> <span class="o">=</span> <span class="nx">des_25</span><span class="p">.</span><span class="nx">reduceToVectors</span><span class="p">({</span>
+<span class="nx">scale</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="nx">geometryType</span><span class="o">:</span> <span class="s1">&#39;polygon&#39;</span><span class="p">,</span>
+<span class="nx">eightConnected</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="nx">labelProperty</span><span class="o">:</span> <span class="s1">&#39;zone&#39;</span><span class="p">,}</span>
+<span class="p">);</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">des_25_v</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>## search
+<a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">`</span></a>javascript
+var point = /* color: #98ff00 <a href="#id6"><span class="problematic" id="id7">*</span></a>/ee.Geometry.Point([114.3362584771894, 30.54952805541824]),</p>
+<blockquote>
+<div><p>l8 = ee.ImageCollection(“LANDSAT/LC08/C01/T1_TOA”),
+bare = /* color: #c24823 <a href="#id8"><span class="problematic" id="id9">*</span></a>/ee.Geometry.Polygon(</p>
+<blockquote>
+<div><dl class="simple">
+<dt>[[[114.30517811719619, 30.554663336996253],</dt><dd><p>[114.30161614362441, 30.552224189574872],
+[114.30958338525011, 30.55368954007891],
+[114.30803843285753, 30.5546134528199]]]),</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>veget = /* color: #ff0000 <a href="#id10"><span class="problematic" id="id11">*</span></a>/ee.Geometry.Polygon(</dt><dd><dl class="simple">
+<dt>[[[114.48716604174274, 30.507213819178254],</dt><dd><p>[114.4845928059624, 30.5054401948097],
+[114.48682294356126, 30.505144587441116],
+[114.4883667488358, 30.505144633458844],
+[114.49162631694242, 30.504848979348527],
+[114.49368490531106, 30.506622614826078]]]),</p>
+</dd>
+</dl>
+</dd>
+<dt>water = /* color: #00ff00 <a href="#id12"><span class="problematic" id="id13">*</span></a>/ee.Geometry.Polygon(</dt><dd><dl class="simple">
+<dt>[[[114.28774101355862, 30.565245523015815],</dt><dd><p>[114.28482277015041, 30.561845853255953],
+[114.28516609290432, 30.5602198821312],
+[114.28774101355862, 30.559480795340228],
+[114.29237587073635, 30.563619608862606]]]);</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>var bands = [“B2”,”B3”,”B4”,”B5”,”B6”,”B7”];
+var image = ee.Image(l8</p>
+<blockquote>
+<div><p>.filterBounds(point)
+.sort(“CLOUD_COVER”)
+.first())
+.select(bands);</p>
+</div></blockquote>
+<p>Map.addLayer(image,{bands:[“B4”,”B3”,”B2”],max:0.3},”image”);</p>
+<dl class="simple">
+<dt>var bareMean = image.reduceRegion({</dt><dd><p>reducer:ee.Reducer.mean(),
+geometry:bare,
+scale:30,
+}).values();</p>
+</dd>
+<dt>var vegetMean = image.reduceRegion({</dt><dd><p>reducer:ee.Reducer.mean(),
+geometry:veget,
+scale:30,
+}).values();</p>
+</dd>
+<dt>var waterMean = image.reduceRegion({</dt><dd><p>reducer:ee.Reducer.mean(),
+geometry:water,
+scale:30,
+}).values();</p>
+</dd>
+<dt>var chart = ui.Chart.image.regions(image,ee.FeatureCollection([</dt><dd><p>ee.Feature(bare, {label:”bare”}),
+ee.Feature(veget,{label:”vaget”}),
+ee.Feature(water,{label:”water”})]),
+ee.Reducer.mean(),30,”label”,[0.48,0.56,0.65,0.86,1.61,2.2]</p>
+</dd>
+</dl>
+<p>);
+print(chart);</p>
+<p>var endmembers = ee.Array.cat([bareMean,vegetMean,waterMean],1);
+var arrayImage = image.toArray().toArray(1);
+var unmixed = ee.Image(endmembers).matrixSolve(arrayImage);
+var unmixedImage = unmixed.arrayProject([0])</p>
+<blockquote>
+<div><p>.arrayFlatten([[“bare”,”veget”,”water”]]);</p>
+</div></blockquote>
+<p>Map.addLayer(unmixedImage,{},”fractions”)
+<a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a></p>
+</div>
+</div>
+</div>
+</div>
+
 
            </div>
            
