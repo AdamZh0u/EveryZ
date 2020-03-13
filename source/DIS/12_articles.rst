@@ -135,5 +135,23 @@ IEEE 评审专家需要回答四个问题：论文的主题和材料是否适合
 
 三是基本功。题目确定后，轮到我们自己动手时，应该具备英文阅读、编程等基本的素质和能力来完成实验。
 
-最后是科研的代价。人的时间是有限的，你在某一方面很专注，往往意味着你在其他方面有所欠缺。我们需要无数个夜晚面对毫无表情的屏幕，要学会面对自己、面对寂寞。（测绘遥感信息工程国家重点实验室研究生李凤玲、李洪利对本文亦有贡献）
+最后是科研的代价。人的时间是有限的，你在某一方面很专注，往往意味着你在其他方面有所欠缺。我们需要无数个夜晚面对毫无表情的屏幕，要学会面对自己、面对寂寞。
 
+Youth
+================
+Samuel Ullman
+
+Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.
+青春不是年华，而是心境；青春不是桃面、丹唇、柔膝，而是深沉的意志、恢宏的想象、炽热的感情；青春是生命的深泉在涌流。
+
+Youth means a temperamental predominance of courage over timidity of the appetite, for adventure over the love of ease. This often exists in a man of sixty more than a boy of twenty. Nobody grows old merely by a number of years. We grow old by deserting our ideals.
+青春气贯长虹，勇锐盖过怯弱，进取压倒苟安。如此锐气，二十后生有之，六旬男子则更多见。年岁有加，并非垂老；理想丢弃，方堕暮年。
+
+Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul. Worry, fear, self-distrust bows the heart and turns the spirit back to dust.
+岁月悠悠，衰微只及肌肤；热忱抛却，颓唐必至灵魂。忧烦、惶恐、丧失自信，定使心灵扭曲，意气如灰。
+
+Whether sixty or sixteen, there is in every human being's heart the lure of wonder, the unfailing child-like appetite of what's next, and the joy of the game of living. In the center of your heart and my heart there is a wireless station; so long as it receives messages of beauty, hope, cheer, courage and power from men and from the infinite, so long are you young.
+无论年届花甲，抑或二八芳龄，心中皆有生命之欢乐，奇迹之诱惑，孩童般天真久盛不衰。人人心中皆有一台天线，只要你从天上人间接受美好、希望、欢乐、勇气和力量的信号，你就青春永驻，风华常存。
+
+When the aerials are down, and your spirit is covered with snows of cynicism and the ice of pessimism, then you are grown old, even at twenty, but as long as your aerials are up, to catch the waves of optimism, there is hope you may die young at eighty.
+一旦天线降下，锐气便被冰雪覆盖，玩世不恭、自暴自弃油然而生，即便年方二十，实已垂垂老矣；然则只要竖起天线，捕捉乐观的信号，你就有望在八十离龄告别尘寰时仍觉年轻。

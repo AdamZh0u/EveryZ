@@ -1,12 +1,17 @@
 ^^^^^^
 GEE
 ^^^^^^
+Documents
+#############
 
-############
-
-=================
-
--------
+ImageCollection
+======================
+ImageCollection Visualization
+---------------------------------
+Collection preparation
+*************************
+Filtering
+"""""""""""""""
 
 GAIA 处理
 ##############
@@ -284,6 +289,9 @@ function
     });
 
 
+
+
+
 Gallery
 ################
 
@@ -355,183 +363,6 @@ Gallery
                             .arrayFlatten([["bare","veget","water"]]);
     Map.addLayer(unmixedImage,{},"fractions")
 
-获取landsat 数据列表与统计
-=================================
-.. code-block:: javascript
-    :linenos:
-
-    // Load Feature Collections ############################
-
-    // Country Fusion Table
-    var countries = ee.FeatureCollection('ft:1tdSwUL7MVpOauSgRzqVTOwdfy17KDbw-1d9omPw');
-
-    // Footprint of Landsat WRS2
-    var wrs2_descending = ee.FeatureCollection('ft:1_RZgjlcqixp-L9hyS6NYGqLaKOlnhSC35AB5M5Ll');
-
-    // Load Landsat Image Collections ######################
-    var l4_coll = ee.ImageCollection('LANDSAT/LT4_L1T_TOA');  //Aug 22, 1982 - Dec 14, 1993
-    var l5_coll = ee.ImageCollection('LANDSAT/LT5_L1T_TOA');  //Jan 1, 1984 - May 5, 2012
-    var l7_coll = ee.ImageCollection('LANDSAT/LE7_L1T_TOA');  //Jan 1, 1999 - Apr 30, 2017
-    var l8_coll = ee.ImageCollection('LANDSAT/LC8_L1T_TOA');  //Apr 11, 2013 - Apr 30, 2017
-
-    // Add Functions ########################################
-    function redraw(key){
-        var selectedCountry = ee.Feature(countries.filter(ee.Filter.eq('Country', key)).first());
-        Map.centerObject(selectedCountry);
-        var selectedCountry_Strg = ee.String(selectedCountry.get('Country'))
-    
-        // Show country
-        var layer0 = ui.Map.Layer(selectedCountry, {color:'purple'}, 'Selected country');
-        Map.layers().set(0, layer0);
-        
-        // show WRS2 footprint
-        var wrs2_filtered = wrs2_descending.filterBounds(selectedCountry.geometry());
-        var layer1 = ui.Map.Layer(wrs2_filtered, vizParams, 'WRS2 filtered');
-        Map.layers().set(1, layer1);
-        
-        // filter the ImageCollection with the boundary of the selected country
-        var iC = merged_collection.filterBounds(selectedCountry.geometry());
-        
-        iC = iC.map(function(img){
-            var year  = img.date().format("Y");            // get the acquisition year
-            var CC = img.get('CLOUD_COVER')
-            return img.set('year', ee.Number.parse(year)).set('clouds', ee.Number.parse(CC)); // 
-    });
-        
-    var iC_FC = ee.FeatureCollection(iC);            
-    var iC_FC_size = iC_FC.size();
-    
-    var options1 = {
-        title: 'Landsat Mission 4-8 - GEE image availability',
-        hAxis: {title: 'Year'},
-        vAxis: {title: 'Image count'},
-        colors: ['red']
-    };
-    
-    var options2 = {
-        title: 'Landsat cloud cover',
-        hAxis: {title: '% Cloud Cover'},
-        vAxis: {title: 'Image count'},
-        colors: ['orange']
-    };
-    
-    // Make the histogram, set the options.
-    var histogram = ui.Chart.feature.histogram({
-        features: iC_FC,
-        property: 'year',
-        minBucketWidth: 1
-    }).setOptions(options1);
-
-
-    var histogram_CC = ui.Chart.feature.histogram({
-        features: iC_FC,
-        property: 'clouds',
-        minBucketWidth: 5
-    }).setOptions(options2);
-    // add text to the panel
-    
-    var iscoveredby = " is covered by ";
-    var wrs2_filtered_size = wrs2_filtered.size();
-    var LandsatWRSgridsIntotalwere = " Landsat WRS-2 grids. During the lifetime of Landsat Mission 4-8 were ";
-    var text = " images collected. Their spatial distribution is shown in the map (red circles), the temporal distribution is shown in the first chart.";
-    var text2 = " The relative average cloud cover for each WRS-2 is shown in the map (orange circles), while the 2nd chart shows a histogram of the overall percentage cloud cover."
-    var info_text = ee.String(selectedCountry_Strg).cat(iscoveredby).cat(wrs2_filtered_size)
-        .cat(LandsatWRSgridsIntotalwere).cat(iC_FC_size).cat(text).cat(text2);
-    
-    panel.widgets().set(0, histogram);
-    panel.widgets().set(1, histogram_CC);
-    
-    // create centroids
-    var centroids = wrs2_filtered.map(getCentroid);
-    var fC        = centroids.map(addField);
-    
-    // buffer centroid according to image counts
-    var buffered_points = fC.map(buffer_count).flatten();
-    
-    // buffer centroid according to cloud percentage
-    var buffered_points_cloud = fC.map(buffer_cloud).flatten();
-    
-    var outlines = empty.paint({featureCollection: buffered_points, color: 1, width: 2});
-
-    // show image count circles
-    var filledOutlines = empty.paint(buffered_points).paint(buffered_points, 0, 2).clip(wrs2_filtered);
-    var layer2         = ui.Map.Layer(filledOutlines, {palette: ['red'].concat(palette)}, 'Landsat image count');
-    Map.layers().set(2, layer2);
-
-    var innerCircles = empty.paint(buffered_points_cloud).paint(buffered_points_cloud, 0, 2).clip(wrs2_filtered);
-    var layer3       = ui.Map.Layer(innerCircles, {palette: ['orange'].concat(palette)}, 'Cloud percentage (avg.)');
-    Map.layers().set(3, layer3);
-    
-    info_text.evaluate(function(result) { 
-        panel.widgets().set(2, ui.Label(result));
-    });
-
-    }  // end - redraw
-
-    // ##################################################
-    // This function creates a new feature from the centroid of the geometry.
-    var getCentroid = function(feature) {
-        // Keep this list of properties.
-        var keepProperties = ['PATH', 'ROW'];
-        // Get the centroid of the feature's geometry.
-        var centroid = feature.geometry().centroid();
-        // Return a new Feature, copying properties from the old Feature.
-        return ee.Feature(centroid).copyProperties(feature, keepProperties);
-    }; // end - getCentroid
-
-    // ##################################################    
-    var addField = function(feature) {
-
-        var path       = feature.get('PATH');
-        var row        = feature.get('ROW');
-        var collection = merged_collection.filter(ee.Filter.eq('WRS_PATH', path)).filter(ee.Filter.eq('WRS_ROW', row));
-        var cloud_mean = collection.aggregate_mean('CLOUD_COVER');
-        cloud_mean     = ee.Number(cloud_mean);
-        var count      = collection.size();
-        var f          = count.multiply(100).round();
-        var cloud_pct  = cloud_mean.multiply(f).divide(100).round();
-        var keepProperties = ['PATH', 'ROW', 'CLOUD_COVER'];
-        
-        return feature.set({'count': f}).set({'cloud_mean': cloud_mean}).set({'cloud_pct': cloud_pct})
-            .copyProperties(feature, keepProperties);
-    }; // end - addField
-
-    // ##################################################    
-    var buffer_count = function(feature) {
-        return ee.FeatureCollection(feature.buffer(feature.get('count')));
-    }; // end - buffer_count
-
-    // ##################################################  
-    var buffer_cloud = function(feature) {
-        return ee.FeatureCollection(feature.buffer(feature.get('cloud_pct')));
-    }; // end - buffer_cloud
-
-    // ##################################################    
-    ui.root.setLayout(ui.Panel.Layout.absolute());
-
-    // Create a panel with vertical flow layout.
-    var panel = ui.Panel({
-    layout: ui.Panel.Layout.flow('vertical'),
-    style: {position: 'bottom-right', height: '500px', width:'350px'}
-    });
-
-    // Create drop down selection
-
-    var vizParams = { color: 'grey', opacity: 0.1 };
-    var palette   = ['FF0000', '00FF00', '0000FF'];
-
-    // get country names
-    var names = countries.aggregate_array('Country');
-    var merged_collection = ee.ImageCollection(l4_coll.merge(l5_coll).merge(l7_coll).merge(l8_coll));
-    // Create an empty image into which to paint the features, cast to byte.
-    var empty   = ee.Image().byte();
-    // initialize combobox and fire up the redraw function
-    var select = ui.Select({items: names.getInfo(), onChange: redraw });
-    select.setPlaceholder('Choose a country ...'); 
-
-    Map.setCenter(10.5, 51.3, 4);
-    Map.add(select);
-    ui.root.add(panel);
 
 landsat可视化
 =================================
@@ -708,7 +539,107 @@ function compute NDVI
     Map.addLayer(L8_NDVI.select("nd"));
     Map.addLayer(L8.limit(1).select("B[4,5]").mean());
 
+focal 斑块
+===============
+.. code-block:: javascript
+    :linenos:
 
+    var table2 = ee.FeatureCollection("users/zhouzz400/Boundries/UrbanDensity50_2015"),
+        table = ee.FeatureCollection("users/zhouzz400/Boundries/UrbanDensity100_2015"),
+        geometry = ee.Geometry.Polygon(
+            [[[100.99709998976684, 33.5381776358804],
+            [100.99709998976684, 22.143132836963183],
+            [126.17776405226684, 22.143132836963183],
+            [126.17776405226684, 33.5381776358804]]], null, false);
+    var demo = table2.filterBounds(geometry).map(function (feature){ 
+        return feature.set({demo:1}).centroid();
+    })
+    Map.addLayer(table2)
+    Map.addLayer(demo)
+    var demo2 = table2.filterBounds(geometry).map(function (feature){ 
+        return feature.set({demo:1});
+    })
+    // print(demo.limit(3))
+    var image = demo2.reduceToImage(ee.List(["demo"]),ee.Reducer.anyNonZero())
+
+    var focal_2 = image.focal_min(1,"plus","pixels",15)
+    Map.addLayer(image)
+    Map.addLayer(focal_2)
+
+
+双变量循环
+=================
+.. code-block:: javascript
+    :linenos:
+
+    var X = ee.List([1,2,3])
+    var Y = ee.List([1,2,3])
+    var Z = X.map(function (x){
+    return Y.map(function(y){
+        return x+y
+    })
+    })
+
+iterate
+===============
+.. code-block:: javascript
+    :linenos:
+
+    var table = ee.FeatureCollection("users/rawailnaeem/CA");
+    var S1 = ee.ImageCollection("COPERNICUS/S1_GRD");
+    Map.addLayer(table);
+
+    var t = table.limit(1000);
+    print(t);
+    var Sentinel1 = S1.filterMetadata('instrumentMode', 'equals', 'IW')
+                    .filterDate('2016-04-01','2016-08-30' )
+                    .filterMetadata('resolution_meters', 'equals' , 10)
+                    .filterBounds(t);
+
+    var S1dates = Sentinel1.toList(Sentinel1.size()).map(function(img){
+    var idate = ee.Image(img).date();
+    return ee.Date.fromYMD(
+        idate.get('year'),
+        idate.get('month'),
+        idate.get('day')
+    ).millis()
+    });
+
+    // print images dates
+    print(S1dates.map(function(millis) {
+    return ee.Date(millis).format();
+    }));
+
+    var newfc = ee.List(t.iterate(function(feat, ini){
+    // cast
+    var ini = ee.List(ini);
+    var feat = ee.Feature(feat);
+
+    // get src date
+    var srcd = ee.String(feat.get('SrcImgDate'));
+    var year = ee.Number.parse(srcd.slice(0, 4));
+    var month = ee.Number.parse(srcd.slice(4, 6));
+    var day = ee.Number.parse(srcd.slice(6, 8));
+
+    var date = ee.Date.fromYMD(year, month, day).millis();
+
+    var condition = S1dates.contains(date);
+
+    return ee.Algorithms.If(condition, ini.add(feat), ini);
+    }, ee.List([])));
+
+    var newfc = ee.FeatureCollection(newfc);
+
+    print(newfc);
+
+
+
+
+Courses
+###########
+
+string
+===================
 .. code-block:: javascript
     :linenos:
 
@@ -998,102 +929,186 @@ kernel
 
     // function name(parameters){operation}
 
+APPs
+############
 
-focal 斑块
-===============
+获取landsat 数据列表与统计
+=================================
 .. code-block:: javascript
     :linenos:
 
-    var table2 = ee.FeatureCollection("users/zhouzz400/Boundries/UrbanDensity50_2015"),
-        table = ee.FeatureCollection("users/zhouzz400/Boundries/UrbanDensity100_2015"),
-        geometry = ee.Geometry.Polygon(
-            [[[100.99709998976684, 33.5381776358804],
-            [100.99709998976684, 22.143132836963183],
-            [126.17776405226684, 22.143132836963183],
-            [126.17776405226684, 33.5381776358804]]], null, false);
-    var demo = table2.filterBounds(geometry).map(function (feature){ 
-        return feature.set({demo:1}).centroid();
-    })
-    Map.addLayer(table2)
-    Map.addLayer(demo)
-    var demo2 = table2.filterBounds(geometry).map(function (feature){ 
-        return feature.set({demo:1});
-    })
-    // print(demo.limit(3))
-    var image = demo2.reduceToImage(ee.List(["demo"]),ee.Reducer.anyNonZero())
+    // Load Feature Collections ############################
 
-    var focal_2 = image.focal_min(1,"plus","pixels",15)
-    Map.addLayer(image)
-    Map.addLayer(focal_2)
+    // Country Fusion Table
+    var countries = ee.FeatureCollection('ft:1tdSwUL7MVpOauSgRzqVTOwdfy17KDbw-1d9omPw');
+
+    // Footprint of Landsat WRS2
+    var wrs2_descending = ee.FeatureCollection('ft:1_RZgjlcqixp-L9hyS6NYGqLaKOlnhSC35AB5M5Ll');
+
+    // Load Landsat Image Collections ######################
+    var l4_coll = ee.ImageCollection('LANDSAT/LT4_L1T_TOA');  //Aug 22, 1982 - Dec 14, 1993
+    var l5_coll = ee.ImageCollection('LANDSAT/LT5_L1T_TOA');  //Jan 1, 1984 - May 5, 2012
+    var l7_coll = ee.ImageCollection('LANDSAT/LE7_L1T_TOA');  //Jan 1, 1999 - Apr 30, 2017
+    var l8_coll = ee.ImageCollection('LANDSAT/LC8_L1T_TOA');  //Apr 11, 2013 - Apr 30, 2017
+
+    // Add Functions ########################################
+    function redraw(key){
+        var selectedCountry = ee.Feature(countries.filter(ee.Filter.eq('Country', key)).first());
+        Map.centerObject(selectedCountry);
+        var selectedCountry_Strg = ee.String(selectedCountry.get('Country'))
+    
+        // Show country
+        var layer0 = ui.Map.Layer(selectedCountry, {color:'purple'}, 'Selected country');
+        Map.layers().set(0, layer0);
+        
+        // show WRS2 footprint
+        var wrs2_filtered = wrs2_descending.filterBounds(selectedCountry.geometry());
+        var layer1 = ui.Map.Layer(wrs2_filtered, vizParams, 'WRS2 filtered');
+        Map.layers().set(1, layer1);
+        
+        // filter the ImageCollection with the boundary of the selected country
+        var iC = merged_collection.filterBounds(selectedCountry.geometry());
+        
+        iC = iC.map(function(img){
+            var year  = img.date().format("Y");            // get the acquisition year
+            var CC = img.get('CLOUD_COVER')
+            return img.set('year', ee.Number.parse(year)).set('clouds', ee.Number.parse(CC)); // 
+    });
+        
+    var iC_FC = ee.FeatureCollection(iC);            
+    var iC_FC_size = iC_FC.size();
+    
+    var options1 = {
+        title: 'Landsat Mission 4-8 - GEE image availability',
+        hAxis: {title: 'Year'},
+        vAxis: {title: 'Image count'},
+        colors: ['red']
+    };
+    
+    var options2 = {
+        title: 'Landsat cloud cover',
+        hAxis: {title: '% Cloud Cover'},
+        vAxis: {title: 'Image count'},
+        colors: ['orange']
+    };
+    
+    // Make the histogram, set the options.
+    var histogram = ui.Chart.feature.histogram({
+        features: iC_FC,
+        property: 'year',
+        minBucketWidth: 1
+    }).setOptions(options1);
 
 
-双变量循环
-=================
-.. code-block:: javascript
-    :linenos:
+    var histogram_CC = ui.Chart.feature.histogram({
+        features: iC_FC,
+        property: 'clouds',
+        minBucketWidth: 5
+    }).setOptions(options2);
+    // add text to the panel
+    
+    var iscoveredby = " is covered by ";
+    var wrs2_filtered_size = wrs2_filtered.size();
+    var LandsatWRSgridsIntotalwere = " Landsat WRS-2 grids. During the lifetime of Landsat Mission 4-8 were ";
+    var text = " images collected. Their spatial distribution is shown in the map (red circles), the temporal distribution is shown in the first chart.";
+    var text2 = " The relative average cloud cover for each WRS-2 is shown in the map (orange circles), while the 2nd chart shows a histogram of the overall percentage cloud cover."
+    var info_text = ee.String(selectedCountry_Strg).cat(iscoveredby).cat(wrs2_filtered_size)
+        .cat(LandsatWRSgridsIntotalwere).cat(iC_FC_size).cat(text).cat(text2);
+    
+    panel.widgets().set(0, histogram);
+    panel.widgets().set(1, histogram_CC);
+    
+    // create centroids
+    var centroids = wrs2_filtered.map(getCentroid);
+    var fC        = centroids.map(addField);
+    
+    // buffer centroid according to image counts
+    var buffered_points = fC.map(buffer_count).flatten();
+    
+    // buffer centroid according to cloud percentage
+    var buffered_points_cloud = fC.map(buffer_cloud).flatten();
+    
+    var outlines = empty.paint({featureCollection: buffered_points, color: 1, width: 2});
 
-    var X = ee.List([1,2,3])
-    var Y = ee.List([1,2,3])
-    var Z = X.map(function (x){
-    return Y.map(function(y){
-        return x+y
-    })
-    })
+    // show image count circles
+    var filledOutlines = empty.paint(buffered_points).paint(buffered_points, 0, 2).clip(wrs2_filtered);
+    var layer2         = ui.Map.Layer(filledOutlines, {palette: ['red'].concat(palette)}, 'Landsat image count');
+    Map.layers().set(2, layer2);
 
-iterate
-===============
-.. code-block:: javascript
-    :linenos:
-
-    var table = ee.FeatureCollection("users/rawailnaeem/CA");
-    var S1 = ee.ImageCollection("COPERNICUS/S1_GRD");
-    Map.addLayer(table);
-
-    var t = table.limit(1000);
-    print(t);
-    var Sentinel1 = S1.filterMetadata('instrumentMode', 'equals', 'IW')
-                    .filterDate('2016-04-01','2016-08-30' )
-                    .filterMetadata('resolution_meters', 'equals' , 10)
-                    .filterBounds(t);
-
-    var S1dates = Sentinel1.toList(Sentinel1.size()).map(function(img){
-    var idate = ee.Image(img).date();
-    return ee.Date.fromYMD(
-        idate.get('year'),
-        idate.get('month'),
-        idate.get('day')
-    ).millis()
+    var innerCircles = empty.paint(buffered_points_cloud).paint(buffered_points_cloud, 0, 2).clip(wrs2_filtered);
+    var layer3       = ui.Map.Layer(innerCircles, {palette: ['orange'].concat(palette)}, 'Cloud percentage (avg.)');
+    Map.layers().set(3, layer3);
+    
+    info_text.evaluate(function(result) { 
+        panel.widgets().set(2, ui.Label(result));
     });
 
-    // print images dates
-    print(S1dates.map(function(millis) {
-    return ee.Date(millis).format();
-    }));
+    }  // end - redraw
 
-    var newfc = ee.List(t.iterate(function(feat, ini){
-    // cast
-    var ini = ee.List(ini);
-    var feat = ee.Feature(feat);
+    // ##################################################
+    // This function creates a new feature from the centroid of the geometry.
+    var getCentroid = function(feature) {
+        // Keep this list of properties.
+        var keepProperties = ['PATH', 'ROW'];
+        // Get the centroid of the feature's geometry.
+        var centroid = feature.geometry().centroid();
+        // Return a new Feature, copying properties from the old Feature.
+        return ee.Feature(centroid).copyProperties(feature, keepProperties);
+    }; // end - getCentroid
 
-    // get src date
-    var srcd = ee.String(feat.get('SrcImgDate'));
-    var year = ee.Number.parse(srcd.slice(0, 4));
-    var month = ee.Number.parse(srcd.slice(4, 6));
-    var day = ee.Number.parse(srcd.slice(6, 8));
+    // ##################################################    
+    var addField = function(feature) {
 
-    var date = ee.Date.fromYMD(year, month, day).millis();
+        var path       = feature.get('PATH');
+        var row        = feature.get('ROW');
+        var collection = merged_collection.filter(ee.Filter.eq('WRS_PATH', path)).filter(ee.Filter.eq('WRS_ROW', row));
+        var cloud_mean = collection.aggregate_mean('CLOUD_COVER');
+        cloud_mean     = ee.Number(cloud_mean);
+        var count      = collection.size();
+        var f          = count.multiply(100).round();
+        var cloud_pct  = cloud_mean.multiply(f).divide(100).round();
+        var keepProperties = ['PATH', 'ROW', 'CLOUD_COVER'];
+        
+        return feature.set({'count': f}).set({'cloud_mean': cloud_mean}).set({'cloud_pct': cloud_pct})
+            .copyProperties(feature, keepProperties);
+    }; // end - addField
 
-    var condition = S1dates.contains(date);
+    // ##################################################    
+    var buffer_count = function(feature) {
+        return ee.FeatureCollection(feature.buffer(feature.get('count')));
+    }; // end - buffer_count
 
-    return ee.Algorithms.If(condition, ini.add(feat), ini);
-    }, ee.List([])));
+    // ##################################################  
+    var buffer_cloud = function(feature) {
+        return ee.FeatureCollection(feature.buffer(feature.get('cloud_pct')));
+    }; // end - buffer_cloud
 
-    var newfc = ee.FeatureCollection(newfc);
+    // ##################################################    
+    ui.root.setLayout(ui.Panel.Layout.absolute());
 
-    print(newfc);
+    // Create a panel with vertical flow layout.
+    var panel = ui.Panel({
+    layout: ui.Panel.Layout.flow('vertical'),
+    style: {position: 'bottom-right', height: '500px', width:'350px'}
+    });
 
+    // Create drop down selection
 
+    var vizParams = { color: 'grey', opacity: 0.1 };
+    var palette   = ['FF0000', '00FF00', '0000FF'];
 
+    // get country names
+    var names = countries.aggregate_array('Country');
+    var merged_collection = ee.ImageCollection(l4_coll.merge(l5_coll).merge(l7_coll).merge(l8_coll));
+    // Create an empty image into which to paint the features, cast to byte.
+    var empty   = ee.Image().byte();
+    // initialize combobox and fire up the redraw function
+    var select = ui.Select({items: names.getInfo(), onChange: redraw });
+    select.setPlaceholder('Choose a country ...'); 
+
+    Map.setCenter(10.5, 51.3, 4);
+    Map.add(select);
+    ui.root.add(panel);
 
 Global Urban Extent from Landsat
 ======================================
@@ -2398,3 +2413,5 @@ Global Urban Extent from Landsat
     'driveFolder':'prova'
     });
     */
+
+
