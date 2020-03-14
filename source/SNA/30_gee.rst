@@ -16,6 +16,404 @@ Filtering
 GAIA 处理
 ##############
 
+下载GAIA
+===================
+.. code-block:: python
+    :linenos:
+        
+    import requests
+    import re
+    url = 'http://data.ess.tsinghua.edu.cn/data/GAIA/GAIA_1985_2018_00_008.tif'
+    r = requests.get(url, allow_redirects=True)
+    #if r.headers.get( 'Content-Type')== 'Content-Type':
+    r.content
+
+    f = open("demo.txt")
+    line = f.read()
+    f.close()
+
+    pattern = re.compile("GAIA_1985_2018(_\-?\d{2})(_\-?\d{3}).tif")  
+    result = pattern.findall(line)
+
+    for i in result:
+        url = "http://data.ess.tsinghua.edu.cn/data/GAIA/GAIA_1985_2018"+i[0]+i[1]+".tif"
+        r = requests.get(url, allow_redirects=True)
+        name = "GAIA_1985_2018"+i[0]+i[1]+".tif"
+        open("../GAIA_Data/"+name, 'wb').write(r.content)
+
+
+如何上传到gee
+================
+.. code-block:: python
+    :linenos:
+
+    !pip install --upgrade google-cloud-storage
+    !gsutil ls gs://gaia-zzz/
+
+    project_id = 'groovy-bay-266911'
+    import uuid
+    bucket_name = 'colab-sample-bucket-' + str(uuid.uuid1())
+    from google.colab import auth
+    auth.authenticate_user()
+
+    !gcloud config set project {project_id}
+
+    ## test
+    with open('/tmp/to_upload_-01.txt', 'w') as f:
+    f.write('my sample file')
+    print('/tmp/to_upload.txt contains:')
+    !cat /tmp/to_upload_-01.txt
+    !gsutil cp /tmp/to_upload_-01.txt gs://gaia-zzz/
+
+    lats = []
+    lats.append("%02d"% 0 )
+    for i in range(1,80):
+        lats.append("%02d" % i)
+        lats.append("%03d" % -i)
+    for lat in lats:
+        AssetID = 'users/zhouzz400/GAIA_2018_lat/GAIA_1985_2018_'+lat
+        ImageFile = 'gs://gaia-zzz/GAIA_1985_2018_' + lat + '.tif'
+        #print(ImageFile,AssetID)
+        line = "earthengine --no-use_cloud_api upload image --asset_id={AssetID} --nodata_value=255 {ImageFile}".format(AssetID=AssetID,ImageFile=ImageFile)
+        print(line)
+        !eval {line}
+
+gee 投影
+============
+gee 使用geotools 库 不支持Interrupted_Goode_Homolosine
+可以使用mollwide
+https://gis.stackexchange.com/questions/272818/google-earth-engine-reprojection-to-non-epsg-defined-crs
+
+https://spatialreference.org/ref/sr-org/7619
+ python接口会支持吗？
+
+.. code-block:: javascript
+    :linenos:
+
+    var region = "SPA"
+    var boun = ee.FeatureCollection("users/zhouzz400/Boundries/worldRegion")
+    .filter(ee.Filter.eq("Abbrv",region)).geometry()
+
+    var GAIA = ee.ImageCollection("users/zhouzz400/GAIA")
+    .filterBounds(boun).mosaic().clip(boun)
+    var GAIA_year = GAIA.gte(4)
+
+    var GAIA_viz = {min:0,max:34,palette:["000000","ff0000"]}
+    //Map.addLayer(GAIA,GAIA_viz)
+
+    function getArea(image,boun){
+    var area_imag = image.multiply(ee.Image.pixelArea())
+    var sumarea = ee.Number(area_imag.reduceRegion(
+                    {"reducer": ee.Reducer.sum(),
+                    "scale": 30,
+                    "geometry":boun
+                    })
+                    .get("b1") )
+    return sumarea}
+    var area = getArea(GAIA_year,boun)
+
+    //Lambert cylindrical projection epsg:9843
+    // WKT string
+    var wkt = ' \
+    PROJCS["World_Mollweide", \
+        GEOGCS["GCS_WGS_1984", \
+        DATUM["WGS_1984", \
+            SPHEROID["WGS_1984",6378137,298.257223563]], \
+        PRIMEM["Greenwich",0], \
+        UNIT["Degree",0.017453292519943295]], \
+        PROJECTION["Mollweide"], \
+        PARAMETER["False_Easting",0], \
+        PARAMETER["False_Northing",0], \
+        PARAMETER["Central_Meridian",0], \
+        UNIT["Meter",1], \
+        AUTHORITY["EPSG","54009"]]';
+
+    var proj_mollweide = ee.Projection(wkt);
+    var boun_moll = boun.transform(proj_mollweide,
+    ee.ErrorMargin(10))
+    print(boun_moll.area(ee.ErrorMargin(1000)))//5010868555175.95
+    print(boun.area(ee.ErrorMargin(1000)))//5010868555175.796
+    print(boun.area(ee.ErrorMargin(10),proj_mollweide))//5022090468716.392
+
+矢量与栅格总面积是不是相等的？
+=============================
+.. code-block:: javascript
+    :linenos:
+
+    var boun2 = ee.FeatureCollection("users/zhouzz400/Boundries/China_Provinces")
+    .filter(ee.Filter.eq("Name","湖北省")).geometry()
+
+    var GAIA = ee.ImageCollection("users/zhouzz400/GAIA")
+    .filterBounds(boun2)
+
+    Map.addLayer(GAIA.mosaic().clip(boun2))
+    Map.addLayer(boun2)
+    print("mosaic area:",getArea(GAIA.mosaic())) //185940066188.5224
+
+    function getArea(image){
+    var a = ee.Image(image).gte(0).clip(boun2)
+    var area_imag = a.multiply(ee.Image.pixelArea())
+    var sumarea = ee.Number(area_imag.reduceRegion(
+                    {"reducer": ee.Reducer.sum(),
+                    "scale": 300,
+                    "geometry":boun2
+                    })
+                    .get("b1") )
+    return sumarea
+    }
+    var area = GAIA.toList(10).map(getArea).reduce(ee.Reducer.sum())
+    print("map imgcol area:",area)//185905517767.81976
+    print("boun area:",boun2.area(ee.ErrorMargin(1)))//186114667454.5676
+
+    // peojection area
+    var wkt = ' \
+    PROJCS["World_Mollweide", ["GCS_WGS_1984", ["WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Mollweide"],PARAMETER["False_Easting",0],PARAMETER["False_Northing",0],PARAMETER["Central_Meridian",0],UNIT["Meter",1],AUTHORITY["EPSG","54009"]]';
+
+    var proj_mollweide = ee.Projection(wkt);
+    print("boun transform area:",boun2.transform(proj_mollweide,ee.ErrorMargin(1)).area(ee.ErrorMargin(1))) //186114667454.5346
+    print("boun areapro area:",boun2.area(ee.ErrorMargin(10),proj_mollweide))//186531461977.6914
+
+    function getAreaProject(image){
+    var a = ee.Image(image).gte(0).reproject(proj_mollweide).clip(boun2)
+    var area_imag = a.multiply(ee.Image.pixelArea())
+    var sumarea = ee.Number(area_imag.reduceRegion(
+                    {"reducer": ee.Reducer.sum(),
+                    "scale": 30,
+                    "geometry":boun2
+                    })
+                    .get("b1") )
+    return sumarea
+    }
+    var area = GAIA.toList(70).map(getArea).reduce(ee.Reducer.sum())
+    print("img reproject area:",area)//185905517767.81976
+
+    mosaic area:
+    185940066188.5224
+    map imgcol area:
+    185905517767.81976
+    boun area:
+    186114667454.5676
+    boun transform area:
+    186114667454.5346
+    boun areapro area:
+    186531461977.6914
+    img reproject area:
+    185905517767.81976
+
+栅格区域太大时切片计算
+==========================
+.. code-block:: javascript
+    :linenos:
+
+    var b = ee.Array(lslat).reshape([60,1])
+    var region = "SPA"
+    var boun = ee.FeatureCollection("users/zhouzz400/Boundries/worldRegion")
+    .filter(ee.Filter.eq("Abbrv",region)).geometry()
+    var bound = ee.List(boun.bounds().coordinates().get(0))
+    var pro = boun.bounds().projection()
+    print(boun.bounds().coordinates())
+    Map.addLayer(boun.bounds())
+    var left = ee.Number(ee.List(bound.get(0)).get(0)).floor()
+    var right = ee.Number(ee.List(bound.get(1)).get(0)).ceil()
+    var down = ee.Number(ee.List(bound.get(0)).get(1)).floor()
+    var up = ee.Number(ee.List(bound.get(2)).get(1)).ceil()
+
+    //92,236,-30,29
+    var rec = ee.Geometry.Rectangle([left, down,right, up],null,false)
+
+    // var ls = ee.List([])
+    // for(var i = left; i < right; i++) {
+    //   for (var j = down; i< up; i++){
+    //     var rec = ee.Geometry.Rectangle([i, j,i.add(1), j.add(1)],null,false)
+    //     ls.evaluate(function(rec){  //行不通，push不进去
+    //       ls.add(rec)
+    //       return ls})
+    //   }
+    // }
+
+    // var lslat = ee.List.sequence(down,up)
+    // var lslng = ee.List.sequence(left,right)
+    var down = ee.Number(0)
+    var left = ee.Number(90)
+    var lslat = ee.List.sequence(down,down.add(10))
+    var lslng = ee.List.sequence(left,left.add(10))
+    var ls = lslat.map(function(lat){
+    var y = lslng.map(function(lng){
+    return ee.List([lat,lng])
+    })
+    return y
+    })
+
+    //var array = ee.Array(ls).reshape([8700,2])
+    var array = ee.Array(ls).reshape([121,2])
+    var rect = array.toList().map(function(point){
+    var x = ee.Number(ee.List(point).get(0))
+    var y = ee.Number(ee.List(point).get(1))
+    var rec = ee.Geometry.Rectangle([y,x.subtract(1) ,y.add(1), x],null,false)
+    return rec
+    })
+    //var rectg = ee.List(ee.Geometry.MultiPolygon(rect))
+    Map.addLayer(ee.Geometry.MultiPolygon(rect))
+    var area = rect.map(function(fets){
+    var fet = ee.Geometry(fets)
+    var GAIA = ee.ImageCollection("users/zhouzz400/GAIA")
+    .filterBounds(fet).mosaic().clip(fet).gte(0)
+    var a = ee.Image(GAIA)
+    var area_imag = a.multiply(ee.Image.pixelArea())
+    var sumarea = ee.Number(area_imag.reduceRegion(
+                {"reducer": ee.Reducer.sum(),
+                "scale": 300,
+                "geometry":fet
+                })
+                .get("b1") )
+    return sumarea
+    })
+    var area = area.reduce(ee.Reducer.sum())
+    print(area)
+    //3151140115.2027273
+    //6305539433.349972
+    //1482707901266.5425
+
+
+造掩膜填空
+=====================
+
+.. code-block:: javascript
+    :linenos:
+
+    var region = "SPA"
+    var boun = ee.FeatureCollection("users/zhouzz400/Boundries/worldRegion")
+    .filter(ee.Filter.eq("Abbrv",region)).geometry()
+
+    var GAIA = ee.ImageCollection("users/zhouzz400/GAIA")
+    .filterBounds(boun).mosaic().clip(boun)
+    var GAIA_viz = {min:0,max:34,palette:["000000","ff0000"]}
+    //Map.addLayer(GAIA,GAIA_viz)
+
+    var GAIA_masked = GAIA.updateMask(GAIA.gte(1))
+    var emp = ee.Image.constant(0).select(["constant"],["b1"])
+    //print(emp.get("system:band_names"))
+    //print(emp.propertyNames())
+    print(emp)
+    var x = ee.ImageCollection([GAIA_masked,emp]).mosaic()
+    Map.addLayer(x,{min:0,max:1,palette:["000000","ff0000"]})
+    print(x)
+
+
+.. code-block:: javascript
+    :linenos:
+
+    var region = "SPA"
+    var boun = ee.FeatureCollection("users/zhouzz400/Boundries/worldRegion")
+    .filter(ee.Filter.eq("Abbrv",region)).geometry()
+
+    var GAIA = ee.ImageCollection("users/zhouzz400/GAIA")
+    .filterBounds(boun).mosaic()
+
+    var emp = ee.Image(1).select(["constant"],["b1"])
+
+    var GAIA_mask = GAIA.mask().toUint8()
+    var mask= ee.ImageCollection([GAIA_mask,GAIA]).mosaic().reduce(ee.Reducer.min())
+    var g = GAIA.updateMask(mask)
+    Map.addLayer(g,{min:0,max:34,palette:["000000","ff0000"]})
+
+    var bound = ee.List(boun.bounds().coordinates().get(0))
+    var pro = boun.bounds().projection()
+    Map.addLayer(boun.bounds())
+    var left = ee.Number(ee.List(bound.get(0)).get(0)).floor()
+    var right = ee.Number(ee.List(bound.get(1)).get(0)).ceil()
+    var down = ee.Number(ee.List(bound.get(0)).get(1)).floor()
+    var up = ee.Number(ee.List(bound.get(2)).get(1)).ceil()
+
+    //92,236,-30,29
+
+    var rec = ee.Geometry.Rectangle([left, down,right, up],null,false)
+
+    var lslat = ee.List.sequence(down,up)
+    var lslng = ee.List.sequence(left,right)
+    var ls = lslat.map(function(lat){
+    var y = lslng.map(function(lng){
+        return ee.List([lat,lng])
+    })
+    return y
+    })
+
+    var array = ee.Array(ls).reshape([8700,2])
+    var rect = array.toList().map(function(point){
+    var x = ee.Number(ee.List(point).get(0))
+    var y = ee.Number(ee.List(point).get(1))
+    var rec = ee.Geometry.Rectangle([y,x.subtract(1) ,y.add(1), x],null,false)
+    return rec
+    })
+    //var rectg = ee.List(ee.Geometry.MultiPolygon(rect))
+    Map.addLayer(ee.Geometry.MultiPolygon(rect))
+    var area = rect.map(function(fets){
+    var fet = ee.Geometry(fets)
+    var a = ee.Image(g.clip(boun).gte(3))
+    var area_imag = a.multiply(ee.Image.pixelArea())
+    var sumarea = ee.Number(area_imag.reduceRegion(
+                    {"reducer": ee.Reducer.sum(),
+                    "scale": 300,
+                    "geometry":fet
+                    })
+                    .get("b1") )
+    return sumarea
+    })
+    var area = area.reduce(ee.Reducer.sum())
+    print(area)
+
+
+.. code-block:: javascript
+    :linenos:
+
+    var bound = ee.List(boun.bounds().coordinates().get(0))
+    var pro = boun.bounds().projection()
+    Map.addLayer(boun.bounds())
+    var left = ee.Number(ee.List(bound.get(0)).get(0)).floor()
+    var right = ee.Number(ee.List(bound.get(1)).get(0)).ceil()
+    var down = ee.Number(ee.List(bound.get(0)).get(1)).floor()
+    var up = ee.Number(ee.List(bound.get(2)).get(1)).ceil()
+
+    //92,236,-30,29
+
+    var rec = ee.Geometry.Rectangle([left, down,right, up],null,false)
+    var down = ee.Number(0)
+    var lslat = ee.List.sequence(down,down.add(14),6)
+    var lslng = ee.List.sequence(left,left.add(24),6)
+    // var lslat = ee.List.sequence(down,up)
+    // var lslng = ee.List.sequence(left,right)
+    var ls = lslat.map(function(lat){
+    var y = lslng.map(function(lng){
+        return ee.List([lat,lng])
+    })
+    return y
+    })
+    var array = ee.Array(ls).reshape([15,2])
+
+
+    var rect = array.toList().map(function(point){
+    var x = ee.Number(ee.List(point).get(0))
+    var y = ee.Number(ee.List(point).get(1))
+    var rec = ee.Geometry.Rectangle([y,x.subtract(6) ,y.add(6), x],null,false)
+    return rec
+    })
+    //var rectg = ee.List(ee.Geometry.MultiPolygon(rect))
+    Map.addLayer(ee.Geometry.MultiPolygon(rect))
+    var area = rect.map(function(fets){
+    var fet = ee.Geometry(fets)
+    var a = ee.Image(g.clip(boun).gte(3))
+    var area_imag = a.multiply(ee.Image.pixelArea())
+    var sumarea = ee.Number(area_imag.reduceRegion(
+                    {"reducer": ee.Reducer.sum(),
+                    "scale": 300,
+                    "geometry":fet
+                    })
+                    .get("b1") )
+    return sumarea
+    })
+    var area = area.reduce(ee.Reducer.sum())
+    print(area)
+
 GAIA 数据提取
 ==================
 .. code-block:: javascript
@@ -1109,6 +1507,245 @@ APPs
     Map.setCenter(10.5, 51.3, 4);
     Map.add(select);
     ui.root.add(panel);
+
+Landsat NDVI
+=======================
+.. code-block:: javascript
+    :linenos:
+
+    var GJ = GJ_P.filterBounds(point).geometry();
+    var NDVI_00 = L7_NDVI.filterDate('2000-01-01','2000-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_00 = NDVI_00.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_00,
+    'NDVIsoil':0.22278,//(49)14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+    'NDVIveg':0.78478//(30)14 1,07 0.61322,00 0.43351 ,19 0.96473
+    }).rename('FVC');
+    // print(fvc_00);
+    var NDVI_01 = L7_NDVI.filterDate('2001-01-01','2001-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_01 = NDVI_01.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_01,
+    'NDVIsoil':0.26945,//14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+    'NDVIveg':0.75373//14 1,07 0.61322,00 0.43351 ,19 0.96473
+    }).rename('FVC');
+    // print(fvc_01);
+    var NDVI_02 = L7_NDVI.filterDate('2002-01-01','2002-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_02 = NDVI_02.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_02,
+    'NDVIsoil':0.20628,
+    'NDVIveg':0.76145
+    }).rename('FVC');
+    // print(fvc_02);
+    var NDVI_03 = L5_NDVI.filterDate('2003-01-01','2003-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_03 = NDVI_03.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_03,
+    'NDVIsoil':0.14459,//0.17587
+    'NDVIveg':0.74578//0.73809
+    }).rename('FVC');
+    // print(fvc_03);
+    var NDVI_04 = L5_NDVI.filterDate('2004-01-01','2004-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_04 = NDVI_04.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_04,
+    'NDVIsoil':0.16053,
+    'NDVIveg':0.76210
+    }).rename('FVC');
+    // print(fvc_04);
+    var NDVI_05 = L5_NDVI.filterDate('2005-01-01','2005-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_05 = NDVI_05.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_05,
+    'NDVIsoil':0.13683,
+    'NDVIveg':0.75358
+    }).rename('FVC');
+    // print(fvc_05);
+    var NDVI_06 = L5_NDVI.filterDate('2006-06-01','2006-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_06 = NDVI_06.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_06,
+    'NDVIsoil':0.13679,
+    'NDVIveg':0.76178
+    }).rename('FVC');
+    // print(fvc_06);
+    var NDVI_07 = L5_NDVI.filterDate('2007-01-01','2007-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_07 = NDVI_07.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_07,
+    'NDVIsoil':0.15240,//0.22274
+    'NDVIveg':0.755361//0.76144
+    }).rename('FVC');
+    // print(fvc_07);
+    var NDVI_08 = L5_NDVI.filterDate('2008-01-01','2008-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_08 = NDVI_08.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_08,
+    'NDVIsoil':0.14452,
+    'NDVIveg':0.72232
+    }).rename('FVC');
+    // print(fvc_08);
+    var NDVI_09 = L5_NDVI.filterDate('2009-01-01','2009-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_09 = NDVI_09.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_09,
+    'NDVIsoil':0.14457,
+    'NDVIveg':0.76880
+    }).rename('FVC');
+    // print(fvc_09);
+    var NDVI_10 = L5_NDVI.filterDate('2010-01-01','2010-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_10 = NDVI_10.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_10,
+    'NDVIsoil':0.12892,
+    'NDVIveg':0.75360
+    }).rename('FVC');
+    // print(fvc_10);
+    var NDVI_11 = L5_NDVI.filterDate('2011-01-01','2011-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_11 = NDVI_11.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_11,
+    'NDVIsoil':0.14458,
+    'NDVIveg':0.75363
+    }).rename('FVC');
+    // print(fvc_11);
+    var NDVI_12 = L7_NDVI.filterDate('2012-01-01','2012-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_12 = NDVI_12.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_12,
+    'NDVIsoil':0.18363,
+    'NDVIveg':0.78475
+    }).rename('FVC');
+    // print(fvc_12);
+    var NDVI_13 = L7_NDVI.filterDate('2013-01-01','2013-12-31')
+            .filterBounds(GJ)
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_13 = NDVI_13.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_13,
+    'NDVIsoil':0.20681,
+    'NDVIveg':0.80047
+    }).rename('FVC');
+    // print(fvc_13);
+    var NDVI_14 = L8.filterDate('2014-01-01','2014-12-31')
+            .filterBounds(GJ)
+            .map(function(image) {
+            return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+            .select('NDVI')
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_14 = NDVI_14.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_14,
+    'NDVIsoil':0.27930,//14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+    'NDVIveg':1//14 1,07 0.61322,00 0.43351 ,19 0.96473
+    }).rename('FVC');
+    // print(fvc_14);
+    var NDVI_15 = L8.filterDate('2015-01-01','2015-12-31')
+            .filterBounds(GJ)
+            .map(function(image) {
+            return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+            .select('NDVI')
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_15 = NDVI_15.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_15,
+    'NDVIsoil':0.25393,
+    'NDVIveg':1
+    }).rename('FVC');
+    // print(fvc_15);
+    var NDVI_16 = L8.filterDate('2016-01-01','2016-12-31')
+            .filterBounds(GJ)
+            .map(function(image) {
+            return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+            .select('NDVI')
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_16 = NDVI_16.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_16,
+    'NDVIsoil':0.24803,
+    'NDVIveg':1
+    }).rename('FVC');
+    // print(fvc_16);
+    var NDVI_17 = L8.filterDate('2017-01-01','2017-12-31')
+            .filterBounds(GJ)
+            .map(function(image) {
+            return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+            .select('NDVI')
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_17 = NDVI_17.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_17,
+    'NDVIsoil':0.26367,
+    'NDVIveg':1
+    }).rename('FVC');
+    // print(fvc_17);
+    var NDVI_18 = L8.filterDate('2018-01-01','2018-12-31')
+            .filterBounds(GJ)
+            .map(function(image) {
+            return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+            .select('NDVI')
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_18 = NDVI_18.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_18,
+    'NDVIsoil':0.24803,
+    'NDVIveg':1
+    }).rename('FVC');
+    // print(fvc_18);
+    var NDVI_19 = L8.filterDate('2019-01-01','2019-12-31')
+            .filterBounds(GJ)
+            .map(function(image) {
+            return image.addBands(image.normalizedDifference(['B5','B4']).rename('NDVI'))})
+            .select('NDVI')
+            .qualityMosaic('NDVI').select('NDVI').clip(GJ);
+    var fvc_19 = NDVI_19.expression(
+    '(NDVI-NDVIsoil)/(NDVIveg-NDVIsoil)',{
+    'NDVI':NDVI_19,
+    'NDVIsoil':0.22268,//14 0.13089,07 -0.17542,00 -0.05848,19 0.22268
+    'NDVIveg':0.96473//14 1,07 0.61322,00 0.43351 ,19 0.96473
+    }).rename('FVC');
+    // print(fvc_19);
+    var collection = ee.ImageCollection([fvc_00,fvc_01,fvc_02,fvc_03,fvc_04,fvc_05,fvc_06,fvc_07,fvc_08,
+    fvc_09,fvc_10,fvc_11,fvc_12,fvc_13,fvc_14,fvc_15,fvc_16,fvc_17,fvc_18,fvc_19]);
+    print(collection);
+    var collection_mean = collection.reduce(ee.Reducer.mean()).rename('FVC').toFloat();
+    print(collection_mean);
+    Export.image.toDrive({
+    image:collection_mean,
+    description:'fvc_mean',
+    fileNamePrefix:'GJ_fvc_mean',
+    scale:30,
+    region:GJ,
+    maxPixels:1e13
+    })
+
 
 Global Urban Extent from Landsat
 ======================================

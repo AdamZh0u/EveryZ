@@ -13,8 +13,10 @@ This is an open source book written for myself to review my tools.
 
     SNA/10_sphinx_rst.rst
     SNA/30_gee.rst
+    SNA/50_plots.rst
+    SNA/51_pandas.rst
     Snippet/python.rst
-    Snippet/Plots.rst
+
     Snippet/R.rst
 
 .. 
@@ -40,12 +42,13 @@ This is an open source book written for myself to review my tools.
     Discussion/En.rst
 
 
-.. toctree::
+.. 
+    toctree::
     :maxdepth: 1
     :caption: Daily
 
+.. Daily/Daily
     Daily/2020
-..    Daily/Daily
 
 
 Indices and tables
