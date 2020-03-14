@@ -64,7 +64,7 @@ loglogplot
                 )#bbox = dict(facecolor = "r", alpha = 0.2)
         return slope,ax
 
-![loglogplot](./00_img/loglogplot.png)
+.. image:: ./00_img/loglogplot.png
 
 
 Scientific style plot
@@ -132,7 +132,7 @@ Scientific style plot
     plt.show()
     fig.savefig("Four-quadrant.png",dpi=600)
 
-![CA_FI-rat0](./00_img/CA_FI-rat0_2.0.png)
+.. image:: ./00_img/CA_FI-rat0_2.0.png
 
 HDI-LDI
 ==============
@@ -211,7 +211,7 @@ HDI-LDI
     ax1.legend(handles=[A,B],prop=font1,frameon=False,loc="lower left")
     fig.savefig("HDI-LDI-plot_8_31.png",dpi=1000)
 
-![HDI-LDI](./00_img/HDI-LDI-plot_8_31.png)
+.. image:: ./00_img/HDI-LDI-plot_8_31.png
 
 Proportion and change rate
 =====================================
@@ -347,7 +347,7 @@ Proportion and change rate
 
     fig.savefig("demo1.png",bbox_inches="tight",dpi=1200,pad_inches=0)
 
-![Nature_change](./00_img/Nature_change-9.2.png)
+.. image:: ./00_img/Nature_change-9.2.png
 
 
 legend 
@@ -521,5 +521,5 @@ Visualizing named colors
                         hspace=0, wspace=0)
     plt.show()
 
-![named_colors](./00_img/named_colors.png)
+.. image:: ./00_img/named_colors.png
 
