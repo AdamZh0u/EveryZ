@@ -11,12 +11,11 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 1
     :caption: SNA
 
-    SNA/10_sphinx_rst.rst
-    SNA/30_gee.rst
-    SNA/50_plots.rst
-    SNA/51_pandas.rst
+    0_SNA/10_sphinx_rst.rst
+    0_SNA/30_gee.rst
+    0_SNA/50_plots.rst
+    0_SNA/51_pandas.rst
     Snippet/python.rst
-
     Snippet/R.rst
 
 .. 
@@ -28,15 +27,15 @@ This is an open source book written for myself to review my tools.
     :maxdepth: 1
     :caption: Notes
 
-    Notes/10_notes.rst
+    1_Notes/10_notes.rst
 
 .. toctree::
     :maxdepth: 1
     :caption: Discussion
 
-    DIS/11_debate.rst
-    DIS/12_articles.rst
-    DIS/13_libretto.rst
+    2_DIS/11_debate.rst
+    2_DIS/12_articles.rst
+    2_DIS/13_libretto.rst
 .. 
     Discussion/Write.rst
     Discussion/En.rst
