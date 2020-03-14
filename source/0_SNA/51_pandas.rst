@@ -430,7 +430,9 @@ Split Cells With Lists
 .. code-block:: python
     :linenos: 
 
-
+    df = df_test.head()
+    df["g"] = [",".join([str(a)+lista for a in range(4)]) for lista in ["a","b","c"]]
+    df_out = df.assign(g = df["g"].str.split(",")).explode("g")
 
 Table Exploration
 **********************
@@ -439,8 +441,82 @@ Groupby Functionality
 .. code-block:: python
     :linenos: 
 
+    df["gr"] = [1, 1 , 0]
+    df_out = df.groupby('gr').agg([np.sum, np.mean, np.std])
+    df_out.iloc[:,:]
 
+Cross Correlation Series Without Duplicates (func)
+======================================================
+.. code-block:: python
+    :linenos: 
 
+    def corr_list(df):
+
+        return  (df.corr()
+                .unstack()
+                .sort_values(kind="quicksort",ascending=False)
+                .drop_duplicates().iloc[1:]); df_out
+                
+    corr_list(df)
+
+Missing Data Report
+======================================================
+.. code-block:: python
+    :linenos: 
+
+    df = df_test.copy()
+    df[df>df.mean()]  = None
+
+    def missing_data(data):
+        "Create a dataframe with a percentage and count of missing values"
+        total = data.isnull().sum().sort_values(ascending = False)
+        percent = (data.isnull().sum()/data.isnull().count()*100).sort_values(ascending = False)
+        return pd.concat([total, percent], axis=1, keys=['Total', 'Percent'])
+
+    df_out = missing_data(df)
+
+Duplicated Rows Report
+======================================================
+.. code-block:: python
+    :linenos: 
+
+    df = df_test.copy()
+    df["a"].iloc[2] = df["a"].iloc[1]
+    df["b"].iloc[2] = df["b"].iloc[1] 
+    # Get a report of all duplicate records in a dataframe, based on specific columns
+    df_out = df[df.duplicated(['a'], keep=False)]
+
+Skewness (func)
+======================================================
+.. code-block:: python
+    :linenos: 
+
+    from scipy.stats import skew
+
+    def display_skewness(data):
+        '''show skewness information
+
+            Parameters
+            ----------
+            data: pandas dataframe
+
+            Return
+            ------
+            df: pandas dataframe
+        '''
+        numeric_cols = data.columns[data.dtypes != 'object'].tolist()
+        skew_value = []
+
+        for i in numeric_cols:
+            skew_value += [skew(data[i])]
+        df = pd.concat(
+            [pd.Series(numeric_cols), pd.Series(data.dtypes[data.dtypes != 'object'].apply(lambda x: str(x)).values)
+                , pd.Series(skew_value)], axis=1)
+        df.columns = ['var_name', 'col_type', 'skew_value']
+
+        return df
+
+    display_skewness(df)
 
 
 
