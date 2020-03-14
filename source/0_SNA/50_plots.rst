@@ -440,7 +440,6 @@ IEEE style
 .. code-block:: python
     :linenos:
 
-
     # Matplotlib style for IEEE plots
     # This style should work for most two-column journals
 
@@ -459,10 +458,6 @@ IEEE style
 Named Colors
 =====================
 
-"""
-========================
-Visualizing named colors
-========================
 .. code-block:: python
     :linenos:
 
