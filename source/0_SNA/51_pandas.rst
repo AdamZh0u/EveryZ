@@ -542,6 +542,7 @@ Remove Correlated Pairs (func)
 Replace Infrequently Occuring Categories
 =============================================
 替换频率比较小的类别
+
 .. code-block:: python
     :linenos: 
 
@@ -907,26 +908,6 @@ Prinicipal Component Features (func)
         return df
 
     df_out = pv.pca_feature(df,variance_or_components=0.80,drop_cols=["target","a"]); df_out
-
-Multiple Lags (func)
-=========================================
-.. code-block:: python
-    :linenos: 
-
-    df = df_test.copy()
-    def multiple_lags(df, start=1, end=3,columns=None):
-        if not columns:
-            columns = df.columns.to_list()
-        lags = range(start, end+1)  # Just two lags for demonstration.
-
-        df = df.assign(**{
-        '{}_t_{}'.format(col, t): df[col].shift(t)
-        for t in lags
-        for col in columns
-        })
-        return df
-
-    df_out = multiple_lags(df, start=1, end=2,columns=["a","target"]); df_out
 
 Multiple Lags (func)
 =========================================
