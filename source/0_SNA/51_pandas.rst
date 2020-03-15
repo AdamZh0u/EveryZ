@@ -316,7 +316,7 @@ Memory Reduction Script (func)
         print('Decreased by {:.1f}%'.format(100 * (start_mem - end_mem) / start_mem))
         
         return df
-    df_out = pv.reduce_mem_usage(df); df_out
+    df_out = reduce_mem_usage(df); df_out
 
 
 Verify Primary Key (func)
@@ -347,7 +347,7 @@ Shift Columns to Front (func)
         df.reset_index(drop=True, inplace=True)
         return df
 
-    df_out = pv.list_shuff(["target","c","d"],df); df_out
+    df_out = list_shuff(["target","c","d"],df); df_out
 
 Multiple Column Assignments
 ================================
@@ -537,7 +537,7 @@ Remove Correlated Pairs (func)
         df_corr = df_corr.drop(columns = to_remove)
         return df.drop(to_remove,axis=1)
 
-    df_out = pv.drop_corr(df, thresh=0.1,keep_cols=["target"]); df_out
+    df_out = drop_corr(df, thresh=0.1,keep_cols=["target"]); df_out
 
 Replace Infrequently Occuring Categories
 =============================================
@@ -557,7 +557,7 @@ Replace Infrequently Occuring Categories
             small_categories = frequencies[frequencies < thresh].index
             df[col] = df[col].replace(small_categories, "Other")
         return df
-    df_out = pv.replace_small_cat(df,["cat"])
+    df_out = replace_small_cat(df,["cat"])
 
 Quasi-Constant Features Detection (func)
 ===============================================
@@ -907,7 +907,7 @@ Prinicipal Component Features (func)
         df = pd.concat((df[drop_cols],pd.DataFrame(X_pca, columns=["PCA_"+str(i+1) for i in range(X_pca.shape[1])])),axis=1)
         return df
 
-    df_out = pv.pca_feature(df,variance_or_components=0.80,drop_cols=["target","a"]); df_out
+    df_out =pca_feature(df,variance_or_components=0.80,drop_cols=["target","a"]); df_out
 
 Multiple Lags (func)
 =========================================
@@ -997,7 +997,7 @@ Haversine Distance (Location Feature) (func)
         
         return R * c
 
-    df['distance_central'] = df.apply(pv.haversine_distance,axis=1); df.iloc[:,4:]
+    df['distance_central'] = df.apply(haversine_distance,axis=1); df.iloc[:,4:]
 
 Parse Address
 =============================================
@@ -1150,4 +1150,4 @@ Classification Metrics (func)
         return df_exec
 
 
-    met = pv.classification_scores(y_test, y_predict, y_prob); met
+    met = classification_scores(y_test, y_predict, y_prob); met
