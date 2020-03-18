@@ -480,6 +480,62 @@ GAIA 数据提取
     );
     Map.addLayer(des_25_v);
 
+
+层级焦点统计
+================
+焦点统计与focal的区别？
+kernel种类对focal的影响。
+
+.. code-block:: javascript
+    :linenos:
+        
+    var Viz_GAIA = {min: 1, max: 34, palette: ['FFFFFF', 'FF0000']};
+    Map.addLayer(sh,Viz_GAIA)
+
+    var sh_10 = sh.gte(9)
+
+    var ker_sq = ee.Kernel.circle({
+    radius: 10, units: 'pixels', normalize: false
+    });
+
+    // ee.Kernel.circle(7)
+    var ker_st1 = sh_10.reduceNeighborhood({
+    reducer: ee.Reducer.mean(),
+    kernel: ker_sq,
+    });
+
+    var Viz_Dens = {min: 0, max: 1, palette: ['FFFFFF', 'FF0000']};
+    var des_50_1 = ker_st1.gte(0.7);
+    Map.addLayer(des_50_1,Viz_Dens)
+    print(des_50_1)
+
+    var ker_st2 = des_50_1.reduceNeighborhood({
+    reducer: ee.Reducer.mean(),
+    kernel: ker_sq,
+    });
+
+    var des_50_2 = ker_st2.gte(0.7);
+    Map.addLayer(des_50_2,Viz_Dens)
+    print(des_50_2)
+
+
+    var ker_st3 = des_50_2.reduceNeighborhood({
+    reducer: ee.Reducer.mean(),
+    kernel: ker_sq,
+    });
+
+    var des_50_3 = ker_st3.gte(0.7);
+    Map.addLayer(des_50_3,Viz_Dens)
+    print(des_50_3)
+
+    var objectId = des_50_3.connectedComponents({
+    connectedness: ee.Kernel.plus(1),
+    maxSize: 256
+    });
+    Map.addLayer(objectId.randomVisualizer(), null, 'Objects');
+
+
+
 城市中心与Buffer
 ================
 .. code-block:: javascript

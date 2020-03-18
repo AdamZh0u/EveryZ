@@ -247,3 +247,6 @@ https://scholar.google.com/citations?hl=en&user=_yDpJ2MAAAAJ
 JoséScheinkman
 
 
+3.17
+================
+

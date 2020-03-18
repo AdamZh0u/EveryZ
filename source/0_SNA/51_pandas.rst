@@ -1,6 +1,8 @@
 ^^^^^^^^^^^^
 Pandas
 ^^^^^^^^^^^^
+https://github.com/firmai/pandasvault#table-processing
+
 Genertate DF
 ******************
 

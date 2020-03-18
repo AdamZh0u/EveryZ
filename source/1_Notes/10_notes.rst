@@ -308,3 +308,12 @@ Data
 .. data:: Statistics
 
     `statistics from yearbook`
+
+
+2010 Schwarz,Nina 
+#######################
+Urban form revisited—Selecting indicators for characterising European cities
+
+Four out of five European citizens life in urban areas, and urban form – like the density or compactness of a city – influences daily life and is an important factor for both quality of life and environmental impact. Urban planning can influence urban form, but due to practicality needs to focus on a few indicators out of the numerous indicators which are available. The present study analyses urban form with respect to landscape metrics and population-related indicators for 231 European cities. Correlations and factor analysis identify the most relevant urban form indicators. Furthermore, a cluster analysis groups European cities according to their urban form. Significant differences between the clusters are presented. Results indicate that researchers, European administration and urban planners can select few indicators for analysing urban form due to strong relationships between single indicators. But they should be aware of differences in urban form when comparing European cities or working on planning policies for the whole of Europe.
+
+五分之四的欧洲公民生活在城市地区，城市形态——比如城市的密度或紧凑程度——影响着人们的日常生活，是影响生活质量和环境的重要因素。城市规划可以影响城市形态，但由于实践中需要在众多指标中关注少数几个指标。本研究分析了231个欧洲城市的城市形态景观指标和人口相关指标。相关性和因子分析确定最相关的城市形态指标。此外，聚类分析还根据欧洲城市的城市形态对其进行了分组。集群之间存在显著差异。结果表明，研究人员、欧洲行政当局和城市规划者可以选择很少的指标来分析城市形态，因为单一指标之间的关系很强。但在比较欧洲城市或制定整个欧洲的规划政策时，他们应该意识到城市形态的差异。
