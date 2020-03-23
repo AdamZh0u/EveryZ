@@ -386,11 +386,14 @@ OLS log plot
 
 .. math::
 
+    \begin{eqnarray}
     y = C\times x^\alpha + m  \\
     y \stackrel{\text{i.i.d}}{\sim} \mathcal{N}(\hat{y}, \sigma^2) \\
     \    \\
     \log y = \alpha \log x+\log C \\
     \log y \not \stackrel{\text{i.i.d}}{\sim} \mathcal{N}(\hat{\log y}, \sigma^2)
+    \end{eqnarray}
+
 
 .. code-block:: python
     :linenos:
