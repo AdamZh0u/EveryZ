@@ -400,6 +400,7 @@ OLS log plot
 
     import pandas as pd
     import matplotlib.pyplot as plt
+    import numpy as np
     from scipy.optimize import curve_fit
 
     ## 生成数据
@@ -410,7 +411,7 @@ OLS log plot
     b = 1.3
     c = 0.5
 
-    noise_sigma = 10000
+    noise_sigma = 50000
 
     xdata = np.linspace(10, 10000, 100) # truex
     y = func(xdata,a,b,c) # true y 
@@ -442,15 +443,15 @@ OLS log plot
     fig,ax = plt.subplots(1,2,figsize = (12,5))
 
     ax[0].scatter(xdata,ydata,s=10)
-    ax[0].plot(xdata,y,'k',label ="ture line" )
-    ax[0].plot(xdata,yhat1,'r--',label ="cruve fit" )
+    ax[0].plot(xdata,y,'k',label ="true line" )
+    ax[0].plot(xdata,yhat1,'r--',label ="NLS fit" )
     ax[0].plot(np.exp(xd),yhat2,"g",label ="OLS line")## OLS fit
     ax[0].legend()
     ax[0].grid()
 
     ax[1].scatter(xd,yd,s=10)
-    ax[1].plot(xd,np.log(y[index])                  ,"k",label ="ture line")## 真值
-    ax[1].plot(xd,popt[1]*xd+np.log(popt[0]) ,"r--",label ="cruve fit")## 幂拟合
+    ax[1].plot(xd,np.log(y[index])                  ,"k",label ="true line")## 真值
+    ax[1].plot(xd,popt[1]*xd+np.log(popt[0]) ,"r--",label ="NLS fit")## 幂拟合
     ax[1].plot(xd,k*xd+m                     ,"g--",label ="OLS line")## 幂拟合
     ax[1].legend()
     ax[1].grid()
