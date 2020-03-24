@@ -404,30 +404,32 @@ OLS log plot
     from scipy.optimize import curve_fit
 
     ## 生成数据
-    def func(x, a, b, c):
-        return a * x**b + c
+    def func(x, a, b):
+        return a * x**b
 
     a = 2.5
     b = 1.3
-    c = 0.5
 
-    noise_sigma = 50000
+    noise_sigma = 10000
 
     xdata = np.linspace(10, 10000, 100) # truex
-    y = func(xdata,a,b,c) # true y 
-    ydata = y + np.random.normal(0,noise_sigma,size=len(xdata)) # noise y
+    # xdata = np.logspace(1, 20, 100)
 
-    print("True C:",a,"\nTrue Alpha===",b,"\nTrue m",c)
+    y = func(xdata,a,b) # true y 
+    ydata = y + np.random.normal(0,noise_sigma,size=len(xdata)) # noise y
+    index = ~(ydata<0)
+
+    print("True C:",a,"\nTrue Alpha===",b)
     print("*"*60)
     ## curve fit 
     popt, pcov = curve_fit(func, xdata, ydata)
 
-    yhat1 = [func(i, popt[0],popt[1],popt[2]) for i in xdata]
-    print("NLS Fit C:",popt[0],"\nNLS Fit Alpha===",popt[1],"\nNLS Fit m",popt[2])
+    yhat1 = [func(i, popt[0],popt[1]) for i in xdata]
+    print("NLS Fit C:",popt[0],"\nNLS Fit Alpha===",popt[1])
     print("*"*60)
+
     ## ols fit 
     index = ~(ydata<0)
-
     xd = np.log(xdata[index])
     yd = np.log(ydata[index])
 
@@ -439,22 +441,25 @@ OLS log plot
     yhat2 = np.exp(logyhat)
     print("OLS Fit Alpha===",k,"\nOLS Fit C:",m)
     print("*"*60)
+
     ## plot
     fig,ax = plt.subplots(1,2,figsize = (12,5))
 
     ax[0].scatter(xdata,ydata,s=10)
     ax[0].plot(xdata,y,'k',label ="true line" )
     ax[0].plot(xdata,yhat1,'r--',label ="NLS fit" )
-    ax[0].plot(np.exp(xd),yhat2,"g",label ="OLS line")## OLS fit
+    ax[0].plot(xdata[index],yhat2,"g",label ="OLS line")## OLS fit
     ax[0].legend()
     ax[0].grid()
 
-    ax[1].scatter(xd,yd,s=10)
-    ax[1].plot(xd,np.log(y[index])                  ,"k",label ="true line")## 真值
-    ax[1].plot(xd,popt[1]*xd+np.log(popt[0]) ,"r--",label ="NLS fit")## 幂拟合
-    ax[1].plot(xd,k*xd+m                     ,"g--",label ="OLS line")## 幂拟合
-    ax[1].legend()
-    ax[1].grid()
+    ax[1].set_yscale("log")
+    ax[1].set_xscale("log")
+    ax[1].scatter(xdata,ydata,s=10)
+    ax[1].loglog(xdata,y,'k',label ="true line" )
+    ax[1].loglog(xdata,yhat1,'r--',label ="NLS fit" )
+    ax[1].loglog(xdata[index],yhat2,"g",label ="OLS line")## OLS fit
+    ax[1].legend(frameon = True)
+    ax[1].grid(which = "both")
 
 
 .. image:: ./00_img/OLS_Log.png
