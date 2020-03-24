@@ -462,8 +462,7 @@ OLS log plot
     ax[1].grid(which = "both")
 
 
-.. image:: ./00_img/OLS_Log.png
-
+.. image:: ./00_img/OLS_Log1.png
 
 
 Configures
