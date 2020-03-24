@@ -387,11 +387,11 @@ OLS log plot
 .. math::
 
     \begin{eqnarray}
-    y = C\times x^\alpha + m  \\
-    y \stackrel{\text{i.i.d}}{\sim} \mathcal{N}(\hat{y}, \sigma^2) \\
+    y &=& C\times x^\alpha + m  \\
+    y &\stackrel{\text{i.i.d}}{\sim}& \mathcal{N}(\hat{y}, \sigma^2) \\
     \    \\
-    \log y = \alpha \log x+\log C \\
-    \log y \not \stackrel{\text{i.i.d}}{\sim} \mathcal{N}(\hat{\log y}, \sigma^2)
+    \log y &=& \alpha \log x+\log C \\
+    \log y &\not \stackrel{\text{i.i.d}}{\sim}& \mathcal{N}(\hat{\log y}, \sigma^2)
     \end{eqnarray}
 
 
@@ -447,7 +447,7 @@ OLS log plot
 
     ax[0].scatter(xdata,ydata,s=10)
     ax[0].plot(xdata,y,'k',label ="true line" )
-    ax[0].plot(xdata,yhat1,'r--',label ="NLS fit" )
+    ax[0].plot(xdata,yhat1,'r--',label ="NLS line" )
     ax[0].plot(xdata[index],yhat2,"g",label ="OLS line")## OLS fit
     ax[0].legend()
     ax[0].grid()
@@ -456,7 +456,7 @@ OLS log plot
     ax[1].set_xscale("log")
     ax[1].scatter(xdata,ydata,s=10)
     ax[1].loglog(xdata,y,'k',label ="true line" )
-    ax[1].loglog(xdata,yhat1,'r--',label ="NLS fit" )
+    ax[1].loglog(xdata,yhat1,'r--',label ="NLS line" )
     ax[1].loglog(xdata[index],yhat2,"g",label ="OLS line")## OLS fit
     ax[1].legend(frameon = True)
     ax[1].grid(which = "both")
