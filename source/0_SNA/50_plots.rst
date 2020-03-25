@@ -403,63 +403,83 @@ OLS log plot
     import numpy as np
     from scipy.optimize import curve_fit
 
+    def paramsPlot(xdata,ydata):
+        ## curve fit
+        popt, pcov = curve_fit(func, xdata, ydata)
+
+        yhat1 = [func(i, popt[0],popt[1]) for i in xdata]
+        print("NLS Fit C:",popt[0],"\nNLS Fit Alpha===",popt[1])
+        print("*"*60)
+
+        ## ols fit
+        xd = np.log(xdata)
+        yd = np.log(ydata)
+
+        par= np.polyfit(xd,yd,1)
+        k = par[0]
+        m = par[1]
+
+        logyhat = k*xd+m
+        yhat2 = np.exp(logyhat)
+        print("OLS Fit C:",m ,"\nOLS Fit Alpha===",k)
+        print("*"*60)
+
+        ## plot
+        fig,ax = plt.subplots(1,2,figsize = (12,5))
+
+        ax[0].scatter(xdata,ydata,s=10)
+        ax[0].plot(xdata,yhat1,'r--',label ="NLS line" )
+        ax[0].plot(xdata,yhat2,"g--",label ="OLS line")## OLS fit
+        ax[0].legend()
+        ax[0].grid()
+        ax[1].set_xlim(0.7*min(xdata),1.3*max(xdata))
+        ax[1].set_ylim(0.7*min(ydata),1.3*max(ydata))
+        
+        ax[1].set_yscale("log")
+        ax[1].set_xscale("log")
+        ax[1].scatter(xdata,ydata,s=10)
+        ax[1].loglog(xdata,yhat1,'r--',label ="NLS line" )
+        ax[1].loglog(xdata,yhat2,"g--",label ="OLS line")## OLS fit
+        ax[1].grid(which = "both")
+        ax[1].legend()
+        ax[1].set_xlim(0.7*min(xdata),1.3*max(xdata))
+        ax[1].set_ylim(0.7*min(ydata),1.3*max(ydata))
+        
+        return fig,ax
+    ## 使用数据
+    df = pd.read_excel("01全国96指标数据.xlsx",index_col = 0)
+    data = df[["Pop","BuiltUpArea"]].dropna().sort_values(by = "Pop",ascending = False).reset_index(drop= True)
+    data = df[["Pop","Employment"]].dropna().sort_values(by = "Pop",ascending = False).reset_index(drop= True)
+    data = df[["Pop","GDP"]].dropna().sort_values(by = "Pop",ascending = False).reset_index(drop= True)
+
+    xdata = data.iloc[:,0]
+    ydata = data.iloc[:,1]
+
+    fig,ax = paramsPlot(xdata,ydata)
+
     ## 生成数据
     def func(x, a, b):
         return a * x**b
 
     a = 2.5
-    b = 1.3
+    b = 0.75
 
-    noise_sigma = 10000
+    noise_sigma = 100
 
     xdata = np.linspace(10, 10000, 100) # truex
     # xdata = np.logspace(1, 20, 100)
 
-    y = func(xdata,a,b) # true y 
+    y = func(xdata,a,b) # true y
     ydata = y + np.random.normal(0,noise_sigma,size=len(xdata)) # noise y
     index = ~(ydata<0)
 
     print("True C:",a,"\nTrue Alpha===",b)
     print("*"*60)
-    ## curve fit 
-    popt, pcov = curve_fit(func, xdata, ydata)
 
-    yhat1 = [func(i, popt[0],popt[1]) for i in xdata]
-    print("NLS Fit C:",popt[0],"\nNLS Fit Alpha===",popt[1])
-    print("*"*60)
-
-    ## ols fit 
+    ## ols fit
     index = ~(ydata<0)
-    xd = np.log(xdata[index])
-    yd = np.log(ydata[index])
 
-    par= np.polyfit(xd,yd,1)
-    k = par[0]
-    m = par[1]
-
-    logyhat = k*xd+m
-    yhat2 = np.exp(logyhat)
-    print("OLS Fit Alpha===",k,"\nOLS Fit C:",m)
-    print("*"*60)
-
-    ## plot
-    fig,ax = plt.subplots(1,2,figsize = (12,5))
-
-    ax[0].scatter(xdata,ydata,s=10)
-    ax[0].plot(xdata,y,'k',label ="true line" )
-    ax[0].plot(xdata,yhat1,'r--',label ="NLS line" )
-    ax[0].plot(xdata[index],yhat2,"g",label ="OLS line")## OLS fit
-    ax[0].legend()
-    ax[0].grid()
-
-    ax[1].set_yscale("log")
-    ax[1].set_xscale("log")
-    ax[1].scatter(xdata,ydata,s=10)
-    ax[1].loglog(xdata,y,'k',label ="true line" )
-    ax[1].loglog(xdata,yhat1,'r--',label ="NLS line" )
-    ax[1].loglog(xdata[index],yhat2,"g",label ="OLS line")## OLS fit
-    ax[1].legend(frameon = True)
-    ax[1].grid(which = "both")
+    fig,ax = paramsPlot(xdata[index],ydata[index])
 
 
 .. image:: ./00_img/OLS_Log1.png
@@ -467,6 +487,24 @@ OLS log plot
 
 Configures
 ***********************
+RcParams
+====================
+.. code-block:: python
+    :linenos:
+
+    from matplotlib.pyplot import rcParams,cycler
+    rcParams["figure.figsize"] = 16,8
+
+    rcParams["axes.spines.top"] = False
+    rcParams["axes.spines.right"] = False
+    rcParams["axes.spines.bottom"] = False
+    rcParams["axes.spines.left"] = False
+
+    rcParams["lines.linewidth"] = 2.5
+    rcParams["axes.prop_cycle"] = cycler(color =["#424242"])
+
+    rcParams["xtick.labelsize"] = "xx-large"
+    rcParams["ytick.labelsize"] = "xx-large"
 
 Scientific style
 ========================
