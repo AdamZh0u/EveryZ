@@ -35,8 +35,8 @@ This is an open source book written for myself to review my tools.
     :caption: Discussion
 
     2_DIS/11_debate.rst
-    2_DIS/12_articles.rst
-    2_DIS/13_libretto.rst
+    2_DIS/12_toc.rst
+
 .. 
     Discussion/Write.rst
     Discussion/En.rst
