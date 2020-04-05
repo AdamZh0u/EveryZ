@@ -447,7 +447,7 @@ fig.text(0,-0.2,"serif"+ test_font,font5);
 ```
 
 
-![png](output_8_0.png)
+![ ](output_8_0.png)
 
 
 #### font props
@@ -574,7 +574,7 @@ plt.show()
 ```
 
 
-![png](output_19_0.png)
+![ ](output_19_0.png)
 
 
 
@@ -595,7 +595,7 @@ labels = ax.get_xticklabels() + ax.get_yticklabels() ## text class
 ```
 
 
-![png](output_20_0.png)
+![ ](output_20_0.png)
 
 
 #### example2
@@ -697,7 +697,7 @@ plt.show()
 ```
 
 
-![png](output_22_0.png)
+![ ](output_22_0.png)
 
 
 #### 使用tex
@@ -739,7 +739,7 @@ for i, s in enumerate(tests):
 ```
 
 
-![png](output_24_0.png)
+![ ](output_24_0.png)
 
 
 #### tex2
@@ -768,5 +768,5 @@ plt.show()
 ```
 
 
-![png](output_26_0.png)
+![ ](output_26_0.png)
 
