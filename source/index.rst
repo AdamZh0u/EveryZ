@@ -15,6 +15,7 @@ This is an open source book written for myself to review my tools.
     0_SNA/30_gee.rst
     0_SNA/50_plots.rst
     0_SNA/51_pandas.rst
+    0_SNA/52_matplotlib.rst
     Snippet/python.rst
     Snippet/R.rst
 
@@ -23,11 +24,11 @@ This is an open source book written for myself to review my tools.
     Snippet/Git.rst
     Snippet/Rhino.rst
 
-.. toctree::
-    :maxdepth: 1
-    :caption: Notes
-
-    1_Notes/10_notes.rst
+.. 
+    .. toctree::
+        :maxdepth: 1
+        :caption: Notes
+        1_Notes/10_notes.rst
 
 .. toctree::
     :maxdepth: 1
