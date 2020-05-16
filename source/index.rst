@@ -37,6 +37,7 @@ This is an open source book written for myself to review my tools.
 
     2_DIS/11_debate.rst
     2_DIS/12_toc.rst
+    2_DIS/13_RLT.rst
 
 .. 
     Discussion/Write.rst
