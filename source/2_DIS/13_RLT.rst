@@ -78,3 +78,45 @@ Why is this? Why do a majority develop a capacity to delay fratification while a
 
 The sins of the father
 =============================
+It is not that the homes of these unself-disciplined children are lacking in parental discipline of a sort. More often than not these children are punished frequently and severly throughout their childhood -- slapped, punched, kicked, beaten and whipped by their paents for even minor infractions. But this discipline is meaningless. Because it is undiciplined discipline.
+
+缺少自律的孩子，未必是因为父母管教不严。不少孩子甚至经常遭受严厉的体罚，即便小有过错，父母也会劈头盖脸地打过去：掌掴、脚踢、鞭打、拳击，可谓花样翻新。这种教育不仅收效甚微，甚至反而使局面恶化。
+
+One reason that it is meaningless, is that the parents themselves are unself-disciplined, and therefore serve as undisciplined role models for their children. They are the "Do as I say, Not as I do" parents. They may frequently get drunk in front of their children. THey may fignhtt with each other in front of the children without restraint, dignity or rationality. They may be slovenly. They make promises they don't keep. Their own libes are frequently and obviously in disorder and disarray, and their attempts to order the lives of their children seem therfore to make little sense to these children. If father beats up mother regularly, what sense does it make to a boy when his mother beats him up because he beat up his sister? Does it make sense when he's told that he must learn to control his tempet? Since we do not have the benefit of comparison when we are young, our parents are godlike figures to our children eyes. When parents do things a certain way, it seems to the young child the way to do them, the way they should be done. If a child sees his parents day in and day out behaving with self-discipline, restraint, dignity and a capacity to order their own lives, then the child will come to feel in the deepest fibers of his being that this is the way to live. If a child sees his parents day in and day our libing without self-restraint or self-discipline, then he will come in the deeppest fibersof being to believe that that is the way to live. 
+
+父母本身难以自律，就不可能成为孩子的榜样。父母常常告诫孩子：“照我的话去做，不过别去学我。”他们酗酒无度，或在孩子面前恶语相向，甚至大打出手。他们缺乏起码的自制力，缺少长辈的尊严和理性；他们形容邋遢、一塌糊涂，甚至偷懒耍滑、背信弃义。他们的生活毫无章法，却强迫孩子有条不紊地生活。可想而知，假如父亲动辄殴打孩子的母亲，那么母亲因儿子欺负妹妹而对其施以体罚，又有多少意义呢？如何又能指望儿子听她的话，控制好情绪呢？在年幼的孩子心中，父母就像上帝那样位高权重。孩子缺乏其他模仿的对象，自然把父母处理问题的办法全盘接受下来，并视为金科玉律。父母懂得自律、自制和自尊，生活井然有序，孩子就会心领神会，并奉之为最高准则。父母的生活混乱不堪、任意妄为，孩子们同样照单全收，并视为不二法门。
+
+Yet even more important than role modeling is love. For even in chatic and disordered homes genuine love is occasionally present, and form such homes may come may come self-disciplined children. And not infrequently parents who are professional people -- doctors, lawyers, club women and philanthropists -- who leads lives of strict orderlines and decorum but yet lack love, send children into the world who are as undisciplined and destructive and disorganized as any child from an impoverished and chaotic home.
+
+父母的爱心至关重要，即便家庭生活混乱，倘若有爱存在，照样可以培养出懂得自律的孩子。父母身为医生、律师、企业经理、慈善家，即便在职业上得心应手，生活方式也相当严谨，倘若缺少爱和温情，他们培养的子女，就和成长在贫寒、混乱家庭的孩子一样，照样不懂得自律，照样随心所欲、无法无天。
+
+Ultimatly love is everything. This mystery of love will be examined in later portions of this week. Yet, for the sake of coherency, it may be helpfui to make a brief but limited mention of it and its relationship to discipline at this point.
+
+爱，关乎心灵的健康成长。在本书后面部分，我将就此深入探讨。爱，是身心健康必不可少的元素，所以有必要了解爱的实质，以及爱同自律的关系。
+
+When we love something it is of value to us, and when something is of value to us we spend time with it, time enjoying it and time taking care of it. Observe a teenager. In love with his car and note the time he will spend admiring it, polishing it, repairing it, tuning it . Or and older person whirh a beloved rose garden, and the time spent pruning and mulching and fertilizing and studying it. So it is when we love children; we spend time admiring them and caring for them. We give them our time.
+
+我们爱某样东西，就会乐于为它付出时间。譬如，某个青年终于拥有心仪已久的汽车，你就会发现，他把多少时间用在汽车上面：擦车、洗车、修车、给汽车美容、不停地欣赏它、整理汽车内室……你也可以观察，一个上了年纪的老人，如何照料他的花园：浇水、施肥、修剪、除虫、嫁接、移植……对子女的爱也同样如此，我们可以花更多的时间去照顾他们、陪伴他们。
+
+
+Good discipline requires time. When we have no time to give our children, or no time that we are willing to give, we don't even observe them closely enough to become aware of when their need for our disciplinary assistance id expressed subtly. If their need for discipline is so gross as to impinge upon our consciousness, we may still ignore the need on the grounds that it's easier to let them have their own way -- "I just don't have the energy to deal with them today." Or, finally, if we are impelled into action by their misdeeds and our irritation, we will impose discipline, often brutally, out of anger rather than deliberation, without examining the problem or even taking the time to consider which form of discipline is the most appropriate to that particular problem.
+
+
+让孩子学会自律，也需要时间。不把精力用在孩子身上，与孩子相处的时间少得可怜，就无法深入了解其需要，就不知道他们在自律方面，还需要哪些条件。遗憾的是，即便孩子明显需要纪律训练的时候，我们可能照样无知无觉，甚至不管不顾。“我没精力管你们，你们想怎么样，就怎么样吧！”最后，到了危机时刻，孩子的错误导致我们恼怒，我们就会把满腔怨气发泄出来。我们根本不愿去调查问题的本质，也不考虑哪种教育模式最适合。父母习惯用严厉的体罚教训孩子，本质上不是教育，而是发泄怨气和不满。
+
+The parents who devote time to their children even when it is not demanded by glaring misdeeds will perceive in them subtle needs for discipline, to which they will respond with gentle urging or reprimand or stucture or parise, administered with thoughtfulness and care. They will observe how their children eat cake, how they study, when they tell subtle falsehoods, when they run away from problems rather than face them. They will take the time to make these monor corrections and adjustments, listening to their children, responding to them, tightening a little here, liisening a little there, giving them little lectures, little hugs and kisses, little admonishments, little pats on the back.
+
+聪明的父母决不会这样做。他们愿意花时间了解孩子，对症下药地教育孩子。哪怕孩子犯了大错，他们也恰当运用敦促、鼓励、表扬，或必要的警告和责备。他们灵活调整孩子的发展方向，认真观察孩子的言行举止：吃蛋糕、做功课、撒谎、欺骗、逃避任务……他们也会倾听孩子的心里话，在对孩子的管教上，他们掌握分寸，张弛有度。他们给孩子讲有意义的故事，适时亲吻、拥抱、爱抚他们，及时纠正孩子的问题。
+
+So it is that the quality of discipline afforded by loving parents is superior to the discipline of unloving parents. But this is just the beginning. In taking the time to observe and to think about their chidren's needs, loving parents will frequently agonize over the decisions to be made, and will, in a very real sense, suffer along with their children. The children are not blind to this. They perceive it when their parents are willing to suffer with them , and although they may not respond with immediate gratitude, they will learn also to suffer. "If my parents are willing to suffer with me," they will tell themselves, "then suffering must not be so bad, and I shoulf be willing to suffer with myself." THis is the beginning of self-discipline.
+
+毋庸置疑，父母的爱，决定了家庭教育质量的优劣。充满爱的教育带来幸运；缺乏爱的教育只能导致不幸。富有爱心的父母，善于审视孩子的需要，做出理性、客观的判断。他们也可能在面临痛苦抉择时，与孩子一道经受痛苦和折磨。孩子也当然会逐渐意识到，父母甘心陪着忍受苦楚的一片苦心。他们未必立刻流露感激之情，却可以领悟到痛苦的内涵和真谛，他们提醒自己：“既然爸爸妈妈愿意陪着我忍受痛苦，痛苦就不见得那么可怕，而且未必是太坏的事。我也应该承担责任，面对属于自己的痛苦。”———这就是自律的起点。
+
+The time and the quality of the time that their parents devote to them indicate to children the degree to which they are valued by their parents. Some basically unloving parents, in an attempt to cover up their lack of caring, make frequent professions of love to therir children, repetitively and mechanically telling them how much they are valued, but not devoting significant time of high quality to them. THeri children are never totally deceived by such hollow words. Consciously they may cling to them, wating to believe that they are loved, but unconsciously they know that their parents's word do not match up with their deeds.
+
+父母付出的努力越大，孩子感受到的重视程度，就越是强烈。有的父母为掩饰在家庭教育上的失败，就会不停地告诉孩子，说自己是多么爱他们，多么重视他们，云云，但真相无法逃过孩子的眼睛。孩子不会被谎言和欺骗长期蒙蔽，他们渴望得到父母的爱，但父母一再出尔反尔，只会让他们渐失信心。即便他们表面不会牢骚不断，或大发雷霆，可父母的教导和许诺，近乎一钱不值。更为糟糕的是，他们会情不自禁地模仿父母，拷贝父母的处世方式，将它视为人生的标准和榜样。
+
+On the other hand, children who are truly loved, although in moments of pique they may consciously feel or proclaim that they are being neglected, unconsciously know themselves to be valued. This knowledge id worth more than any gold. For when children know that they are valued, when they truly feel valued in the deepest parts of themselves, then they feel valuable.
+
+那些沐浴着父母的爱的孩子，心灵却可以健全发展。他们也可能因父母一时的忽视表示不满，然而他们对父母的爱感激不尽。父母的珍视让他们懂得珍惜自己，懂得选择进步而不是落后，懂得追求幸福而不是自暴自弃。他们将自尊自爱作为人生起点，这有着比黄金还要宝贵的价值。
+
