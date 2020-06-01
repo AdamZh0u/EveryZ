@@ -188,3 +188,113 @@ Parents are executives, and despite the fact that they are usually illpreprared 
 
 Responsibility
 ===================
+
+We cannot solve life's problem except by solving them. This statement may seem idiotically tautological or self-evident, yet it is seemingly beyond the comprehension of much of the human race. This is because we must accept responsibility for a problem before we can solve it. We cannot solve a problem by saying "It's not my problem." We cannot solve a problem by hoping that someone else will solve it for us. I can solve s problem only when I say "This is my problem and it's up to me to solve it." But many, so many, seek to avoid the pain of their problem by saying to themselves: "This problem was caused me by other people, or by social cirsumastances beyond my control, and therefore it is up to other people or society to solve this problem for me. It is not really my personal problem."
+
+The extent to which people will go psychologically to avoid assuming responsibility for personal problems, while always sad, is sometimes almost ludicrous. A career sergeant in the army, stationed in Okinawa and in serious trouble because of his excessive drinking, was referred for psychiatric evaluation and, if possible, assistance. He denied that he was an alcoholic, or even that his use of alcohol was a personal problem, saying, "There's nothing else to do in the evenings in Okinawa except drink."
+
+不能及时解决人生的难题，它们就会像山一样横亘在我们眼前。
+
+很多人显然忽略了其中的道理。我们必须面对属于自己的问题，这是解决问题的基本前提。避之惟恐不及，认为“这不是我的问题”，显然一点好处也没有；指望别人解决，也不是聪明的做法。惟一的办法———我们应该勇敢地说：“这是我的问题，还是由我来解决！”相当多的人只想逃避，他们宁愿这样自我安慰：“出现这个问题，不是我而是别人的原因，是别人拖累了我，是我无法控制的社会因素造成的，应该由别人或者社会替我解决。这绝不是我个人的问题。”
+
+趋利避害，逃避责任，这种心理趋向令人遗憾，有时甚至达到可笑的程度。我过去曾随美国军队驻扎在冲绳岛，当时有个美军军官酗酒成瘾，问题严重，只好找我做心理咨询，看看是否有可能解决。他否认自己饮酒成性，还认为酗酒不是他的个人问题。
+
+他说：“在冲绳岛，我们晚间无事可做，生活实在是无聊，除了喝酒，还能做什么呢？”
+我问他：“你喜欢读书吗？”
+“是啊，当然啊，我喜欢读书。”他说。
+“既然如此，你晚上以读书代替喝酒，不是更好吗？”
+“营房里太吵闹，我可没心思读书。”
+“那么去图书馆看书怎么样呢？”
+“图书馆距离太远了。”
+“难道图书馆比酒吧还要远吗？”
+“唉，说实话吧，其实我也不怎么爱读书。我的兴趣不在读书上，我原本就不是个爱读书的人。”
+
+“Do you like to read?” I asked.
+“Oh yes, I like to read, sure.”
+“Then why don’t you read in the evening instead of drinking.”
+“It’s too noisy to read in the barracks.”
+“Well, then, why don’t you go to the library?”
+“The library is too far away.”
+“Is the library farther away than the bar you go to?”
+“Well, I’m not much of a reader. That’s not where my interests lie.”
+“Do you like to fish?” I then inquired.
+“Sure, I love to fish.”
+“Why not go fishing instead of drinking?”
+“Because I have to work all day long.”
+“Can’t you go fishing at night?”
+“No, there isn’t any night fishing in Okinawa.”
+“But there is,” I said. “I know several organizations that fish at night
+here. Would you like me to put you in touch with them?”
+“Well, I really don’t like to fish.”
+“What I hear you saying,” I clarified, “is that there are other things to do in Okinawa except drink, but the thing you like to do most in Okinawa is
+drink.”
+“Yeah, I guess so.”
+“But your drinking is getting you in trouble, so you’re faced with a real
+problem, aren’t you?”
+“This damn island would drive anyone to drink.”
+I kept trying for a while, but the sergeant was not the least bit interested in seeing his drinking as a personal problem which he could solve either with or without help, and I regretfully told his commander that he was not amenable to assistance. His drinking continued, and he was separated from the service in mid-career.
+
+我换了话题，继续问道：“你喜欢钓鱼吗？”
+“当然啊，我太喜欢钓鱼了。”
+“那么，你为什么不以钓鱼来代替喝酒呢？”
+“我白天得工作啊。”
+“难道晚上就不能钓鱼了吗？”
+“当然不能啊，冲绳岛晚上没什么地方可以钓鱼。”
+“好像不是吧，据我所知，这里有好几家夜间钓鱼俱乐部，我介绍你到那里去垂钓，你觉得怎么样呢？”
+“嗯……怎么说呢，其实我也不是那么喜欢钓鱼。”
+“听你的意思，”我指出他的问题，“在冲绳岛这里，除了喝酒以外，其实还是有其他事情可做的，但是确切地说，惟有喝酒，才是你最喜欢的事。”
+“我想你说的没错。”
+“可是，你总是饮酒过量，以至于违犯军纪，给你带来了不小的麻烦，对不对？”
+“有什么办法呢？驻扎在这个该死的小岛，人人整天只有靠喝酒打发时间，这难道是我一个人的问题吗？”
+
+我同他交谈了很久，但这位军官总是固执己见，不愿承认酗酒是他的个人问题。他也不肯接受我的建议：只要凭借毅力和决心，再加上别人的帮助，就可以彻底解决问题。我只好无奈地通知他的上司：他根本不肯接受帮助，他的固执让我无能为力。就这样，那个军官继续酗酒，最终被开除军职。
+
+A young wife, also in Okinawa, cut her wrist lightly with a razor blade
+and was brought to the emergency room, where I saw her. I asked her why
+she had done this to herself. 
+“To kill myself, of course.”
+“Why do you want to kill yourself?”
+“Because I can’t stand it on this dumb island. You have to send me back to the States. I’m going to kill myself if I have to stay here any longer.”
+“What is it about living in Okinawa that’s so painful for you?” I asked. She began to cry in a whining sort of way. “I don’t have any friends here,
+and I’m alone all the time.” 
+“That’s too bad. How come you haven’t been able to make any friends?”
+“Because I have to live in a stupid Okinawan housing area, and none of
+my neighbors speak English.”
+“Why don’t you drive over to the American housing area or to the wives’
+club during the day so you can make some friends?”
+“Because my husband has to drive the car to work.”
+“Can’t you drive him to work, since you’re alone and bored all day?” I
+asked.
+“No. It’s a stick-shift car, and I don’t know how to drive a stick-shift car,only an automatic.”
+“Why don’t you learn how to drive a stick-shift car?”
+She glared at me. “On these roads? You must be crazy.”
+
+在冲绳岛，有一位年轻的军人妻子，她用剃须刀片割开了手腕，被送到抢救室急救。后来，我在病房里见到她，我问她为什么要这么做。
+
+“我当然是想自杀了。”
+“你为什么想自杀呢？”
+“这个地方让我觉得无聊和乏味，我一刻也忍受不了。你们必须把我送回国内，要是还得呆在这里，我还是会自杀的。”
+“住在冲绳岛，为什么让你感觉那么痛苦呢？”
+她抽泣着说：“我在这里什么朋友也没有，我一直都很孤独。”
+“这确实很糟糕。可是，你为什么不去交朋友呢？”
+“因为我住在冲绳岛该死的居民区，那里没人说英语。”
+“那你为何不驾车去美军家属区，或者去参加军人妻子俱乐部，在那里结交朋友呢？”
+“因为我丈夫白天得开着车上班。”
+“既然你白天孤独和无聊，为什么不开车送你丈夫上班呢？”我问道。
+“因为我们的汽车是变速挡，不是自动挡，我不知道怎么开变速挡汽车。”
+“你为什么不去学习驾驶变速挡汽车呢？”
+她盯住我，说：“就在那种道路上学习吗？你一定是疯了。”
+
+Neuroses and Character Disorders
+=======================================
+Most people who come to see a psychiatrist are suffering what is called either a neurosis or a character disorder. Put most simply, these two conditions are disorders of responsibility, and as such they are opposite tyles of relating to the world and its problems. The neurotic assumes too much responsiblity; the person with a character disorder, not enough. When neurotics are in conflict with the world they automatically assume that they are at fault. When those with character disorder are in conflict with the world they automatically assume that the world is at fault. The two individuals just described had character disorders: the sergeant felt that his drinking was Okinawa's fault, not his, and the wife also saw herself as playing no role whatsoever in her own isolation. A neurotic women, on the other hand, also suffering from loneliness and isolation on Okinawa, complained:"I drive over to the Non-Commissioned Officers' Wives Club every day to look for friendship, but I don't feel at ease there. I think that the other wives don't like me. Something must be wrong with me. I should be able to make friends more easily. I ought to be more outgoing. I want to find out what it is about me that makes me so unpopular." This woman assumed total responsibility for her loneliness, feeling she was entirely to blame. What she found out in the course of therapy was that she was an unusually intelligent and ambitious person and that she was ill at ease with the other sergeants' wives, as well as with her husband, because she was considerably more intelligent and ambitious than they. She became able to see that her loneliness while her problem, was not necessarily due to a fault or defect of her own. Ultimately she was discovered, put herself through college while raising her children, became a magazine editor, and married a successful publisher.
+
+求助于心理医生的大多数人，不是有神经官能症，就是患有人格失调。它们都是责任感出现问题所致，其表现症状却恰恰相反：神经官能症患者为自己强加责任，患有人格失调的人却不愿承担责任。与外界发生冲突和矛盾，神经官能症患者认为错在自己，人格失调症患者却把错误归咎于旁人。前面那位酗酒的军官，认为责任在冲绳岛，不在他自己；而那个军人妻子觉得，面对孤独她无能为力。我在冲绳岛工作期间，还接待过一位患有神经官能症的女士，过度的寂寞让她难以忍受。她说：“我每天都会驾车到军属俱乐部，希望结识到新朋友，可那个地方总是让我心烦意乱，我感觉其他军人妻子都不愿和我在一起，我想我一定有什么问题，我的性格可能内向了。我无法理解，我为什么不受欢迎呢？”这位女士曾认为自己是世上最不幸的人，认为寂寞完全是自己性格怪异、咎由自取的结果。治疗发现，问题在于她的智商高于常人，进取心也比一般人强烈。她和其他军官妻子以及丈夫格格不入，是因为和他们相比，她的智商更高，进取心更强。她终于意识到感觉孤寂，不是自身有多么大的缺点。就这样，她做出了适合自己的选择：不久后她和丈夫离了婚，回到大学校园，一边读书，一边抚养孩子。她如今在一家杂志社当编辑，嫁给了一位事业有成的出版商。
+
+Even the speech patterns of neurotics and those with character disorders are different. The speech of the neurotic is notable for such expressions as "I ought to,""I should," and "I shouldn't," indicating the individual's self-image as an inferior man or woman, always falling short of the mark, always making the wrong choices. The speech of a person with a character disorder, however, relies heavily on "I can't," "I couldn't,""I have to," and "I had to," demonstrating a self-image of a being who has no power of choice, whose behavior is completely directed  by external forces totally beyond his or her control. As might be imagined, neurotics, compared with character-disordered people, are easy to work with in psychotherapy because they assume responsibility for their difficulties and therefore see themselves as having problems. Those with character disorders are much more difficult, if not possible, to work with because they don't see themselves as being in need of their problems; they see the world rather than themselves as being in need of change and therefore fail to recognize the necessity for self-examination. In actuality, many individuals have both a neurosis and a character disorder and are referred to as "character neurotics," indicating that in some areas of their lives they are guilt-ridden by virtue of having assumed responsibility that is not really theirs, while in other areas of their lives they fail to make realistic responsibility for themselves. Fortunately, once having established the faith and trust of such individuals in the psychotherapy process through helping them with the neurotic part of their personalities, it is often possible then to engage them in examining and correcting their unwillingness to assume responsiblity where appropriate.
+
+神经官能症患者常常把“我本来可以”、“我或许应该”、“我不应该”挂在嘴边。不管做任何事，他们都觉得能力不及他人，他们缺少勇气和个性。人格失调症患者则强调“我不能”、“我不可能”、“我做不到”，他们缺少自主判断及承担责任的能力。治疗神经官能症，比治疗人格失调症容易得多，因为前者坚持问题应由自己负责，而非别人和社会所致。治愈人格失调症患者则较为困难，他们顽固地认为问题和自己无关，他人和外界才是罪魁祸首。不少人兼有神经官能症和人格失调症，统称为“人格神经官能症”。在某些问题上，他们把别人的责任揽到自己身上，内心充满内疚感；而在别的问题上，他们却一推了之。治疗人格神经官能症，不见得如想象的那样困难，首先治愈其神经官能症，就能让患者对治疗树立信心，进而接受医生的建议，纠正不愿承担责任的心理，消除人格失调的根源。
+
+Few of us can escape being neurotic or character disordered to at least some degree (which is why essentially everyone can benefit from psychotherapy if he or she is seriously willing to participate in the process). The reason for this is that the problem of distinguishing what we are and what we are not responsible for in this life is one of the greatest problems of human existence. It is never completely solved; for the netirely of our lives we must continually assess and reassess where our responsibility lie in the ever-changing course of events. Nor is this assessment and reassessment painless if performed adequately and conscientiously. To perform either process adequately we must possess the willingness and the capacity to suffer continual self-examination. And such capacity or willingness is not inherent in any of us. In a sense all children have character disorders, in that their instinctual thendency is to deny their responsiblity for many conflicts in which they find themselves. Thus two siblings fighting will always blame each other for initiating the fight and each will totally deny that he or she may have  been the culprit. Similarly, all children have neurous, in that they will instinctually assume responsiblity for certain deprivations that they experience but do not yet understand. Thus the child who is not loved by his parents will always assume himself or herself to be unlovable rather than see the parents as deficient in their capacity to love. Or early adolescents who are not yet successful at dating or at sports will see themselves as seriously deficient human beings rather than the late or even average but perfectly adequate bloomers they usually are. It is only through a vast amount of experience and a lenghy and successful maturation that we gain the capacity to see the world and our place in it realistically, and thus are enabled to realistically assess our responsibility for ourselves and the world.
+
+几乎人人都患有程度不同的神经官能症或人格失调症，因此，只要及时求诊，对于心理健康大有好处。人生一世，正确评估自己的角色，判定该为何人、何事负责，既是我们的责任，也是无法逃避的问题。评估责任归属，必然让我们感觉痛苦，从而产生回避倾向。从内心出发，做出权衡，当事人须自我反省，其中的痛苦和折磨，令不少人望而却步。好逸恶劳显然是人类的天性。某种意义上，所有的孩子都患有人格失调，都会本能地逃避责罚。兄弟姐妹打架，大人追究起来，他们会忙不迭地推卸责任。不少孩子也都患有某种神经官能症。他们理解力有限，就会把承受的苦楚看成是罪有应得。缺少关心的孩子自惭形秽，认为自己不够可爱，缺点大于优点，他们从来不会想到，这是根源于父母缺乏爱和照顾。他们无法得到异性的青睐，或在运动方面差强人意，也都一概怀疑自己有严重的能力缺陷。他们难以意识到，即便发育迟缓、智力平平，他们仍是正常的人。人人都需要多年经验，让心智不断成熟，才能够正确认识自己，客观评定自己和他人应该承担的责任。
