@@ -17,7 +17,7 @@ This is an open source book written for myself to review my tools.
     0_SNA/51_pandas.rst
     0_SNA/52_matplotlib.rst
     0_SNA/53_R.rst
-    0_SNA/javascript.md
+    0_SNA/Javascript.md
     Snippet/python.rst
     Snippet/R.rst
 
