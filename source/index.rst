@@ -20,7 +20,7 @@ This is an open source book written for myself to review my tools.
     Snippet/R.rst
     0_SNA/31_Arcgis&Frag.rst
     Snippet/python.rst
-    0_SNA/Javascript.rst
+    0_SNA/54_Javascript.rst
 
 .. 
     SNA/20_regexp.rst
