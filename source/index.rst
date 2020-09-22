@@ -17,9 +17,10 @@ This is an open source book written for myself to review my tools.
     0_SNA/51_pandas.rst
     0_SNA/52_matplotlib.rst
     0_SNA/53_R.rst
-    0_SNA/Javascript.md
-    Snippet/python.rst
     Snippet/R.rst
+    0_SNA/31_Arcgis&Frag.rst
+    Snippet/python.rst
+    0_SNA/Javascript.rst
 
 .. 
     SNA/20_regexp.rst
@@ -38,7 +39,7 @@ This is an open source book written for myself to review my tools.
 
     2_DIS/11_debate.rst
     2_DIS/12_toc.rst
-    2_DIS/13_RLT.rst
+    ..2_DIS/13_RLT.rst
 
 .. 
     Discussion/Write.rst
