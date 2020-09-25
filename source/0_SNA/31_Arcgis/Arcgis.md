@@ -109,7 +109,7 @@ plot=plot.get_figure()
 plot.savefig("output.png",dpi=600)
 ```
 
-![output](Arcgis.assets/output.png)
+![](Arcgis.assets/output.png)
 
 ## Boxplot in R
 
@@ -125,6 +125,8 @@ ggplot( aes(x=FID, y=PD,group= FID,fill=as.factor(FID)),data=data1) + geom_boxpl
 # +  scale_fill_brewer(palette="Reds")
 # # BuGn Reds
 ```
+
+![](Arcgis.assets/Rplot.png)
 
 ## Gallery
 
